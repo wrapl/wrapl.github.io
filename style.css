@@ -1,0 +1,364 @@
+#breadcrumbs {
+    font: 11px Arial, Helvetica, sans-serif;
+    background-image:url('img/bc_bg.gif'); 
+    background-repeat:repeat-x;
+	height:30px;
+    line-height:30px;
+    color:#888;
+    border:solid 1px #cacaca;
+    width:100%;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+}
+
+#breadcrumbs li {
+    list-style-type:none;
+    padding-left:10px;
+	display:inline-block;
+	float:left;
+}
+
+#breadcrumbs a {
+	display:inline-block;
+    background-image:url('img/bc_separator.gif'); 
+    background-repeat:no-repeat; 
+    background-position:right;
+    padding-right: 15px;
+    text-decoration: none;
+    color:#333333;
+	outline:none;
+}
+
+#breadcrumbs a:hover {
+	color:#35acc5;
+}
+
+div.module {
+	min-width: 200px;
+}
+span.code {
+	white-space:pre;
+	font-family:monospace;
+	color:white;
+}
+span.term {
+	white-space:pre;
+	font-family:monospace;
+	color:white;
+}
+span.var {
+	/*font-style:italic;*/
+	font-family:monospace;
+	color:white;
+}
+span.var sub {
+	color:white;
+	font-style:normal;
+}
+span.nested {
+	font-style:italic;
+}
+a.id {
+	color:LightBlue;
+	text-decoration:none;
+	font-family:monospace;
+}
+a.id:hover {
+	color:red;
+	border-bottom:thin dotted red;
+}
+span.symbol {
+	color:Khaki;
+}
+span.delimiter {
+	color:GreenYellow;
+}
+span.keyword {
+	color:yellow;
+}
+span.literal {
+	color: LightBlue;
+	font-style:italic;
+}
+span.comment {
+	color:gray;
+	font-style:italic;
+}
+span.lineno {
+	margin-right:5px;
+	padding-right:5px;
+	border-right:thin solid black;
+}
+span.highlight {
+	border:thin solid blue;
+	background-color:DarkBlue;
+}
+div.codeheader {
+	text-align: center;
+	/*border-bottom:thin solid black;*/
+}
+div.codeheader a {
+	color:white;
+	text-decoration:none;
+	border-bottom:thin dotted white;
+	font-family:default;
+}
+div.codeheader a:hover {
+	color:yellow;
+	border-bottom:thin dotted yellow;
+}
+div.code {
+	color:#eee;
+	background: #555;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 12px;
+	overflow: auto;
+	padding: 8px 10px;
+	white-space: pre;
+	font-family:monospace;
+	border: thin inset #555;
+}
+span.prompt {
+	color:yellow;
+}
+div.term {
+	color:#eee;
+	background: black;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 12px;
+	overflow: auto;
+	padding: 8px 10px;
+	white-space: pre;
+	font-family:monospace;
+	border: thin inset #555;
+}
+div.ccode {
+	color:#eee;
+	background: #555;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 12px;
+	overflow: auto;
+	padding: 8px 10px;
+	white-space: pre;
+	font-family:monospace;
+	border: thin inset #555;
+}
+div.m3code {
+	color:#eee;
+	background: #555;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 12px;
+	overflow: auto;
+	padding: 8px 10px;
+	white-space: pre;
+	font-family:monospace;
+	border: thin inset #555;
+}
+div.comment {
+	margin-left:5px;
+	padding:5px 10px 10px 10px;
+}
+div.frimage {
+	text-align:center;
+	padding:5px;
+	background-color:white;
+	border:thin solid #FFFFBD;
+	margin:10px;
+	border: thin inset white;
+}
+div.frimage img {
+	border:0;
+	max-width: 95%;
+}
+div.editbox {
+	background-color:white;
+	border:thin solid #FFFFBD;
+	margin:10px;
+	clear:both;
+}
+div.errors {
+	text-align:left;
+	line-height:normal;
+	white-space:pre;
+	font-family:monospace;
+	color:red;
+	padding:5px;
+	background-color:#FFE0E0;
+	margin:10px;
+	border:thin inset #BDBDFF;
+}
+
+div.left ul {
+	list-style-type:circle;
+}
+div.left dl {
+}
+div.left dt {
+	padding-left:2px;
+	padding-right:2px;
+/*
+	border-top:thin dotted teal;
+	border-left:thin dotted teal;
+	border-right:thin dotted teal;
+*/
+	background-color:#0F002F;
+}
+div.left dd {
+	padding-left:22px;
+	padding-right:2px;
+	margin-left:0;
+	margin-bottom:0;
+/*
+	border-bottom:thin dotted teal;
+	border-left:thin dotted teal;
+	border-right:thin dotted teal;
+*/
+	background-color:#0F002F;
+}
+div.left table {
+	margin: 0 10px 12px;
+	width: 98%;
+	/*background-color:#FFE0E0;*/
+	background-color:#555;
+	border:thin inset #333;
+}
+div.left th {
+	/*font-size:medium;
+	border-bottom:thin dotted #FFBDBD;*/
+	font-size:small;
+	border:thin gray outset;
+	background-color:gray;
+	padding:0;
+}
+div.left td {
+	padding:0 10px 0 10px;
+}
+
+form.forum-action {
+	display:inline;
+}
+form.forum-action fieldset {
+	display:inline;
+	border:none;
+	padding:2px;
+}
+form.forum-action .inputbox {
+	margin:0 0px;
+	background-color:black;
+	color:#BBB;
+	border:1px groove #333;
+}
+form.forum-action input {
+	color:#cccccc;
+	background-color:#333;
+	border:1px outset gray;
+}
+form.forum-action input:hover {
+	color:yellow;
+}
+form.forum-action input:active {
+	border:1px inset gray;
+}
+form.forum-action select {
+	color:#cccccc;
+	background-color:#333;
+	border:1px outset gray;
+}
+form.forum-action select:hover {
+	color:yellow;
+}
+form.forum-action select:active {
+	border:1px inset gray;
+}
+#forum-search {
+	float: right;
+}
+div.profilebox {
+	float:left;
+	width:130px;
+	margin:5px;
+	overflow:auto;
+	background-color:#0F0F00;
+	border:thin inset black;
+}
+div.profilebox ul {
+	list-style:none;
+	margin:0;
+	padding:5px;
+}
+div.right2 {
+	padding:5px;
+	background-color:#00000F;
+	line-height:140%;
+	/*margin-left:15%;*/
+}
+div.right2 div.postbody {
+	padding:0.5em;
+}
+div.right2 hr {
+	clear:both;
+}
+
+
+blockquote {
+	background: #141414 none 6px 8px no-repeat;
+	border: 1px inset #141414;
+	margin: 0.5em 1px 0 5px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+blockquote blockquote {
+	/* Nested quotes */
+	background-color: #454545;
+	margin: 0.5em 1px 0 5px;	
+}
+
+blockquote blockquote blockquote {
+	/* Nested quotes */
+	background-color: #1B1B1B;
+}
+
+blockquote cite {
+	/* Username/source of quoter */
+	font-style: normal;
+	font-weight: bold;
+	margin-left: 0px;
+	display: block;
+	font-size: 0.9em;
+}
+
+blockquote cite cite {
+}
+
+blockquote.uncited {
+	padding-top: 5px;
+}
+
+div.right form.centred-form fieldset {
+	border:none;
+}
+
+div.right form.centred-form table {
+	border:thin gray inset;
+	padding:5px;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:0;
+}
+
+p.centred {
+	text-align:center;
+}
+
+input.edit_button {
+	margin:0 0px;
+	background-color:#333;
+	color:#BBB;
+	border:1px dotted #777;
+}

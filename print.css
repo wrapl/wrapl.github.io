@@ -1,0 +1,157 @@
+body {
+	padding:0;
+	margin:0;
+	background-color:white;
+}
+div.header {
+	width:100%;
+	margin:0;
+}
+#title {
+	text-align:center;
+	color:maroon;
+	font-style:italic;
+	font-variant:small-caps;
+	font-weight:bold;
+	font-size:large;
+	padding:10pt;
+}
+#mainmenu {
+	display:none;
+}
+div.main {
+	width:100%;
+	margin:0px;
+	border-top:thin solid teal;
+	border-bottom:thin solid teal;
+	color:black;
+}
+div.left {
+	display:none;
+}
+div.right {
+	padding:1em;
+	background-color:white;
+	line-height:140%;
+}
+div.right h1 {
+	color:teal;
+	text-align:center;
+	font-size:large;
+	font-weight:normal;
+}
+div.right h2 {
+	color:teal;
+	font-size:medium;
+	font-weight:bold;
+	padding-left:3pt;
+	background-color:#F0F0F0;
+}
+div.right h3 {
+	font-size:medium;
+	font-weight:normal;
+	margin:10pt 0 3pt 0;
+	border-bottom:thin dotted green;
+}
+div.right ul {
+	list-style-type:circle;
+}
+div.right table {
+	margin:10pt;
+	background-color:#FFF0F0;
+	border:thin dashed teal;
+}
+div.right th {
+	font-size:medium;
+	border-bottom:thin dotted teal;
+}
+div.right td {
+	padding:0 10pt 0 10pt;
+}
+div.footer {
+	width:100%;
+	background-color:#F5FFD9;
+	border-bottom:thin solid teal;
+	overflow:hidden;
+}
+div.footer span {
+	font-size:small;
+	float:right;
+	margin-right:20pt;
+}
+div.module {
+	min-width: 200pt;
+/*	padding:0 20pt 0 20pt;*/
+}
+span.code {
+	white-space:pre;
+	font-family:monospace;
+	color:black;
+}
+span.term {
+	white-space:pre;
+	font-family:monospace;
+	color:black;
+}
+span.var {
+	font-style:italic;
+	font-family:monospace;
+	color:maroon;
+}
+a.id {
+	color:blue;
+	text-decoration:none;
+	font-family:monospace;
+}
+a.id:hover {
+	color:red;
+	border-bottom:thin dotted red;
+}
+span.symbol {
+	color:purple;
+}
+span.delimiter {
+	color:red;
+}
+span.keyword {
+	color:blue;
+}
+span.literal {
+	color:green;
+	font-style:italic;
+}
+span.comment {
+	color:gray;
+	font-style:italic;
+}
+span.lineno {
+	margin-right:5pt;
+	padding-right:5pt;
+	border-right:thin solid black;
+}
+div.code {
+	line-height:normal;
+	white-space:pre;
+	font-family:monospace;
+	color:black;
+	padding:5pt;
+	background-color:#F0FFF0;
+	margin:10pt;
+	border:thin dashed maroon;
+}
+div.term {
+	line-height:normal;
+	white-space:pre;
+	font-family:monospace;
+	color:black;
+	padding:5pt;
+	background-color:#F0F0FF;
+	margin:10pt;
+	border:thin dashed green;
+}
+div.comment {
+	margin-left:5pt;
+	padding:5pt 10pt 10pt 10pt;
+/*	border-left:thin dotted blue;*/
+/*	border-right:thin dotted blue;*/
+}

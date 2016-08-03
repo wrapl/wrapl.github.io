@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>riva</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="riva" data-spy="true" data-target="#side-menu"><h2>riva</h2>
+<p><span class="var">riva</span> is the name of the main module loader executable. By itself, it can load several different types of module, any of which can register methods for loading additional module types. The following modules are loadable directly:</p>
+
+<table class="ink-table">
+<tr><th>Name</th><th>Description</th><th>Filetype</th></tr>
+<tr><td>Riva</td><td>A custom binary file format used for most compiled modules.</td><td><span class="literal">*.riva</span></td></tr>
+<tr><td>Native</td><td>Operating system specific dynamic link libraries.</td><td><span class="literal">*.so</span> (Linux) or <span class="literal">*.dll</span> (Windows)</td></tr>
+<tr><td>FileSet</td><td>Loads all the modules in a directory and combines their exports.</td><td>directory <span class="literal">*.fset</span>/</tr>
+<tr><td>Directory</td><td>Loads a directory as a module which exports its contents.</td><td>any directory</td></tr>
+</table>
+
+<p>In addition, the following additional loaders are currently available:</p>
+
+<table class="ink-table">
+<tr><th>Name</th><th>Description</th><th>Filetype</th><th>Provided by</th></tr>
+<tr><td><a href="/doc/Wrapl/Loader.html">Wrapl</a></td><td>Dynamically compiles Wrapl source code.</td><td><span class="literal">*.wrapl</span></td><td><a class="id" href="/doc/Wrapl/Loader.html">Wrapl.Loader</a></td></tr>
+<tr><td><a href="/doc/Gtk/Glade/Loader.html">Glade</a></td><td>Loads GTK+ UI files as created by Glade.</td><td><span class="literal">*.glade</span></td><td><a class="id" href="/doc/Gtk/Glade/Loader.html">Gtk.Glade.Loader</a></td></tr>
+</table>
+
+<p>The Wrapl loader is automatically loaded by the default <a href="#configuration_files"><span class="literal">riva.conf</span></a> file, although this can be changed.</p>
+
+<section id="Configuration_Files" data-spy="true" data-target="#side-menu"><h3>Configuration Files</h3>
+<p>When run, <span class="var">riva</span> first reads in a configuration file called <span class="literal">riva.conf</span> located in the same directory as the executable. If the <span class="var">riva</span> executable has been renamed to <span class="var">progname</span>, then the file <span class="var">progname</span><span class="literal">.conf</span> is loaded. This file sets the default library search path, specifies which modules to preload and sets any number of key/value pairs, accessible at runtime from <a class="id" href="/doc/Sys/Config.html">Sys.Config</a>.</p>
+
+<p>The following options are avaible in the <span class="literal">riva.conf</span> file:</p>
+<table class="ink-table">
+<tr><th>Option</th><th>Type</th><th>Description</th></tr>
+<tr><td><span class="var">library</span></td><td>List of directories</td><td>Search path for modules.</td></tr>
+<tr><td><span class="var">parseargs</span></td><td>Boolean</td><td>Controls whether additional options are read from the command line.</td></tr>
+<tr><td><span class="var">modules</span></td><td>List of module names</td><td>List of modules which are loaded automatically.</td></tr>
+<tr><td><span class="code"><span class="var">config</span><span class="delimiter">(</span><span class="var">key</span><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span></span></td><td>Strings</td><td>Sets arbitrary key/value pairs.</td></tr>
+</table>
+</section>
+
+<section id="Command_Line_Options" data-spy="true" data-target="#side-menu"><h3>Command Line Options</h3>
+<p>The basic invocation for <span class="var">riva</span> is <span class="code"><span class="var">riva</span> <span class="delimiter">[</span><span class="var">options</span><span class="delimiter">]</span> <span class="var">module</span></span>. If <span class="var">parseargs</span> is set to <span class="var">true</span> in <span class="literal">riva.conf</span> then the following options are accepted by the <span class="var">riva</span> executable.</p>
+
+<table class="ink-table">
+<tr><th>Option</th><th>Description</th></tr>
+<tr><td><span class="literal">-nogc</span></td><td>Disables the garbage collector.</td></tr>
+<tr><td><span class="literal">-nodelay</span></td><td>Disables delayed linking of text sections in <span class="literal">*.riva</span> modules.</td></tr>
+<tr><td><span class="literal">-L</span> <span class="var">directory</span></td><td>Adds <span class="var">directory</span> to the library search path.</td></tr>
+<tr><td><span class="literal">-P</span> <span class="var">module</span></td><td>Preloads <span class="var">module</span>.</td></tr>
+<tr><td><span class="literal">-D</span> <span class="code"><span class="var">key</span><span class="delimiter">=</span><span class="var">value</span></span></td><td>Sets key/value pair.</td></tr>
+<tr><td><span class="literal">-t</span> <span class="var">loader</span></td><td>Selects which loader to use for the initial module.</td></tr>
+<tr><td><span class="literal">-v</span></td><td>Logs descriptive messages to standard output.</td></tr>
+</table>
+</section>
+
+</section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#riva">riva</a><ul><li><a href="#Configuration_Files">Configuration Files</a><ul></ul></li><li><a href="#Command_Line_Options">Command Line Options</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

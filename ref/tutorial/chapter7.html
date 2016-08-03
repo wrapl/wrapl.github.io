@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>Chapter 7</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Chapter_7" data-spy="true" data-target="#side-menu"><h2><a class="prev" href="chapter6.html"><i class="fa fa-angle-left medium"></i></a>  <a class="prev" href="../tutorial.html"><i class="fa fa-angle-up medium"></i></a>  Chapter 7  <a class="next" href="chapter8.html"><i class="fa fa-angle-right medium"></i></a></h2>
+<section id="Modules" data-spy="true" data-target="#side-menu"><h3>Modules</h3>
+
+<p>Code in Wrapl can be separated into modules. Each module consists of any number of variable and/or constant declarations, any of which can be exported allowing their use in other modules. To export a variable or constant, follow its declaration with an exclamation mark, <span class="code"><span class="delimiter">!</span></span>. To use such an exported variable/constant in another module, you can use an import declaration. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Mod1</span><span class="delimiter">;</span>
+<span class="lineno">   2</span> 
+<span class="lineno">   3</span><span class="keyword">IMP</span> <span class="var">IO</span><span class="delimiter">.</span><span class="var">Terminal</span><span class="delimiter">;</span>
+<span class="lineno">   4</span> 
+<span class="lineno">   5</span><span class="keyword">DEF</span> <span class="var">f</span><span class="delimiter">!(</span><span class="var">x</span><span class="delimiter">)</span> <span class="delimiter">(</span>
+<span class="lineno">   6</span>    <span class="var">Terminal</span><span class="delimiter">.</span><span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">);</span>
+<span class="lineno">   7</span>    <span class="var">Terminal</span><span class="delimiter">.</span><span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">x</span><span class="delimiter">);</span>
+<span class="lineno">   8</span>    <span class="var">Terminal</span><span class="delimiter">.</span><span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">"\n"</span><span class="delimiter">);</span>
+<span class="lineno">   9</span><span class="delimiter">);</span>
+<span class="lineno">  10</span> 
+<span class="lineno">  11</span><span class="keyword">END</span> <span class="var">Mod1</span><span class="delimiter">.</span></div>
+
+is a module which exports a single constant, <span class="code"><span class="var">f</span></span>. In addition, it imports the module <a class="id" href="/doc/IO.html#Terminal">IO.Terminal</a> and uses the constant <span class="code"><span class="var">Out</span></span> exported by that module.
+
+If you use the same imported variable/constant repeatedly, you can define the name of that variable/constant in the current scope by using a <span class="code"><span class="keyword">USE</span></span> clause.
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Mod1</span><span class="delimiter">;</span>
+<span class="lineno">   2</span> 
+<span class="lineno">   3</span><span class="keyword">IMP</span> <span class="var">IO</span><span class="delimiter">.</span><span class="var">Terminal</span> <span class="keyword">USE</span> <span class="var">Out</span><span class="delimiter">;</span>
+<span class="lineno">   4</span> 
+<span class="lineno">   5</span><span class="keyword">DEF</span> <span class="var">f</span><span class="delimiter">!(</span><span class="var">x</span><span class="delimiter">)</span> <span class="delimiter">(</span>
+<span class="lineno">   6</span>    <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">);</span>
+<span class="lineno">   7</span>    <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">x</span><span class="delimiter">);</span>
+<span class="lineno">   8</span>    <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">"\n"</span><span class="delimiter">);</span>
+<span class="lineno">   9</span><span class="delimiter">);</span>
+<span class="lineno">  10</span> 
+<span class="lineno">  11</span><span class="keyword">END</span> <span class="var">Mod1</span><span class="delimiter">.</span></div>
+
+The full list of modules that are provided with Wrapl can be found in the Libraries Reference.
+
+<h4 id="Imports_and_Exports">Imports and Exports</h4>
+
+
+</section>
+
+<section id="Variables_and_Constants" data-spy="true" data-target="#side-menu"><h3>Variables and Constants</h3>
+<p>In Wrapl, all identifiers must be declared. Variables are declared as <span class="code"><span class="keyword">VAR</span> <span class="var">name</span><span class="delimiter">;</span></span>. This declares a new variable name in the current scope, which will be initialized to <a class="id" href="/doc/Std/Object.html#Nil">NIL</a>. A variable can optionally be initialized when declared, <span class="code"><span class="keyword">VAR</span> <span class="var">name</span> <span class="delimiter">&lt;-</span> <span class="var">value</span><span class="delimiter">;</span></span>.</p>
+
+<p>Variables can be used at any point within the scope they are declared in, even before the actual declarations (i.e. foward declarations are unnecessary). However, the variable is only assigned its initial value at the actual declaration, prior to this it will have the value <a class="id" href="/doc/Std/Object.html#Nil">NIL</a>. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="var">Out</span><span class="symbol">:writes</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">,</span> <span class="var">x</span><span class="delimiter">,</span> <span class="literal">"\n"</span><span class="delimiter">);</span>
+<span class="lineno">   2</span><span class="keyword">VAR</span> <span class="var">x</span> <span class="delimiter">&lt;-</span> 200<span class="delimiter">;</span>
+<span class="lineno">   3</span><span class="var">Out</span><span class="symbol">:writes</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">,</span> <span class="var">x</span><span class="delimiter">,</span> <span class="literal">"\n"</span><span class="delimiter">);</span></div>
+
+will output
+
+<div class="term">x = NIL
+x = 200
+</div>
+
+<p>The alternative syntax <span class="code"><span class="keyword">VAR</span> <span class="var">name</span><span class="delimiter">(</span><span class="var">parameters</span><span class="delimiter">)</span> <span class="var">body</span><span class="delimiter">;</span></span> can be used to initialize a variable to hold a function. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">VAR</span> <span class="var">fact</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;</span><span class="var">n</span><span class="delimiter">&gt;</span> <span class="delimiter">(</span>
+<span class="lineno">   2</span>    <span class="keyword">VAR</span> <span class="var">r</span> <span class="delimiter">&lt;-</span> 1<span class="delimiter">;</span>
+<span class="lineno">   3</span>    <span class="keyword">EVERY</span> <span class="var">r</span> <span class="delimiter">&lt;-</span> <span class="var">r</span> <span class="delimiter">*</span> 1<span class="symbol">:to</span><span class="delimiter">(</span><span class="var">n</span><span class="delimiter">);</span>
+<span class="lineno">   4</span>    <span class="keyword">RET</span> <span class="var">r</span><span class="delimiter">;</span>
+<span class="lineno">   5</span><span class="delimiter">);</span></div>
+
+can be written as
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">VAR</span> <span class="var">f</span><span class="delimiter">(</span><span class="var">n</span><span class="delimiter">)</span> <span class="delimiter">(</span>
+<span class="lineno">   2</span>    <span class="keyword">VAR</span> <span class="var">r</span> <span class="delimiter">&lt;-</span> 1<span class="delimiter">;</span>
+<span class="lineno">   3</span>    <span class="keyword">EVERY</span> <span class="var">r</span> <span class="delimiter">&lt;-</span> <span class="var">r</span> <span class="delimiter">*</span> 1<span class="symbol">:to</span><span class="delimiter">(</span><span class="var">n</span><span class="delimiter">);</span>
+<span class="lineno">   4</span>    <span class="keyword">RET</span> <span class="var">r</span><span class="delimiter">;</span>
+<span class="lineno">   5</span><span class="delimiter">);</span></div>
+
+<p>Constants can be declared in Wrapl using <span class="code"><span class="keyword">DEF</span></span> instead of <span class="code"><span class="keyword">VAR</span></span>. All constants must be given an initial value when declared, however a constant is assigned its initial value before any variables are initialized or any other expressions are evaluated in the same scope. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="var">Out</span><span class="symbol">:writes</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">,</span> <span class="var">x</span><span class="delimiter">,</span> <span class="literal">"\n"</span><span class="delimiter">);</span>
+<span class="lineno">   2</span><span class="keyword">DEF</span> <span class="var">x</span> <span class="delimiter">&lt;-</span> 200<span class="delimiter">;</span>
+<span class="lineno">   3</span><span class="var">Out</span><span class="symbol">:writes</span><span class="delimiter">(</span><span class="literal">"x = "</span><span class="delimiter">,</span> <span class="var">x</span><span class="delimiter">,</span> <span class="literal">"\n"</span><span class="delimiter">);</span></div>
+
+will output
+
+<div class="term">x = 200
+x = 200
+</div>
+
+</section>
+
+<h2><a class="prev" href="chapter6.html"><i class="fa fa-angle-left medium"></i></a>  <a class="prev" href="../tutorial.html"><i class="fa fa-angle-up medium"></i></a>  Navigate  <a class="next" href="chapter8.html"><i class="fa fa-angle-right medium"></i></a></h2></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Chapter_7">Chapter 7</a><ul><li><a href="#Modules">Modules</a><ul></ul></li><li><a href="#Variables_and_Constants">Variables and Constants</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+]<!-- INCLUDE overall_header.html -->
+
+<form action="{S_LOGIN_ACTION}" method="post" id="login" class="centred-form">
+<div class="panel">
+	<div class="content">
+		<h2><!-- IF LOGIN_EXPLAIN -->{LOGIN_EXPLAIN}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></h2>
+		
+		<fieldset><table>
+		<!-- IF LOGIN_ERROR --><tr><td>{LOGIN_ERROR}</td></tr><!-- ENDIF -->
+		<tr>
+			<td><label for="{USERNAME_CREDENTIAL}">{L_USERNAME}:</label></td>
+			<td><input type="text" tabindex="1" name="{USERNAME_CREDENTIAL}" id="{USERNAME_CREDENTIAL}" size="25" value="{USERNAME}" class="inputbox autowidth" /></td>
+		</tr>
+		<tr>
+			<td><label for="{PASSWORD_CREDENTIAL}">{L_PASSWORD}:</label></td>
+			<td><input type="password" tabindex="2" id="{PASSWORD_CREDENTIAL}" name="{PASSWORD_CREDENTIAL}" size="25" class="inputbox autowidth" /></td>
+		</tr>
+			<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->
+				<tr>
+				<!-- IF U_SEND_PASSWORD --><td><a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a></td><!-- ENDIF -->
+				<!-- IF U_RESEND_ACTIVATION --><td><a href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a></dd><!-- ENDIF -->
+				</tr>
+			<!-- ENDIF -->
+		
+		<!-- IF S_CONFIRM_CODE -->
+		<tr>
+			<td><label for="confirm_code">{L_CONFIRM_CODE}:</label><br /><span>{L_CONFIRM_CODE_EXPLAIN}</span></td>
+				<td><input type="hidden" name="confirm_id" value="{CONFIRM_ID}" />{CONFIRM_IMAGE}</td>
+				<td><input type="text" name="confirm_code" id="confirm_code" size="8" maxlength="8" tabindex="3" class="inputbox narrow" title="{L_CONFIRM_CODE}" /></td>
+		</tr>
+		<!-- ENDIF -->
+		
+		<!-- IF S_DISPLAY_FULL_LOGIN -->
+		<tr>
+			<!-- IF S_AUTOLOGIN_ENABLED --><td><label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}</label></td><!-- ENDIF -->
+		</tr>
+		<tr>
+			<td><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label></td>
+		</tr>
+		<!-- ENDIF -->
+		<tr>
+			<td colspan="2" align="center">{S_HIDDEN_FIELDS}<input type="submit" name="login" tabindex="6" value="{L_LOGIN}" class="button1" /></td>
+		</tr>
+	
+		</table></fieldset>
+	</div>
+</div>
+
+<!-- IF not S_ADMIN_AUTH and S_REGISTER_ENABLED -->
+	<div class="panel">
+		<div class="content">
+			<h2>{L_REGISTER}</h2>
+			<p>{L_LOGIN_INFO}</p>
+			<p class="centred">
+				<strong><a href="{U_TERMS_USE}">{L_TERMS_USE}</a> | <a href="{U_PRIVACY}">{L_PRIVACY}</a> | <a href="{U_REGISTER}" class="button2">{L_REGISTER}</a></strong>
+			</p>
+		</div>
+	</div>
+<!-- ENDIF -->
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

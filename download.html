@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>Download</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Source" data-spy="true" data-target="#side-menu"><h2>Source</h2>
+<section id="Download" data-spy="true" data-target="#side-menu"><h3>Download</h3>
+<p>The latest source release can be found <a href="/downloads/wrapl-unknown.tar.bz2">here</a>.</p>
+</section>
+<section id="SVN" data-spy="true" data-target="#side-menu"><h3>SVN</h3>
+<p>The Wrapl svn repository is hosted on Sourceforge.</p>
+<div class="term">svn co https://wrapl.svn.sourceforge.net/svnroot/wrapl/trunk wrapl 
+</div>
+</section>
+
+<section id="Required_Packages" data-spy="true" data-target="#side-menu"><h3>Required Packages</h3>
+<p>In order to build Wrapl/Riva from the source code, you will need the following software:</p>
+<ul>
+	<li><a href="http://omake.metaprl.org/">OMake</a> is the build system used to build everything in Wrapl/Riva.</li>
+	<li><a href="http://gcc.gnu.org/">GCC</a> is needed to compile the C/C++ code.</li>
+	<li><a href="http://nasm.sourceforge.net/">Nasm</a> or <a href="http://www.tortall.net/projects/yasm/">Yasm</a> is needed to assemble the assembly code.</li>
+	<li><a href="http://http://www.lua.org/">Lua</a> is needed:
+		<ul>
+			<li>The executable <span class="var">lua</span> is needed to generate the runtime assembler using <a href="http://luajit.org/dynasm.html">Dynasm</a>. The necessary Dynasm files are packaged in the Wrapl source.</li>
+			<li>The <span class="var">liblua</span> library is needed to build the <a href="/tools/rlink.html"><span class="var">rlink</span></a> linker.</li>
+		</ul>
+	</li>
+	<li><a href="http://www.gnu.org/software/gperf/">Gperf</a> is needed to generate parts of the Wrapl scanner.</li>
+	<li><a href="http://www.nongnu.org/confuse/">libConfuse</a> is used by <a href="/tools/riva.html"><span class="var">riva</span></a> to parse the configuration file.</li>
+	<li>You will need a version of <span class="var">m4</span> installed, in order to configure/build the garbage collector and <span class="var">GMP</span>.</li>
+	<li>The <a href="http://www.gnu.org/software/binutils/">binutils</a> development package is required, in particular <span class="var">libbfd</span> is needed for the linker.</li>
+</ul>
+</section>
+<section id="Automatically_Downloaded_Sources" data-spy="true" data-target="#side-menu"><h3>Automatically Downloaded Sources</h3>
+<p>The build process will automatically download, extract and build a number of third party libraries. If the required source directories are already present then they will be used (currently one can check the <span class="var">OMakefile</span>s to see which libraries are downloaded, this will be documented properly in the future). Note that any downloaded libraries are built only for use with Wrapl, and will not be installed system-wide.</p>
+<ul>
+	<li>The <a href="http://www.hpl.hp.com/personal/Hans_Boehm/gc/">Boehm-Demers-Weiser conservative garbage collector</a> is used as the garbage collector in Wrapl.</li>
+	<li><a href="http://gmplib.org/">GMP</a> is used for arbitrary precision integer/rational support.</li>
+	<li><a href="http://www.boost.org/">Boost</a> is used for statistical functions among other things.</li>
+	<li>The <a href="http://udis86.sourceforge.net/">Udis86</a> library is used by <a href="/tools/rlink.html"><span class="var">rlink</span></a> linker.</li>
+	<li>The <a href="http://igraph.sourceforge.net/">igraph library</a> is required to build the currently incomplete <a class="id" href="/doc/Agg/Graph.html">Agg.Graph</a>.</li>
+	<li>The <a href="http://www.astro.caltech.edu/~mcs/tecla/">Tecla</a> line-editing library is needed to build the <a class="id" href="/doc/Util/Tecla.html">Util.Tecla</a> module which provides line-editing to the <a href="tools/wrapl.html"><span class="var">wrapl</span></a> interpreter.</li>
+	<li>The <a href="http://www.fastcgi.com/drupal/node/5">FastCGI Development Kit</a> is required to build <a class="id" href="/doc/Web/FastCGI.html">Web.FastCGI</a> which can be used to write fastcgi applications in Wrapl.</li>
+</ul>
+</section>
+<section id="requirements2" data-spy="true" data-target="#side-menu"><h3><strike>Optional</strike> Required Libraries II</h3>
+<p>A number of modules have further dependancies. Since these modules are not necessary to run most Wrapl programs, these dependancies are not strictly required. However, the current build process assumes their presence and will fail if any of these are missing. Alternatively, the <span class="var">OMakefile</span>'s can be edited to comment out the relevant modules.</p>
+<ul>
+	<li><a href="http://expat.sourceforge.net/">Expat</a> is used to provide an Xml parsing module <a class="id" href="/doc/Xml/Parser.html">Xml.Parser</a>.</li>
+	<li><a href="http://www.laurikari.net/tre/">Tre</a> is used to provide a basic regular expression module <a class="id" href="/doc/Util/Regexp.html">Util.Regexp</a>.</li>
+	<li><a href="http://www.lysator.liu.se/~nisse/nettle/">Nettle</a> is used for the (currently inadequate) encryption/hashing modules <a class="id" href="/doc/Alg.html#*">Alg.*</a> and <a class="id" href="/doc/IO/Cipher.html">IO.Cipher</a>.</li>
+	<li>The <a href="http://www.mysql.com/">MySQL</a> client library is used by the <a class="id" href="/doc/DB/Mysql.html">DB.Mysql</a> module.</li>
+	<li>The build process can, with the correct arguments to Omake, generate bindings to <a href="http://www.gtk.org/">GTK+</a> and numerous other <span class="var">Glib</span> based libraries. This is described in full <a href="gtk-bindings.html">here</a>.</li>
+</ul>
+</section>
+<section id="Building" data-spy="true" data-target="#side-menu"><h3>Building</h3>
+<p>In theory, building Wrapl/Riva should be as simple as:</p>
+<ol>
+	<li>Ensuring the necessary <a href="#requirements">requirements</a> are installed.</li>
+	<li>Downloading and extracting the <a href="#download">source code</a>.</li>
+	<li>Changing to the <span class="var">dev</span> directory and running <span class="var">omake</span>.</li>
+	<li>Creating the file <span class="var">bin/riva.conf</span>.</li>
+	<li>Adding the <span class="var">bin</span> directory to the path.</li>
+</ol>
+<p>However, it may be easier to download a prebuilt <a href="#binaries">binary package</a>.</p>
+</section>
+</section><section id="Binaries" data-spy="true" data-target="#side-menu"><h2>Binaries</h2>
+<section id="Ubuntu/Debian" data-spy="true" data-target="#side-menu"><h3>Ubuntu/Debian</h3>
+<p>A prebuilt Ubuntu/Debian package (for x86 only) can be downloaded <a href="/downloads/wrapl-unknown.deb">here</a>. Note that several modules will not work if the required libraries are not present:</p>
+<ul>
+	<li><a class="id" href="/doc/Alg.html#*">Alg.*</a> and <a class="id" href="/doc/IO/Cipher.html">IO.Cipher</a> require <span class="var">libnettle2</span>.</li>
+	<li><a class="id" href="/doc/DB/Mysql.html">DB.Mysql</a> requires <span class="var">libmysqlclient15off</span>.</li>
+	<li><a class="id" href="/doc/Util/Regexp.html">Util.Regexp</a> requires <span class="var">libtre4</span>.</li>
+	<li><a class="id" href="/doc/Xml/Parser.html">Xml.Parser</a> requires <span class="var">libexpat1</span>.</li>
+	<li>The various <a class="id" href="/doc/Gtk.html#*">Gtk.*</a> <a href="gtk-bindings.html">bindings</a> require the relevant libraries to be installed.</li>
+</ul>
+<p>A somewhat incomplete but still functional editor for Wrapl can be downloaded <a href="/downloads/wredit-unknown.deb">here</a>
+</section>
+
+<section id="Windows" data-spy="true" data-target="#side-menu"><h3>Windows</h3>
+<p>An experimental prebuilt Windows package built with <a href="http://www.cygwin.com/">Cygwin</a> can be downloaded <a href="/downloads/wrapl-unknown.exe">here</a>. This package does not provide the <a class="id" href="/doc/Gtk.html">Gtk</a> modules, since the native GTK+ libraries on Windows are built with <a href="http://www.mingw.org">Mingw</a>.</p>
+</section>
+
+</section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Source">Source</a><ul><li><a href="#Download">Download</a><ul></ul></li><li><a href="#SVN">SVN</a><ul></ul></li><li><a href="#Required_Packages">Required Packages</a><ul></ul></li><li><a href="#Automatically_Downloaded_Sources">Automatically Downloaded Sources</a><ul></ul></li><li><a href="#requirements2"><strike>Optional</strike> Required Libraries II</a><ul></ul></li><li><a href="#Building">Building</a><ul></ul></li></ul></li><li><a href="#Binaries">Binaries</a><ul><li><a href="#Ubuntu/Debian">Ubuntu/Debian</a><ul></ul></li><li><a href="#Windows">Windows</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

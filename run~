@@ -1,0 +1,3 @@
+rsync -r -t -v --progress -z /home/raja/Work/Wrapl/web-sf/ rajamukherji,wrapl@shell.sourceforge.net:/home/project-web/wrapl/htdocs
+
+#sudo bozohttpd -b -I 81 -i 0.0.0.0 -C .php /usr/bin/php-cgi ../../web

@@ -1,0 +1,7 @@
+MOD Hello;
+
+IMP IO.Terminal USE Out;
+
+Out:write("Hello world!\n");
+
+END Hello.

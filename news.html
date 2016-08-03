@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>News</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="News" data-spy="true" data-target="#side-menu"><h2>News</h2>
+<section id="n14-06-01" data-spy="true" data-target="#side-menu"><h3>01<sup>th</sup> Jun 2014</h3>Finally, an update!
+
+<ul>
+	<li>Wrapl has been updated with numerous new bindings and several enhancements to the language itself.</li>
+</ul>
+
+</section><section id="n11-10-08" data-spy="true" data-target="#side-menu"><h3>08<sup>th</sup> Oct 2011</h3><ul>
+	<li>Updated the website (see footer for template information).</li>
+</ul>
+</section><section id="n10-05-30" data-spy="true" data-target="#side-menu"><h3>30<sup>th</sup> May 2010</h3><ul>
+	<li>Added various new methods and modules.</li>
+	<li>Updated the Windows port.</li>
+</ul>
+</section><section id="n10-02-25" data-spy="true" data-target="#side-menu"><h3>25<sup>th</sup> Feb 2010</h3><ul>
+	<li>Finally uploaded the updated website to Sourceforge.</li>
+	<li>Released version 1.7 of Wrapl, with numerous improvements and bug fixes.</li>
+</ul>
+</section><section id="n09-12-15" data-spy="true" data-target="#side-menu"><h3>15<sup>th</sup> Dec 2009</h3><ul>
+	<li>Text sections in <a href="/tools/riva.html"><span class="literal">*.riva</span></a> files are now relocated when first used. This prevents loading modules referred to by methods which are never invoked. Added the option <span class="literal">-nodelay</span> to <a href="/tools/riva.html"><span class="var">riva</span></a> to use the original behaviour.</li>
+</ul>
+</section><section id="n09-11-30" data-spy="true" data-target="#side-menu"><h3>30<sup>th</sup> Nov 2009</h3><ul>
+	<li>Changed the versioning scheme for Wrapl releases. Releases are now named <span class="code"><span class="var">major</span><span class="delimiter">.</span><span class="var">minor</span><span class="delimiter">.</span><span class="var">revision</span></span> where <span class="var">revision</span> is the svn revision.</li>
+	<li>The <a class="id" href="/doc/Gtk.html">Gtk</a> bindings have been updated to support threaded GTK+ applications.</li>
+	<li>The <a href="/tools/wredit.html">editor</a> has received a lot of work.</li>
+</ul>
+</section><section id="n09-08-27" data-spy="true" data-target="#side-menu"><h3>27<sup>th</sup> Aug 2009</h3>Version 1.2.7 has been released.
+<ul>
+	<li>The <a href="/tools/wrapl.html">interactive interpreter</a> now intercepts <span class="term">Ctrl+C</span> to break out of loops.</li>
+	<li>The <a href="/doc/Wrapl/Loader.html">Wrapl loader</a> now understands unicode replacements for some keywords/tokens.
+<table class="ink-table">
+<tr><th>Keyword/Token</th><th>Unicode Equivalent</th><th>Shortcut</th></tr>
+<tr><td><span class="code"><span class="keyword">IN</span></span></td><td><span class="literal">∈</span></td><td><span class="literal">&lt;</span>TAB</td></tr>
+<tr><td><span class="code"><span class="delimiter">&lt;-</span></span></td><td><span class="literal">←</span></td><td><span class="literal">&lt;-</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">~=</span></span></td><td><span class="literal">≠</span></td><td><span class="literal">=/</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">~==</span></span></td><td><span class="literal">≢</span></td><td><span class="literal">==/</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">==</span></span></td><td><span class="literal">≡</span></td><td><span class="literal">==</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">&lt;=</span></span></td><td><span class="literal">⩽</span></td><td><span class="literal">&lt;=</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">&gt;=</span></span></td><td><span class="literal">⩾</span></td><td><span class="literal">&gt;=</span></td></tr>
+<tr><td><span class="code"><span class="keyword">NIL</span></span></td><td><span class="literal">∅</span></td><td><span class="literal">0</span>TAB TAB</td></tr>
+<tr><td><span class="code"><span class="delimiter">*</span></span></td><td><span class="literal">×</span></td><td><span class="literal">*</span>TAB</td></tr>
+<tr><td><span class="code"><span class="delimiter">/</span></span></td><td><span class="literal">÷</span></td><td><span class="literal">/</span>TAB</td></tr>
+<tr><td><span class="code"><span class="delimiter">||</span></span></td><td><span class="literal">∥</span></td><td><span class="literal">||</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">=&gt;</span></span></td><td><span class="literal">⇒</span></td><td><span class="literal">=&gt;</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">//</span></span></td><td><span class="literal">↷</span></td><td><span class="literal">//</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">..</span></span></td><td><span class="literal">…</span></td><td><span class="literal">..</span></td></tr>
+<tr><td><span class="code"><span class="delimiter">-&gt;</span></span></td><td><span class="literal">→</span></td><td><span class="literal">-&gt;</span></td></tr>
+</table>
+	</li>
+	<li>A basic source editor has been written in Wrapl using the GTK+ bindings. It includes syntax highlighting (using GtkSourceview), autocompletion and automatic conversion of certain character sequences into unicode.</li>
+	<li>The semantics of a conditional expression without a success clause has been changed.</li>
+</ul>
+</section><section id="n08-05-23" data-spy="true" data-target="#side-menu"><h3>23<sup>th</sup> May 2008</h3>Switched to a new web layout, using static html pages generated by Wrapl scripts.
+</section>
+</section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#News">News</a><ul><li><a href="#n14-06-01">01<sup>th</sup> Jun 2014</a><ul></ul></li><li><a href="#n11-10-08">08<sup>th</sup> Oct 2011</a><ul></ul></li><li><a href="#n10-05-30">30<sup>th</sup> May 2010</a><ul></ul></li><li><a href="#n10-02-25">25<sup>th</sup> Feb 2010</a><ul></ul></li><li><a href="#n09-12-15">15<sup>th</sup> Dec 2009</a><ul></ul></li><li><a href="#n09-11-30">30<sup>th</sup> Nov 2009</a><ul></ul></li><li><a href="#n09-08-27">27<sup>th</sup> Aug 2009</a><ul></ul></li><li><a href="#n08-05-23">23<sup>th</sup> May 2008</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>Chapter 6</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Chapter_6" data-spy="true" data-target="#side-menu"><h2><a class="prev" href="chapter5.html"><i class="fa fa-angle-left medium"></i></a>  <a class="prev" href="../tutorial.html"><i class="fa fa-angle-up medium"></i></a>  Chapter 6  <a class="next" href="chapter7.html"><i class="fa fa-angle-right medium"></i></a></h2>
+<section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3>
+
+<h4 id="Lists">Lists</h4>
+<p>We have seen how the expression <span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span> returns a list of all the values produced by <span class="var">expr</span>. Lists in Wrapl can contain any number of elements, each of which can have any type including other lists or compound types. Lists can be written between square brackets <span class="code"><span class="delimiter">[]</span></span> and separated by commas.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> [1, 2, 3, 4];
+[1, 2, 3, 4]
+<span class="prompt">--&gt;</span> [0, "a", [9]];
+[0, "a", [9]]
+</div>
+
+<p>Lists are indexed using <span class="code"><span class="delimiter">[]</span></span>, the first element having index <span class="code">1</span> with the last having index <span class="code"><span class="var">list</span><span class="symbol">:length</span></span>. Like strings, lists can be indexed with negative indices, the first element having index <span class="code"><span class="delimiter">-</span><span class="var">list</span><span class="symbol">:length</span></span> with the last having index <span class="code"><span class="delimiter">-</span>1</span>. Unlike strings, indexing a list returns an assignable reference.</p>
+
+
+
+<p>Wrapl supports object-oriented programming (OOP) and provides a class-based object model; i.e. there are classes, called types in Wrapl, and instances of those classes, called objects. Every value in Wrapl is an object and therefore is an instance of some type. Types may inherit from any number of other types (multiple inheritance) and in turn may be extended by any number of subtypes.</p>
+
+Wrapl provides a number of predefined types, some of which are listed in the table below.
+<table class="ink-table">
+<tr><th>Type</th><th>Description</th><th>Representation</th></tr>
+<tr><td><a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></td><td>The base type of all other objects.</td><td><a class="id" href="/doc/Std/Object.html#Nil">NIL</a> is the only notable instance.</td></tr>
+<tr><td><a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a></td><td>The type of all types.</td><td><span class="code"><span class="delimiter">&lt;[</span><span class="var">parent</span><span class="delimiter">,</span> <span class="delimiter">...]</span><span class="var">field</span><span class="delimiter">,</span> <span class="delimiter">...&gt;</span></span>.</td></tr>
+<tr><td><a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a></td><td>Integer values of unlimited size.</td><td>Any number of digits.</td></tr>
+<tr><td><a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a></td><td>Limited (64bit) precision floating point numbers.</td><td>Any number of digits containing a decimal point and/or exponent.</td></tr>
+<tr><td><a class="id" href="/doc/Std/String.html#T">Std.String.T</a></td><td>Immutable strings.</td><td>Characters enclosed in quotes, <span class="code"><span class="literal">""</span></span>. May contain escaped control characters.</td></tr>
+<tr><td><a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></td><td>The base type of all functions.</td><td><span class="code"><span class="delimiter">&lt;</span><span class="var">parameters</span><span class="delimiter">&gt;</span> <span class="var">expression</span></span>.</td></tr>
+<tr><td><a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></td><td>Multiple dispatch functions.</td><td><span class="code"><span class="symbol">:identifier</span></span> or <span class="code"><span class="symbol">:</span><span class="literal">"string"</span></span>.</td></tr>
+<tr><td><a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></td><td>Mutable lists of objects.</td><td><span class="code"><span class="delimiter">[</span><span class="var">expr</span><span class="delimiter">,...]</span></span>.</td></tr>
+<tr><td><a class="id" href="/doc/Agg/Table.html#T">Agg.Table.T</a></td><td>Key/Value maps.</td><td><span class="code"><span class="delimiter">{</span><span class="var">expr</span> <span class="keyword">IS</span> <span class="var">expr</span><span class="delimiter">,</span> <span class="delimiter">...}</span></span>.</td></tr>
+</table>
+
+<p>New types can be created in Wrapl using the syntax <span class="code"><span class="delimiter">&lt;[</span><span class="var">parent</span><span class="delimiter">,</span> <span class="delimiter">...]</span><span class="var">field</span><span class="delimiter">,</span> <span class="delimiter">...&gt;</span></span>. A new instance of a type can be created by calling the type like a function.</p>
+
+<p>Each field should be an identifier or a symbol. This is because fields in an object are accessed by calling a symbol with the object as the first parameter. If the field is supplied as an identifier, then the symbol with that name is used to access the field, however if a symbol is supplied directly, then that symbol is used. Note that the expression <span class="code"><span class="var">t</span><span class="symbol">:x</span></span> is equivalent to <span class="code"><span class="symbol">:x</span><span class="delimiter">(</span><span class="var">t</span><span class="delimiter">)</span></span>. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">DEF</span> <span class="var">T</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;[]</span> <span class="var">x</span><span class="delimiter">,</span> <span class="symbol">:</span><span class="literal">":)"</span><span class="delimiter">&gt;;</span>
+<span class="lineno">   2</span> 
+<span class="lineno">   3</span><span class="keyword">VAR</span> <span class="var">t</span> <span class="delimiter">&lt;-</span> <span class="var">T</span><span class="delimiter">();</span>
+<span class="lineno">   4</span><span class="var">t</span><span class="symbol">:x</span> <span class="delimiter">&lt;-</span> 100<span class="delimiter">;</span>
+<span class="lineno">   5</span><span class="var">t</span><span class="symbol">:</span><span class="literal">":)"</span> <span class="delimiter">&lt;-</span> 200<span class="delimiter">;</span></div>
+
+<p>Each parent should evaluate to a type. Any number of parents, including none, is allowed. All types implicitly inherit from <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a>. A type will inherit all fields from each of its parents. If a same field is defined in more than one parent, then only one instance of the field will be allocated. Hence multiple inheritance should be used carefully (as in any language which supports it).</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">DEF</span> <span class="var">T</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;[]</span> <span class="var">x</span><span class="delimiter">&gt;;</span>
+<span class="lineno">   2</span><span class="keyword">DEF</span> <span class="var">U</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;[</span><span class="var">T</span><span class="delimiter">]</span> <span class="var">y</span><span class="delimiter">&gt;;</span>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span><span class="keyword">VAR</span> <span class="var">u</span> <span class="delimiter">&lt;-</span> <span class="var">U</span><span class="delimiter">();</span>
+<span class="lineno">   5</span><span class="var">u</span><span class="symbol">:x</span> <span class="delimiter">&lt;-</span> 100<span class="delimiter">;</span>
+<span class="lineno">   6</span><span class="var">u</span><span class="symbol">:y</span> <span class="delimiter">&lt;-</span> 200<span class="delimiter">;</span></div>
+
+</section>
+
+<section id="Multiple_Dispatch" data-spy="true" data-target="#side-menu"><h3>Multiple Dispatch</h3>
+
+<p>Being object-oriented, Wrapl provides methods; functions whose behaviour depend on the types of their arguments. In most OOP languages, methods depend only on the type of the first argument (which is usually written preceding the rest of the function call). However in Wrapl, methods depend on the types and values of all arguments.</p>
+
+<p>Methods in Wrapl are stored in symbols; a colon <span class="code"><span class="symbol">:</span></span> followed immediately by either an identifier or a string. For example, <span class="code"><span class="symbol">:x</span></span>, <span class="code"><span class="symbol">:write</span></span> and <span class="code"><span class="symbol">:</span><span class="literal">"*"</span></span> are all symbols. A symbol represented by an identifier is the same as the symbol represented by the equivalent string. Thus <span class="code"><span class="symbol">:write</span></span> and <span class="code"><span class="symbol">:</span><span class="literal">"write"</span></span> represent the same symbol. In addition, any symbols represented by the same string are the same. Symbols are created implicitly when they are first used.</p>
+
+<p>Each symbol has a set of signatures and corresponding functions, where each signature is a list of types or values. When a symbol is called with arguments, the types and values of the arguments are checked against the various signatures and the function corresponding to the closest matching signature is called with the same arguments. If no signature matches the call, then a <a class="id" href="/doc/Std/Symbol.html#NoMethodMessageT">Std.Symbol.NoMethodMessageT</a> message is sent. When calling a symbol, the first argument can be placed before the symbol for convenience. For example: <span class="code"><span class="var">t</span><span class="symbol">:x</span></span> is equivalent to <span class="code"><span class="symbol">:x</span><span class="delimiter">(</span><span class="var">t</span><span class="delimiter">)</span></span> and <span class="code"><span class="var">t</span><span class="symbol">:m</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">,</span> <span class="var">c</span><span class="delimiter">)</span></span> is equivalent to <span class="code"><span class="symbol">:m</span><span class="delimiter">(</span><span class="var">t</span><span class="delimiter">,</span> <span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">,</span> <span class="var">c</span><span class="delimiter">)</span></span>.</p>
+
+<p>To add a new signature and corresponding function, the syntax <span class="code"><span class="keyword">TO</span> <span class="var">symbol</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">function</span></span> is used. Here a signature looks like a list of parameters, each of which can be followed by either <span class="code"><span class="delimiter">@</span> <span class="var">type</span></span> or <span class="code"><span class="delimiter">=</span> <span class="var">value</span></span>. If <span class="code"><span class="delimiter">@</span> <span class="var">type</span></span> is present then the signature matches a call if the type of the corresponding argument is either <span class="code"><span class="var">type</span></span> or a subtype of <span class="code"><span class="var">type</span></span>. If <span class="code"><span class="delimiter">=</span> <span class="var">value</span></span> is present then the signature matches a call if the corresponding argument is the same object as <span class="code"><span class="var">value</span></span> (not just equal in value). If neither is present, then the signature matches a call if any argument is supplied for that parameter. The actual names of the parameters are ignored.</p>
+
+<p>The syntax <span class="code"><span class="keyword">TO</span> <span class="var">symbol</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="var">expression</span></span> is shorthand for <span class="code"><span class="keyword">TO</span> <span class="var">symbol</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="delimiter">&lt;</span><span class="var">parameters</span><span class="delimiter">&gt;</span> <span class="var">expression</span></span> where the parameter names are taken from the signature.</p>
+
+<p>Note that <span class="code"><span class="keyword">TO</span></span> expressions are translated into calls to <a class="id" href="/doc/Std/Symbol.html#Set">Std.Symbol.Set</a>. Hence they may occur in other expressions, for example within a conditional expression. Also, the signature and corresponding function will not work until after the call to <a class="id" href="/doc/Std/Symbol.html#Set">Std.Symbol.Set</a> has returned, allowing signature/function pairs to be temporarily overridden, or even prevent them being overridden by calling the symbol with the correct arguments and checking for a <a class="id" href="/doc/Std/Symbol.html#NoMethodMessageT">Std.Symbol.NoMethodMessageT</a> message.</p>
+
+Example:
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">DEF</span> <span class="var">T</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;[]&gt;;</span>
+<span class="lineno">   2</span><span class="keyword">DEF</span> <span class="var">U</span> <span class="delimiter">&lt;-</span> <span class="delimiter">&lt;[</span><span class="var">T</span><span class="delimiter">]&gt;;</span>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span><span class="keyword">TO</span> <span class="symbol">:a</span><span class="delimiter">(</span><span class="var">t</span><span class="delimiter">@</span><span class="var">T</span><span class="delimiter">)</span> <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">":a(t@T)"</span><span class="delimiter">);</span>
+<span class="lineno">   5</span><span class="keyword">TO</span> <span class="symbol">:a</span><span class="delimiter">(</span><span class="var">u</span><span class="delimiter">@</span><span class="var">U</span><span class="delimiter">)</span> <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">":a(u@U)"</span><span class="delimiter">);</span>
+<span class="lineno">   6</span><span class="keyword">TO</span> <span class="symbol">:b</span><span class="delimiter">(</span><span class="var">t</span><span class="delimiter">@</span><span class="var">T</span><span class="delimiter">)</span> <span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">":b(t@T)"</span><span class="delimiter">)</span><span class="symbol">:</span>
+<span class="lineno">   7</span> 
+<span class="lineno">   8</span><span class="keyword">VAR</span> <span class="var">t</span> <span class="delimiter">&lt;-</span> <span class="var">T</span><span class="delimiter">(),</span> <span class="var">u</span> <span class="delimiter">&lt;-</span> <span class="var">U</span><span class="delimiter">();</span>
+<span class="lineno">   9</span> 
+<span class="lineno">  10</span><span class="var">t</span><span class="symbol">:a</span><span class="delimiter">;</span>    <span class="comment">-- writes ":a(t@T)"</span>
+<span class="lineno">  11</span><span class="var">t</span><span class="symbol">:b</span><span class="delimiter">;</span>    <span class="comment">-- writes ":b(t@T)"</span>
+<span class="lineno">  12</span><span class="var">u</span><span class="symbol">:a</span><span class="delimiter">;</span>    <span class="comment">-- writes ":a(u@U)"</span>
+<span class="lineno">  13</span><span class="var">u</span><span class="symbol">:b</span><span class="delimiter">;</span>    <span class="comment">-- writes ":b(t@T)"</span>
+<span class="lineno">  14</span><span class="var">t</span><span class="symbol">:c</span><span class="delimiter">;</span>    <span class="comment">-- sends a Symbol.NoMethodMessageT message</span></div>
+
+</section>
+
+<h2><a class="prev" href="chapter5.html"><i class="fa fa-angle-left medium"></i></a>  <a class="prev" href="../tutorial.html"><i class="fa fa-angle-up medium"></i></a>  Navigate  <a class="next" href="chapter7.html"><i class="fa fa-angle-right medium"></i></a></h2></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Chapter_6">Chapter 6</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Multiple_Dispatch">Multiple Dispatch</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

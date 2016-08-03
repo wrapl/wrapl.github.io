@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+
+	<title>Agg.Table</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/doc.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Table" data-spy="true" data-target="#side-menu"><h2><a href="/doc.html">Libraries</a>  <a class="id" href="/doc/Agg.html">Agg</a><span class="code">.</span><a class="id" href="/doc/Agg/Table.html">Table</a></h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+ A table of Key/Value pairs<br></br>
+	</div><h4 id="NodeType"><span class="code">NodeType</span></h4><div class="comment">
+ A single Key/Value pair<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Collect"><span class="code">Collect<span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">args...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns a table consisting of the values returned by <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">args</span><span class="delimiter">)</span></span> as keys (and <span class="code"><a class="id" href="/doc/Std/Object.html#Nil">NIL</a></span> as each Value).<br></br>
+	</div><h4 id="Make"><span class="code">Make<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+ Returns a new table with the arguments taken as alternating Key/Value pairs.<br></br>
+	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">comp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a> <span class="delimiter">=</span> <a class="id" href="#:"?"">:"?"</a><span class="delimiter">,</span> <span class="var">Hash</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a> <span class="delimiter">=</span> <a class="id" href="#:"#"">:"#"</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns a new table with comparison function <span class="var">comp</span> and Hash function <span class="var">Hash</span>.<br></br>
+ <span class="code"><span class="var">comp</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">)</span></span> should return <span class="code"><span class="delimiter">-</span>1</span>, <span class="code">0</span> or <span class="code"><span class="delimiter">-</span>1</span> if <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;</span> <span class="var">b</span></span>, <span class="code"><span class="var">a</span> <span class="delimiter">=</span> <span class="var">b</span></span> or <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">gt</span><span class="delimiter">;</span> <span class="var">b</span></span> respectively.<br></br>
+ <span class="code"><span class="var">Hash</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">)</span></span> should return a <span class="code"><a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span>.<br></br>
+	</div><h4 id="NewIdentity"><span class="code">NewIdentity<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+ Returns a new table in which two keys are the same only if they are the same object.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""*""><span class="code"><span class="symbol">:</span><span class="literal">"*"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns the intersection of <span class="var">a</span> and <span class="var">b</span>, i.e. those <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs of <span class="var">a</span> where <span class="var">Key</span> is in <span class="var">b</span>.<br></br>
+	</div><h4 id=""+""><span class="code"><span class="symbol">:</span><span class="literal">"+"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns the union of <span class="var">a</span> and <span class="var">b</span>. If a Key exists in both <span class="var">a</span> and <span class="var">b</span> then the Value is taken from <span class="var">b</span>.<br></br>
+	</div><h4 id=""-""><span class="code"><span class="symbol">:</span><span class="literal">"-"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns the difference of <span class="var">a</span> and <span class="var">b</span>, i.e. those <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs of <span class="var">a</span> where <span class="var">Key</span> is not in <span class="var">b</span>.<br></br>
+	</div><h4 id="".""><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id=""=""><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/ObjectTable.html#T">Agg.ObjectTable.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="Hash"><span class="code"><span class="symbol">:Hash</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></span></h4><div class="comment">
+		
+ Returns the Hash function used in <span class="var">t</span>.<br></br>
+	</div><h4 id=""[]""><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+ Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+ If <span class="var">Key</span> is not present, a new pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span> is created and <span class="var">default</span> is returned.<br></br>
+	</div><h4 id=""[]""><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+ Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+	</div><h4 id="check"><span class="code"><span class="symbol">:check</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+ Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+ If <span class="var">Key</span> is not present, a new pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span> is created and the call fails.<br></br>
+	</div><h4 id="compare"><span class="code"><span class="symbol">:compare</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></span></h4><div class="comment">
+		
+ Returns the comparison function used in <span class="var">t</span>.<br></br>
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+ Returns a shallow copy of <span class="var">t</span><br></br>
+	</div><h4 id="deffun"><span class="code"><span class="symbol">:deffun</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+ Sets the default function to create a Value when a Key is not present<br></br>
+	</div><h4 id="defval"><span class="code"><span class="symbol">:defval</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+ Sets the default Value to return when a Key is not present<br></br>
+	</div><h4 id="delete"><span class="code"><span class="symbol">:delete</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Removes the <span class="var">Key</span> from <span class="var">t</span>.<br></br>
+	</div><h4 id="empty"><span class="code"><span class="symbol">:empty</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+ Removes all entries from <span class="var">t</span> and returns it.<br></br>
+	</div><h4 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+ Generates the all keys in <span class="var">table</span> which has Value <span class="var">Value</span>.<br></br>
+	</div><h4 id="in"><span class="code"><span class="symbol">:in</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+ Returns <span class="var">Key</span> if it is a Key in <span class="var">table</span>, fails otherwise.<br></br>
+	</div><h4 id="insert"><span class="code"><span class="symbol">:insert</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="items"><span class="code"><span class="symbol">:items</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h4><div class="comment">
+		
+ Generates the <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs in <span class="var">t</span>.<br></br>
+	</div><h4 id="key"><span class="code"><span class="symbol">:key</span><span class="delimiter">(</span><span class="var">Node</span> <span class="delimiter">@</span> <a class="id" href="#NodeType">NodeType</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+ Returns <span class="var">Key</span> from a <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair.<br></br>
+	</div><h4 id="keys"><span class="code"><span class="symbol">:keys</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+value+<br></br>
+ Generates the keys in <span class="var">t</span> while assigning the corresponding value to <span class="var">value</span>.<br></br>
+	</div><h4 id="keys"><span class="code"><span class="symbol">:keys</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+ Generates the keys in <span class="var">t</span>.<br></br>
+	</div><h4 id="list"><span class="code"><span class="symbol">:list</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns the list <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> running over all pairs in <span class="var">t</span>.<br></br>
+	</div><h4 id="loop"><span class="code"><span class="symbol">:loop</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key<span class="delimiter">+</span></span><span class="delimiter">,</span> <span class="var">Value<span class="delimiter">+</span></span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+ For each <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> in <span class="var">t</span>, generates <span class="code"><a class="id" href="/doc/Std/Object.html#Nil">NIL</a></span> after assigning <span class="var">Key</span> and <span class="var">Value</span>.<br></br>
+	</div><h4 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Returns a copy of <span class="var">t</span> with the same keys, but with values returned by calling <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span><br></br>
+	</div><h4 id="missing"><span class="code"><span class="symbol">:missing</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+ If <span class="var">Key</span> is present in <span class="var">t</span> then fail, after assigning the current Value to <span class="var">var</span> if provided.<br></br>
+ Otherwise, inserts the pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="keyword">NIL</span><span class="delimiter">)</span></span> into <span class="var">t</span> and returns an assignable reference.<br></br>
+	</div><h4 id="modify"><span class="code"><span class="symbol">:modify</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">mod</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+ Modifies the Value associated with <span class="var">Key</span>, <span class="code"><span class="var">t</span><span class="delimiter">[</span><span class="var">Key</span><span class="delimiter">]</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;-</span> <span class="var">mod</span><span class="delimiter">($)</span></span>.<br></br>
+ Uses the default Value of <span class="var">t</span> if <span class="var">Key</span> is not present and a default has been set.<br></br>
+	</div><h4 id="newv"><span class="code"><span class="symbol">:newv</span><span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a><span class="delimiter">,</span> <span class="var">fields</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+ Creates a new instance <span class="var">instance</span> of <span class="var">type</span> and for each <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair in <span class="var">fields</span>, sets <span class="code"><span class="var">Key</span><span class="delimiter">(</span><span class="var">instance</span><span class="delimiter">)</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;-</span> <span class="var">Value</span></span>. Returns <span class="var">instance</span>.<br></br>
+ Each <span class="var">Key</span> should be a <span class="code"><a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span>.<br></br>
+	</div><h4 id="remove"><span class="code"><span class="symbol">:remove</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Removes the first <span class="var">Key</span> found with Value <span class="var">Value</span>.<br></br>
+	</div><h4 id="remove_all"><span class="code"><span class="symbol">:remove_all</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Removes the first <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> succeeds.<br></br>
+	</div><h4 id="remove_if"><span class="code"><span class="symbol">:remove_if</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+ Removes the first <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> succeeds.<br></br>
+	</div><h4 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+ Returns the number of entries in <span class="var">t</span>.<br></br>
+	</div><h4 id="value"><span class="code"><span class="symbol">:value</span><span class="delimiter">(</span><span class="var">Node</span> <span class="delimiter">@</span> <a class="id" href="#NodeType">NodeType</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+ Returns <span class="var">Value</span> from a <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair.<br></br>
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key<span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+ Generates the values in <span class="var">t</span> while assigning the corresponding key to <span class="var">key</span>.<br></br>
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+ Generates the values in <span class="var">t</span>.<br></br>
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Table">Table</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/*#############################################################
+Name: Shades of Gray
+Date: 2006-11-05
+Description: Monochrome, lightweight and totally liquid. Comes with three different layouts.
+Author: Viktor Persson
+URL: http://arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* standard elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {text-decoration: none;}
+
+body {
+	margin: 0pt 5%;
+	background: #111 url(img/bg.jpg) repeat-y center top;
+	color: #BBB;
+	font: normal 0.9em "Lucida Sans Unicode",sans-serif;
+}
+
+p,ul,ol {
+	font-size: 1em;
+	padding-bottom: 1em;
+	padding-left: 4px;
+}
+
+code {
+	background: #444;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 12px;
+	overflow: auto;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+img {border: none;}
+
+ul,ol {margin-left: 2em;}
+h1 {font: normal 1.6em sans-serif;}
+
+/* misc */
+.clearer {clear: both;}
+.stripes {
+	background: #333 url(img/stripe.gif);
+	height: 6px;
+}
+.left {float: left;}
+.right {float: right;}
+
+/* header */
+.header {
+	background: #111;
+	border-bottom: 1px solid #333;
+	font: normal 2em sans-serif;
+	height: 60px;
+}
+.header a {
+	color: #888;
+	display: block;
+	line-height: 120px;
+	text-decoration: none;
+	width: 100%;
+}
+.header span {padding-left: 32px;}
+.header a:hover {
+	background: #191919;
+	color: #BBB;
+}
+.header img {
+	margin-top: 5px;
+	margin-left: 5px;
+	vertical-align:text-bottom;
+	margin-right:20%;
+}
+
+/* structure */
+.container {
+	border: 3px solid #444;
+	border-top: none;
+}
+
+.main {
+	background: #303030;
+	border-bottom: 1px solid #2A2A2A;
+	border-left: 1px solid #2A2A2A;
+}
+.main .left {width: 82%;}
+.main .right {width: 18%;}
+
+.content {
+	border-left: 1px solid #444;
+	border-top: 1px solid #444;
+	padding: 16px;
+}
+
+/* content elements */
+.content h1 {
+	text-align: center;
+	background: url(img/bgh1.gif) repeat-x left bottom;
+	color: #EEE;
+	margin-bottom: 10px;
+	padding: 6px 0 4px;
+}
+.content h2 {
+	font: bold 1.2em Verdana,sans-serif;
+	padding-left: 4px;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+	background-color: #333;
+	border: thin inset #333;
+}
+.content a {
+	color: #999;
+	text-decoration: underline;
+}
+.content a:hover {color: #CCC;}
+.content .descr {margin-bottom: 5px;}
+.content h1 img {
+	width: 1em;
+	height: 1em;
+}
+.content h1 .prev {
+	float: left;
+}
+.content h1 .next {
+	float: right;
+}
+
+.content .divider {
+	visibility: hidden;
+}
+
+/* navigation */
+.nav {background: #191919 url(img/nav.gif);}
+.nav a {
+	background: #191919 url(img/nav.gif);
+	border-right: 1px solid #161616;
+	color: #CCC;
+	float: left;
+	font: bold 1em Verdana,sans-serif;
+	line-height: 21px;
+	padding: 0 20px;
+}
+.nav a:hover {
+	background: #191919 url(img/nav_hover.gif);
+}
+
+.subnav ul {
+	padding:3px;
+	margin-bottom:4px;
+	list-style-type:none;
+}
+.subnav ul ul {
+	padding-top:0;
+/*	background-color:#E0D19F;*/
+	border:thin gray dotted;
+}
+.subnav ul ul ul {
+	padding:0;
+	margin:0;
+	border:none;
+}
+.subnav li {
+	padding:2px;
+	font-size:small;
+	overflow:auto;
+}
+.subnav ul li {
+	margin-top:0;
+	padding-top:1px;
+}
+.subnav a {
+	text-decoration:none;
+}
+.subnav a:hover, #mainmenu a:focus {
+	color:red;
+	border-bottom:thin dotted red;
+}
+.subnav h1 {
+	text-align:center;
+	font-size:small;
+	font-weight:bold;
+	margin:0px;
+}
+.subnav h1 a {
+}
+.subnav h2 {
+	padding-left:3px;
+	font-size:small;
+	font-weight:bold;
+	margin-bottom:0;
+/*
+	color:yellow;
+	background-color:#908C7A;
+	border:thin gray outset;
+*/
+}
+.subnav h2 img {
+	border:none;
+	width:0.9em;
+	height:0.9em;
+	padding-right:3px;
+}
+.subnav h2 a {
+/*	color:yellow;*/
+}
+.subnav h3 {
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:1.5em;
+	font-size:small;
+	font-weight:normal;
+	white-space:nowrap;
+}
+
+/* sub-navigation */
+.subnav {
+	min-height:400px;
+	background: #2A2A2A;
+	border: 1px solid #1E1E1E;
+	border-top-color: #444;	
+	padding: 12px;
+	overflow:hidden;
+}
+.subnav h1 {padding-top: 8px;}
+.subnav ul {margin: 0;}
+.subnav ul ul li {
+	background: url(img/li.gif) no-repeat left 1em;
+	list-style: none;
+	margin: 0;
+	padding-left: 18px;
+	line-height: 2.4em;
+}
+.subnav ul ul ul li {
+	background: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0px;
+	line-height: 1em;
+}
+.subnav li a {
+	color: #777;
+	text-decoration: none;
+}
+.subnav li a:hover {color: #BBB;}
+
+/* footer */
+.footer {
+	background: #191919;
+	border-top: 1px solid #444;
+	color: #999;
+	padding: 3% 3% 1%;
+}
+.footer ul {
+	border-top: 1px solid #262626;
+	margin: 0;
+}
+.footer li {
+	border-bottom: 1px solid #262626;
+	list-style: none;
+}
+.footer li a {
+	display: block;
+	line-height: 2em;
+	padding-left: 4%;
+	width: 96%;
+}
+.footer a {color: #666;}
+.footer a:hover {
+	color: #BBB;
+	background: #222;
+}
+
+.col3,.col3center {
+	float: left;
+	width: 31%;
+}
+.col3center {margin: 0 3%;}
+
+/* bottom */
+.bottom {
+	color: #666;
+	clear: both;
+	font-size: 1.1em;
+}
+.bottom a {color: #888;}
