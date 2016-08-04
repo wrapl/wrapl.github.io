@@ -20,27 +20,27 @@
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css"/>
-	<link rel="stylesheet" type="text/css" href="https://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
 
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="https://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
-	<script type="text/javascript" src="https://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+	<script type="text/javascript" src="/js/modernizr.js"></script>
 	<script type="text/javascript">
 		Modernizr.load({
 			test: Modernizr.flexbox,
-			nope: "https://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css"
+			nope: "/css/ink-legacy.min.css"
 		});
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="https://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
-	<script type="text/javascript" src="https://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="https://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
 
 	<title>Samples</title>
 </head>
@@ -104,7 +104,7 @@
 
 <div class="column-group horizontal-gutters">
 	<div class="left-column all-75 small-100 tiny-100">
-<section id="Basic_Samples" data-spy="true" data-target="#side-menu"><h2>Basic Samples</h2>
+<section id="Basic_Samples" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>Basic Samples</a></li></ul></nav>
 
 <section id="Hello_world_" data-spy="true" data-target="#side-menu"><h3>Hello world!</h3>
 <div class="code"><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Hello</span><span class="delimiter">;</span>
@@ -155,7 +155,7 @@
 <p>How it works is left as an exercise to the reader :).</p>
 </section>
 
-</section><section id="Objects_and_Methods" data-spy="true" data-target="#side-menu"><h2>Objects and Methods</h2>
+</section><section id="Objects_and_Methods" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>Objects and Methods</a></li></ul></nav>
 <section id="Complex_Numbers" data-spy="true" data-target="#side-menu"><h3>Complex Numbers</h3>
 <div class="code"><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Complex</span><span class="delimiter">;</span>
 <span class="lineno">   2</span>
@@ -192,7 +192,7 @@ NIL
 </div>
 
 </section>
-</section><section id="wrpp" data-spy="true" data-target="#side-menu"><h2>wrpp</h2>
+</section><section id="wrpp" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>wrpp</a></li></ul></nav>
 <section id="wrpp" data-spy="true" data-target="#side-menu"><h3>wrpp</h3>
 <p>Here is the entire source code for the <a href="/tools/wrpp.html"><span class="var">wrpp</span></a> preprocessor.</p>
 <div class="code"><span class="lineno">   1</span><span class="delimiter">#!/</span><span class="var">home</span><span class="delimiter">/</span><span class="var">raja</span><span class="delimiter">/</span><span class="var">Work</span><span class="delimiter">/</span><span class="var">Wrapl</span><span class="delimiter">/</span><span class="var">bin</span><span class="delimiter">/</span><span class="var">riva</span> <span class="delimiter">-</span><span class="var">tWrapl</span>
@@ -334,7 +334,7 @@ NIL
 <span class="lineno"> 137</span>
 <span class="lineno"> 138</span><span class="keyword">END</span> <span class="var">Mark</span><span class="delimiter">.</span></div>
 </section>
-</section><section id="Other_Examples" data-spy="true" data-target="#side-menu"><h2>Other Examples</h2>
+</section><section id="Other_Examples" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>Other Examples</a></li></ul></nav>
 <p>To see some more complex sample code using several of the included libraries, check the following:</p>
 <section id="GTK+" data-spy="true" data-target="#side-menu"><h3>GTK+</h3>
 <p>For an example on using the GTK+ binding, see <a href="/samples/gtk.html">here</a>.</p>
