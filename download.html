@@ -21,8 +21,8 @@
 
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -69,7 +69,7 @@
 							</ul>
 						</li>
 						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/doc.html">Libraries</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
 					</ul>
 				</li>
 				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -106,18 +106,13 @@
 	<div class="left-column all-75 small-100 tiny-100">
 <section id="Source" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>Source</a></li></ul></nav>
 <section id="Download" data-spy="true" data-target="#side-menu"><h3>Download</h3>
-<p>The latest source release can be found <a href="/downloads/wrapl-unknown.tar.bz2">here</a>.</p>
-</section>
-<section id="SVN" data-spy="true" data-target="#side-menu"><h3>SVN</h3>
-<p>The Wrapl svn repository is hosted on Sourceforge.</p>
-<div class="term">svn co https://wrapl.svn.sourceforge.net/svnroot/wrapl/trunk wrapl 
-</div>
+<p>The latest source release can be found on Github at <a href="https://github.com/wrapl/wrapl">https://github.com/wrapl/wrapl</a>.</p>
 </section>
 
 <section id="Required_Packages" data-spy="true" data-target="#side-menu"><h3>Required Packages</h3>
 <p>In order to build Wrapl/Riva from the source code, you will need the following software:</p>
 <ul>
-	<li><a href="http://omake.metaprl.org/">OMake</a> is the build system used to build everything in Wrapl/Riva.</li>
+	<li><a href="http://github.com/wrapl/rabs">Rabs</a> is the new build system used to build everything in Wrapl/Riva.</li>
 	<li><a href="http://gcc.gnu.org/">GCC</a> is needed to compile the C/C++ code.</li>
 	<li><a href="http://nasm.sourceforge.net/">Nasm</a> or <a href="http://www.tortall.net/projects/yasm/">Yasm</a> is needed to assemble the assembly code.</li>
 	<li><a href="http://http://www.lua.org/">Lua</a> is needed:
@@ -127,13 +122,12 @@
 		</ul>
 	</li>
 	<li><a href="http://www.gnu.org/software/gperf/">Gperf</a> is needed to generate parts of the Wrapl scanner.</li>
-	<li><a href="http://www.nongnu.org/confuse/">libConfuse</a> is used by <a href="/tools/riva.html"><span class="var">riva</span></a> to parse the configuration file.</li>
 	<li>You will need a version of <span class="var">m4</span> installed, in order to configure/build the garbage collector and <span class="var">GMP</span>.</li>
 	<li>The <a href="http://www.gnu.org/software/binutils/">binutils</a> development package is required, in particular <span class="var">libbfd</span> is needed for the linker.</li>
 </ul>
 </section>
 <section id="Automatically_Downloaded_Sources" data-spy="true" data-target="#side-menu"><h3>Automatically Downloaded Sources</h3>
-<p>The build process will automatically download, extract and build a number of third party libraries. If the required source directories are already present then they will be used (currently one can check the <span class="var">OMakefile</span>s to see which libraries are downloaded, this will be documented properly in the future). Note that any downloaded libraries are built only for use with Wrapl, and will not be installed system-wide.</p>
+<p>The build process will automatically download, extract and build a number of third party libraries. If the required source directories are already present then they will be used (currently one can check the <span class="var">_minibuild_</span>s to see which libraries are downloaded, this will be documented properly in the future). Note that any downloaded libraries are built only for use with Wrapl, and will not be installed system-wide.</p>
 <ul>
 	<li>The <a href="http://www.hpl.hp.com/personal/Hans_Boehm/gc/">Boehm-Demers-Weiser conservative garbage collector</a> is used as the garbage collector in Wrapl.</li>
 	<li><a href="http://gmplib.org/">GMP</a> is used for arbitrary precision integer/rational support.</li>
@@ -145,27 +139,35 @@
 </ul>
 </section>
 <section id="requirements2" data-spy="true" data-target="#side-menu"><h3><strike>Optional</strike> Required Libraries II</h3>
-<p>A number of modules have further dependancies. Since these modules are not necessary to run most Wrapl programs, these dependancies are not strictly required. However, the current build process assumes their presence and will fail if any of these are missing. Alternatively, the <span class="var">OMakefile</span>'s can be edited to comment out the relevant modules.</p>
+<p>A number of modules have further dependancies. Since these modules are not necessary to run most Wrapl programs, these dependancies are not strictly required. However, the current build process assumes their presence and will fail if any of these are missing. Alternatively, the <span class="var">_minibuild_</span>'s can be edited to comment out the relevant modules.</p>
 <ul>
 	<li><a href="http://expat.sourceforge.net/">Expat</a> is used to provide an Xml parsing module <a class="id" href="/doc/Xml/Parser.html">Xml.Parser</a>.</li>
 	<li><a href="http://www.laurikari.net/tre/">Tre</a> is used to provide a basic regular expression module <a class="id" href="/doc/Util/Regexp.html">Util.Regexp</a>.</li>
 	<li><a href="http://www.lysator.liu.se/~nisse/nettle/">Nettle</a> is used for the (currently inadequate) encryption/hashing modules <a class="id" href="/doc/Alg.html#*">Alg.*</a> and <a class="id" href="/doc/IO/Cipher.html">IO.Cipher</a>.</li>
 	<li>The <a href="http://www.mysql.com/">MySQL</a> client library is used by the <a class="id" href="/doc/DB/Mysql.html">DB.Mysql</a> module.</li>
-	<li>The build process can, with the correct arguments to Omake, generate bindings to <a href="http://www.gtk.org/">GTK+</a> and numerous other <span class="var">Glib</span> based libraries. This is described in full <a href="gtk-bindings.html">here</a>.</li>
+	<li>The build process will generate bindings to <a href="http://www.gtk.org/">GTK+</a> and numerous other <span class="var">Glib</span> based libraries. This is described in full <a href="gtk-bindings.html">here</a>.</li>
 </ul>
 </section>
 <section id="Building" data-spy="true" data-target="#side-menu"><h3>Building</h3>
-<p>In theory, building Wrapl/Riva should be as simple as:</p>
+<p>Building Wrapl/Riva should be as simple / complicated as:</p>
 <ol>
 	<li>Ensuring the necessary <a href="#requirements">requirements</a> are installed.</li>
 	<li>Downloading and extracting the <a href="#download">source code</a>.</li>
-	<li>Changing to the <span class="var">dev</span> directory and running <span class="var">omake</span>.</li>
-	<li>Creating the file <span class="var">bin/riva.conf</span>.</li>
+	<li>Changing to the main directory and running <span class="var">rabs</span>.</li>
 	<li>Adding the <span class="var">bin</span> directory to the path.</li>
 </ol>
-<p>However, it may be easier to download a prebuilt <a href="#binaries">binary package</a>.</p>
+<p>Currently Wrapl only builds on 32 bit versions of Linux, but will run on most 64 bit versions of Linux once built with proper multilib support. This has been tested on:</p>
+<ul>
+	<li>Manjaro and Arch Linux</li>
+	<li>Ubuntu</li>
+	<li>Redhat Enterprise Linux</li>
+	<li>Fedora</li>
+</ul>
 </section>
 </section><section id="Binaries" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>Binaries</a></li></ul></nav>
+<div class="ink-alert basic" role="alert">
+    <p><b>Warning:</b> This section is obselete and will be updated soon. Currently no binary packages are available for Wrapl.</p>
+</div>
 <section id="Ubuntu/Debian" data-spy="true" data-target="#side-menu"><h3>Ubuntu/Debian</h3>
 <p>A prebuilt Ubuntu/Debian package (for x86 only) can be downloaded <a href="/downloads/wrapl-unknown.deb">here</a>. Note that several modules will not work if the required libraries are not present:</p>
 <ul>
@@ -188,7 +190,7 @@
 	<div class="right-column all-25 hide-small hide-tiny">
 		<nav class="ink-navigation ink-sticky" id="side-menu">
 			<ul class="menu vertical blue">
-<li><a href="#Source">Source</a><ul><li><a href="#Download">Download</a><ul></ul></li><li><a href="#SVN">SVN</a><ul></ul></li><li><a href="#Required_Packages">Required Packages</a><ul></ul></li><li><a href="#Automatically_Downloaded_Sources">Automatically Downloaded Sources</a><ul></ul></li><li><a href="#requirements2"><strike>Optional</strike> Required Libraries II</a><ul></ul></li><li><a href="#Building">Building</a><ul></ul></li></ul></li><li><a href="#Binaries">Binaries</a><ul><li><a href="#Ubuntu/Debian">Ubuntu/Debian</a><ul></ul></li><li><a href="#Windows">Windows</a><ul></ul></li></ul></li>
+<li><a href="#Source">Source</a><ul><li><a href="#Download">Download</a><ul></ul></li><li><a href="#Required_Packages">Required Packages</a><ul></ul></li><li><a href="#Automatically_Downloaded_Sources">Automatically Downloaded Sources</a><ul></ul></li><li><a href="#requirements2"><strike>Optional</strike> Required Libraries II</a><ul></ul></li><li><a href="#Building">Building</a><ul></ul></li></ul></li><li><a href="#Binaries">Binaries</a><ul><li><a href="#Ubuntu/Debian">Ubuntu/Debian</a><ul></ul></li><li><a href="#Windows">Windows</a><ul></ul></li></ul></li>
 		</ul>
         </nav>
     </div>

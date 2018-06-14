@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Gir.GObject.Main</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Main" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/GObject.html">GObject</a></li><li><a class="id" href="/lib/Gir/GObject/Main.html">Main</a></li></ul></nav><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$BoxedCopy"><span class="code">__$BoxedCopy<span class="delimiter">(</span><span class="var">boxed_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">src_boxed</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$BoxedFree"><span class="code">__$BoxedFree<span class="delimiter">(</span><span class="var">boxed_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">boxed</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$CclosureMarshalBOOLEANBOXEDBOXED"><span class="code">__$CclosureMarshalBOOLEANBOXEDBOXED<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalBOOLEANFLAGS"><span class="code">__$CclosureMarshalBOOLEANFLAGS<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalGeneric"><span class="code">__$CclosureMarshalGeneric<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_gvalue</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalSTRINGOBJECTPOINTER"><span class="code">__$CclosureMarshalSTRINGOBJECTPOINTER<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDBOOLEAN"><span class="code">__$CclosureMarshalVOIDBOOLEAN<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDBOXED"><span class="code">__$CclosureMarshalVOIDBOXED<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDCHAR"><span class="code">__$CclosureMarshalVOIDCHAR<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDDOUBLE"><span class="code">__$CclosureMarshalVOIDDOUBLE<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDENUM"><span class="code">__$CclosureMarshalVOIDENUM<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDFLAGS"><span class="code">__$CclosureMarshalVOIDFLAGS<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDFLOAT"><span class="code">__$CclosureMarshalVOIDFLOAT<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDINT"><span class="code">__$CclosureMarshalVOIDINT<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDLONG"><span class="code">__$CclosureMarshalVOIDLONG<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDOBJECT"><span class="code">__$CclosureMarshalVOIDOBJECT<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDPARAM"><span class="code">__$CclosureMarshalVOIDPARAM<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDPOINTER"><span class="code">__$CclosureMarshalVOIDPOINTER<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDSTRING"><span class="code">__$CclosureMarshalVOIDSTRING<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDUCHAR"><span class="code">__$CclosureMarshalVOIDUCHAR<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDUINT"><span class="code">__$CclosureMarshalVOIDUINT<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDUINTPOINTER"><span class="code">__$CclosureMarshalVOIDUINTPOINTER<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDULONG"><span class="code">__$CclosureMarshalVOIDULONG<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDVARIANT"><span class="code">__$CclosureMarshalVOIDVARIANT<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$CclosureMarshalVOIDVOID"><span class="code">__$CclosureMarshalVOIDVOID<span class="delimiter">(</span><span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">n_param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">param_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">invocation_hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">marshal_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$EnumCompleteTypeInfo"><span class="code">__$EnumCompleteTypeInfo<span class="delimiter">(</span><span class="var">g_enum_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">const_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/EnumValue.html#T">Gir.GObject.EnumValue.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$EnumGetValue"><span class="code">__$EnumGetValue<span class="delimiter">(</span><span class="var">enum_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/EnumClass.html#T">Gir.GObject.EnumClass.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/EnumValue.html#T">Gir.GObject.EnumValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$EnumGetValueByName"><span class="code">__$EnumGetValueByName<span class="delimiter">(</span><span class="var">enum_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/EnumClass.html#T">Gir.GObject.EnumClass.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/EnumValue.html#T">Gir.GObject.EnumValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$EnumGetValueByNick"><span class="code">__$EnumGetValueByNick<span class="delimiter">(</span><span class="var">enum_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/EnumClass.html#T">Gir.GObject.EnumClass.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/EnumValue.html#T">Gir.GObject.EnumValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$EnumRegisterStatic"><span class="code">__$EnumRegisterStatic<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">const_static_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/EnumValue.html#T">Gir.GObject.EnumValue.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$EnumToString"><span class="code">__$EnumToString<span class="delimiter">(</span><span class="var">g_enum_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$FlagsCompleteTypeInfo"><span class="code">__$FlagsCompleteTypeInfo<span class="delimiter">(</span><span class="var">g_flags_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">const_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/FlagsValue.html#T">Gir.GObject.FlagsValue.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$FlagsGetFirstValue"><span class="code">__$FlagsGetFirstValue<span class="delimiter">(</span><span class="var">flags_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/FlagsClass.html#T">Gir.GObject.FlagsClass.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/FlagsValue.html#T">Gir.GObject.FlagsValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$FlagsGetValueByName"><span class="code">__$FlagsGetValueByName<span class="delimiter">(</span><span class="var">flags_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/FlagsClass.html#T">Gir.GObject.FlagsClass.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/FlagsValue.html#T">Gir.GObject.FlagsValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$FlagsGetValueByNick"><span class="code">__$FlagsGetValueByNick<span class="delimiter">(</span><span class="var">flags_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/FlagsClass.html#T">Gir.GObject.FlagsClass.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/FlagsValue.html#T">Gir.GObject.FlagsValue.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$FlagsRegisterStatic"><span class="code">__$FlagsRegisterStatic<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">const_static_values</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/FlagsValue.html#T">Gir.GObject.FlagsValue.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$FlagsToString"><span class="code">__$FlagsToString<span class="delimiter">(</span><span class="var">flags_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$GtypeGetType"><span class="code">__$GtypeGetType<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+	</div><h4 id="__$ParamSpecBoolean"><span class="code">__$ParamSpecBoolean<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecBoxed"><span class="code">__$ParamSpecBoxed<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">boxed_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecChar"><span class="code">__$ParamSpecChar<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecDouble"><span class="code">__$ParamSpecDouble<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecEnum"><span class="code">__$ParamSpecEnum<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">enum_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecFlags"><span class="code">__$ParamSpecFlags<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecFloat"><span class="code">__$ParamSpecFloat<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecGtype"><span class="code">__$ParamSpecGtype<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">is_a_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecInt"><span class="code">__$ParamSpecInt<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecInt64"><span class="code">__$ParamSpecInt64<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecLong"><span class="code">__$ParamSpecLong<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecObject"><span class="code">__$ParamSpecObject<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">object_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecParam"><span class="code">__$ParamSpecParam<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">param_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecPointer"><span class="code">__$ParamSpecPointer<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecPoolNew"><span class="code">__$ParamSpecPoolNew<span class="delimiter">(</span><span class="var">type_prefixing</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpecPool.html#T">Gir.GObject.ParamSpecPool.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$ParamSpecString"><span class="code">__$ParamSpecString<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecUchar"><span class="code">__$ParamSpecUchar<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecUint"><span class="code">__$ParamSpecUint<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecUint64"><span class="code">__$ParamSpecUint64<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecUlong"><span class="code">__$ParamSpecUlong<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">minimum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">maximum</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecUnichar"><span class="code">__$ParamSpecUnichar<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamSpecVariant"><span class="code">__$ParamSpecVariant<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">nick</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">blurb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/VariantType.html#T">Gir.GLib.VariantType.T</a><span class="delimiter">,</span> <span class="var">default_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Variant.html#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$ParamTypeRegisterStatic"><span class="code">__$ParamTypeRegisterStatic<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">pspec_info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpecTypeInfo.html#T">Gir.GObject.ParamSpecTypeInfo.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ParamValueConvert"><span class="code">__$ParamValueConvert<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">src_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">dest_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">strict_validation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$ParamValueDefaults"><span class="code">__$ParamValueDefaults<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ParamValueSetDefault"><span class="code">__$ParamValueSetDefault<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ParamValueValidate"><span class="code">__$ParamValueValidate<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ParamValuesCmp"><span class="code">__$ParamValuesCmp<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">value1</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">value2</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$PointerTypeRegisterStatic"><span class="code">__$PointerTypeRegisterStatic<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SignalAccumulatorFirstWins"><span class="code">__$SignalAccumulatorFirstWins<span class="delimiter">(</span><span class="var">ihint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/SignalInvocationHint.html#T">Gir.GObject.SignalInvocationHint.T</a><span class="delimiter">,</span> <span class="var">return_accu</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">handler_return</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">dummy</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SignalAccumulatorTrueHandled"><span class="code">__$SignalAccumulatorTrueHandled<span class="delimiter">(</span><span class="var">ihint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/SignalInvocationHint.html#T">Gir.GObject.SignalInvocationHint.T</a><span class="delimiter">,</span> <span class="var">return_accu</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">handler_return</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">dummy</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SignalAddEmissionHook"><span class="code">__$SignalAddEmissionHook<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hook_func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">hook_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data_destroy</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalChainFromOverridden"><span class="code">__$SignalChainFromOverridden<span class="delimiter">(</span><span class="var">instance_and_params</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalConnectClosure"><span class="code">__$SignalConnectClosure<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">detailed_signal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">after</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SignalConnectClosureById"><span class="code">__$SignalConnectClosureById<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">after</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalEmitv"><span class="code">__$SignalEmitv<span class="delimiter">(</span><span class="var">instance_and_params</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">return_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SignalGetInvocationHint"><span class="code">__$SignalGetInvocationHint<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/SignalInvocationHint.html#T">Gir.GObject.SignalInvocationHint.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SignalHandlerBlock"><span class="code">__$SignalHandlerBlock<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">handler_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalHandlerDisconnect"><span class="code">__$SignalHandlerDisconnect<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">handler_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalHandlerFind"><span class="code">__$SignalHandlerFind<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalHandlerIsConnected"><span class="code">__$SignalHandlerIsConnected<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">handler_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalHandlerUnblock"><span class="code">__$SignalHandlerUnblock<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">handler_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalHandlersBlockMatched"><span class="code">__$SignalHandlersBlockMatched<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalHandlersDestroy"><span class="code">__$SignalHandlersDestroy<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SignalHandlersDisconnectMatched"><span class="code">__$SignalHandlersDisconnectMatched<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalHandlersUnblockMatched"><span class="code">__$SignalHandlersUnblockMatched<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalHasHandlerPending"><span class="code">__$SignalHasHandlerPending<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">may_be_blocked</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SignalListIds"><span class="code">__$SignalListIds<span class="delimiter">(</span><span class="var">itype</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SignalLookup"><span class="code">__$SignalLookup<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">itype</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalName"><span class="code">__$SignalName<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SignalOverrideClassClosure"><span class="code">__$SignalOverrideClassClosure<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">instance_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">class_closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$SignalParseName"><span class="code">__$SignalParseName<span class="delimiter">(</span><span class="var">detailed_signal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">itype</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">signal_id_p</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">detail_p</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">force_detail_quark</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$SignalQuery"><span class="code">__$SignalQuery<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">query</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalRemoveEmissionHook"><span class="code">__$SignalRemoveEmissionHook<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hook_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalSetVaMarshaller"><span class="code">__$SignalSetVaMarshaller<span class="delimiter">(</span><span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">instance_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">va_marshaller</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$SignalStopEmission"><span class="code">__$SignalStopEmission<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">signal_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$SignalStopEmissionByName"><span class="code">__$SignalStopEmissionByName<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">detailed_signal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SignalTypeCclosureNew"><span class="code">__$SignalTypeCclosureNew<span class="delimiter">(</span><span class="var">itype</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">struct_offset</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SourceSetClosure"><span class="code">__$SourceSetClosure<span class="delimiter">(</span><span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Source.html#T">Gir.GLib.Source.T</a><span class="delimiter">,</span> <span class="var">closure</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Closure.html#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SourceSetDummyCallback"><span class="code">__$SourceSetDummyCallback<span class="delimiter">(</span><span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Source.html#T">Gir.GLib.Source.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$StrdupValueContents"><span class="code">__$StrdupValueContents<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeAddClassPrivate"><span class="code">__$TypeAddClassPrivate<span class="delimiter">(</span><span class="var">class_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">private_size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeAddInstancePrivate"><span class="code">__$TypeAddInstancePrivate<span class="delimiter">(</span><span class="var">class_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">private_size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeAddInterfaceDynamic"><span class="code">__$TypeAddInterfaceDynamic<span class="delimiter">(</span><span class="var">instance_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">interface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">plugin</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypePlugin.html#T">Gir.GObject.TypePlugin.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TypeAddInterfaceStatic"><span class="code">__$TypeAddInterfaceStatic<span class="delimiter">(</span><span class="var">instance_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">interface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/InterfaceInfo.html#T">Gir.GObject.InterfaceInfo.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TypeCheckClassIsA"><span class="code">__$TypeCheckClassIsA<span class="delimiter">(</span><span class="var">g_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a><span class="delimiter">,</span> <span class="var">is_a_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeCheckInstance"><span class="code">__$TypeCheckInstance<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInstance.html#T">Gir.GObject.TypeInstance.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeCheckInstanceIsA"><span class="code">__$TypeCheckInstanceIsA<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInstance.html#T">Gir.GObject.TypeInstance.T</a><span class="delimiter">,</span> <span class="var">iface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeCheckInstanceIsFundamentallyA"><span class="code">__$TypeCheckInstanceIsFundamentallyA<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInstance.html#T">Gir.GObject.TypeInstance.T</a><span class="delimiter">,</span> <span class="var">fundamental_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeCheckIsValueType"><span class="code">__$TypeCheckIsValueType<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeCheckValue"><span class="code">__$TypeCheckValue<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeCheckValueHolds"><span class="code">__$TypeCheckValueHolds<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeChildren"><span class="code">__$TypeChildren<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeClassAdjustPrivateOffset"><span class="code">__$TypeClassAdjustPrivateOffset<span class="delimiter">(</span><span class="var">g_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">private_size_or_offset</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeClassPeek"><span class="code">__$TypeClassPeek<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeClassPeekStatic"><span class="code">__$TypeClassPeekStatic<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeClassRef"><span class="code">__$TypeClassRef<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeDefaultInterfacePeek"><span class="code">__$TypeDefaultInterfacePeek<span class="delimiter">(</span><span class="var">g_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeInterface.html#T">Gir.GObject.TypeInterface.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeDefaultInterfaceRef"><span class="code">__$TypeDefaultInterfaceRef<span class="delimiter">(</span><span class="var">g_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeInterface.html#T">Gir.GObject.TypeInterface.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeDefaultInterfaceUnref"><span class="code">__$TypeDefaultInterfaceUnref<span class="delimiter">(</span><span class="var">g_iface</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInterface.html#T">Gir.GObject.TypeInterface.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeDepth"><span class="code">__$TypeDepth<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeEnsure"><span class="code">__$TypeEnsure<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeFreeInstance"><span class="code">__$TypeFreeInstance<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInstance.html#T">Gir.GObject.TypeInstance.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeFromName"><span class="code">__$TypeFromName<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeFundamental"><span class="code">__$TypeFundamental<span class="delimiter">(</span><span class="var">type_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeFundamentalNext"><span class="code">__$TypeFundamentalNext<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+	</div><h4 id="__$TypeGetInstanceCount"><span class="code">__$TypeGetInstanceCount<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeGetPlugin"><span class="code">__$TypeGetPlugin<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypePlugin.html#T">Gir.GObject.TypePlugin.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeGetQdata"><span class="code">__$TypeGetQdata<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">quark</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeGetTypeRegistrationSerial"><span class="code">__$TypeGetTypeRegistrationSerial<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$TypeInit"><span class="code">__$TypeInit<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h4 id="__$TypeInitWithDebugFlags"><span class="code">__$TypeInitWithDebugFlags<span class="delimiter">(</span><span class="var">debug_flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeInterfaceAddPrerequisite"><span class="code">__$TypeInterfaceAddPrerequisite<span class="delimiter">(</span><span class="var">interface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">prerequisite_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeInterfaceGetPlugin"><span class="code">__$TypeInterfaceGetPlugin<span class="delimiter">(</span><span class="var">instance_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">interface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypePlugin.html#T">Gir.GObject.TypePlugin.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeInterfacePeek"><span class="code">__$TypeInterfacePeek<span class="delimiter">(</span><span class="var">instance_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a><span class="delimiter">,</span> <span class="var">iface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/TypeInterface.html#T">Gir.GObject.TypeInterface.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeInterfacePrerequisites"><span class="code">__$TypeInterfacePrerequisites<span class="delimiter">(</span><span class="var">interface_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeInterfaces"><span class="code">__$TypeInterfaces<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeIsA"><span class="code">__$TypeIsA<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">is_a_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeName"><span class="code">__$TypeName<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeNameFromClass"><span class="code">__$TypeNameFromClass<span class="delimiter">(</span><span class="var">g_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeClass.html#T">Gir.GObject.TypeClass.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeNameFromInstance"><span class="code">__$TypeNameFromInstance<span class="delimiter">(</span><span class="var">instance</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInstance.html#T">Gir.GObject.TypeInstance.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeNextBase"><span class="code">__$TypeNextBase<span class="delimiter">(</span><span class="var">leaf_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">root_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeParent"><span class="code">__$TypeParent<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeQname"><span class="code">__$TypeQname<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TypeQuery"><span class="code">__$TypeQuery<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">query</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TypeRegisterDynamic"><span class="code">__$TypeRegisterDynamic<span class="delimiter">(</span><span class="var">parent_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">type_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">plugin</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypePlugin.html#T">Gir.GObject.TypePlugin.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$TypeRegisterFundamental"><span class="code">__$TypeRegisterFundamental<span class="delimiter">(</span><span class="var">type_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">type_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInfo.html#T">Gir.GObject.TypeInfo.T</a><span class="delimiter">,</span> <span class="var">finfo</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeFundamentalInfo.html#T">Gir.GObject.TypeFundamentalInfo.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$TypeRegisterStatic"><span class="code">__$TypeRegisterStatic<span class="delimiter">(</span><span class="var">parent_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">type_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/TypeInfo.html#T">Gir.GObject.TypeInfo.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$TypeSetQdata"><span class="code">__$TypeSetQdata<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">quark</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TypeTestFlags"><span class="code">__$TypeTestFlags<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ValueTypeCompatible"><span class="code">__$ValueTypeCompatible<span class="delimiter">(</span><span class="var">src_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">dest_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$ValueTypeTransformable"><span class="code">__$ValueTypeTransformable<span class="delimiter">(</span><span class="var">src_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">dest_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Main">Main</a><ul><li><a href="#Functions">Functions</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

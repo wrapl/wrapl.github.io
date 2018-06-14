@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Gir.Gtk.Window</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Window" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gtk.html">Gtk</a></li><li><a class="id" href="/lib/Gir/Gtk/Window.html">Window</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from:<div class="comment"><a class="id" href="/doc/Gir/Gtk/Bin.html#T">Gir.Gtk.Bin.T</a>, <a class="id" href="/doc/Gir/Gtk/Container.html#T">Gir.Gtk.Container.T</a>, <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a>, <a class="id" href="/doc/Gir/GObject/InitiallyUnowned.html#T">Gir.GObject.InitiallyUnowned.T</a>, <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/doc/Gir/Atk/ImplementorIface.html#T">Gir.Atk.ImplementorIface.T</a>, <a class="id" href="/doc/Gir/Gtk/Buildable.html#T">Gir.Gtk.Buildable.T</a></div>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$GetDefaultIconList"><span class="code">__$GetDefaultIconList<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+	</div><h4 id="__$GetDefaultIconName"><span class="code">__$GetDefaultIconName<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$ListToplevels"><span class="code">__$ListToplevels<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+	</div><h4 id="__$New"><span class="code">__$New<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/WindowType.html#T">Gir.Gtk.WindowType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetAutoStartupNotification"><span class="code">__$SetAutoStartupNotification<span class="delimiter">(</span><span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetDefaultIcon"><span class="code">__$SetDefaultIcon<span class="delimiter">(</span><span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetDefaultIconFromFile"><span class="code">__$SetDefaultIconFromFile<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SetDefaultIconList"><span class="code">__$SetDefaultIconList<span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetDefaultIconName"><span class="code">__$SetDefaultIconName<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetInteractiveDebugging"><span class="code">__$SetInteractiveDebugging<span class="delimiter">(</span><span class="var">enable</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="activate_default"><span class="code"><span class="symbol">:activate_default</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="activate_focus"><span class="code"><span class="symbol">:activate_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="activate_key"><span class="code"><span class="symbol">:activate_key</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="add_accel_group"><span class="code"><span class="symbol">:add_accel_group</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">accel_group</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/AccelGroup.html#T">Gir.Gtk.AccelGroup.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="add_mnemonic"><span class="code"><span class="symbol">:add_mnemonic</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="begin_move_drag"><span class="code"><span class="symbol">:begin_move_drag</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">button</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">root_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">root_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">timestamp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="begin_resize_drag"><span class="code"><span class="symbol">:begin_resize_drag</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">edge</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/WindowEdge.html#T">Gir.Gdk.WindowEdge.T</a><span class="delimiter">,</span> <span class="var">button</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">root_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">root_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">timestamp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="bin"><span class="code"><span class="symbol">:bin</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Bin.html#T">Gir.Gtk.Bin.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="deiconify"><span class="code"><span class="symbol">:deiconify</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="fullscreen"><span class="code"><span class="symbol">:fullscreen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="fullscreen_on_monitor"><span class="code"><span class="symbol">:fullscreen_on_monitor</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a><span class="delimiter">,</span> <span class="var">monitor</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_accept_focus"><span class="code"><span class="symbol">:get_accept_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_application"><span class="code"><span class="symbol">:get_application</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Application.html#T">Gir.Gtk.Application.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_attached_to"><span class="code"><span class="symbol">:get_attached_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_decorated"><span class="code"><span class="symbol">:get_decorated</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_default_size"><span class="code"><span class="symbol">:get_default_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span><span class="delimiter">,</span> <span class="var">height</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_default_widget"><span class="code"><span class="symbol">:get_default_widget</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_deletable"><span class="code"><span class="symbol">:get_deletable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_destroy_with_parent"><span class="code"><span class="symbol">:get_destroy_with_parent</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_focus"><span class="code"><span class="symbol">:get_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_focus_on_map"><span class="code"><span class="symbol">:get_focus_on_map</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_focus_visible"><span class="code"><span class="symbol">:get_focus_visible</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_gravity"><span class="code"><span class="symbol">:get_gravity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Gravity.html#T">Gir.Gdk.Gravity.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_group"><span class="code"><span class="symbol">:get_group</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/WindowGroup.html#T">Gir.Gtk.WindowGroup.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_has_resize_grip"><span class="code"><span class="symbol">:get_has_resize_grip</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_hide_titlebar_when_maximized"><span class="code"><span class="symbol">:get_hide_titlebar_when_maximized</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_icon"><span class="code"><span class="symbol">:get_icon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_icon_list"><span class="code"><span class="symbol">:get_icon_list</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_icon_name"><span class="code"><span class="symbol">:get_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_mnemonic_modifier"><span class="code"><span class="symbol">:get_mnemonic_modifier</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_mnemonics_visible"><span class="code"><span class="symbol">:get_mnemonics_visible</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_modal"><span class="code"><span class="symbol">:get_modal</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_opacity"><span class="code"><span class="symbol">:get_opacity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_position"><span class="code"><span class="symbol">:get_position</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">root_x</span><span class="delimiter">,</span> <span class="var">root_y</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_resizable"><span class="code"><span class="symbol">:get_resizable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_resize_grip_area"><span class="code"><span class="symbol">:get_resize_grip_area</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">rect</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_role"><span class="code"><span class="symbol">:get_role</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_screen"><span class="code"><span class="symbol">:get_screen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_size"><span class="code"><span class="symbol">:get_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span><span class="delimiter">,</span> <span class="var">height</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_skip_pager_hint"><span class="code"><span class="symbol">:get_skip_pager_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_skip_taskbar_hint"><span class="code"><span class="symbol">:get_skip_taskbar_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_title"><span class="code"><span class="symbol">:get_title</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_titlebar"><span class="code"><span class="symbol">:get_titlebar</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_transient_for"><span class="code"><span class="symbol">:get_transient_for</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_type_hint"><span class="code"><span class="symbol">:get_type_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/WindowTypeHint.html#T">Gir.Gdk.WindowTypeHint.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_urgency_hint"><span class="code"><span class="symbol">:get_urgency_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_window_type"><span class="code"><span class="symbol">:get_window_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/WindowType.html#T">Gir.Gtk.WindowType.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="has_group"><span class="code"><span class="symbol">:has_group</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="has_toplevel_focus"><span class="code"><span class="symbol">:has_toplevel_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="iconify"><span class="code"><span class="symbol">:iconify</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="is_active"><span class="code"><span class="symbol">:is_active</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="is_maximized"><span class="code"><span class="symbol">:is_maximized</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="maximize"><span class="code"><span class="symbol">:maximize</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="mnemonic_activate"><span class="code"><span class="symbol">:mnemonic_activate</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifier</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="move"><span class="code"><span class="symbol">:move</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="parse_geometry"><span class="code"><span class="symbol">:parse_geometry</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">geometry</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="present"><span class="code"><span class="symbol">:present</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="present_with_time"><span class="code"><span class="symbol">:present_with_time</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timestamp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="propagate_key_event"><span class="code"><span class="symbol">:propagate_key_event</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="remove_accel_group"><span class="code"><span class="symbol">:remove_accel_group</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">accel_group</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/AccelGroup.html#T">Gir.Gtk.AccelGroup.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="remove_mnemonic"><span class="code"><span class="symbol">:remove_mnemonic</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="reshow_with_initial_size"><span class="code"><span class="symbol">:reshow_with_initial_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="resize"><span class="code"><span class="symbol">:resize</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="resize_grip_is_visible"><span class="code"><span class="symbol">:resize_grip_is_visible</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="resize_to_geometry"><span class="code"><span class="symbol">:resize_to_geometry</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_accept_focus"><span class="code"><span class="symbol">:set_accept_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_application"><span class="code"><span class="symbol">:set_application</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">application</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Application.html#T">Gir.Gtk.Application.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_attached_to"><span class="code"><span class="symbol">:set_attached_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attach_widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_bin"><span class="code"><span class="symbol">:set_bin</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Bin.html#T">Gir.Gtk.Bin.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Bin.html#T">Gir.Gtk.Bin.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_decorated"><span class="code"><span class="symbol">:set_decorated</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_default"><span class="code"><span class="symbol">:set_default</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">default_widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_default_geometry"><span class="code"><span class="symbol">:set_default_geometry</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_default_size"><span class="code"><span class="symbol">:set_default_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_deletable"><span class="code"><span class="symbol">:set_deletable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_destroy_with_parent"><span class="code"><span class="symbol">:set_destroy_with_parent</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_focus"><span class="code"><span class="symbol">:set_focus</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">focus</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_focus_on_map"><span class="code"><span class="symbol">:set_focus_on_map</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_focus_visible"><span class="code"><span class="symbol">:set_focus_visible</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_geometry_hints"><span class="code"><span class="symbol">:set_geometry_hints</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">geometry_widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">geometry</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Geometry.html#T">Gir.Gdk.Geometry.T</a><span class="delimiter">,</span> <span class="var">geom_mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="set_gravity"><span class="code"><span class="symbol">:set_gravity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">gravity</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Gravity.html#T">Gir.Gdk.Gravity.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_has_resize_grip"><span class="code"><span class="symbol">:set_has_resize_grip</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_has_user_ref_count"><span class="code"><span class="symbol">:set_has_user_ref_count</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_hide_titlebar_when_maximized"><span class="code"><span class="symbol">:set_hide_titlebar_when_maximized</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_icon"><span class="code"><span class="symbol">:set_icon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_icon_from_file"><span class="code"><span class="symbol">:set_icon_from_file</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_icon_list"><span class="code"><span class="symbol">:set_icon_list</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_icon_name"><span class="code"><span class="symbol">:set_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_keep_above"><span class="code"><span class="symbol">:set_keep_above</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_keep_below"><span class="code"><span class="symbol">:set_keep_below</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_mnemonic_modifier"><span class="code"><span class="symbol">:set_mnemonic_modifier</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">modifier</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_mnemonics_visible"><span class="code"><span class="symbol">:set_mnemonics_visible</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_modal"><span class="code"><span class="symbol">:set_modal</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">modal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_opacity"><span class="code"><span class="symbol">:set_opacity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">opacity</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_position"><span class="code"><span class="symbol">:set_position</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">position</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/WindowPosition.html#T">Gir.Gtk.WindowPosition.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_resizable"><span class="code"><span class="symbol">:set_resizable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">resizable</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_role"><span class="code"><span class="symbol">:set_role</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">role</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_screen"><span class="code"><span class="symbol">:set_screen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_skip_pager_hint"><span class="code"><span class="symbol">:set_skip_pager_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_skip_taskbar_hint"><span class="code"><span class="symbol">:set_skip_taskbar_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_startup_id"><span class="code"><span class="symbol">:set_startup_id</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">startup_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_title"><span class="code"><span class="symbol">:set_title</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">title</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_titlebar"><span class="code"><span class="symbol">:set_titlebar</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">titlebar</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_transient_for"><span class="code"><span class="symbol">:set_transient_for</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">parent</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_type_hint"><span class="code"><span class="symbol">:set_type_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hint</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/WindowTypeHint.html#T">Gir.Gdk.WindowTypeHint.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_urgency_hint"><span class="code"><span class="symbol">:set_urgency_hint</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">setting</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_wmclass"><span class="code"><span class="symbol">:set_wmclass</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">wmclass_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">wmclass_class</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="stick"><span class="code"><span class="symbol">:stick</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="unfullscreen"><span class="code"><span class="symbol">:unfullscreen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="unmaximize"><span class="code"><span class="symbol">:unmaximize</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="unstick"><span class="code"><span class="symbol">:unstick</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Window">Window</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

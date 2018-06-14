@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Gir.Gtk.Main</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Main" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gtk.html">Gtk</a></li><li><a class="id" href="/lib/Gir/Gtk/Main.html">Main</a></li></ul></nav><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$AccelGroupsActivate"><span class="code">__$AccelGroupsActivate<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">accel_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accel_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$AccelGroupsFromObject"><span class="code">__$AccelGroupsFromObject<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$AcceleratorGetDefaultModMask"><span class="code">__$AcceleratorGetDefaultModMask<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$AcceleratorGetLabel"><span class="code">__$AcceleratorGetLabel<span class="delimiter">(</span><span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$AcceleratorGetLabelWithKeycode"><span class="code">__$AcceleratorGetLabelWithKeycode<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Display.html#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keycode</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$AcceleratorName"><span class="code">__$AcceleratorName<span class="delimiter">(</span><span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$AcceleratorNameWithKeycode"><span class="code">__$AcceleratorNameWithKeycode<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Display.html#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keycode</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$AcceleratorParse"><span class="code">__$AcceleratorParse<span class="delimiter">(</span><span class="var">accelerator</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$AcceleratorParseWithKeycode"><span class="code">__$AcceleratorParseWithKeycode<span class="delimiter">(</span><span class="var">accelerator</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">accelerator_key</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accelerator_codes</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">accelerator_mods</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$AcceleratorSetDefaultModMask"><span class="code">__$AcceleratorSetDefaultModMask<span class="delimiter">(</span><span class="var">default_mod_mask</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$AcceleratorValid"><span class="code">__$AcceleratorValid<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$AlternativeDialogButtonOrder"><span class="code">__$AlternativeDialogButtonOrder<span class="delimiter">(</span><span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$BindingEntryAddSignalFromString"><span class="code">__$BindingEntryAddSignalFromString<span class="delimiter">(</span><span class="var">binding_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/BindingSet.html#T">Gir.Gtk.BindingSet.T</a><span class="delimiter">,</span> <span class="var">signal_desc</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GLib/TokenType.html#T">Gir.GLib.TokenType.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$BindingEntryAddSignall"><span class="code">__$BindingEntryAddSignall<span class="delimiter">(</span><span class="var">binding_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/BindingSet.html#T">Gir.Gtk.BindingSet.T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signal_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">binding_args</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$BindingEntryRemove"><span class="code">__$BindingEntryRemove<span class="delimiter">(</span><span class="var">binding_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/BindingSet.html#T">Gir.Gtk.BindingSet.T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$BindingEntrySkip"><span class="code">__$BindingEntrySkip<span class="delimiter">(</span><span class="var">binding_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/BindingSet.html#T">Gir.Gtk.BindingSet.T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$BindingSetFind"><span class="code">__$BindingSetFind<span class="delimiter">(</span><span class="var">set_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/BindingSet.html#T">Gir.Gtk.BindingSet.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$BindingsActivate"><span class="code">__$BindingsActivate<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$BindingsActivateEvent"><span class="code">__$BindingsActivateEvent<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$BuilderErrorQuark"><span class="code">__$BuilderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$CairoShouldDrawWindow"><span class="code">__$CairoShouldDrawWindow<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Window.html#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$CairoTransformToWindow"><span class="code">__$CairoTransformToWindow<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Window.html#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$CheckVersion"><span class="code">__$CheckVersion<span class="delimiter">(</span><span class="var">required_major</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_minor</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_micro</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$CssProviderErrorQuark"><span class="code">__$CssProviderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$DeviceGrabAdd"><span class="code">__$DeviceGrabAdd<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a><span class="delimiter">,</span> <span class="var">block_others</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$DeviceGrabRemove"><span class="code">__$DeviceGrabRemove<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$DisableSetlocale"><span class="code">__$DisableSetlocale<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h4 id="__$DistributeNaturalAllocation"><span class="code">__$DistributeNaturalAllocation<span class="delimiter">(</span><span class="var">extra_space</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">n_requested_sizes</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">sizes</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/RequestedSize.html#T">Gir.Gtk.RequestedSize.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$DragCancel"><span class="code">__$DragCancel<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$DragFinish"><span class="code">__$DragFinish<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">success</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">del</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DragGetSourceWidget"><span class="code">__$DragGetSourceWidget<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$DragSetIconDefault"><span class="code">__$DragSetIconDefault<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$DragSetIconGicon"><span class="code">__$DragSetIconGicon<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gio/Icon.html#T">Gir.Gio.Icon.T</a><span class="delimiter">,</span> <span class="var">hot_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hot_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DragSetIconName"><span class="code">__$DragSetIconName<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">icon_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">hot_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hot_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DragSetIconPixbuf"><span class="code">__$DragSetIconPixbuf<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">,</span> <span class="var">hot_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hot_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DragSetIconStock"><span class="code">__$DragSetIconStock<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">stock_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">hot_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hot_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DragSetIconSurface"><span class="code">__$DragSetIconSurface<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Surface.html#T">Gir.Cairo.Surface.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$DragSetIconWidget"><span class="code">__$DragSetIconWidget<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DragContext.html#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">hot_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hot_y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$DrawInsertionCursor"><span class="code">__$DrawInsertionCursor<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">location</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Rectangle.html#T">Gir.Gdk.Rectangle.T</a><span class="delimiter">,</span> <span class="var">is_primary</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">direction</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TextDirection.html#T">Gir.Gtk.TextDirection.T</a><span class="delimiter">,</span> <span class="var">draw_arrow</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$EventsPending"><span class="code">__$EventsPending<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h4 id="__$False"><span class="code">__$False<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h4 id="__$FileChooserErrorQuark"><span class="code">__$FileChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetBinaryAge"><span class="code">__$GetBinaryAge<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetCurrentEvent"><span class="code">__$GetCurrentEvent<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a></span></h4><div class="comment">
+	</div><h4 id="__$GetCurrentEventDevice"><span class="code">__$GetCurrentEventDevice<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a></span></h4><div class="comment">
+	</div><h4 id="__$GetCurrentEventState"><span class="code">__$GetCurrentEventState<span class="delimiter">(</span><span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$GetCurrentEventTime"><span class="code">__$GetCurrentEventTime<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetDebugFlags"><span class="code">__$GetDebugFlags<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetDefaultLanguage"><span class="code">__$GetDefaultLanguage<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h4><div class="comment">
+	</div><h4 id="__$GetEventWidget"><span class="code">__$GetEventWidget<span class="delimiter">(</span><span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$GetInterfaceAge"><span class="code">__$GetInterfaceAge<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetLocaleDirection"><span class="code">__$GetLocaleDirection<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/TextDirection.html#T">Gir.Gtk.TextDirection.T</a></span></h4><div class="comment">
+	</div><h4 id="__$GetMajorVersion"><span class="code">__$GetMajorVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetMicroVersion"><span class="code">__$GetMicroVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetMinorVersion"><span class="code">__$GetMinorVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$GetOptionGroup"><span class="code">__$GetOptionGroup<span class="delimiter">(</span><span class="var">open_default_display</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GLib/OptionGroup.html#T">Gir.GLib.OptionGroup.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$GrabGetCurrent"><span class="code">__$GrabGetCurrent<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+	</div><h4 id="__$IconSizeFromName"><span class="code">__$IconSizeFromName<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$IconSizeGetName"><span class="code">__$IconSizeGetName<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$IconSizeLookup"><span class="code">__$IconSizeLookup<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$IconSizeLookupForSettings"><span class="code">__$IconSizeLookupForSettings<span class="delimiter">(</span><span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Settings.html#T">Gir.Gtk.Settings.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$IconSizeRegister"><span class="code">__$IconSizeRegister<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$IconSizeRegisterAlias"><span class="code">__$IconSizeRegisterAlias<span class="delimiter">(</span><span class="var">alias</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$IconThemeErrorQuark"><span class="code">__$IconThemeErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$Init"><span class="code">__$Init<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$InitCheck"><span class="code">__$InitCheck<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$InitWithArgs"><span class="code">__$InitWithArgs<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">parameter_string</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">entries</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">translation_domain</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$KeySnooperRemove"><span class="code">__$KeySnooperRemove<span class="delimiter">(</span><span class="var">snooper_handler_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$Main"><span class="code">__$Main<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h4 id="__$MainDoEvent"><span class="code">__$MainDoEvent<span class="delimiter">(</span><span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$MainIteration"><span class="code">__$MainIteration<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h4 id="__$MainIterationDo"><span class="code">__$MainIterationDo<span class="delimiter">(</span><span class="var">blocking</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$MainLevel"><span class="code">__$MainLevel<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$MainQuit"><span class="code">__$MainQuit<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h4 id="__$PaintArrow"><span class="code">__$PaintArrow<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">arrow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ArrowType.html#T">Gir.Gtk.ArrowType.T</a><span class="delimiter">,</span> <span class="var">fill</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintBox"><span class="code">__$PaintBox<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintBoxGap"><span class="code">__$PaintBoxGap<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">gap_side</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PositionType.html#T">Gir.Gtk.PositionType.T</a><span class="delimiter">,</span> <span class="var">gap_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">gap_width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintCheck"><span class="code">__$PaintCheck<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintDiamond"><span class="code">__$PaintDiamond<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintExpander"><span class="code">__$PaintExpander<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">expander_style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ExpanderStyle.html#T">Gir.Gtk.ExpanderStyle.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintExtension"><span class="code">__$PaintExtension<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">gap_side</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PositionType.html#T">Gir.Gtk.PositionType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintFlatBox"><span class="code">__$PaintFlatBox<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintFocus"><span class="code">__$PaintFocus<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintHandle"><span class="code">__$PaintHandle<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">orientation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Orientation.html#T">Gir.Gtk.Orientation.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintHline"><span class="code">__$PaintHline<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x1</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x2</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintLayout"><span class="code">__$PaintLayout<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">use_text</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">layout</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Pango/Layout.html#T">Gir.Pango.Layout.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintOption"><span class="code">__$PaintOption<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintResizeGrip"><span class="code">__$PaintResizeGrip<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">edge</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/WindowEdge.html#T">Gir.Gdk.WindowEdge.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintShadow"><span class="code">__$PaintShadow<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintShadowGap"><span class="code">__$PaintShadowGap<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">gap_side</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PositionType.html#T">Gir.Gtk.PositionType.T</a><span class="delimiter">,</span> <span class="var">gap_x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">gap_width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintSlider"><span class="code">__$PaintSlider<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">orientation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Orientation.html#T">Gir.Gtk.Orientation.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintSpinner"><span class="code">__$PaintSpinner<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">step</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintTab"><span class="code">__$PaintTab<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">shadow_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/ShadowType.html#T">Gir.Gtk.ShadowType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaintVline"><span class="code">__$PaintVline<span class="delimiter">(</span><span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">state_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StateType.html#T">Gir.Gtk.StateType.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">detail</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">y1_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y2_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$PaperSizeGetDefault"><span class="code">__$PaperSizeGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$PaperSizeGetPaperSizes"><span class="code">__$PaperSizeGetPaperSizes<span class="delimiter">(</span><span class="var">include_custom</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$ParseArgs"><span class="code">__$ParseArgs<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$PrintErrorQuark"><span class="code">__$PrintErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$PrintRunPageSetupDialog"><span class="code">__$PrintRunPageSetupDialog<span class="delimiter">(</span><span class="var">parent</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a><span class="delimiter">,</span> <span class="var">page_setup</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PageSetup.html#T">Gir.Gtk.PageSetup.T</a><span class="delimiter">,</span> <span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PrintSettings.html#T">Gir.Gtk.PrintSettings.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/PageSetup.html#T">Gir.Gtk.PageSetup.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$PrintRunPageSetupDialogAsync"><span class="code">__$PrintRunPageSetupDialogAsync<span class="delimiter">(</span><span class="var">parent</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a><span class="delimiter">,</span> <span class="var">page_setup</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PageSetup.html#T">Gir.Gtk.PageSetup.T</a><span class="delimiter">,</span> <span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PrintSettings.html#T">Gir.Gtk.PrintSettings.T</a><span class="delimiter">,</span> <span class="var">done_cb</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$PropagateEvent"><span class="code">__$PropagateEvent<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$RcAddDefaultFile"><span class="code">__$RcAddDefaultFile<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcFindModuleInPath"><span class="code">__$RcFindModuleInPath<span class="delimiter">(</span><span class="var">module_file</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcFindPixmapInPath"><span class="code">__$RcFindPixmapInPath<span class="delimiter">(</span><span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Settings.html#T">Gir.Gtk.Settings.T</a><span class="delimiter">,</span> <span class="var">scanner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Scanner.html#T">Gir.GLib.Scanner.T</a><span class="delimiter">,</span> <span class="var">pixmap_file</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcGetDefaultFiles"><span class="code">__$RcGetDefaultFiles<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcGetImModuleFile"><span class="code">__$RcGetImModuleFile<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcGetImModulePath"><span class="code">__$RcGetImModulePath<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcGetModuleDir"><span class="code">__$RcGetModuleDir<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcGetStyle"><span class="code">__$RcGetStyle<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcGetStyleByPaths"><span class="code">__$RcGetStyleByPaths<span class="delimiter">(</span><span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Settings.html#T">Gir.Gtk.Settings.T</a><span class="delimiter">,</span> <span class="var">widget_path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">class_path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Style.html#T">Gir.Gtk.Style.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$RcGetThemeDir"><span class="code">__$RcGetThemeDir<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcParse"><span class="code">__$RcParse<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcParseColor"><span class="code">__$RcParseColor<span class="delimiter">(</span><span class="var">scanner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Scanner.html#T">Gir.GLib.Scanner.T</a><span class="delimiter">,</span> <span class="var">color</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$RcParseColorFull"><span class="code">__$RcParseColorFull<span class="delimiter">(</span><span class="var">scanner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Scanner.html#T">Gir.GLib.Scanner.T</a><span class="delimiter">,</span> <span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/RcStyle.html#T">Gir.Gtk.RcStyle.T</a><span class="delimiter">,</span> <span class="var">color</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcParsePriority"><span class="code">__$RcParsePriority<span class="delimiter">(</span><span class="var">scanner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Scanner.html#T">Gir.GLib.Scanner.T</a><span class="delimiter">,</span> <span class="var">priority</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$RcParseState"><span class="code">__$RcParseState<span class="delimiter">(</span><span class="var">scanner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/Scanner.html#T">Gir.GLib.Scanner.T</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$RcParseString"><span class="code">__$RcParseString<span class="delimiter">(</span><span class="var">rc_string</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcPropertyParseBorder"><span class="code">__$RcPropertyParseBorder<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">gstring</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/String.html#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">property_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcPropertyParseColor"><span class="code">__$RcPropertyParseColor<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">gstring</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/String.html#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">property_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcPropertyParseEnum"><span class="code">__$RcPropertyParseEnum<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">gstring</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/String.html#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">property_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcPropertyParseFlags"><span class="code">__$RcPropertyParseFlags<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">gstring</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/String.html#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">property_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcPropertyParseRequisition"><span class="code">__$RcPropertyParseRequisition<span class="delimiter">(</span><span class="var">pspec</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/ParamSpec.html#T">Gir.GObject.ParamSpec.T</a><span class="delimiter">,</span> <span class="var">gstring</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GLib/String.html#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">property_value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RcReparseAll"><span class="code">__$RcReparseAll<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h4 id="__$RcReparseAllForSettings"><span class="code">__$RcReparseAllForSettings<span class="delimiter">(</span><span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Settings.html#T">Gir.Gtk.Settings.T</a><span class="delimiter">,</span> <span class="var">force_load</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$RcResetStyles"><span class="code">__$RcResetStyles<span class="delimiter">(</span><span class="var">settings</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Settings.html#T">Gir.Gtk.Settings.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RcSetDefaultFiles"><span class="code">__$RcSetDefaultFiles<span class="delimiter">(</span><span class="var">filenames</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$RecentChooserErrorQuark"><span class="code">__$RecentChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$RecentManagerErrorQuark"><span class="code">__$RecentManagerErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="__$RenderActivity"><span class="code">__$RenderActivity<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderArrow"><span class="code">__$RenderArrow<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">angle</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderBackground"><span class="code">__$RenderBackground<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderBackgroundGetClip"><span class="code">__$RenderBackgroundGetClip<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">out_clip</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderCheck"><span class="code">__$RenderCheck<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderExpander"><span class="code">__$RenderExpander<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderExtension"><span class="code">__$RenderExtension<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">gap_side</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PositionType.html#T">Gir.Gtk.PositionType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderFocus"><span class="code">__$RenderFocus<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderFrame"><span class="code">__$RenderFrame<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderFrameGap"><span class="code">__$RenderFrameGap<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">gap_side</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/PositionType.html#T">Gir.Gtk.PositionType.T</a><span class="delimiter">,</span> <span class="var">xy0_gap</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">xy1_gap</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderHandle"><span class="code">__$RenderHandle<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderIcon"><span class="code">__$RenderIcon<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderIconPixbuf"><span class="code">__$RenderIconPixbuf<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/IconSource.html#T">Gir.Gtk.IconSource.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$RenderIconSurface"><span class="code">__$RenderIconSurface<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Surface.html#T">Gir.Cairo.Surface.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderInsertionCursor"><span class="code">__$RenderInsertionCursor<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">layout</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Pango/Layout.html#T">Gir.Pango.Layout.T</a><span class="delimiter">,</span> <span class="var">index</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">direction</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderLayout"><span class="code">__$RenderLayout<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">layout</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Pango/Layout.html#T">Gir.Pango.Layout.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderLine"><span class="code">__$RenderLine<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x0</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y0</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x1</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y1</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderOption"><span class="code">__$RenderOption<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RenderSlider"><span class="code">__$RenderSlider<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/StyleContext.html#T">Gir.Gtk.StyleContext.T</a><span class="delimiter">,</span> <span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Cairo.html#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">orientation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Orientation.html#T">Gir.Gtk.Orientation.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$RgbToHsv"><span class="code">__$RgbToHsv<span class="delimiter">(</span><span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">g</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">h</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">s</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">v</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="__$SelectionAddTarget"><span class="code">__$SelectionAddTarget<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SelectionAddTargets"><span class="code">__$SelectionAddTargets<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$SelectionClearTargets"><span class="code">__$SelectionClearTargets<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$SelectionConvert"><span class="code">__$SelectionConvert<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SelectionOwnerSet"><span class="code">__$SelectionOwnerSet<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$SelectionOwnerSetForDisplay"><span class="code">__$SelectionOwnerSetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Display.html#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Atom.html#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$SelectionRemoveAll"><span class="code">__$SelectionRemoveAll<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$SetDebugFlags"><span class="code">__$SetDebugFlags<span class="delimiter">(</span><span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$ShowUri"><span class="code">__$ShowUri<span class="delimiter">(</span><span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a><span class="delimiter">,</span> <span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">timestamp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$ShowUriOnWindow"><span class="code">__$ShowUriOnWindow<span class="delimiter">(</span><span class="var">parent</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Window.html#T">Gir.Gtk.Window.T</a><span class="delimiter">,</span> <span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">timestamp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$StockAdd"><span class="code">__$StockAdd<span class="delimiter">(</span><span class="var">items</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$StockAddStatic"><span class="code">__$StockAddStatic<span class="delimiter">(</span><span class="var">items</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$StockListIds"><span class="code">__$StockListIds<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+	</div><h4 id="__$StockLookup"><span class="code">__$StockLookup<span class="delimiter">(</span><span class="var">stock_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">item</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$StockSetTranslateFunc"><span class="code">__$StockSetTranslateFunc<span class="delimiter">(</span><span class="var">domain</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="__$TargetTableFree"><span class="code">__$TargetTableFree<span class="delimiter">(</span><span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TargetTableNewFromList"><span class="code">__$TargetTableNewFromList<span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TargetList.html#T">Gir.Gtk.TargetList.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TargetsIncludeImage"><span class="code">__$TargetsIncludeImage<span class="delimiter">(</span><span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">writable</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TargetsIncludeRichText"><span class="code">__$TargetsIncludeRichText<span class="delimiter">(</span><span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TextBuffer.html#T">Gir.Gtk.TextBuffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TargetsIncludeText"><span class="code">__$TargetsIncludeText<span class="delimiter">(</span><span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TargetsIncludeUri"><span class="code">__$TargetsIncludeUri<span class="delimiter">(</span><span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TestCreateSimpleWindow"><span class="code">__$TestCreateSimpleWindow<span class="delimiter">(</span><span class="var">window_title</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">dialog_text</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TestFindLabel"><span class="code">__$TestFindLabel<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">label_pattern</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TestFindSibling"><span class="code">__$TestFindSibling<span class="delimiter">(</span><span class="var">base_widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">widget_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TestFindWidget"><span class="code">__$TestFindWidget<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">label_pattern</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">widget_type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TestListAllTypes"><span class="code">__$TestListAllTypes<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
+	</div><h4 id="__$TestRegisterAllTypes"><span class="code">__$TestRegisterAllTypes<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h4 id="__$TestSliderGetValue"><span class="code">__$TestSliderGetValue<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TestSliderSetPerc"><span class="code">__$TestSliderSetPerc<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">percentage</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TestSpinButtonClick"><span class="code">__$TestSpinButtonClick<span class="delimiter">(</span><span class="var">spinner</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/SpinButton.html#T">Gir.Gtk.SpinButton.T</a><span class="delimiter">,</span> <span class="var">button</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">upwards</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TestTextGet"><span class="code">__$TestTextGet<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TestTextSet"><span class="code">__$TestTextSet<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TestWidgetClick"><span class="code">__$TestWidgetClick<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">button</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TestWidgetSendKey"><span class="code">__$TestWidgetSendKey<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TestWidgetWaitForDraw"><span class="code">__$TestWidgetWaitForDraw<span class="delimiter">(</span><span class="var">widget</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$TreeGetRowDragData"><span class="code">__$TreeGetRowDragData<span class="delimiter">(</span><span class="var">selection_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/SelectionData.html#T">Gir.Gtk.SelectionData.T</a><span class="delimiter">,</span> <span class="var">tree_model</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$TreeRowReferenceDeleted"><span class="code">__$TreeRowReferenceDeleted<span class="delimiter">(</span><span class="var">proxy</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TreePath.html#T">Gir.Gtk.TreePath.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TreeRowReferenceInserted"><span class="code">__$TreeRowReferenceInserted<span class="delimiter">(</span><span class="var">proxy</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TreePath.html#T">Gir.Gtk.TreePath.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$TreeSetRowDragData"><span class="code">__$TreeSetRowDragData<span class="delimiter">(</span><span class="var">selection_data</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/SelectionData.html#T">Gir.Gtk.SelectionData.T</a><span class="delimiter">,</span> <span class="var">tree_model</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TreeModel.html#T">Gir.Gtk.TreeModel.T</a><span class="delimiter">,</span> <span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/TreePath.html#T">Gir.Gtk.TreePath.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="__$True"><span class="code">__$True<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Main">Main</a><ul><li><a href="#Functions">Functions</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

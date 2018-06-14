@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Gir.Gtk.Image</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Image" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gtk.html">Gtk</a></li><li><a class="id" href="/lib/Gir/Gtk/Image.html">Image</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from:<div class="comment"><a class="id" href="/doc/Gir/Gtk/Misc.html#T">Gir.Gtk.Misc.T</a>, <a class="id" href="/doc/Gir/Gtk/Widget.html#T">Gir.Gtk.Widget.T</a>, <a class="id" href="/doc/Gir/GObject/InitiallyUnowned.html#T">Gir.GObject.InitiallyUnowned.T</a>, <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/doc/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/doc/Gir/Atk/ImplementorIface.html#T">Gir.Atk.ImplementorIface.T</a>, <a class="id" href="/doc/Gir/Gtk/Buildable.html#T">Gir.Gtk.Buildable.T</a></div>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$New"><span class="code">__$New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+	</div><h4 id="__$NewFromAnimation"><span class="code">__$NewFromAnimation<span class="delimiter">(</span><span class="var">animation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/PixbufAnimation.html#T">Gir.GdkPixbuf.PixbufAnimation.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$NewFromFile"><span class="code">__$NewFromFile<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$NewFromGicon"><span class="code">__$NewFromGicon<span class="delimiter">(</span><span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gio/Icon.html#T">Gir.Gio.Icon.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$NewFromIconName"><span class="code">__$NewFromIconName<span class="delimiter">(</span><span class="var">icon_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$NewFromIconSet"><span class="code">__$NewFromIconSet<span class="delimiter">(</span><span class="var">icon_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/IconSet.html#T">Gir.Gtk.IconSet.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$NewFromPixbuf"><span class="code">__$NewFromPixbuf<span class="delimiter">(</span><span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$NewFromResource"><span class="code">__$NewFromResource<span class="delimiter">(</span><span class="var">resource_path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="__$NewFromStock"><span class="code">__$NewFromStock<span class="delimiter">(</span><span class="var">stock_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="__$NewFromSurface"><span class="code">__$NewFromSurface<span class="delimiter">(</span><span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Surface.html#T">Gir.Cairo.Surface.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Image.html#T">Gir.Gtk.Image.T</a></span></h4><div class="comment">
+		
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="clear"><span class="code"><span class="symbol">:clear</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_animation"><span class="code"><span class="symbol">:get_animation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GdkPixbuf/PixbufAnimation.html#T">Gir.GdkPixbuf.PixbufAnimation.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_gicon"><span class="code"><span class="symbol">:get_gicon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">gicon</span><span class="delimiter">,</span> <span class="var">size</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_icon_name"><span class="code"><span class="symbol">:get_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon_name</span><span class="delimiter">,</span> <span class="var">size</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_icon_set"><span class="code"><span class="symbol">:get_icon_set</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon_set</span><span class="delimiter">,</span> <span class="var">size</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_pixbuf"><span class="code"><span class="symbol">:get_pixbuf</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_pixel_size"><span class="code"><span class="symbol">:get_pixel_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_stock"><span class="code"><span class="symbol">:get_stock</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">stock_id</span><span class="delimiter">,</span> <span class="var">size</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_storage_type"><span class="code"><span class="symbol">:get_storage_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/ImageType.html#T">Gir.Gtk.ImageType.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="misc"><span class="code"><span class="symbol">:misc</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Misc.html#T">Gir.Gtk.Misc.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="set_from_animation"><span class="code"><span class="symbol">:set_from_animation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">animation</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/PixbufAnimation.html#T">Gir.GdkPixbuf.PixbufAnimation.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_from_file"><span class="code"><span class="symbol">:set_from_file</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_from_gicon"><span class="code"><span class="symbol">:set_from_gicon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gio/Icon.html#T">Gir.Gio.Icon.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_from_icon_name"><span class="code"><span class="symbol">:set_from_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon_name</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_from_icon_set"><span class="code"><span class="symbol">:set_from_icon_set</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">icon_set</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/IconSet.html#T">Gir.Gtk.IconSet.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_from_pixbuf"><span class="code"><span class="symbol">:set_from_pixbuf</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/GdkPixbuf/Pixbuf.html#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_from_resource"><span class="code"><span class="symbol">:set_from_resource</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">resource_path</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_from_stock"><span class="code"><span class="symbol">:set_from_stock</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">stock_id</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="set_from_surface"><span class="code"><span class="symbol">:set_from_surface</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Cairo/Surface.html#T">Gir.Cairo.Surface.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_misc"><span class="code"><span class="symbol">:set_misc</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gtk/Misc.html#T">Gir.Gtk.Misc.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gtk/Misc.html#T">Gir.Gtk.Misc.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_pixel_size"><span class="code"><span class="symbol">:set_pixel_size</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">pixel_size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Image">Image</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

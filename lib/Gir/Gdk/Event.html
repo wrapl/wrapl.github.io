@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Gir.Gdk.Event</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="Event" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gdk.html">Gdk</a></li><li><a class="id" href="/lib/Gir/Gdk/Event.html">Event</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a></span></h4><div class="comment">
+	</div><h4 id="__$New"><span class="code">__$New<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventType.html#T">Gir.Gdk.EventType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a></span></h4><div class="comment">
+		
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""=""><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="_get_angle"><span class="code"><span class="symbol">:_get_angle</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">angle</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="_get_center"><span class="code"><span class="symbol">:_get_center</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">x</span><span class="delimiter">,</span> <span class="var">y</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="_get_distance"><span class="code"><span class="symbol">:_get_distance</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">distance</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="any"><span class="code"><span class="symbol">:any</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventAny.html#T">Gir.Gdk.EventAny.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="button"><span class="code"><span class="symbol">:button</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventButton.html#T">Gir.Gdk.EventButton.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="configure"><span class="code"><span class="symbol">:configure</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventConfigure.html#T">Gir.Gdk.EventConfigure.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Event.html#T">Gir.Gdk.Event.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="crossing"><span class="code"><span class="symbol">:crossing</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventCrossing.html#T">Gir.Gdk.EventCrossing.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="dnd"><span class="code"><span class="symbol">:dnd</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventDND.html#T">Gir.Gdk.EventDND.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="expose"><span class="code"><span class="symbol">:expose</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventExpose.html#T">Gir.Gdk.EventExpose.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="focus_change"><span class="code"><span class="symbol">:focus_change</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventFocus.html#T">Gir.Gdk.EventFocus.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_axis"><span class="code"><span class="symbol">:get_axis</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">axis_use</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/AxisUse.html#T">Gir.Gdk.AxisUse.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_button"><span class="code"><span class="symbol">:get_button</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">button</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_click_count"><span class="code"><span class="symbol">:get_click_count</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">click_count</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_coords"><span class="code"><span class="symbol">:get_coords</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x_win</span><span class="delimiter">,</span> <span class="var">y_win</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_device"><span class="code"><span class="symbol">:get_device</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_device_tool"><span class="code"><span class="symbol">:get_device_tool</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/DeviceTool.html#T">Gir.Gdk.DeviceTool.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_event_sequence"><span class="code"><span class="symbol">:get_event_sequence</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_event_type"><span class="code"><span class="symbol">:get_event_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventType.html#T">Gir.Gdk.EventType.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_keycode"><span class="code"><span class="symbol">:get_keycode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keycode</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_keyval"><span class="code"><span class="symbol">:get_keyval</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_pointer_emulated"><span class="code"><span class="symbol">:get_pointer_emulated</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_root_coords"><span class="code"><span class="symbol">:get_root_coords</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x_root</span><span class="delimiter">,</span> <span class="var">y_root</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_scancode"><span class="code"><span class="symbol">:get_scancode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_screen"><span class="code"><span class="symbol">:get_screen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_scroll_deltas"><span class="code"><span class="symbol">:get_scroll_deltas</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">delta_x</span><span class="delimiter">,</span> <span class="var">delta_y</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_scroll_direction"><span class="code"><span class="symbol">:get_scroll_direction</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">direction</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_seat"><span class="code"><span class="symbol">:get_seat</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Seat.html#T">Gir.Gdk.Seat.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_source_device"><span class="code"><span class="symbol">:get_source_device</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_state"><span class="code"><span class="symbol">:get_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">state</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_time"><span class="code"><span class="symbol">:get_time</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_window"><span class="code"><span class="symbol">:get_window</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/Window.html#T">Gir.Gdk.Window.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="grab_broken"><span class="code"><span class="symbol">:grab_broken</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventGrabBroken.html#T">Gir.Gdk.EventGrabBroken.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="is_scroll_stop_event"><span class="code"><span class="symbol">:is_scroll_stop_event</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="key"><span class="code"><span class="symbol">:key</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="motion"><span class="code"><span class="symbol">:motion</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventMotion.html#T">Gir.Gdk.EventMotion.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="owner_change"><span class="code"><span class="symbol">:owner_change</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventOwnerChange.html#T">Gir.Gdk.EventOwnerChange.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="pad_axis"><span class="code"><span class="symbol">:pad_axis</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadAxis.html#T">Gir.Gdk.EventPadAxis.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="pad_button"><span class="code"><span class="symbol">:pad_button</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadButton.html#T">Gir.Gdk.EventPadButton.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="pad_group_mode"><span class="code"><span class="symbol">:pad_group_mode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadGroupMode.html#T">Gir.Gdk.EventPadGroupMode.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="property"><span class="code"><span class="symbol">:property</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventProperty.html#T">Gir.Gdk.EventProperty.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="proximity"><span class="code"><span class="symbol">:proximity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventProximity.html#T">Gir.Gdk.EventProximity.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="put"><span class="code"><span class="symbol">:put</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="scroll"><span class="code"><span class="symbol">:scroll</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventScroll.html#T">Gir.Gdk.EventScroll.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="selection"><span class="code"><span class="symbol">:selection</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventSelection.html#T">Gir.Gdk.EventSelection.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="set_any"><span class="code"><span class="symbol">:set_any</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventAny.html#T">Gir.Gdk.EventAny.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventAny.html#T">Gir.Gdk.EventAny.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_button"><span class="code"><span class="symbol">:set_button</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventButton.html#T">Gir.Gdk.EventButton.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventButton.html#T">Gir.Gdk.EventButton.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_configure"><span class="code"><span class="symbol">:set_configure</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventConfigure.html#T">Gir.Gdk.EventConfigure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventConfigure.html#T">Gir.Gdk.EventConfigure.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_crossing"><span class="code"><span class="symbol">:set_crossing</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventCrossing.html#T">Gir.Gdk.EventCrossing.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventCrossing.html#T">Gir.Gdk.EventCrossing.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_device"><span class="code"><span class="symbol">:set_device</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_device_tool"><span class="code"><span class="symbol">:set_device_tool</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tool</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/DeviceTool.html#T">Gir.Gdk.DeviceTool.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_dnd"><span class="code"><span class="symbol">:set_dnd</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventDND.html#T">Gir.Gdk.EventDND.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventDND.html#T">Gir.Gdk.EventDND.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_expose"><span class="code"><span class="symbol">:set_expose</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventExpose.html#T">Gir.Gdk.EventExpose.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventExpose.html#T">Gir.Gdk.EventExpose.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_focus_change"><span class="code"><span class="symbol">:set_focus_change</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventFocus.html#T">Gir.Gdk.EventFocus.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventFocus.html#T">Gir.Gdk.EventFocus.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_grab_broken"><span class="code"><span class="symbol">:set_grab_broken</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventGrabBroken.html#T">Gir.Gdk.EventGrabBroken.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventGrabBroken.html#T">Gir.Gdk.EventGrabBroken.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_key"><span class="code"><span class="symbol">:set_key</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventKey.html#T">Gir.Gdk.EventKey.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_motion"><span class="code"><span class="symbol">:set_motion</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventMotion.html#T">Gir.Gdk.EventMotion.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventMotion.html#T">Gir.Gdk.EventMotion.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_owner_change"><span class="code"><span class="symbol">:set_owner_change</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventOwnerChange.html#T">Gir.Gdk.EventOwnerChange.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventOwnerChange.html#T">Gir.Gdk.EventOwnerChange.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_pad_axis"><span class="code"><span class="symbol">:set_pad_axis</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventPadAxis.html#T">Gir.Gdk.EventPadAxis.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadAxis.html#T">Gir.Gdk.EventPadAxis.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_pad_button"><span class="code"><span class="symbol">:set_pad_button</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventPadButton.html#T">Gir.Gdk.EventPadButton.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadButton.html#T">Gir.Gdk.EventPadButton.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_pad_group_mode"><span class="code"><span class="symbol">:set_pad_group_mode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventPadGroupMode.html#T">Gir.Gdk.EventPadGroupMode.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventPadGroupMode.html#T">Gir.Gdk.EventPadGroupMode.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_property"><span class="code"><span class="symbol">:set_property</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventProperty.html#T">Gir.Gdk.EventProperty.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventProperty.html#T">Gir.Gdk.EventProperty.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_proximity"><span class="code"><span class="symbol">:set_proximity</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventProximity.html#T">Gir.Gdk.EventProximity.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventProximity.html#T">Gir.Gdk.EventProximity.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_screen"><span class="code"><span class="symbol">:set_screen</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Screen.html#T">Gir.Gdk.Screen.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_scroll"><span class="code"><span class="symbol">:set_scroll</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventScroll.html#T">Gir.Gdk.EventScroll.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventScroll.html#T">Gir.Gdk.EventScroll.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_selection"><span class="code"><span class="symbol">:set_selection</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventSelection.html#T">Gir.Gdk.EventSelection.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventSelection.html#T">Gir.Gdk.EventSelection.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_setting"><span class="code"><span class="symbol">:set_setting</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventSetting.html#T">Gir.Gdk.EventSetting.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventSetting.html#T">Gir.Gdk.EventSetting.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_source_device"><span class="code"><span class="symbol">:set_source_device</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/Device.html#T">Gir.Gdk.Device.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_touch"><span class="code"><span class="symbol">:set_touch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventTouch.html#T">Gir.Gdk.EventTouch.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouch.html#T">Gir.Gdk.EventTouch.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_touchpad_pinch"><span class="code"><span class="symbol">:set_touchpad_pinch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadPinch.html#T">Gir.Gdk.EventTouchpadPinch.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadPinch.html#T">Gir.Gdk.EventTouchpadPinch.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_touchpad_swipe"><span class="code"><span class="symbol">:set_touchpad_swipe</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadSwipe.html#T">Gir.Gdk.EventTouchpadSwipe.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadSwipe.html#T">Gir.Gdk.EventTouchpadSwipe.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_type"><span class="code"><span class="symbol">:set_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventType.html#T">Gir.Gdk.EventType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventType.html#T">Gir.Gdk.EventType.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_visibility"><span class="code"><span class="symbol">:set_visibility</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventVisibility.html#T">Gir.Gdk.EventVisibility.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventVisibility.html#T">Gir.Gdk.EventVisibility.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_window_state"><span class="code"><span class="symbol">:set_window_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/doc/Gir/Gdk/EventWindowState.html#T">Gir.Gdk.EventWindowState.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventWindowState.html#T">Gir.Gdk.EventWindowState.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="setting"><span class="code"><span class="symbol">:setting</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventSetting.html#T">Gir.Gdk.EventSetting.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="touch"><span class="code"><span class="symbol">:touch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouch.html#T">Gir.Gdk.EventTouch.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="touchpad_pinch"><span class="code"><span class="symbol">:touchpad_pinch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadPinch.html#T">Gir.Gdk.EventTouchpadPinch.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="touchpad_swipe"><span class="code"><span class="symbol">:touchpad_swipe</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventTouchpadSwipe.html#T">Gir.Gdk.EventTouchpadSwipe.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="triggers_context_menu"><span class="code"><span class="symbol">:triggers_context_menu</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventType.html#T">Gir.Gdk.EventType.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="visibility"><span class="code"><span class="symbol">:visibility</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventVisibility.html#T">Gir.Gdk.EventVisibility.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="window_state"><span class="code"><span class="symbol">:window_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Gir/Gdk/EventWindowState.html#T">Gir.Gdk.EventWindowState.T</a></span></h4><div class="comment">
+		
+	</div><h4 id=""~=""><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#Event">Event</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

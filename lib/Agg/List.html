@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+
+
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+
+	<!-- load inks css from the cdn -->
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- load inks css for IE8 -->
+	<!--[if lt IE 9 ]>
+		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<![endif]-->
+
+	<!-- test browser flexbox support and load legacy grid if unsupported -->
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.flexbox,
+			nope: "/css/ink-legacy.min.css"
+		});
+	</script>
+
+	<!-- load inks javascript files from the cdn -->
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="/js/autoload.min.js"></script>
+
+	<title>Agg.List</title>
+</head>
+<body>
+
+<div class="ink-grid">
+	<header class="vertical-space">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+		<nav class="ink-navigation">
+			<ul class="menu horizontal blue">
+				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
+					<ul class="submenu">
+						<li><a href="/about.html#Features">Features</a></li>
+						<li><a href="/about.html#Status">Status</a></li>
+						<li><a href="/about.html#Contact">Contact</a></li>
+					</ul>
+				</li>
+				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+					<ul class="submenu">
+						<li><a href="/ref/tutorial.html">Tutorial</a></li>
+						<li><a href="/docs.html#Reference">Reference</a>
+							<ul class="submenu flyout right">
+								<li><a href="/ref/syntax.html">Syntax</a></li>
+								<li><a href="/ref/expressions.html">Expressions</a></li>
+							</ul>
+						</li>
+						<li><a href="/samples.html">Sample</a></li>
+						<li><a href="/lib.html">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+					<ul class="submenu">
+						<li><a href="/download.html#Source">Source</a></li>
+						<li><a href="/download.html#Binaries">Binaries</a></li>
+					</ul>
+				</li>
+				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+					<ul class="submenu">
+						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
+						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
+						<li><a href="/links.html#Libraries">Libraries</a></li>
+					</ul>
+				</li>
+				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+					<ul class="submenu">
+						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+						<li><a href="/forum/index.php">Forum</a></li>
+					</ul>
+				</li>
+				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
+					<form method="get" action="/sphider/search.php" class="ink-form">
+						<input type="hidden" name="search" value="1"/>
+						<input type="text" name="query" id="do_search">
+						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<div class="column-group horizontal-gutters">
+	<div class="left-column all-75 small-100 tiny-100">
+<section id="List" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Agg.html">Agg</a></li><li><a class="id" href="/lib/Agg/List.html">List</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+A general purpose extensible list type. Lists are indexed starting at <span class="code">1</span>.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Apply"><span class="code">Apply<span class="delimiter">(</span><span class="var">list</span><span class="delimiter">,</span> <span class="var">func</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Returns the result of calling <span class="var">func</span> with the elements in <span class="var">list</span> as arguments.<br></br>
+References to the elements of <span class="var">list</span> are passed so if <span class="var">func</span> expects reference parameters, it will modify <span class="var">list</span>.<br></br>
+	</div><h4 id="Collect"><span class="code">Collect<span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">args...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Returns a list of all values produced by <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">args</span><span class="delimiter">)</span></span>.<br></br>
+	</div><h4 id="CollectN"><span class="code">CollectN<span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">list<sub>1</sub>, ..., list<sub>k</sub></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Returns a list of all values produced by <span class="code"><span class="var">func</span><span class="delimiter">(</span></span><span class="var">arg<sub>1</sub></span><span class="code"><span class="delimiter">,</span> <span class="delimiter">...,</span> </span><span class="var">arg<sub>k</sub></span><span class="code"><span class="delimiter">)</span></span> where <span class="var">arg<sub>1</sub></span><span class="code"><span class="delimiter">,</span> <span class="delimiter">...,</span> </span><span class="var">arg<sub>k</sub></span> are elements taken from <span class="var">list<sub>1</sub></span><span class="code"><span class="delimiter">,</span> <span class="delimiter">...,</span> </span><span class="var">list<sub>k</sub></span><br></br>
+	</div><h4 id="Make"><span class="code">Make<span class="delimiter">(</span><span class="var">value<sub>1</sub>, ..., value<sub>k</sub></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+returns a list with <span class="var">value<sub>1</sub></span>, ... , <span class="var">value<sub>k</sub></span> as its elements<br></br>
+	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a> <span class="delimiter">=</span> <a class="id" href="#0">0</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+Returns a new list with Length elements<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""#""><span class="code"><span class="symbol">:</span><span class="literal">"#"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id=""+""><span class="code"><span class="symbol">:</span><span class="literal">"+"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+returns the concatenation of <span class="var">a</span> and <span class="var">b</span><br></br>
+	</div><h4 id=""=""><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Agg/ObjectTable.html#T">Agg.ObjectTable.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id=""?""><span class="code"><span class="symbol">:</span><span class="literal">"?"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">sep</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+		
+converts each element of <span class="var">list</span> to a string and joins them separating elements with <span class="var">sep</span>.<br></br>
+	</div><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id=""[]""><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+returns an assignable reference to the <span class="var">n</span><sup>th</sup> element of <span class="var">list</span><br></br>
+negative indices are taken from the end of the list<br></br>
+fails if <span class="var">n</span> is outside the range <span class="code"><span class="delimiter">-</span></span><span class="var">list</span><span class="code"><span class="symbol">:length</span></span> .. <span class="var">list</span><span class="code"><span class="symbol">:length</span></span><br></br>
+	</div><h4 id=""[]""><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+		
+returns the sublist of <span class="var">list</span> from the <span class="var">m</span><sup>th</sup> to the <span class="var">n - 1</span><sup>th</sup> element inclusively<br></br>
+fails if either <span class="var">m</span> or <span class="var">n</span> is outside the range of the list<br></br>
+returns an empty list if <span class="code"><span class="var">m</span> <span class="delimiter">&amp;</span><span class="var">gt</span><span class="delimiter">;</span> <span class="var">n</span></span><br></br>
+	</div><h4 id=""[]=""><span class="code"><span class="symbol">:</span><span class="literal">"[]="</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+		
+compares the <span class="var">n</span><sup>th</sup> element of <span class="var">list</span> to <span class="var">value</span><br></br>
+negative indices are taken from the end of the list<br></br>
+fails if <span class="var">n</span> is outside the range <span class="code"><span class="delimiter">-</span></span><span class="var">list</span><span class="code"><span class="symbol">:length</span></span> .. <span class="var">list</span><span class="code"><span class="symbol">:length</span></span><br></br>
+	</div><h4 id=""[]=""><span class="code"><span class="symbol">:</span><span class="literal">"[]="</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">list2</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+		
+compares the sublist of <span class="var">list</span> from the <span class="var">m</span><sup>th</sup> to the <span class="var">n - 1</span><sup>th</sup> element inclusively to <span class="var">list2</span><br></br>
+fails if either <span class="var">m</span> or <span class="var">n</span> is outside the range of the list<br></br>
+returns an empty list if <span class="code"><span class="var">m</span> <span class="delimiter">&amp;</span><span class="var">gt</span><span class="delimiter">;</span> <span class="var">n</span></span><br></br>
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Returns the result of calling <span class="var">func</span> with the elements in <span class="var">list</span> as arguments.<br></br>
+References to the elements of <span class="var">list</span> are passed so if <span class="var">func</span> expects reference parameters, it will modify <span class="var">list</span>.<br></br>
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Returns the result of calling <span class="var">func</span> with the elements in <span class="var">list</span> as arguments.<br></br>
+References to the elements of <span class="var">list</span> are passed so if <span class="var">func</span> expects reference parameters, it will modify <span class="var">list</span>.<br></br>
+	</div><h4 id="bsearch"><span class="code"><span class="symbol">:bsearch</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="collect"><span class="code"><span class="symbol">:collect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+returns a shallow copy of <span class="var">list</span><br></br>
+	</div><h4 id="delete"><span class="code"><span class="symbol">:delete</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+removes the <span class="var">n</span><sup>th</sup> element from <span class="var">list</span>. Returns the removed value.<br></br>
+	</div><h4 id="empty"><span class="code"><span class="symbol">:empty</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+empties <span class="var">list</span> and returns it<br></br>
+	</div><h4 id="fill"><span class="code"><span class="symbol">:fill</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">var<sub>1</sub><span class="delimiter">+</span>, ..., var<sub>k</sub><span class="delimiter">+</span></span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+Iterates through <span class="var">list</span> assigning values to <span class="var">var<sub>1</sub></span>, ..., <span class="var">var<sub>k</sub></span>, <span class="var">k</span> values at a time,<br></br>
+	</div><h4 id="filter"><span class="code"><span class="symbol">:filter</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Removes each <span class="var">value</span> from <span class="var">list</span> for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">value</span><span class="delimiter">)</span></span> succeeds, generating each value in turn.<br></br>
+Returns <span class="var">value</span> if such a <span class="var">value</span> was found, fails otherwise.<br></br>
+	</div><h4 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">,</span> <span class="var">fn<sub>1</sub><span class="delimiter">+</span>, ..., fn<sub>k</sub><span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+Generates all <span class="var">n</span> where <span class="var">fn<sub>k</sub></span><span class="code"><span class="delimiter">(</span> <span class="delimiter">...</span> </span><span class="var">fn<sub>1</sub></span><span class="code"><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span> <span class="delimiter">...</span> <span class="delimiter">)</span> <span class="delimiter">=</span> <span class="var">value</span></span>, if any.<br></br>
+	</div><h4 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">]</span> <span class="delimiter">=</span> <span class="var">value</span></span>, if any.<br></br>
+	</div><h4 id="foldl"><span class="code"><span class="symbol">:foldl</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="foldl"><span class="code"><span class="symbol">:foldl</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="foldr"><span class="code"><span class="symbol">:foldr</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="foldr"><span class="code"><span class="symbol">:foldr</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="in"><span class="code"><span class="symbol">:in</span><span class="delimiter">(</span><span class="var">value</span><span class="delimiter">,</span> <span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Returns <span class="var">value</span> if it is an element in <span class="var">list</span>, fails otherwise.<br></br>
+	</div><h4 id="insert"><span class="code"><span class="symbol">:insert</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">value...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+inserts <span class="code"><span class="var">value</span><span class="delimiter">...</span></span> into the <span class="var">n</span><sup>th</sup> position in <span class="var">list</span><br></br>
+	</div><h4 id="keys"><span class="code"><span class="symbol">:keys</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+Equivalent to <span class="code">1<span class="symbol">:to</span><span class="delimiter">(</span><span class="var">list</span><span class="symbol">:length</span><span class="delimiter">)</span></span>.<br></br>
+	</div><h4 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+returns the length of <span class="var">list</span><br></br>
+	</div><h4 id="loop"><span class="code"><span class="symbol">:loop</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Returns the list or results obtained by calling <span class="var">func</span> with each element in <span class="var">list</span>.<br></br>
+Elements for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">value</span><span class="delimiter">)</span></span> fail will not add any result to the list.<br></br>
+	</div><h4 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Returns the list or results obtained by calling <span class="var">func</span> with each element in <span class="var">list</span>.<br></br>
+Elements for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">value</span><span class="delimiter">)</span></span> fail will not add any result to the list.<br></br>
+	</div><h4 id="new"><span class="code"><span class="symbol">:new</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="pop"><span class="code"><span class="symbol">:pop</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+removes and returns the first element of <span class="var">list</span><br></br>
+	</div><h4 id="pull"><span class="code"><span class="symbol">:pull</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+removes and returns the last element of <span class="var">list</span><br></br>
+	</div><h4 id="push"><span class="code"><span class="symbol">:push</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+inserts <span class="code"><span class="var">value</span><span class="delimiter">...</span></span> onto the start of <span class="var">list</span> and returns <span class="var">list</span><br></br>
+	</div><h4 id="put"><span class="code"><span class="symbol">:put</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+inserts <span class="code"><span class="var">value</span><span class="delimiter">...</span></span> onto the end of <span class="var">list</span> and returns <span class="var">list</span><br></br>
+	</div><h4 id="remove"><span class="code"><span class="symbol">:remove</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+		
+Removes the first occurance where <span class="var">fn<sub>k</sub></span><span class="code"><span class="delimiter">(</span> <span class="delimiter">...</span> </span><span class="var">fn<sub>1</sub></span><span class="code"><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span> <span class="delimiter">...</span> <span class="delimiter">)</span> <span class="delimiter">=</span> <span class="var">value</span></span> from <span class="var">list</span>.<br></br>
+Returns <span class="var">value</span> if <span class="var">value</span> was removed, fails otherwise.<br></br>
+	</div><h4 id="remove"><span class="code"><span class="symbol">:remove</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Removes the first occurance of <span class="var">value</span> from <span class="var">list</span>.<br></br>
+Returns <span class="var">value</span> if <span class="var">value</span> was present, fails otherwise.<br></br>
+	</div><h4 id="reverse"><span class="code"><span class="symbol">:reverse</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+Reverses the order of the entries in <span class="var">list</span> in place. Returns <span class="var">list</span>.<br></br>
+	</div><h4 id="rfind"><span class="code"><span class="symbol">:rfind</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">,</span> <span class="var">fn<sub>1</sub><span class="delimiter">+</span>, ..., fn<sub>k</sub><span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+Generates all <span class="var">n</span> where <span class="var">fn<sub>k</sub></span><span class="code"><span class="delimiter">(</span> <span class="delimiter">...</span> </span><span class="var">fn<sub>1</sub></span><span class="code"><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span> <span class="delimiter">...</span> <span class="delimiter">)</span> <span class="delimiter">=</span> <span class="var">value</span></span> in reverse order, if any.<br></br>
+	</div><h4 id="rfind"><span class="code"><span class="symbol">:rfind</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">]</span> <span class="delimiter">=</span> <span class="var">value</span></span> in reverse order, if any.<br></br>
+	</div><h4 id="rvalues"><span class="code"><span class="symbol">:rvalues</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+Generates the values in <span class="var">list</span> in reverse order.<br></br>
+	</div><h4 id="rwhere"><span class="code"><span class="symbol">:rwhere</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">predicate</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">predicate</span><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span> <span class="delimiter">=</span> <span class="var">value</span></span> in reverse order, if any.<br></br>
+	</div><h4 id="rwhere"><span class="code"><span class="symbol">:rwhere</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">predicate</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">predicate</span><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span></span> succeeds in reverse order, if any.<br></br>
+	</div><h4 id="separate"><span class="code"><span class="symbol">:separate</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="shift"><span class="code"><span class="symbol">:shift</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+shifts the <span class="var">n</span><sup>th</sup> element by <span class="var">r</span> positions within <span class="var">list</span><br></br>
+	</div><h4 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+returns the length of <span class="var">list</span><br></br>
+	</div><h4 id="sort"><span class="code"><span class="symbol">:sort</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">comp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Sorts <span class="var">list</span> in place with the ordering given by <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;</span> <span class="var">b</span></span> if <span class="code"><span class="var">comp</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">)</span></span> succeeds.<br></br>
+Algorithm taken from <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/">Simon Tatham's Algorithms Page</a><br></br>
+	</div><h4 id="sort"><span class="code"><span class="symbol">:sort</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+Sorts <span class="var">list</span> in place with the ordering given by <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;</span> <span class="var">b</span></span> if <span class="code"><span class="var">comp</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">)</span></span> succeeds.<br></br>
+Algorithm taken from <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/">Simon Tatham's Algorithms Page</a><br></br>
+	</div><h4 id="sort2"><span class="code"><span class="symbol">:sort2</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">comp</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Code based on public domain code by Philip J. Erdelsky, pje@acm.org<br></br>
+http://www.alumni.caltech.edu/~pje/<br></br>
+	</div><h4 id="sort2"><span class="code"><span class="symbol">:sort2</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+Code based on public domain code by Philip J. Erdelsky, pje@acm.org<br></br>
+http://www.alumni.caltech.edu/~pje/<br></br>
+	</div><h4 id="splice"><span class="code"><span class="symbol">:splice</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="split"><span class="code"><span class="symbol">:split</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">from</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">to</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+Trims the list to <span class="code"><span class="var">list</span><span class="delimiter">[</span>1<span class="delimiter">,</span> <span class="var">from</span> <span class="delimiter">-</span> 1<span class="delimiter">]</span> <span class="delimiter">+</span> <span class="var">list</span><span class="delimiter">[</span><span class="var">to</span><span class="delimiter">,</span> 0<span class="delimiter">]</span></span> and returns <span class="code"><span class="var">list</span><span class="delimiter">[</span><span class="var">from</span><span class="delimiter">,</span> <span class="var">to</span> <span class="delimiter">-</span> 1<span class="delimiter">]</span></span>.<br></br>
+	</div><h4 id="split"><span class="code"><span class="symbol">:split</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">from</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Trims the list to <span class="code"><span class="var">list</span><span class="delimiter">[</span>1<span class="delimiter">,</span> <span class="var">from</span> <span class="delimiter">-</span> 1<span class="delimiter">]</span></span> and returns <span class="code"><span class="var">list</span><span class="delimiter">[</span><span class="var">from</span><span class="delimiter">,</span> 0<span class="delimiter">]</span></span>.<br></br>
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+Generates the values in <span class="var">list</span>.<br></br>
+	</div><h4 id="where"><span class="code"><span class="symbol">:where</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">predicate</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">predicate</span><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span> <span class="delimiter">=</span> <span class="var">value</span></span>, if any.<br></br>
+	</div><h4 id="where"><span class="code"><span class="symbol">:where</span><span class="delimiter">(</span><span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">predicate</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+		
+Generates all <span class="var">n</span> where <span class="code"><span class="var">predicate</span><span class="delimiter">(</span><span class="var">list</span><span class="delimiter">[</span><span class="var">n</span><span class="delimiter">])</span></span> succeeds, if any.<br></br>
+	</div></section></section>
+	</div>
+
+	<div class="right-column all-25 hide-small hide-tiny">
+		<nav class="ink-navigation ink-sticky" id="side-menu">
+			<ul class="menu vertical blue">
+<li><a href="#List">List</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
+		</ul>
+        </nav>
+    </div>
+
+	<div class="clearer"><span></span></div>
+</div>
+
+</div>
+<footer class="clearfix">
+	<div class="ink-grid">
+		<div class="bottom space">
+			<span class="left"></span>
+			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
