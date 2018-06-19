@@ -22,7 +22,7 @@
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -104,18 +104,18 @@
 
 <div class="column-group horizontal-gutters">
 	<div class="left-column all-75 small-100 tiny-100">
-<section id="Integer" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Std.html">Std</a></li><li><a class="id" href="/lib/Std/Integer.html">Integer</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from:<div class="comment"><a class="id" href="/doc/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></div>
+<section id="Integer" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Std.html">Std</a></li><li><a class="id" href="/lib/Std/Integer.html">Integer</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a>
 <div class="comment">
 		
 		
 base type of all integer types<br></br>
-	</div><h4 id="SmallT"><span class="code">SmallT</span></h4>Inherits from:<div class="comment"><a class="id" href="#T">T</a>, <a class="id" href="/doc/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></div>
+	</div><h4 id="SmallT"><span class="code">SmallT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a>
 <div class="comment">
 		
 		
 		
 integers that fit into a signed machine word.<br></br>
-	</div><h4 id="BigT"><span class="code">BigT</span></h4>Inherits from:<div class="comment"><a class="id" href="#T">T</a>, <a class="id" href="/doc/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a></div>
+	</div><h4 id="BigT"><span class="code">BigT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>, <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a>
 <div class="comment">
 		
 		
@@ -124,14 +124,14 @@ arbritrary precision integers.<br></br>
 note: instances of type <span class="code"><a class="id" href="#BigT">BigT</a></span> should never contain values which can fit into a signed machine word.<br></br>
 	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="One"><span class="code">One</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
 	</div><h4 id="Zero"><span class="code">Zero</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/doc/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/doc/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/doc/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
-	</div><h4 id="CompareSmall"><span class="code">CompareSmall<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/lib/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/lib/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/lib/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
+	</div><h4 id="CompareSmall"><span class="code">CompareSmall<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/doc/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/doc/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/doc/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
+Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/lib/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/lib/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/lib/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
 	</div><h4 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#SmallT">SmallT</a></span></h4><div class="comment">
 		
 Returns a hash for <span class="var">a</span>.<br></br>
@@ -152,10 +152,10 @@ generates the values from <span class="var">from</span> to <span class="var">to<
 	</div><h4 id=""/""><span class="code"><span class="symbol">:</span><span class="literal">"/"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BigT">BigT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BigT">BigT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h4 id=""^""><span class="code"><span class="symbol">:</span><span class="literal">"^"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BigT">BigT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Rational.html#T">Std.Rational.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id=""^""><span class="code"><span class="symbol">:</span><span class="literal">"^"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BigT">BigT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Rational.html#T">Std.Rational.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h4 id=""^""><span class="code"><span class="symbol">:</span><span class="literal">"^"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Rational.html#T">Std.Rational.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id=""^""><span class="code"><span class="symbol">:</span><span class="literal">"^"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Rational.html#T">Std.Rational.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div><h4 id=""^""><span class="code"><span class="symbol">:</span><span class="literal">"^"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BigT">BigT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SmallT">SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">

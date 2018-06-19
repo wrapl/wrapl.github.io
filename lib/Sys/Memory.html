@@ -22,7 +22,7 @@
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -105,26 +105,26 @@
 <div class="column-group horizontal-gutters">
 	<div class="left-column all-75 small-100 tiny-100">
 <section id="Memory" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Sys.html">Sys</a></li><li><a class="id" href="/lib/Sys/Memory.html">Memory</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="WeakRefT"><span class="code">WeakRefT</span></h4><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Alloc"><span class="code">Alloc<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Alloc"><span class="code">Alloc<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
 		
 Allocates and returns the address of <span class="var">size</span> bytes of memory in the heap.<br></br>
-	</div><h4 id="AllocAtomic"><span class="code">AllocAtomic<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
+	</div><h4 id="AllocAtomic"><span class="code">AllocAtomic<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
 		
 Allocates and returns the address of <span class="var">size</span> bytes of pointer free memory in the heap.<br></br>
-	</div><h4 id="AllocUncollectable"><span class="code">AllocUncollectable<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
+	</div><h4 id="AllocUncollectable"><span class="code">AllocUncollectable<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a></span></h4><div class="comment">
 		
 Allocates and returns the address of <span class="var">size</span> bytes of uncollectable memory in the heap.<br></br>
 	</div><h4 id="Collect"><span class="code">Collect<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
 Causes a garbage collection cycle.<br></br>
 	</div><h4 id="GCEnabled"><span class="code">GCEnabled<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
-	</div><h4 id="IsVisible"><span class="code">IsVisible<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IsVisible"><span class="code">IsVisible<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/doc/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 Attaches a finalizer to <span class="var">address</span>. I.e. <span class="code"><span class="var">finalizer</span><span class="delimiter">(</span><span class="var">address</span><span class="delimiter">,</span> <span class="var">data</span><span class="delimiter">)</span></span> should be called at some stage after <span class="var">address</span> becomes unreachable.<br></br>
-	</div><h4 id="RegisterObjectFinalizer"><span class="code">RegisterObjectFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> ANY<span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/doc/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RegisterObjectFinalizer"><span class="code">RegisterObjectFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> ANY<span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		

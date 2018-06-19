@@ -22,7 +22,7 @@
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -110,10 +110,10 @@
 	</div><h4 id="SemaphoreT"><span class="code">SemaphoreT</span></h4><div class="comment">
 	</div><h4 id="CondT"><span class="code">CondT</span></h4><div class="comment">
 	</div><h4 id="RWLockT"><span class="code">RWLockT</span></h4><div class="comment">
-	</div><h4 id="QueueT"><span class="code">QueueT</span></h4>Inherits from:<div class="comment"><a class="id" href="#MutexT">MutexT</a></div>
+	</div><h4 id="QueueT"><span class="code">QueueT</span></h4>Inherits from: <a class="id" href="#MutexT">MutexT</a>
 <div class="comment">
 		
-	</div><h4 id="GateT"><span class="code">GateT</span></h4>Inherits from:<div class="comment"><a class="id" href="#MutexT">MutexT</a></div>
+	</div><h4 id="GateT"><span class="code">GateT</span></h4>Inherits from: <a class="id" href="#MutexT">MutexT</a>
 <div class="comment">
 		
 	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Block"><span class="code">Block<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
@@ -168,7 +168,7 @@
 	</div><h4 id="Sleep"><span class="code">Sleep<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
 	</div><h4 id="USleep"><span class="code">USleep<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
 	</div><h4 id="Unblock"><span class="code">Unblock<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div><h4 id="broadcast"><span class="code"><span class="symbol">:broadcast</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#CondT">CondT</a><span class="delimiter">)</span></span></h4><div class="comment">
@@ -208,11 +208,11 @@
 		
 	</div><h4 id="result"><span class="code"><span class="symbol">:result</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h4 id="result"><span class="code"><span class="symbol">:result</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="result"><span class="code"><span class="symbol">:result</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h4 id="resume"><span class="code"><span class="symbol">:resume</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#GateT">GateT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="resume"><span class="code"><span class="symbol">:resume</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#GateT">GateT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
@@ -221,7 +221,7 @@
 		
 	</div><h4 id="signal"><span class="code"><span class="symbol">:signal</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#CondT">CondT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h4 id="signal"><span class="code"><span class="symbol">:signal</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="signal"><span class="code"><span class="symbol">:signal</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div><h4 id="success"><span class="code"><span class="symbol">:success</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
@@ -239,7 +239,7 @@
 		
 	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#GateT">GateT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#QueueT">QueueT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#QueueT">QueueT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#CondT">CondT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#MutexT">MutexT</a><span class="delimiter">)</span></span></h4><div class="comment">
@@ -247,7 +247,7 @@
 		
 	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SemaphoreT">SemaphoreT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#MutexT">MutexT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#MutexT">MutexT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div><h4 id="wrlock"><span class="code"><span class="symbol">:wrlock</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#RWLockT">RWLockT</a><span class="delimiter">)</span></span></h4><div class="comment">

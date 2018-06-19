@@ -22,7 +22,7 @@
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -117,13 +117,13 @@ Result of comparison.<br></br>
 	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
 		
 		
-Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/doc/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/doc/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/doc/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
-	</div><h4 id="Create"><span class="code">Create<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a><span class="delimiter">,</span> <span class="var">values...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# T"> T</a></span></h4><div class="comment">
+Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/lib/Std/Object.html#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/lib/Std/Object.html#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/lib/Std/Object.html#Greater">Std.Object.Greater</a></span>.<br></br>
+	</div><h4 id="Create"><span class="code">Create<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Type.html#T">Std.Type.T</a><span class="delimiter">,</span> <span class="var">values...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# T"> T</a></span></h4><div class="comment">
 		
 		
 Creates a new object of type <span class="var">type</span>. If present, fields are initialized from <span class="var">values</span>.<br></br>
 	</div><h4 id="Field"><span class="code">Field<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
-	</div><h4 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 Returns a hash for <span class="var">a</span>.<br></br>
 	</div><h4 id="IsEqual"><span class="code">IsEqual<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
@@ -137,7 +137,7 @@ Returns <span class="var">b</span> if <span class="code"><span class="var">a</sp
 	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# T"> T</a></span></h4><div class="comment">
 		
 creates a new object of the same type as <span class="var">object</span><br></br>
-	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/doc/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.html#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.html#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		

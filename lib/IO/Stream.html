@@ -22,7 +22,7 @@
 	<!-- load inks css from the cdn -->
 	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
 		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
@@ -109,7 +109,7 @@
 		
 		
 		
-	<h4 id="CloseMode.T"><span class="code">T : </span><a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
+	<h4 id="CloseMode.T"><span class="code">T : </span><a class="id" href="/lib/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
  Close mode to pass to <span class="code"><span class="symbol">:close</span></span>.<br></br>
 		</div><h4 id="CloseMode.Read"><span class="code">Read : </span><a class="id" href="#CloseMode.T">CloseMode.T</a></h4><div class="comment">
  Close the stream for further reading.<br></br>
@@ -127,7 +127,7 @@
 		
 		
 		
-	<h4 id="Message.Error"><span class="code">Error : </span><a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
+	<h4 id="Message.Error"><span class="code">Error : </span><a class="id" href="/lib/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
  Base type for error messages sent by stream methods.<br></br>
 		</div><h4 id="Message.ConvertError"><span class="code">ConvertError : </span><a class="id" href="#Message.Error">Message.Error</a></h4><div class="comment">
  Conversion error occurred.<br></br>
@@ -150,7 +150,7 @@
 		
 		
 		
-	<h4 id="SeekMode.T"><span class="code">T : </span><a class="id" href="/doc/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
+	<h4 id="SeekMode.T"><span class="code">T : </span><a class="id" href="/lib/Std/Type.html#T">Std.Type.T</a></h4><div class="comment">
  Seek mode to pass to <span class="code"><span class="symbol">:seek</span></span>.<br></br>
 		</div><h4 id="SeekMode.Set"><span class="code">Set : </span><a class="id" href="#SeekMode.T">SeekMode.T</a></h4><div class="comment">
  Seek to absolute relative to beginning of stream.<br></br>
@@ -160,29 +160,29 @@
  Seek to position relative to end of stream.<br></br>
 		</div><div class="comment"></div></section><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
 A stream of bytes. Streams may be read-only, write-only or read-write and may support seeking. New stream types should inherit from one of the subtypes defined below.<br></br>
-	</div><h4 id="ReaderT"><span class="code">ReaderT</span></h4>Inherits from:<div class="comment"><a class="id" href="#T">T</a></div>
+	</div><h4 id="ReaderT"><span class="code">ReaderT</span></h4>Inherits from: <a class="id" href="#T">T</a>
 <div class="comment">
 		
 A readable stream. Subtypes of <span class="var">ReaderT</span> should define at least the <span class="code"><span class="symbol">:read</span><span class="delimiter">(@</span><span class="var">ReaderT</span><span class="delimiter">,</span> <span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">Address</span><span class="delimiter">.</span><span class="var">T</span><span class="delimiter">,</span> <span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">Integer</span><span class="delimiter">.</span><span class="var">SmallT</span><span class="delimiter">)</span></span> method, default implementations for the other read methods are provided in this module.<br></br>
-	</div><h4 id="WriterT"><span class="code">WriterT</span></h4>Inherits from:<div class="comment"><a class="id" href="#T">T</a></div>
+	</div><h4 id="WriterT"><span class="code">WriterT</span></h4>Inherits from: <a class="id" href="#T">T</a>
 <div class="comment">
 		
 A writable stream. Subtypes of <span class="var">WriterT</span> should define at least the <span class="code"><span class="symbol">:write</span><span class="delimiter">(@</span><span class="var">WriterT</span><span class="delimiter">,</span> <span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">Address</span><span class="delimiter">.</span><span class="var">T</span><span class="delimiter">,</span> <span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">Integer</span><span class="delimiter">.</span><span class="var">SmallT</span><span class="delimiter">)</span></span> method, default implementations for the other write methods are provided in this module.<br></br>
-	</div><h4 id="SeekerT"><span class="code">SeekerT</span></h4>Inherits from:<div class="comment"><a class="id" href="#T">T</a></div>
+	</div><h4 id="SeekerT"><span class="code">SeekerT</span></h4>Inherits from: <a class="id" href="#T">T</a>
 <div class="comment">
 		
 A seekable stream. Subtypes of <span class="var">SeekerT</span> should define at least the <span class="code"><span class="symbol">:seek</span><span class="delimiter">(@</span><span class="var">SeekerT</span><span class="delimiter">,</span> <span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">Integer</span><span class="delimiter">.</span><span class="var">SmallT</span><span class="delimiter">)</span></span> method, default implementations for the other seek methods are provided in this module.<br></br>
-	</div><h4 id="TextReaderT"><span class="code">TextReaderT</span></h4>Inherits from:<div class="comment"><a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#T">T</a></div>
+	</div><h4 id="TextReaderT"><span class="code">TextReaderT</span></h4>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#T">T</a>
 <div class="comment">
 		
 		
 A readable stream with added methods for reading text.<br></br>
-	</div><h4 id="TextWriterT"><span class="code">TextWriterT</span></h4>Inherits from:<div class="comment"><a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a></div>
+	</div><h4 id="TextWriterT"><span class="code">TextWriterT</span></h4>Inherits from: <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>
 <div class="comment">
 		
 		
 A writable stream with added methods for writing text.<br></br>
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""@""><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 		
 	</div><h4 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
@@ -191,12 +191,12 @@ Closes <span class="var">t</span> for further reading or writing<br></br>
 	</div><h4 id="closed"><span class="code"><span class="symbol">:closed</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 Fails if <span class="var">t</span> is still open for reading or writing.<br></br>
-	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">count</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">count</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 		
 		
 Copies <span class="var">count</span> bytes from <span class="var">rd</span> to <span class="var">wr</span>.<br></br>
-	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#T">Std.Integer.T</a></span></h4><div class="comment">
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#T">Std.Integer.T</a></span></h4><div class="comment">
 		
 		
 Copies the contents of <span class="var">rd</span> to <span class="var">wr</span>.<br></br>
@@ -211,21 +211,21 @@ Completes any pending operations on <span class="var">t</span>.<br></br>
 		
 Links <span class="var">rd</span> and <span class="var">wr</span> so that any input available on <span class="var">rd</span> is written to <span class="var">wr</span>.<br></br>
 The default implementation creates a new thread and so <span class="var">rd</span> should block until input is available.<br></br>
-	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#TextReaderT">TextReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#TextReaderT">TextReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 Reads the next line of text from <span class="var">rd</span> and returns it as a string without the carriage return.<br></br>
 This methods differs from <span class="code"><span class="var">t</span><span class="symbol">:readx</span><span class="delimiter">(</span><span class="literal">"\n"</span><span class="delimiter">,</span> 0<span class="delimiter">)</span></span> in that it treats <span class="code"><span class="literal">"\r\n"</span></span> as a single carriage return.<br></br>
-	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">count</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">count</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 		
 Reads <span class="var">count</span> bytes from <span class="var">rd</span> and returns them as a string.<br></br>
-	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 		
 		
 Reads up to <span class="var">length</span> bytes from <span class="var">rd</span> into <span class="var">buffer</span><br></br>
 Returns the number of bytes read<br></br>
-	</div><h4 id="readi"><span class="code"><span class="symbol">:readi</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">max</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">terminal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="readi"><span class="code"><span class="symbol">:readi</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">max</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">terminal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 		
 		
@@ -234,7 +234,7 @@ Returns the bytes read as a string <em>including</em> the final byte if it is in
 Passing <span class="code">0</span> for <span class="var">max</span> will ignore the number of bytes read.<br></br>
 If <span class="code"><span class="var">terminal</span> <span class="delimiter">=</span> <span class="literal">""</span></span>, then only the number of bytes is checked<br></br>
 If both <span class="code"><span class="var">max</span> <span class="delimiter">=</span> 0</span> and <span class="code"><span class="var">terminal</span> <span class="delimiter">=</span> <span class="literal">""</span></span> then all the remaining bytes from <span class="var">rd</span> are returned.<br></br>
-	</div><h4 id="readx"><span class="code"><span class="symbol">:readx</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">max</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">terminal</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="readx"><span class="code"><span class="symbol">:readx</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">max</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">terminal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 		
 		
@@ -243,18 +243,18 @@ Returns the bytes read as a string <em>excluding</em> the final byte if it is in
 Passing <span class="code">0</span> for <span class="var">max</span> will ignore the number of bytes read.<br></br>
 If <span class="code"><span class="var">terminal</span> <span class="delimiter">=</span> <span class="literal">""</span></span>, then only the number of bytes is checked<br></br>
 If both <span class="code"><span class="var">max</span> <span class="delimiter">=</span> 0</span> and <span class="code"><span class="var">terminal</span> <span class="delimiter">=</span> <span class="literal">""</span></span> then all the remaining bytes from <span class="var">rd</span> are returned.<br></br>
-	</div><h4 id="rest"><span class="code"><span class="symbol">:rest</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
+	</div><h4 id="rest"><span class="code"><span class="symbol">:rest</span><span class="delimiter">(</span><span class="var">rd</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
 		
 Returns the remaining contents of <span class="var">rd</span>.<br></br>
-	</div><h4 id="seek"><span class="code"><span class="symbol">:seek</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#SeekerT">SeekerT</a><span class="delimiter">,</span> <span class="var">position</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SeekMode.T">SeekMode.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="seek"><span class="code"><span class="symbol">:seek</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#SeekerT">SeekerT</a><span class="delimiter">,</span> <span class="var">position</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SeekMode.T">SeekMode.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 Seeks to the <span class="var">position</span><sup>th</sup> byte in <span class="var">t</span><br></br>
-	</div><h4 id="tell"><span class="code"><span class="symbol">:tell</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h4 id="tell"><span class="code"><span class="symbol">:tell</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 Returns the current position in <span class="var">t</span><br></br>
-	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#WriterT">WriterT</a></span></h4><div class="comment">
+	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#WriterT">WriterT</a></span></h4><div class="comment">
 		
 		
 Writes <span class="var">string</span> to <span class="var">wr</span>.<br></br>
@@ -262,7 +262,7 @@ Writes <span class="var">string</span> to <span class="var">wr</span>.<br></br>
 		
 		
 Writes <span class="code"><span class="var">value</span><span class="delimiter">@</span><span class="var">Std</span><span class="delimiter">.</span><span class="var">String</span><span class="delimiter">.</span><span class="var">T</span></span> to <span class="var">wr</span>.<br></br>
-	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/doc/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">wr</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.html#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
