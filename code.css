@@ -15,17 +15,17 @@ div.module {
 
 span.code {
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   color: black; }
 
 span.term {
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   color: black; }
 
 span.var {
   /*font-style:italic;*/
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   color: black; }
 
 span.var sub {
@@ -38,7 +38,7 @@ span.nested {
 a.id {
   color: darkblue;
   text-decoration: none;
-  font-family: monospace; }
+  font-family: 'Fira Code', monospace; }
 
 a.id:hover {
   color: red;
@@ -55,7 +55,7 @@ span.keyword {
 
 span.literal {
   color: green;
-  font-style: italic; }
+  /*font-style: italic;*/ }
 
 span.comment {
   color: darkgray;
@@ -92,7 +92,7 @@ div.code {
   overflow: auto;
   padding: 8px 10px;
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   border: 1px solid #ff9933;
   line-height: 1.0;
   border-radius: 2px; }
@@ -108,7 +108,7 @@ div.term {
   overflow: auto;
   padding: 8px 10px;
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   border: 1px solid black;
   line-height: 1.0;
   border-radius: 2px; }
@@ -121,7 +121,7 @@ div.ccode {
   overflow: auto;
   padding: 8px 10px;
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   border: 1px solid #ffff33;
   line-height: 1.0;
   border-radius: 2px; }
@@ -134,7 +134,7 @@ div.m3code {
   overflow: auto;
   padding: 8px 10px;
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   border: thin inset #555;
   line-height: 1.0;
   border-radius: 2px; }
@@ -165,7 +165,7 @@ div.errors {
   text-align: left;
   line-height: normal;
   white-space: pre;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   color: red;
   padding: 5px;
   background-color: #FFE0E0;

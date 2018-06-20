@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,224 +43,205 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Atk.Role</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Role" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Atk.html">Atk</a></li><li><a class="id" href="/lib/Gir/Atk/Role.html">Role</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.html#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>
+<section id="Role" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Atk.html">Atk</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Atk/Role.html">Role</a></li></ul></h2></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.html#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>
 <div class="comment">
 		
 		
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="AcceleratorLabel"><span class="code">AcceleratorLabel</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Alert"><span class="code">Alert</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Animation"><span class="code">Animation</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Application"><span class="code">Application</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Arrow"><span class="code">Arrow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Article"><span class="code">Article</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Audio"><span class="code">Audio</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Autocomplete"><span class="code">Autocomplete</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="BlockQuote"><span class="code">BlockQuote</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Calendar"><span class="code">Calendar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Canvas"><span class="code">Canvas</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Caption"><span class="code">Caption</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Chart"><span class="code">Chart</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="CheckBox"><span class="code">CheckBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="CheckMenuItem"><span class="code">CheckMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ColorChooser"><span class="code">ColorChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ColumnHeader"><span class="code">ColumnHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ComboBox"><span class="code">ComboBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Comment"><span class="code">Comment</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DateEditor"><span class="code">DateEditor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Definition"><span class="code">Definition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DescriptionList"><span class="code">DescriptionList</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DescriptionTerm"><span class="code">DescriptionTerm</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DescriptionValue"><span class="code">DescriptionValue</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DesktopFrame"><span class="code">DesktopFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DesktopIcon"><span class="code">DesktopIcon</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Dial"><span class="code">Dial</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Dialog"><span class="code">Dialog</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DirectoryPane"><span class="code">DirectoryPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentEmail"><span class="code">DocumentEmail</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentFrame"><span class="code">DocumentFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentPresentation"><span class="code">DocumentPresentation</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentSpreadsheet"><span class="code">DocumentSpreadsheet</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentText"><span class="code">DocumentText</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DocumentWeb"><span class="code">DocumentWeb</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DrawingArea"><span class="code">DrawingArea</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="EditBar"><span class="code">EditBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Embedded"><span class="code">Embedded</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Entry"><span class="code">Entry</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="FileChooser"><span class="code">FileChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Filler"><span class="code">Filler</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="FontChooser"><span class="code">FontChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Footer"><span class="code">Footer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Footnote"><span class="code">Footnote</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Form"><span class="code">Form</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Frame"><span class="code">Frame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="GlassPane"><span class="code">GlassPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Grouping"><span class="code">Grouping</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Header"><span class="code">Header</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Heading"><span class="code">Heading</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="HtmlContainer"><span class="code">HtmlContainer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Icon"><span class="code">Icon</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Image"><span class="code">Image</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ImageMap"><span class="code">ImageMap</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InfoBar"><span class="code">InfoBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InputMethodWindow"><span class="code">InputMethodWindow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InternalFrame"><span class="code">InternalFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Invalid"><span class="code">Invalid</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Label"><span class="code">Label</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Landmark"><span class="code">Landmark</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="LastDefined"><span class="code">LastDefined</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="LayeredPane"><span class="code">LayeredPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="LevelBar"><span class="code">LevelBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Link"><span class="code">Link</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="List"><span class="code">List</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ListBox"><span class="code">ListBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ListItem"><span class="code">ListItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Log"><span class="code">Log</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Marquee"><span class="code">Marquee</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Math"><span class="code">Math</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MathFraction"><span class="code">MathFraction</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MathRoot"><span class="code">MathRoot</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Menu"><span class="code">Menu</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MenuBar"><span class="code">MenuBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MenuItem"><span class="code">MenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Notification"><span class="code">Notification</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="OptionPane"><span class="code">OptionPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Page"><span class="code">Page</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PageTab"><span class="code">PageTab</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PageTabList"><span class="code">PageTabList</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Panel"><span class="code">Panel</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Paragraph"><span class="code">Paragraph</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PasswordText"><span class="code">PasswordText</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PopupMenu"><span class="code">PopupMenu</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ProgressBar"><span class="code">ProgressBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PushButton"><span class="code">PushButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RadioButton"><span class="code">RadioButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RadioMenuItem"><span class="code">RadioMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Rating"><span class="code">Rating</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RedundantObject"><span class="code">RedundantObject</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RootPane"><span class="code">RootPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RowHeader"><span class="code">RowHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Ruler"><span class="code">Ruler</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ScrollBar"><span class="code">ScrollBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ScrollPane"><span class="code">ScrollPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Section"><span class="code">Section</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Separator"><span class="code">Separator</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Slider"><span class="code">Slider</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="SpinButton"><span class="code">SpinButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="SplitPane"><span class="code">SplitPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Static"><span class="code">Static</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Statusbar"><span class="code">Statusbar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Subscript"><span class="code">Subscript</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Superscript"><span class="code">Superscript</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Table"><span class="code">Table</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TableCell"><span class="code">TableCell</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TableColumnHeader"><span class="code">TableColumnHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TableRow"><span class="code">TableRow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TableRowHeader"><span class="code">TableRowHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TearOffMenuItem"><span class="code">TearOffMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Terminal"><span class="code">Terminal</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Text"><span class="code">Text</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Timer"><span class="code">Timer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TitleBar"><span class="code">TitleBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ToggleButton"><span class="code">ToggleButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ToolBar"><span class="code">ToolBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ToolTip"><span class="code">ToolTip</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Tree"><span class="code">Tree</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TreeItem"><span class="code">TreeItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TreeTable"><span class="code">TreeTable</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Unknown"><span class="code">Unknown</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Video"><span class="code">Video</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Viewport"><span class="code">Viewport</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Window"><span class="code">Window</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="AcceleratorLabel"><span class="code">AcceleratorLabel</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Alert"><span class="code">Alert</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Animation"><span class="code">Animation</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Application"><span class="code">Application</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Arrow"><span class="code">Arrow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Article"><span class="code">Article</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Audio"><span class="code">Audio</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Autocomplete"><span class="code">Autocomplete</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="BlockQuote"><span class="code">BlockQuote</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Calendar"><span class="code">Calendar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Canvas"><span class="code">Canvas</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Caption"><span class="code">Caption</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Chart"><span class="code">Chart</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="CheckBox"><span class="code">CheckBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="CheckMenuItem"><span class="code">CheckMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ColorChooser"><span class="code">ColorChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ColumnHeader"><span class="code">ColumnHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ComboBox"><span class="code">ComboBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Comment"><span class="code">Comment</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DateEditor"><span class="code">DateEditor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Definition"><span class="code">Definition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DescriptionList"><span class="code">DescriptionList</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DescriptionTerm"><span class="code">DescriptionTerm</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DescriptionValue"><span class="code">DescriptionValue</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DesktopFrame"><span class="code">DesktopFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DesktopIcon"><span class="code">DesktopIcon</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Dial"><span class="code">Dial</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Dialog"><span class="code">Dialog</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DirectoryPane"><span class="code">DirectoryPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentEmail"><span class="code">DocumentEmail</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentFrame"><span class="code">DocumentFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentPresentation"><span class="code">DocumentPresentation</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentSpreadsheet"><span class="code">DocumentSpreadsheet</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentText"><span class="code">DocumentText</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DocumentWeb"><span class="code">DocumentWeb</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DrawingArea"><span class="code">DrawingArea</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="EditBar"><span class="code">EditBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Embedded"><span class="code">Embedded</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Entry"><span class="code">Entry</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="FileChooser"><span class="code">FileChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Filler"><span class="code">Filler</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="FontChooser"><span class="code">FontChooser</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Footer"><span class="code">Footer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Footnote"><span class="code">Footnote</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Form"><span class="code">Form</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Frame"><span class="code">Frame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="GlassPane"><span class="code">GlassPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Grouping"><span class="code">Grouping</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Header"><span class="code">Header</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Heading"><span class="code">Heading</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="HtmlContainer"><span class="code">HtmlContainer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Icon"><span class="code">Icon</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Image"><span class="code">Image</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ImageMap"><span class="code">ImageMap</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InfoBar"><span class="code">InfoBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InputMethodWindow"><span class="code">InputMethodWindow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InternalFrame"><span class="code">InternalFrame</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Invalid"><span class="code">Invalid</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Label"><span class="code">Label</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Landmark"><span class="code">Landmark</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="LastDefined"><span class="code">LastDefined</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="LayeredPane"><span class="code">LayeredPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="LevelBar"><span class="code">LevelBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Link"><span class="code">Link</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="List"><span class="code">List</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ListBox"><span class="code">ListBox</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ListItem"><span class="code">ListItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Log"><span class="code">Log</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Marquee"><span class="code">Marquee</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Math"><span class="code">Math</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MathFraction"><span class="code">MathFraction</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MathRoot"><span class="code">MathRoot</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Menu"><span class="code">Menu</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MenuBar"><span class="code">MenuBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MenuItem"><span class="code">MenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Notification"><span class="code">Notification</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="OptionPane"><span class="code">OptionPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Page"><span class="code">Page</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PageTab"><span class="code">PageTab</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PageTabList"><span class="code">PageTabList</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Panel"><span class="code">Panel</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Paragraph"><span class="code">Paragraph</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PasswordText"><span class="code">PasswordText</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PopupMenu"><span class="code">PopupMenu</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ProgressBar"><span class="code">ProgressBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PushButton"><span class="code">PushButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RadioButton"><span class="code">RadioButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RadioMenuItem"><span class="code">RadioMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Rating"><span class="code">Rating</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RedundantObject"><span class="code">RedundantObject</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RootPane"><span class="code">RootPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RowHeader"><span class="code">RowHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Ruler"><span class="code">Ruler</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ScrollBar"><span class="code">ScrollBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ScrollPane"><span class="code">ScrollPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Section"><span class="code">Section</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Separator"><span class="code">Separator</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Slider"><span class="code">Slider</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="SpinButton"><span class="code">SpinButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="SplitPane"><span class="code">SplitPane</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Static"><span class="code">Static</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Statusbar"><span class="code">Statusbar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Subscript"><span class="code">Subscript</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Superscript"><span class="code">Superscript</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Table"><span class="code">Table</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TableCell"><span class="code">TableCell</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TableColumnHeader"><span class="code">TableColumnHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TableRow"><span class="code">TableRow</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TableRowHeader"><span class="code">TableRowHeader</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TearOffMenuItem"><span class="code">TearOffMenuItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Terminal"><span class="code">Terminal</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Text"><span class="code">Text</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Timer"><span class="code">Timer</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TitleBar"><span class="code">TitleBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ToggleButton"><span class="code">ToggleButton</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ToolBar"><span class="code">ToolBar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ToolTip"><span class="code">ToolTip</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Tree"><span class="code">Tree</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TreeItem"><span class="code">TreeItem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TreeTable"><span class="code">TreeTable</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Unknown"><span class="code">Unknown</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Video"><span class="code">Video</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Viewport"><span class="code">Viewport</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Window"><span class="code">Window</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
 	</div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
 	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Role">Role</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li></ul></li>
-		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
 </div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
-	</div>
-</footer>
 </body>
 </html>

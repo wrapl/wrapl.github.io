@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,114 +43,113 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Gdk.Keymap</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Keymap" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gdk.html">Gdk</a></li><li><a class="id" href="/lib/Gir/Gdk/Keymap.html">Keymap</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/lib/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>
+<section id="Keymap" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Gdk.html">Gdk</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Gdk/Keymap.html">Keymap</a></li></ul></h2></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>, <a class="id" href="/lib/Gir/GObject/Object.html#T">Gir.GObject.Object.T</a>
 <div class="comment">
 		
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$GetDefault"><span class="code">__$GetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Keymap.html#T">Gir.Gdk.Keymap.T</a></span></h4><div class="comment">
-	</div><h4 id="__$GetForDisplay"><span class="code">__$GetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.html#T">Gir.Gdk.Display.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Keymap.html#T">Gir.Gdk.Keymap.T</a></span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="__$GetDefault"><span class="code">__$GetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Keymap.html#T">Gir.Gdk.Keymap.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetForDisplay"><span class="code">__$GetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.html#T">Gir.Gdk.Display.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Keymap.html#T">Gir.Gdk.Keymap.T</a></span></h5><div class="comment">
 		
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="add_virtual_modifiers"><span class="code"><span class="symbol">:add_virtual_modifiers</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="get_caps_lock_state"><span class="code"><span class="symbol">:get_caps_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="get_direction"><span class="code"><span class="symbol">:get_direction</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="get_entries_for_keycode"><span class="code"><span class="symbol">:get_entries_for_keycode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hardware_keycode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">keyvals</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="add_virtual_modifiers"><span class="code"><span class="symbol">:add_virtual_modifiers</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
+	</div><h5 id="get_caps_lock_state"><span class="code"><span class="symbol">:get_caps_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
+	</div><h5 id="get_direction"><span class="code"><span class="symbol">:get_direction</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_entries_for_keyval"><span class="code"><span class="symbol">:get_entries_for_keyval</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="get_entries_for_keycode"><span class="code"><span class="symbol">:get_entries_for_keycode</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hardware_keycode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">keyvals</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
 		
 		
-	</div><h4 id="get_modifier_mask"><span class="code"><span class="symbol">:get_modifier_mask</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">intent</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/ModifierIntent.html#T">Gir.Gdk.ModifierIntent.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h5 id="get_entries_for_keyval"><span class="code"><span class="symbol">:get_entries_for_keyval</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="get_modifier_state"><span class="code"><span class="symbol">:get_modifier_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
-	</div><h4 id="get_num_lock_state"><span class="code"><span class="symbol">:get_num_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="get_scroll_lock_state"><span class="code"><span class="symbol">:get_scroll_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="have_bidi_layouts"><span class="code"><span class="symbol">:have_bidi_layouts</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="lookup_key"><span class="code"><span class="symbol">:lookup_key</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/KeymapKey.html#T">Gir.Gdk.KeymapKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_modifier_mask"><span class="code"><span class="symbol">:get_modifier_mask</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">intent</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/ModifierIntent.html#T">Gir.Gdk.ModifierIntent.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="map_virtual_modifiers"><span class="code"><span class="symbol">:map_virtual_modifiers</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="get_modifier_state"><span class="code"><span class="symbol">:get_modifier_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="get_num_lock_state"><span class="code"><span class="symbol">:get_num_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="get_scroll_lock_state"><span class="code"><span class="symbol">:get_scroll_lock_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="have_bidi_layouts"><span class="code"><span class="symbol">:have_bidi_layouts</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="lookup_key"><span class="code"><span class="symbol">:lookup_key</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/KeymapKey.html#T">Gir.Gdk.KeymapKey.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="translate_keyboard_state"><span class="code"><span class="symbol">:translate_keyboard_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hardware_keycode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">group</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keyval</span><span class="delimiter">,</span> <span class="var">effective_group</span><span class="delimiter">,</span> <span class="var">level</span><span class="delimiter">,</span> <span class="var">consumed_modifiers</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="map_virtual_modifiers"><span class="code"><span class="symbol">:map_virtual_modifiers</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="translate_keyboard_state"><span class="code"><span class="symbol">:translate_keyboard_state</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hardware_keycode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">state</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">group</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keyval</span><span class="delimiter">,</span> <span class="var">effective_group</span><span class="delimiter">,</span> <span class="var">level</span><span class="delimiter">,</span> <span class="var">consumed_modifiers</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
 		
 		
@@ -155,28 +159,10 @@
 		
 		
 	</div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
 	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Keymap">Keymap</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
-		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
 </div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
-	</div>
-</footer>
 </body>
 </html>

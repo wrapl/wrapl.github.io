@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
-
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,99 +43,208 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
-	<title>News</title>
+	<title>Wrapl, The Programming Language</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/doc.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
+<section id="News" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a>News</a></li></ul></h2></nav>
+<div class="timeline">
 
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="News" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a>News</a></li></ul></nav>
-<section id="n14-06-01" data-spy="true" data-target="#side-menu"><h3>01<sup>th</sup> Jun 2014</h3>Finally, an update!
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">19<sup>th</sup> Mar 2018</p>
+The build process for Wrapl has been simplified after switching to a new build system called <a href="/tools/rabs.html">rabs</a>.
+Various new modules and methods have been added.
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">01<sup>th</sup> Jun 2014</p>
+Finally, an update!
 
 <ul>
 	<li>Wrapl has been updated with numerous new bindings and several enhancements to the language itself.</li>
 </ul>
 
-</section><section id="n11-10-08" data-spy="true" data-target="#side-menu"><h3>08<sup>th</sup> Oct 2011</h3><ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">08<sup>th</sup> Oct 2011</p>
+<ul>
 	<li>Updated the website (see footer for template information).</li>
 </ul>
-</section><section id="n10-05-30" data-spy="true" data-target="#side-menu"><h3>30<sup>th</sup> May 2010</h3><ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">30<sup>th</sup> May 2010</p>
+<ul>
 	<li>Added various new methods and modules.</li>
 	<li>Updated the Windows port.</li>
 </ul>
-</section><section id="n10-02-25" data-spy="true" data-target="#side-menu"><h3>25<sup>th</sup> Feb 2010</h3><ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">25<sup>th</sup> Feb 2010</p>
+<ul>
 	<li>Finally uploaded the updated website to Sourceforge.</li>
 	<li>Released version 1.7 of Wrapl, with numerous improvements and bug fixes.</li>
 </ul>
-</section><section id="n09-12-15" data-spy="true" data-target="#side-menu"><h3>15<sup>th</sup> Dec 2009</h3><ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">15<sup>th</sup> Dec 2009</p>
+<ul>
 	<li>Text sections in <a href="/tools/riva.html"><span class="literal">*.riva</span></a> files are now relocated when first used. This prevents loading modules referred to by methods which are never invoked. Added the option <span class="literal">-nodelay</span> to <a href="/tools/riva.html"><span class="var">riva</span></a> to use the original behaviour.</li>
 </ul>
-</section><section id="n09-11-30" data-spy="true" data-target="#side-menu"><h3>30<sup>th</sup> Nov 2009</h3><ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">30<sup>th</sup> Nov 2009</p>
+<ul>
 	<li>Changed the versioning scheme for Wrapl releases. Releases are now named <span class="code"><span class="var">major</span><span class="delimiter">.</span><span class="var">minor</span><span class="delimiter">.</span><span class="var">revision</span></span> where <span class="var">revision</span> is the svn revision.</li>
 	<li>The <a class="id" href="/doc/Gtk.html">Gtk</a> bindings have been updated to support threaded GTK+ applications.</li>
 	<li>The <a href="/tools/wredit.html">editor</a> has received a lot of work.</li>
 </ul>
-</section><section id="n09-08-27" data-spy="true" data-target="#side-menu"><h3>27<sup>th</sup> Aug 2009</h3>Version 1.2.7 has been released.
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">27<sup>th</sup> Aug 2009</p>
+Version 1.2.7 has been released.
 <ul>
 	<li>The <a href="/tools/wrapl.html">interactive interpreter</a> now intercepts <span class="term">Ctrl+C</span> to break out of loops.</li>
 	<li>The <a href="/doc/Wrapl/Loader.html">Wrapl loader</a> now understands unicode replacements for some keywords/tokens.
@@ -156,31 +270,33 @@
 	<li>A basic source editor has been written in Wrapl using the GTK+ bindings. It includes syntax highlighting (using GtkSourceview), autocompletion and automatic conversion of certain character sequences into unicode.</li>
 	<li>The semantics of a conditional expression without a success clause has been changed.</li>
 </ul>
-</section><section id="n08-05-23" data-spy="true" data-target="#side-menu"><h3>23<sup>th</sup> May 2008</h3>Switched to a new web layout, using static html pages generated by Wrapl scripts.
-</section>
-</section>
-	</div>
 
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#News">News</a><ul><li><a href="#n14-06-01">01<sup>th</sup> Jun 2014</a><ul></ul></li><li><a href="#n11-10-08">08<sup>th</sup> Oct 2011</a><ul></ul></li><li><a href="#n10-05-30">30<sup>th</sup> May 2010</a><ul></ul></li><li><a href="#n10-02-25">25<sup>th</sup> Feb 2010</a><ul></ul></li><li><a href="#n09-12-15">15<sup>th</sup> Dec 2009</a><ul></ul></li><li><a href="#n09-11-30">30<sup>th</sup> Nov 2009</a><ul></ul></li><li><a href="#n09-08-27">27<sup>th</sup> Aug 2009</a><ul></ul></li><li><a href="#n08-05-23">23<sup>th</sup> May 2008</a><ul></ul></li></ul></li>
-		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
-</div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<div class="timeline-item">
+		<div class="timeline-left">
+			<span class="timeline-icon icon-lg"></span>
+		</div>
+		<div class="timeline-content">
+			<div class="tile">
+				<div class="tile-content">
+					<p class="tile-subtitle">23<sup>th</sup> May 2008</p>
+Switched to a new web layout, using static html pages generated by Wrapl scripts.
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</div>
 </body>
 </html>

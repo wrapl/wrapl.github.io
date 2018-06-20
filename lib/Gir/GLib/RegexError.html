@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,157 +43,138 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.GLib.RegexError</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="RegexError" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/GLib.html">GLib</a></li><li><a class="id" href="/lib/Gir/GLib/RegexError.html">RegexError</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.html#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>
+<section id="RegexError" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/GLib.html">GLib</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/GLib/RegexError.html">RegexError</a></li></ul></h2></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.html#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.html#T">Std.Number.T</a>
 <div class="comment">
 		
 		
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="AssertionExpected"><span class="code">AssertionExpected</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="BacktrackingControlVerbArgumentForbidden"><span class="code">BacktrackingControlVerbArgumentForbidden</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="BacktrackingControlVerbArgumentRequired"><span class="code">BacktrackingControlVerbArgumentRequired</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="CharacterValueTooLarge"><span class="code">CharacterValueTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Compile"><span class="code">Compile</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DefineRepetion"><span class="code">DefineRepetion</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="DuplicateSubpatternName"><span class="code">DuplicateSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ExpressionTooLarge"><span class="code">ExpressionTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="ExtraSubpatternName"><span class="code">ExtraSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="HexCodeTooLarge"><span class="code">HexCodeTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InconsistentNewlineOptions"><span class="code">InconsistentNewlineOptions</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InexistentSubpatternReference"><span class="code">InexistentSubpatternReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InfiniteLoop"><span class="code">InfiniteLoop</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Internal"><span class="code">Internal</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidCondition"><span class="code">InvalidCondition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidControlChar"><span class="code">InvalidControlChar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidDataCharacter"><span class="code">InvalidDataCharacter</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidEscapeInCharacterClass"><span class="code">InvalidEscapeInCharacterClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidOctalValue"><span class="code">InvalidOctalValue</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="InvalidRelativeReference"><span class="code">InvalidRelativeReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MalformedCondition"><span class="code">MalformedCondition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MalformedProperty"><span class="code">MalformedProperty</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Match"><span class="code">Match</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MemoryError"><span class="code">MemoryError</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingBackReference"><span class="code">MissingBackReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingControlChar"><span class="code">MissingControlChar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingDigit"><span class="code">MissingDigit</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingName"><span class="code">MissingName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingSubpatternName"><span class="code">MissingSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="MissingSubpatternNameTerminator"><span class="code">MissingSubpatternNameTerminator</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="NameTooLong"><span class="code">NameTooLong</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="NotSupportedInClass"><span class="code">NotSupportedInClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="NothingToRepeat"><span class="code">NothingToRepeat</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="NumberTooBig"><span class="code">NumberTooBig</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Optimize"><span class="code">Optimize</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PosixCollatingElementsNotSupported"><span class="code">PosixCollatingElementsNotSupported</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="PosixNamedClassOutsideClass"><span class="code">PosixNamedClassOutsideClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="QuantifierTooBig"><span class="code">QuantifierTooBig</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="QuantifiersOutOfOrder"><span class="code">QuantifiersOutOfOrder</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="RangeOutOfOrder"><span class="code">RangeOutOfOrder</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="Replace"><span class="code">Replace</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="SingleByteMatchInLookbehind"><span class="code">SingleByteMatchInLookbehind</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="StrayBackslash"><span class="code">StrayBackslash</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="SubpatternNameTooLong"><span class="code">SubpatternNameTooLong</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TooManyBranchesInDefine"><span class="code">TooManyBranchesInDefine</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TooManyConditionalBranches"><span class="code">TooManyConditionalBranches</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TooManyForwardReferences"><span class="code">TooManyForwardReferences</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="TooManySubpatterns"><span class="code">TooManySubpatterns</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnknownBacktrackingControlVerb"><span class="code">UnknownBacktrackingControlVerb</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnknownPosixClassName"><span class="code">UnknownPosixClassName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnknownProperty"><span class="code">UnknownProperty</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnmatchedParenthesis"><span class="code">UnmatchedParenthesis</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnrecognizedCharacter"><span class="code">UnrecognizedCharacter</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnrecognizedEscape"><span class="code">UnrecognizedEscape</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnterminatedCharacterClass"><span class="code">UnterminatedCharacterClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="UnterminatedComment"><span class="code">UnterminatedComment</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div><h4 id="VariableLengthLookbehind"><span class="code">VariableLengthLookbehind</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="AssertionExpected"><span class="code">AssertionExpected</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="BacktrackingControlVerbArgumentForbidden"><span class="code">BacktrackingControlVerbArgumentForbidden</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="BacktrackingControlVerbArgumentRequired"><span class="code">BacktrackingControlVerbArgumentRequired</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="CharacterValueTooLarge"><span class="code">CharacterValueTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Compile"><span class="code">Compile</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DefineRepetion"><span class="code">DefineRepetion</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="DuplicateSubpatternName"><span class="code">DuplicateSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ExpressionTooLarge"><span class="code">ExpressionTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="ExtraSubpatternName"><span class="code">ExtraSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="HexCodeTooLarge"><span class="code">HexCodeTooLarge</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InconsistentNewlineOptions"><span class="code">InconsistentNewlineOptions</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InexistentSubpatternReference"><span class="code">InexistentSubpatternReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InfiniteLoop"><span class="code">InfiniteLoop</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Internal"><span class="code">Internal</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidCondition"><span class="code">InvalidCondition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidControlChar"><span class="code">InvalidControlChar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidDataCharacter"><span class="code">InvalidDataCharacter</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidEscapeInCharacterClass"><span class="code">InvalidEscapeInCharacterClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidOctalValue"><span class="code">InvalidOctalValue</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="InvalidRelativeReference"><span class="code">InvalidRelativeReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MalformedCondition"><span class="code">MalformedCondition</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MalformedProperty"><span class="code">MalformedProperty</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Match"><span class="code">Match</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MemoryError"><span class="code">MemoryError</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingBackReference"><span class="code">MissingBackReference</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingControlChar"><span class="code">MissingControlChar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingDigit"><span class="code">MissingDigit</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingName"><span class="code">MissingName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingSubpatternName"><span class="code">MissingSubpatternName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="MissingSubpatternNameTerminator"><span class="code">MissingSubpatternNameTerminator</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="NameTooLong"><span class="code">NameTooLong</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="NotSupportedInClass"><span class="code">NotSupportedInClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="NothingToRepeat"><span class="code">NothingToRepeat</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="NumberTooBig"><span class="code">NumberTooBig</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Optimize"><span class="code">Optimize</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PosixCollatingElementsNotSupported"><span class="code">PosixCollatingElementsNotSupported</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="PosixNamedClassOutsideClass"><span class="code">PosixNamedClassOutsideClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="QuantifierTooBig"><span class="code">QuantifierTooBig</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="QuantifiersOutOfOrder"><span class="code">QuantifiersOutOfOrder</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="RangeOutOfOrder"><span class="code">RangeOutOfOrder</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="Replace"><span class="code">Replace</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="SingleByteMatchInLookbehind"><span class="code">SingleByteMatchInLookbehind</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="StrayBackslash"><span class="code">StrayBackslash</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="SubpatternNameTooLong"><span class="code">SubpatternNameTooLong</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TooManyBranchesInDefine"><span class="code">TooManyBranchesInDefine</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TooManyConditionalBranches"><span class="code">TooManyConditionalBranches</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TooManyForwardReferences"><span class="code">TooManyForwardReferences</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="TooManySubpatterns"><span class="code">TooManySubpatterns</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnknownBacktrackingControlVerb"><span class="code">UnknownBacktrackingControlVerb</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnknownPosixClassName"><span class="code">UnknownPosixClassName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnknownProperty"><span class="code">UnknownProperty</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnmatchedParenthesis"><span class="code">UnmatchedParenthesis</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnrecognizedCharacter"><span class="code">UnrecognizedCharacter</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnrecognizedEscape"><span class="code">UnrecognizedEscape</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnterminatedCharacterClass"><span class="code">UnterminatedCharacterClass</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="UnterminatedComment"><span class="code">UnterminatedComment</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div><h5 id="VariableLengthLookbehind"><span class="code">VariableLengthLookbehind</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
 	</div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
 	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#RegexError">RegexError</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li></ul></li>
-		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
 </div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
-	</div>
-</footer>
 </body>
 </html>

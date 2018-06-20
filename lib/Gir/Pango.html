@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,95 +43,76 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Pango</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
-		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Pango" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Pango.html">Pango</a></li></ul></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Pango/Alignment.html">Alignment</a></div><div class="module"><a href="/lib/Gir/Pango/Analysis.html">Analysis</a></div><div class="module"><a href="/lib/Gir/Pango/AttrClass.html">AttrClass</a></div><div class="module"><a href="/lib/Gir/Pango/AttrColor.html">AttrColor</a></div><div class="module"><a href="/lib/Gir/Pango/AttrDataCopyFunc.html">AttrDataCopyFunc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFilterFunc.html">AttrFilterFunc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFloat.html">AttrFloat</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFontDesc.html">AttrFontDesc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFontFeatures.html">AttrFontFeatures</a></div><div class="module"><a href="/lib/Gir/Pango/AttrInt.html">AttrInt</a></div><div class="module"><a href="/lib/Gir/Pango/AttrIterator.html">AttrIterator</a></div><div class="module"><a href="/lib/Gir/Pango/AttrLanguage.html">AttrLanguage</a></div><div class="module"><a href="/lib/Gir/Pango/AttrList.html">AttrList</a></div><div class="module"><a href="/lib/Gir/Pango/AttrShape.html">AttrShape</a></div><div class="module"><a href="/lib/Gir/Pango/AttrSize.html">AttrSize</a></div><div class="module"><a href="/lib/Gir/Pango/AttrString.html">AttrString</a></div><div class="module"><a href="/lib/Gir/Pango/AttrType.html">AttrType</a></div><div class="module"><a href="/lib/Gir/Pango/Attribute.html">Attribute</a></div><div class="module"><a href="/lib/Gir/Pango/BidiType.html">BidiType</a></div><div class="module"><a href="/lib/Gir/Pango/Color.html">Color</a></div><div class="module"><a href="/lib/Gir/Pango/Context.html">Context</a></div><div class="module"><a href="/lib/Gir/Pango/Coverage.html">Coverage</a></div><div class="module"><a href="/lib/Gir/Pango/CoverageLevel.html">CoverageLevel</a></div><div class="module"><a href="/lib/Gir/Pango/Direction.html">Direction</a></div><div class="module"><a href="/lib/Gir/Pango/EllipsizeMode.html">EllipsizeMode</a></div><div class="module"><a href="/lib/Gir/Pango/Engine.html">Engine</a></div><div class="module"><a href="/lib/Gir/Pango/EngineInfo.html">EngineInfo</a></div><div class="module"><a href="/lib/Gir/Pango/EngineLang.html">EngineLang</a></div><div class="module"><a href="/lib/Gir/Pango/EngineScriptInfo.html">EngineScriptInfo</a></div><div class="module"><a href="/lib/Gir/Pango/EngineShape.html">EngineShape</a></div><div class="module"><a href="/lib/Gir/Pango/Font.html">Font</a></div><div class="module"><a href="/lib/Gir/Pango/FontDescription.html">FontDescription</a></div><div class="module"><a href="/lib/Gir/Pango/FontFace.html">FontFace</a></div><div class="module"><a href="/lib/Gir/Pango/FontFamily.html">FontFamily</a></div><div class="module"><a href="/lib/Gir/Pango/FontMap.html">FontMap</a></div><div class="module"><a href="/lib/Gir/Pango/FontMask.html">FontMask</a></div><div class="module"><a href="/lib/Gir/Pango/FontMetrics.html">FontMetrics</a></div><div class="module"><a href="/lib/Gir/Pango/Fontset.html">Fontset</a></div><div class="module"><a href="/lib/Gir/Pango/FontsetForeachFunc.html">FontsetForeachFunc</a></div><div class="module"><a href="/lib/Gir/Pango/FontsetSimple.html">FontsetSimple</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphGeometry.html">GlyphGeometry</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphInfo.html">GlyphInfo</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphItem.html">GlyphItem</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphItemIter.html">GlyphItemIter</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphString.html">GlyphString</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphVisAttr.html">GlyphVisAttr</a></div><div class="module"><a href="/lib/Gir/Pango/Gravity.html">Gravity</a></div><div class="module"><a href="/lib/Gir/Pango/GravityHint.html">GravityHint</a></div><div class="module"><a href="/lib/Gir/Pango/IncludedModule.html">IncludedModule</a></div><div class="module"><a href="/lib/Gir/Pango/Item.html">Item</a></div><div class="module"><a href="/lib/Gir/Pango/Language.html">Language</a></div><div class="module"><a href="/lib/Gir/Pango/Layout.html">Layout</a></div><div class="module"><a href="/lib/Gir/Pango/LayoutIter.html">LayoutIter</a></div><div class="module"><a href="/lib/Gir/Pango/LayoutLine.html">LayoutLine</a></div><div class="module"><a href="/lib/Gir/Pango/LogAttr.html">LogAttr</a></div><div class="module"><a href="/lib/Gir/Pango/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Pango/Matrix.html">Matrix</a></div><div class="module"><a href="/lib/Gir/Pango/Rectangle.html">Rectangle</a></div><div class="module"><a href="/lib/Gir/Pango/RenderPart.html">RenderPart</a></div><div class="module"><a href="/lib/Gir/Pango/Renderer.html">Renderer</a></div><div class="module"><a href="/lib/Gir/Pango/Script.html">Script</a></div><div class="module"><a href="/lib/Gir/Pango/ScriptIter.html">ScriptIter</a></div><div class="module"><a href="/lib/Gir/Pango/Stretch.html">Stretch</a></div><div class="module"><a href="/lib/Gir/Pango/Style.html">Style</a></div><div class="module"><a href="/lib/Gir/Pango/TabAlign.html">TabAlign</a></div><div class="module"><a href="/lib/Gir/Pango/TabArray.html">TabArray</a></div><div class="module"><a href="/lib/Gir/Pango/Underline.html">Underline</a></div><div class="module"><a href="/lib/Gir/Pango/Variant.html">Variant</a></div><div class="module"><a href="/lib/Gir/Pango/Weight.html">Weight</a></div><div class="module"><a href="/lib/Gir/Pango/WrapMode.html">WrapMode</a></div></section></section>
-	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Pango">Pango</a><ul><li><a href="#SubModules">SubModules</a><ul></ul></li></ul></li>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
 		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
-</div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
 	</div>
-</footer>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<section id="Pango" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Pango.html">Pango</a></li></ul></h2></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Pango/Alignment.html">Alignment</a></div><div class="module"><a href="/lib/Gir/Pango/Analysis.html">Analysis</a></div><div class="module"><a href="/lib/Gir/Pango/AttrClass.html">AttrClass</a></div><div class="module"><a href="/lib/Gir/Pango/AttrColor.html">AttrColor</a></div><div class="module"><a href="/lib/Gir/Pango/AttrDataCopyFunc.html">AttrDataCopyFunc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFilterFunc.html">AttrFilterFunc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFloat.html">AttrFloat</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFontDesc.html">AttrFontDesc</a></div><div class="module"><a href="/lib/Gir/Pango/AttrFontFeatures.html">AttrFontFeatures</a></div><div class="module"><a href="/lib/Gir/Pango/AttrInt.html">AttrInt</a></div><div class="module"><a href="/lib/Gir/Pango/AttrIterator.html">AttrIterator</a></div><div class="module"><a href="/lib/Gir/Pango/AttrLanguage.html">AttrLanguage</a></div><div class="module"><a href="/lib/Gir/Pango/AttrList.html">AttrList</a></div><div class="module"><a href="/lib/Gir/Pango/AttrShape.html">AttrShape</a></div><div class="module"><a href="/lib/Gir/Pango/AttrSize.html">AttrSize</a></div><div class="module"><a href="/lib/Gir/Pango/AttrString.html">AttrString</a></div><div class="module"><a href="/lib/Gir/Pango/AttrType.html">AttrType</a></div><div class="module"><a href="/lib/Gir/Pango/Attribute.html">Attribute</a></div><div class="module"><a href="/lib/Gir/Pango/BidiType.html">BidiType</a></div><div class="module"><a href="/lib/Gir/Pango/Color.html">Color</a></div><div class="module"><a href="/lib/Gir/Pango/Context.html">Context</a></div><div class="module"><a href="/lib/Gir/Pango/Coverage.html">Coverage</a></div><div class="module"><a href="/lib/Gir/Pango/CoverageLevel.html">CoverageLevel</a></div><div class="module"><a href="/lib/Gir/Pango/Direction.html">Direction</a></div><div class="module"><a href="/lib/Gir/Pango/EllipsizeMode.html">EllipsizeMode</a></div><div class="module"><a href="/lib/Gir/Pango/Engine.html">Engine</a></div><div class="module"><a href="/lib/Gir/Pango/EngineInfo.html">EngineInfo</a></div><div class="module"><a href="/lib/Gir/Pango/EngineLang.html">EngineLang</a></div><div class="module"><a href="/lib/Gir/Pango/EngineScriptInfo.html">EngineScriptInfo</a></div><div class="module"><a href="/lib/Gir/Pango/EngineShape.html">EngineShape</a></div><div class="module"><a href="/lib/Gir/Pango/Font.html">Font</a></div><div class="module"><a href="/lib/Gir/Pango/FontDescription.html">FontDescription</a></div><div class="module"><a href="/lib/Gir/Pango/FontFace.html">FontFace</a></div><div class="module"><a href="/lib/Gir/Pango/FontFamily.html">FontFamily</a></div><div class="module"><a href="/lib/Gir/Pango/FontMap.html">FontMap</a></div><div class="module"><a href="/lib/Gir/Pango/FontMask.html">FontMask</a></div><div class="module"><a href="/lib/Gir/Pango/FontMetrics.html">FontMetrics</a></div><div class="module"><a href="/lib/Gir/Pango/Fontset.html">Fontset</a></div><div class="module"><a href="/lib/Gir/Pango/FontsetForeachFunc.html">FontsetForeachFunc</a></div><div class="module"><a href="/lib/Gir/Pango/FontsetSimple.html">FontsetSimple</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphGeometry.html">GlyphGeometry</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphInfo.html">GlyphInfo</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphItem.html">GlyphItem</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphItemIter.html">GlyphItemIter</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphString.html">GlyphString</a></div><div class="module"><a href="/lib/Gir/Pango/GlyphVisAttr.html">GlyphVisAttr</a></div><div class="module"><a href="/lib/Gir/Pango/Gravity.html">Gravity</a></div><div class="module"><a href="/lib/Gir/Pango/GravityHint.html">GravityHint</a></div><div class="module"><a href="/lib/Gir/Pango/IncludedModule.html">IncludedModule</a></div><div class="module"><a href="/lib/Gir/Pango/Item.html">Item</a></div><div class="module"><a href="/lib/Gir/Pango/Language.html">Language</a></div><div class="module"><a href="/lib/Gir/Pango/Layout.html">Layout</a></div><div class="module"><a href="/lib/Gir/Pango/LayoutIter.html">LayoutIter</a></div><div class="module"><a href="/lib/Gir/Pango/LayoutLine.html">LayoutLine</a></div><div class="module"><a href="/lib/Gir/Pango/LogAttr.html">LogAttr</a></div><div class="module"><a href="/lib/Gir/Pango/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Pango/Matrix.html">Matrix</a></div><div class="module"><a href="/lib/Gir/Pango/Rectangle.html">Rectangle</a></div><div class="module"><a href="/lib/Gir/Pango/RenderPart.html">RenderPart</a></div><div class="module"><a href="/lib/Gir/Pango/Renderer.html">Renderer</a></div><div class="module"><a href="/lib/Gir/Pango/Script.html">Script</a></div><div class="module"><a href="/lib/Gir/Pango/ScriptIter.html">ScriptIter</a></div><div class="module"><a href="/lib/Gir/Pango/Stretch.html">Stretch</a></div><div class="module"><a href="/lib/Gir/Pango/Style.html">Style</a></div><div class="module"><a href="/lib/Gir/Pango/TabAlign.html">TabAlign</a></div><div class="module"><a href="/lib/Gir/Pango/TabArray.html">TabArray</a></div><div class="module"><a href="/lib/Gir/Pango/Underline.html">Underline</a></div><div class="module"><a href="/lib/Gir/Pango/Variant.html">Variant</a></div><div class="module"><a href="/lib/Gir/Pango/Weight.html">Weight</a></div><div class="module"><a href="/lib/Gir/Pango/WrapMode.html">WrapMode</a></div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</div>
 </body>
 </html>

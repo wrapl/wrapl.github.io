@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,263 +43,244 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.GLib.Date</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Date" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/GLib.html">GLib</a></li><li><a class="id" href="/lib/Gir/GLib/Date.html">Date</a></li></ul></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h4><div class="comment">
-	</div><h4 id="__$GetDaysInMonth"><span class="code">__$GetDaysInMonth<span class="delimiter">(</span><span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+<section id="Date" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/GLib.html">GLib</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/GLib/Date.html">Date</a></li></ul></h2></nav><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetDaysInMonth"><span class="code">__$GetDaysInMonth<span class="delimiter">(</span><span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="__$GetMondayWeeksInYear"><span class="code">__$GetMondayWeeksInYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="__$GetMondayWeeksInYear"><span class="code">__$GetMondayWeeksInYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$GetSundayWeeksInYear"><span class="code">__$GetSundayWeeksInYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="__$GetSundayWeeksInYear"><span class="code">__$GetSundayWeeksInYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$IsLeapYear"><span class="code">__$IsLeapYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$IsLeapYear"><span class="code">__$IsLeapYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$New"><span class="code">__$New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h4><div class="comment">
-	</div><h4 id="__$NewDmy"><span class="code">__$NewDmy<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h4><div class="comment">
+	</div><h5 id="__$New"><span class="code">__$New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h5><div class="comment">
+	</div><h5 id="__$NewDmy"><span class="code">__$NewDmy<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h5><div class="comment">
 		
 		
 		
-	</div><h4 id="__$NewJulian"><span class="code">__$NewJulian<span class="delimiter">(</span><span class="var">julian_day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h4><div class="comment">
+	</div><h5 id="__$NewJulian"><span class="code">__$NewJulian<span class="delimiter">(</span><span class="var">julian_day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$Strftime"><span class="code">__$Strftime<span class="delimiter">(</span><span class="var">s</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">slen</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="__$Strftime"><span class="code">__$Strftime<span class="delimiter">(</span><span class="var">s</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">slen</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
 		
 		
-	</div><h4 id="__$ValidDay"><span class="code">__$ValidDay<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidDay"><span class="code">__$ValidDay<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$ValidDmy"><span class="code">__$ValidDmy<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidDmy"><span class="code">__$ValidDmy<span class="delimiter">(</span><span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
 		
 		
-	</div><h4 id="__$ValidJulian"><span class="code">__$ValidJulian<span class="delimiter">(</span><span class="var">julian_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidJulian"><span class="code">__$ValidJulian<span class="delimiter">(</span><span class="var">julian_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$ValidMonth"><span class="code">__$ValidMonth<span class="delimiter">(</span><span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidMonth"><span class="code">__$ValidMonth<span class="delimiter">(</span><span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$ValidWeekday"><span class="code">__$ValidWeekday<span class="delimiter">(</span><span class="var">weekday</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateWeekday.html#T">Gir.GLib.DateWeekday.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidWeekday"><span class="code">__$ValidWeekday<span class="delimiter">(</span><span class="var">weekday</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateWeekday.html#T">Gir.GLib.DateWeekday.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="__$ValidYear"><span class="code">__$ValidYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="__$ValidYear"><span class="code">__$ValidYear<span class="delimiter">(</span><span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id=""=""><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id=""=""><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
 		
 		
-	</div><h4 id="add_days"><span class="code"><span class="symbol">:add_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="add_days"><span class="code"><span class="symbol">:add_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="add_months"><span class="code"><span class="symbol">:add_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="add_months"><span class="code"><span class="symbol">:add_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="add_years"><span class="code"><span class="symbol">:add_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="add_years"><span class="code"><span class="symbol">:add_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="clamp"><span class="code"><span class="symbol">:clamp</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">min_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">,</span> <span class="var">max_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="clamp"><span class="code"><span class="symbol">:clamp</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">min_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">,</span> <span class="var">max_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
 		
-	</div><h4 id="clear"><span class="code"><span class="symbol">:clear</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_dates</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="clear"><span class="code"><span class="symbol">:clear</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_dates</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="compare"><span class="code"><span class="symbol">:compare</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">rhs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="compare"><span class="code"><span class="symbol">:compare</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">rhs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h4><div class="comment">
+	</div><h5 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="day"><span class="code"><span class="symbol">:day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="day"><span class="code"><span class="symbol">:day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="days_between"><span class="code"><span class="symbol">:days_between</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">date2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="days_between"><span class="code"><span class="symbol">:days_between</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">date2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="dmy"><span class="code"><span class="symbol">:dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="dmy"><span class="code"><span class="symbol">:dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_day"><span class="code"><span class="symbol">:get_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_day"><span class="code"><span class="symbol">:get_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_day_of_year"><span class="code"><span class="symbol">:get_day_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_day_of_year"><span class="code"><span class="symbol">:get_day_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_iso8601_week_of_year"><span class="code"><span class="symbol">:get_iso8601_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_iso8601_week_of_year"><span class="code"><span class="symbol">:get_iso8601_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_julian"><span class="code"><span class="symbol">:get_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_julian"><span class="code"><span class="symbol">:get_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_monday_week_of_year"><span class="code"><span class="symbol">:get_monday_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_monday_week_of_year"><span class="code"><span class="symbol">:get_monday_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_month"><span class="code"><span class="symbol">:get_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a></span></h4><div class="comment">
+	</div><h5 id="get_month"><span class="code"><span class="symbol">:get_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_sunday_week_of_year"><span class="code"><span class="symbol">:get_sunday_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_sunday_week_of_year"><span class="code"><span class="symbol">:get_sunday_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_weekday"><span class="code"><span class="symbol">:get_weekday</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateWeekday.html#T">Gir.GLib.DateWeekday.T</a></span></h4><div class="comment">
+	</div><h5 id="get_weekday"><span class="code"><span class="symbol">:get_weekday</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateWeekday.html#T">Gir.GLib.DateWeekday.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="get_year"><span class="code"><span class="symbol">:get_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="get_year"><span class="code"><span class="symbol">:get_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="is_first_of_month"><span class="code"><span class="symbol">:is_first_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="is_first_of_month"><span class="code"><span class="symbol">:is_first_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="is_last_of_month"><span class="code"><span class="symbol">:is_last_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="is_last_of_month"><span class="code"><span class="symbol">:is_last_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="julian"><span class="code"><span class="symbol">:julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="julian"><span class="code"><span class="symbol">:julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="julian_days"><span class="code"><span class="symbol">:julian_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="julian_days"><span class="code"><span class="symbol">:julian_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="month"><span class="code"><span class="symbol">:month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="month"><span class="code"><span class="symbol">:month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id="order"><span class="code"><span class="symbol">:order</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">date2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="order"><span class="code"><span class="symbol">:order</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">date2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Date.html#T">Gir.GLib.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_day"><span class="code"><span class="symbol">:set_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_day"><span class="code"><span class="symbol">:set_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_day"><span class="code"><span class="symbol">:set_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_day"><span class="code"><span class="symbol">:set_day</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_dmy"><span class="code"><span class="symbol">:set_dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_dmy"><span class="code"><span class="symbol">:set_dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">day</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
 		
 		
-	</div><h4 id="set_dmy"><span class="code"><span class="symbol">:set_dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_dmy"><span class="code"><span class="symbol">:set_dmy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_julian"><span class="code"><span class="symbol">:set_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">julian_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_julian"><span class="code"><span class="symbol">:set_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">julian_date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_julian"><span class="code"><span class="symbol">:set_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_julian"><span class="code"><span class="symbol">:set_julian</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_julian_days"><span class="code"><span class="symbol">:set_julian_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_julian_days"><span class="code"><span class="symbol">:set_julian_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_month"><span class="code"><span class="symbol">:set_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_month"><span class="code"><span class="symbol">:set_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">month</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateMonth.html#T">Gir.GLib.DateMonth.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_month"><span class="code"><span class="symbol">:set_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_month"><span class="code"><span class="symbol">:set_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_parse"><span class="code"><span class="symbol">:set_parse</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_parse"><span class="code"><span class="symbol">:set_parse</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_time"><span class="code"><span class="symbol">:set_time</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_time"><span class="code"><span class="symbol">:set_time</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_time_t"><span class="code"><span class="symbol">:set_time_t</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timet</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_time_t"><span class="code"><span class="symbol">:set_time_t</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timet</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_time_val"><span class="code"><span class="symbol">:set_time_val</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timeval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeVal.html#T">Gir.GLib.TimeVal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_time_val"><span class="code"><span class="symbol">:set_time_val</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timeval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeVal.html#T">Gir.GLib.TimeVal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_year"><span class="code"><span class="symbol">:set_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="set_year"><span class="code"><span class="symbol">:set_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">year</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="set_year"><span class="code"><span class="symbol">:set_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="set_year"><span class="code"><span class="symbol">:set_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="subtract_days"><span class="code"><span class="symbol">:subtract_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="subtract_days"><span class="code"><span class="symbol">:subtract_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="subtract_months"><span class="code"><span class="symbol">:subtract_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="subtract_months"><span class="code"><span class="symbol">:subtract_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="subtract_years"><span class="code"><span class="symbol">:subtract_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="subtract_years"><span class="code"><span class="symbol">:subtract_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n_years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="to_struct_tm"><span class="code"><span class="symbol">:to_struct_tm</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tm</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
+	</div><h5 id="to_struct_tm"><span class="code"><span class="symbol">:to_struct_tm</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tm</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
-	</div><h4 id="valid"><span class="code"><span class="symbol">:valid</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
+	</div><h5 id="valid"><span class="code"><span class="symbol">:valid</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
-	</div><h4 id="year"><span class="code"><span class="symbol">:year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+	</div><h5 id="year"><span class="code"><span class="symbol">:year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
 		
-	</div><h4 id=""~=""><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h5 id=""~=""><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
 		
 		
 	</div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
 	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Date">Date</a><ul><li><a href="#Types">Types</a><ul></ul></li><li><a href="#Constants">Constants</a><ul></ul></li><li><a href="#Functions">Functions</a><ul></ul></li><li><a href="#Methods">Methods</a><ul></ul></li></ul></li>
-		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
 </div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
-	</div>
-</footer>
 </body>
 </html>

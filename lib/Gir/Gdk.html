@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,95 +43,76 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Gdk</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
-		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Gdk" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gdk.html">Gdk</a></li></ul></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Gdk/AnchorHints.html">AnchorHints</a></div><div class="module"><a href="/lib/Gir/Gdk/AppLaunchContext.html">AppLaunchContext</a></div><div class="module"><a href="/lib/Gir/Gdk/Atom.html">Atom</a></div><div class="module"><a href="/lib/Gir/Gdk/AxisFlags.html">AxisFlags</a></div><div class="module"><a href="/lib/Gir/Gdk/AxisUse.html">AxisUse</a></div><div class="module"><a href="/lib/Gir/Gdk/ByteOrder.html">ByteOrder</a></div><div class="module"><a href="/lib/Gir/Gdk/Color.html">Color</a></div><div class="module"><a href="/lib/Gir/Gdk/CrossingMode.html">CrossingMode</a></div><div class="module"><a href="/lib/Gir/Gdk/Cursor.html">Cursor</a></div><div class="module"><a href="/lib/Gir/Gdk/CursorType.html">CursorType</a></div><div class="module"><a href="/lib/Gir/Gdk/Device.html">Device</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceManager.html">DeviceManager</a></div><div class="module"><a href="/lib/Gir/Gdk/DevicePad.html">DevicePad</a></div><div class="module"><a href="/lib/Gir/Gdk/DevicePadFeature.html">DevicePadFeature</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceTool.html">DeviceTool</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceToolType.html">DeviceToolType</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceType.html">DeviceType</a></div><div class="module"><a href="/lib/Gir/Gdk/Display.html">Display</a></div><div class="module"><a href="/lib/Gir/Gdk/DisplayManager.html">DisplayManager</a></div><div class="module"><a href="/lib/Gir/Gdk/DragAction.html">DragAction</a></div><div class="module"><a href="/lib/Gir/Gdk/DragCancelReason.html">DragCancelReason</a></div><div class="module"><a href="/lib/Gir/Gdk/DragContext.html">DragContext</a></div><div class="module"><a href="/lib/Gir/Gdk/DragProtocol.html">DragProtocol</a></div><div class="module"><a href="/lib/Gir/Gdk/DrawingContext.html">DrawingContext</a></div><div class="module"><a href="/lib/Gir/Gdk/Event.html">Event</a></div><div class="module"><a href="/lib/Gir/Gdk/EventAny.html">EventAny</a></div><div class="module"><a href="/lib/Gir/Gdk/EventButton.html">EventButton</a></div><div class="module"><a href="/lib/Gir/Gdk/EventConfigure.html">EventConfigure</a></div><div class="module"><a href="/lib/Gir/Gdk/EventCrossing.html">EventCrossing</a></div><div class="module"><a href="/lib/Gir/Gdk/EventDND.html">EventDND</a></div><div class="module"><a href="/lib/Gir/Gdk/EventExpose.html">EventExpose</a></div><div class="module"><a href="/lib/Gir/Gdk/EventFocus.html">EventFocus</a></div><div class="module"><a href="/lib/Gir/Gdk/EventFunc.html">EventFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/EventGrabBroken.html">EventGrabBroken</a></div><div class="module"><a href="/lib/Gir/Gdk/EventKey.html">EventKey</a></div><div class="module"><a href="/lib/Gir/Gdk/EventMask.html">EventMask</a></div><div class="module"><a href="/lib/Gir/Gdk/EventMotion.html">EventMotion</a></div><div class="module"><a href="/lib/Gir/Gdk/EventOwnerChange.html">EventOwnerChange</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadAxis.html">EventPadAxis</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadButton.html">EventPadButton</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadGroupMode.html">EventPadGroupMode</a></div><div class="module"><a href="/lib/Gir/Gdk/EventProperty.html">EventProperty</a></div><div class="module"><a href="/lib/Gir/Gdk/EventProximity.html">EventProximity</a></div><div class="module"><a href="/lib/Gir/Gdk/EventScroll.html">EventScroll</a></div><div class="module"><a href="/lib/Gir/Gdk/EventSelection.html">EventSelection</a></div><div class="module"><a href="/lib/Gir/Gdk/EventSetting.html">EventSetting</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouch.html">EventTouch</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouchpadPinch.html">EventTouchpadPinch</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouchpadSwipe.html">EventTouchpadSwipe</a></div><div class="module"><a href="/lib/Gir/Gdk/EventType.html">EventType</a></div><div class="module"><a href="/lib/Gir/Gdk/EventVisibility.html">EventVisibility</a></div><div class="module"><a href="/lib/Gir/Gdk/EventWindowState.html">EventWindowState</a></div><div class="module"><a href="/lib/Gir/Gdk/FilterFunc.html">FilterFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/FilterReturn.html">FilterReturn</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameClock.html">FrameClock</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameClockPhase.html">FrameClockPhase</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameTimings.html">FrameTimings</a></div><div class="module"><a href="/lib/Gir/Gdk/FullscreenMode.html">FullscreenMode</a></div><div class="module"><a href="/lib/Gir/Gdk/GLContext.html">GLContext</a></div><div class="module"><a href="/lib/Gir/Gdk/GLError.html">GLError</a></div><div class="module"><a href="/lib/Gir/Gdk/Geometry.html">Geometry</a></div><div class="module"><a href="/lib/Gir/Gdk/GrabOwnership.html">GrabOwnership</a></div><div class="module"><a href="/lib/Gir/Gdk/GrabStatus.html">GrabStatus</a></div><div class="module"><a href="/lib/Gir/Gdk/Gravity.html">Gravity</a></div><div class="module"><a href="/lib/Gir/Gdk/Init.html">Init</a></div><div class="module"><a href="/lib/Gir/Gdk/InputMode.html">InputMode</a></div><div class="module"><a href="/lib/Gir/Gdk/InputSource.html">InputSource</a></div><div class="module"><a href="/lib/Gir/Gdk/Keymap.html">Keymap</a></div><div class="module"><a href="/lib/Gir/Gdk/KeymapKey.html">KeymapKey</a></div><div class="module"><a href="/lib/Gir/Gdk/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Gdk/ModifierIntent.html">ModifierIntent</a></div><div class="module"><a href="/lib/Gir/Gdk/ModifierType.html">ModifierType</a></div><div class="module"><a href="/lib/Gir/Gdk/Monitor.html">Monitor</a></div><div class="module"><a href="/lib/Gir/Gdk/NotifyType.html">NotifyType</a></div><div class="module"><a href="/lib/Gir/Gdk/OwnerChange.html">OwnerChange</a></div><div class="module"><a href="/lib/Gir/Gdk/Point.html">Point</a></div><div class="module"><a href="/lib/Gir/Gdk/PropMode.html">PropMode</a></div><div class="module"><a href="/lib/Gir/Gdk/PropertyState.html">PropertyState</a></div><div class="module"><a href="/lib/Gir/Gdk/RGBA.html">RGBA</a></div><div class="module"><a href="/lib/Gir/Gdk/Rectangle.html">Rectangle</a></div><div class="module"><a href="/lib/Gir/Gdk/Screen.html">Screen</a></div><div class="module"><a href="/lib/Gir/Gdk/ScrollDirection.html">ScrollDirection</a></div><div class="module"><a href="/lib/Gir/Gdk/Seat.html">Seat</a></div><div class="module"><a href="/lib/Gir/Gdk/SeatCapabilities.html">SeatCapabilities</a></div><div class="module"><a href="/lib/Gir/Gdk/SeatGrabPrepareFunc.html">SeatGrabPrepareFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/SettingAction.html">SettingAction</a></div><div class="module"><a href="/lib/Gir/Gdk/Status.html">Status</a></div><div class="module"><a href="/lib/Gir/Gdk/SubpixelLayout.html">SubpixelLayout</a></div><div class="module"><a href="/lib/Gir/Gdk/TimeCoord.html">TimeCoord</a></div><div class="module"><a href="/lib/Gir/Gdk/TouchpadGesturePhase.html">TouchpadGesturePhase</a></div><div class="module"><a href="/lib/Gir/Gdk/VisibilityState.html">VisibilityState</a></div><div class="module"><a href="/lib/Gir/Gdk/Visual.html">Visual</a></div><div class="module"><a href="/lib/Gir/Gdk/VisualType.html">VisualType</a></div><div class="module"><a href="/lib/Gir/Gdk/WMDecoration.html">WMDecoration</a></div><div class="module"><a href="/lib/Gir/Gdk/WMFunction.html">WMFunction</a></div><div class="module"><a href="/lib/Gir/Gdk/Window.html">Window</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowAttr.html">WindowAttr</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowAttributesType.html">WindowAttributesType</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowChildFunc.html">WindowChildFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowEdge.html">WindowEdge</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowHints.html">WindowHints</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowInvalidateHandlerFunc.html">WindowInvalidateHandlerFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowState.html">WindowState</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowType.html">WindowType</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowTypeHint.html">WindowTypeHint</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowWindowClass.html">WindowWindowClass</a></div></section></section>
-	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Gdk">Gdk</a><ul><li><a href="#SubModules">SubModules</a><ul></ul></li></ul></li>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
 		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
-</div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
 	</div>
-</footer>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<section id="Gdk" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Gdk.html">Gdk</a></li></ul></h2></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Gdk/AnchorHints.html">AnchorHints</a></div><div class="module"><a href="/lib/Gir/Gdk/AppLaunchContext.html">AppLaunchContext</a></div><div class="module"><a href="/lib/Gir/Gdk/Atom.html">Atom</a></div><div class="module"><a href="/lib/Gir/Gdk/AxisFlags.html">AxisFlags</a></div><div class="module"><a href="/lib/Gir/Gdk/AxisUse.html">AxisUse</a></div><div class="module"><a href="/lib/Gir/Gdk/ByteOrder.html">ByteOrder</a></div><div class="module"><a href="/lib/Gir/Gdk/Color.html">Color</a></div><div class="module"><a href="/lib/Gir/Gdk/CrossingMode.html">CrossingMode</a></div><div class="module"><a href="/lib/Gir/Gdk/Cursor.html">Cursor</a></div><div class="module"><a href="/lib/Gir/Gdk/CursorType.html">CursorType</a></div><div class="module"><a href="/lib/Gir/Gdk/Device.html">Device</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceManager.html">DeviceManager</a></div><div class="module"><a href="/lib/Gir/Gdk/DevicePad.html">DevicePad</a></div><div class="module"><a href="/lib/Gir/Gdk/DevicePadFeature.html">DevicePadFeature</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceTool.html">DeviceTool</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceToolType.html">DeviceToolType</a></div><div class="module"><a href="/lib/Gir/Gdk/DeviceType.html">DeviceType</a></div><div class="module"><a href="/lib/Gir/Gdk/Display.html">Display</a></div><div class="module"><a href="/lib/Gir/Gdk/DisplayManager.html">DisplayManager</a></div><div class="module"><a href="/lib/Gir/Gdk/DragAction.html">DragAction</a></div><div class="module"><a href="/lib/Gir/Gdk/DragCancelReason.html">DragCancelReason</a></div><div class="module"><a href="/lib/Gir/Gdk/DragContext.html">DragContext</a></div><div class="module"><a href="/lib/Gir/Gdk/DragProtocol.html">DragProtocol</a></div><div class="module"><a href="/lib/Gir/Gdk/DrawingContext.html">DrawingContext</a></div><div class="module"><a href="/lib/Gir/Gdk/Event.html">Event</a></div><div class="module"><a href="/lib/Gir/Gdk/EventAny.html">EventAny</a></div><div class="module"><a href="/lib/Gir/Gdk/EventButton.html">EventButton</a></div><div class="module"><a href="/lib/Gir/Gdk/EventConfigure.html">EventConfigure</a></div><div class="module"><a href="/lib/Gir/Gdk/EventCrossing.html">EventCrossing</a></div><div class="module"><a href="/lib/Gir/Gdk/EventDND.html">EventDND</a></div><div class="module"><a href="/lib/Gir/Gdk/EventExpose.html">EventExpose</a></div><div class="module"><a href="/lib/Gir/Gdk/EventFocus.html">EventFocus</a></div><div class="module"><a href="/lib/Gir/Gdk/EventFunc.html">EventFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/EventGrabBroken.html">EventGrabBroken</a></div><div class="module"><a href="/lib/Gir/Gdk/EventKey.html">EventKey</a></div><div class="module"><a href="/lib/Gir/Gdk/EventMask.html">EventMask</a></div><div class="module"><a href="/lib/Gir/Gdk/EventMotion.html">EventMotion</a></div><div class="module"><a href="/lib/Gir/Gdk/EventOwnerChange.html">EventOwnerChange</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadAxis.html">EventPadAxis</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadButton.html">EventPadButton</a></div><div class="module"><a href="/lib/Gir/Gdk/EventPadGroupMode.html">EventPadGroupMode</a></div><div class="module"><a href="/lib/Gir/Gdk/EventProperty.html">EventProperty</a></div><div class="module"><a href="/lib/Gir/Gdk/EventProximity.html">EventProximity</a></div><div class="module"><a href="/lib/Gir/Gdk/EventScroll.html">EventScroll</a></div><div class="module"><a href="/lib/Gir/Gdk/EventSelection.html">EventSelection</a></div><div class="module"><a href="/lib/Gir/Gdk/EventSetting.html">EventSetting</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouch.html">EventTouch</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouchpadPinch.html">EventTouchpadPinch</a></div><div class="module"><a href="/lib/Gir/Gdk/EventTouchpadSwipe.html">EventTouchpadSwipe</a></div><div class="module"><a href="/lib/Gir/Gdk/EventType.html">EventType</a></div><div class="module"><a href="/lib/Gir/Gdk/EventVisibility.html">EventVisibility</a></div><div class="module"><a href="/lib/Gir/Gdk/EventWindowState.html">EventWindowState</a></div><div class="module"><a href="/lib/Gir/Gdk/FilterFunc.html">FilterFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/FilterReturn.html">FilterReturn</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameClock.html">FrameClock</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameClockPhase.html">FrameClockPhase</a></div><div class="module"><a href="/lib/Gir/Gdk/FrameTimings.html">FrameTimings</a></div><div class="module"><a href="/lib/Gir/Gdk/FullscreenMode.html">FullscreenMode</a></div><div class="module"><a href="/lib/Gir/Gdk/GLContext.html">GLContext</a></div><div class="module"><a href="/lib/Gir/Gdk/GLError.html">GLError</a></div><div class="module"><a href="/lib/Gir/Gdk/Geometry.html">Geometry</a></div><div class="module"><a href="/lib/Gir/Gdk/GrabOwnership.html">GrabOwnership</a></div><div class="module"><a href="/lib/Gir/Gdk/GrabStatus.html">GrabStatus</a></div><div class="module"><a href="/lib/Gir/Gdk/Gravity.html">Gravity</a></div><div class="module"><a href="/lib/Gir/Gdk/Init.html">Init</a></div><div class="module"><a href="/lib/Gir/Gdk/InputMode.html">InputMode</a></div><div class="module"><a href="/lib/Gir/Gdk/InputSource.html">InputSource</a></div><div class="module"><a href="/lib/Gir/Gdk/Keymap.html">Keymap</a></div><div class="module"><a href="/lib/Gir/Gdk/KeymapKey.html">KeymapKey</a></div><div class="module"><a href="/lib/Gir/Gdk/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Gdk/ModifierIntent.html">ModifierIntent</a></div><div class="module"><a href="/lib/Gir/Gdk/ModifierType.html">ModifierType</a></div><div class="module"><a href="/lib/Gir/Gdk/Monitor.html">Monitor</a></div><div class="module"><a href="/lib/Gir/Gdk/NotifyType.html">NotifyType</a></div><div class="module"><a href="/lib/Gir/Gdk/OwnerChange.html">OwnerChange</a></div><div class="module"><a href="/lib/Gir/Gdk/Point.html">Point</a></div><div class="module"><a href="/lib/Gir/Gdk/PropMode.html">PropMode</a></div><div class="module"><a href="/lib/Gir/Gdk/PropertyState.html">PropertyState</a></div><div class="module"><a href="/lib/Gir/Gdk/RGBA.html">RGBA</a></div><div class="module"><a href="/lib/Gir/Gdk/Rectangle.html">Rectangle</a></div><div class="module"><a href="/lib/Gir/Gdk/Screen.html">Screen</a></div><div class="module"><a href="/lib/Gir/Gdk/ScrollDirection.html">ScrollDirection</a></div><div class="module"><a href="/lib/Gir/Gdk/Seat.html">Seat</a></div><div class="module"><a href="/lib/Gir/Gdk/SeatCapabilities.html">SeatCapabilities</a></div><div class="module"><a href="/lib/Gir/Gdk/SeatGrabPrepareFunc.html">SeatGrabPrepareFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/SettingAction.html">SettingAction</a></div><div class="module"><a href="/lib/Gir/Gdk/Status.html">Status</a></div><div class="module"><a href="/lib/Gir/Gdk/SubpixelLayout.html">SubpixelLayout</a></div><div class="module"><a href="/lib/Gir/Gdk/TimeCoord.html">TimeCoord</a></div><div class="module"><a href="/lib/Gir/Gdk/TouchpadGesturePhase.html">TouchpadGesturePhase</a></div><div class="module"><a href="/lib/Gir/Gdk/VisibilityState.html">VisibilityState</a></div><div class="module"><a href="/lib/Gir/Gdk/Visual.html">Visual</a></div><div class="module"><a href="/lib/Gir/Gdk/VisualType.html">VisualType</a></div><div class="module"><a href="/lib/Gir/Gdk/WMDecoration.html">WMDecoration</a></div><div class="module"><a href="/lib/Gir/Gdk/WMFunction.html">WMFunction</a></div><div class="module"><a href="/lib/Gir/Gdk/Window.html">Window</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowAttr.html">WindowAttr</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowAttributesType.html">WindowAttributesType</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowChildFunc.html">WindowChildFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowEdge.html">WindowEdge</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowHints.html">WindowHints</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowInvalidateHandlerFunc.html">WindowInvalidateHandlerFunc</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowState.html">WindowState</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowType.html">WindowType</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowTypeHint.html">WindowTypeHint</a></div><div class="module"><a href="/lib/Gir/Gdk/WindowWindowClass.html">WindowWindowClass</a></div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</div>
 </body>
 </html>

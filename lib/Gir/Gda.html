@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,95 +43,76 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Gda</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
-		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Gda" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Gda.html">Gda</a></li></ul></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Gda/AttributesManagerFunc.html">AttributesManagerFunc</a></div><div class="module"><a href="/lib/Gir/Gda/AttributesManagerSignal.html">AttributesManagerSignal</a></div><div class="module"><a href="/lib/Gir/Gda/Batch.html">Batch</a></div><div class="module"><a href="/lib/Gir/Gda/BatchError.html">BatchError</a></div><div class="module"><a href="/lib/Gir/Gda/Binary.html">Binary</a></div><div class="module"><a href="/lib/Gir/Gda/Blob.html">Blob</a></div><div class="module"><a href="/lib/Gir/Gda/BlobOp.html">BlobOp</a></div><div class="module"><a href="/lib/Gir/Gda/Column.html">Column</a></div><div class="module"><a href="/lib/Gir/Gda/Config.html">Config</a></div><div class="module"><a href="/lib/Gir/Gda/ConfigError.html">ConfigError</a></div><div class="module"><a href="/lib/Gir/Gda/Connection.html">Connection</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionError.html">ConnectionError</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEvent.html">ConnectionEvent</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEventCode.html">ConnectionEventCode</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEventType.html">ConnectionEventType</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionFeature.html">ConnectionFeature</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionMetaType.html">ConnectionMetaType</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionOptions.html">ConnectionOptions</a></div><div class="module"><a href="/lib/Gir/Gda/DataAccessWrapper.html">DataAccessWrapper</a></div><div class="module"><a href="/lib/Gir/Gda/DataComparator.html">DataComparator</a></div><div class="module"><a href="/lib/Gir/Gda/DataComparatorError.html">DataComparatorError</a></div><div class="module"><a href="/lib/Gir/Gda/DataHandler.html">DataHandler</a></div><div class="module"><a href="/lib/Gir/Gda/DataModel.html">DataModel</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelAccessFlags.html">DataModelAccessFlags</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelArray.html">DataModelArray</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelBdb.html">DataModelBdb</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelDir.html">DataModelDir</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelError.html">DataModelError</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelHint.html">DataModelHint</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIOFormat.html">DataModelIOFormat</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelImport.html">DataModelImport</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIter.html">DataModelIter</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIterError.html">DataModelIterError</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelLdap.html">DataModelLdap</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivot.html">DataPivot</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotAggregate.html">DataPivotAggregate</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotError.html">DataPivotError</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotFieldType.html">DataPivotFieldType</a></div><div class="module"><a href="/lib/Gir/Gda/DataProxy.html">DataProxy</a></div><div class="module"><a href="/lib/Gir/Gda/DataProxyError.html">DataProxyError</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelect.html">DataSelect</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelectConditionType.html">DataSelectConditionType</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelectError.html">DataSelectError</a></div><div class="module"><a href="/lib/Gir/Gda/Diff.html">Diff</a></div><div class="module"><a href="/lib/Gir/Gda/DiffType.html">DiffType</a></div><div class="module"><a href="/lib/Gir/Gda/DsnInfo.html">DsnInfo</a></div><div class="module"><a href="/lib/Gir/Gda/GeometricPoint.html">GeometricPoint</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerBin.html">HandlerBin</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerBoolean.html">HandlerBoolean</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerNumerical.html">HandlerNumerical</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerString.html">HandlerString</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerTime.html">HandlerTime</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerType.html">HandlerType</a></div><div class="module"><a href="/lib/Gir/Gda/Holder.html">Holder</a></div><div class="module"><a href="/lib/Gir/Gda/HolderError.html">HolderError</a></div><div class="module"><a href="/lib/Gir/Gda/LdapSearchScope.html">LdapSearchScope</a></div><div class="module"><a href="/lib/Gir/Gda/Lockable.html">Lockable</a></div><div class="module"><a href="/lib/Gir/Gda/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Gda/MetaContext.html">MetaContext</a></div><div class="module"><a href="/lib/Gir/Gda/MetaDbObject.html">MetaDbObject</a></div><div class="module"><a href="/lib/Gir/Gda/MetaDbObjectType.html">MetaDbObjectType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaForeignKeyPolicy.html">MetaForeignKeyPolicy</a></div><div class="module"><a href="/lib/Gir/Gda/MetaGraphInfo.html">MetaGraphInfo</a></div><div class="module"><a href="/lib/Gir/Gda/MetaSortType.html">MetaSortType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStore.html">MetaStore</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreChange.html">MetaStoreChange</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreChangeType.html">MetaStoreChangeType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreError.html">MetaStoreError</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStruct.html">MetaStruct</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStructError.html">MetaStructError</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStructFeature.html">MetaStructFeature</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTable.html">MetaTable</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTableColumn.html">MetaTableColumn</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTableForeignKey.html">MetaTableForeignKey</a></div><div class="module"><a href="/lib/Gir/Gda/MetaView.html">MetaView</a></div><div class="module"><a href="/lib/Gir/Gda/Numeric.html">Numeric</a></div><div class="module"><a href="/lib/Gir/Gda/PStmt.html">PStmt</a></div><div class="module"><a href="/lib/Gir/Gda/ProviderInfo.html">ProviderInfo</a></div><div class="module"><a href="/lib/Gir/Gda/QuarkList.html">QuarkList</a></div><div class="module"><a href="/lib/Gir/Gda/RepetitiveStatement.html">RepetitiveStatement</a></div><div class="module"><a href="/lib/Gir/Gda/Row.html">Row</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperation.html">ServerOperation</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationCreateTableFlag.html">ServerOperationCreateTableFlag</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationError.html">ServerOperationError</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNode.html">ServerOperationNode</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNodeStatus.html">ServerOperationNodeStatus</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNodeType.html">ServerOperationNodeType</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationType.html">ServerOperationType</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProvider.html">ServerProvider</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderAsyncCallback.html">ServerProviderAsyncCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderError.html">ServerProviderError</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderExecCallback.html">ServerProviderExecCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderHandlerInfo.html">ServerProviderHandlerInfo</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderMeta.html">ServerProviderMeta</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderPrivate.html">ServerProviderPrivate</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderXa.html">ServerProviderXa</a></div><div class="module"><a href="/lib/Gir/Gda/Set.html">Set</a></div><div class="module"><a href="/lib/Gir/Gda/SetError.html">SetError</a></div><div class="module"><a href="/lib/Gir/Gda/SetGroup.html">SetGroup</a></div><div class="module"><a href="/lib/Gir/Gda/SetNode.html">SetNode</a></div><div class="module"><a href="/lib/Gir/Gda/SetSource.html">SetSource</a></div><div class="module"><a href="/lib/Gir/Gda/Short.html">Short</a></div><div class="module"><a href="/lib/Gir/Gda/SqlBuilder.html">SqlBuilder</a></div><div class="module"><a href="/lib/Gir/Gda/SqlBuilderError.html">SqlBuilderError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlError.html">SqlError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlIdentifierStyle.html">SqlIdentifierStyle</a></div><div class="module"><a href="/lib/Gir/Gda/SqlOperatorType.html">SqlOperatorType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParser.html">SqlParser</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserError.html">SqlParserError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserFlavour.html">SqlParserFlavour</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserIface.html">SqlParserIface</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserMode.html">SqlParserMode</a></div><div class="module"><a href="/lib/Gir/Gda/SqlRenderingContext.html">SqlRenderingContext</a></div><div class="module"><a href="/lib/Gir/Gda/SqlRenderingValue.html">SqlRenderingValue</a></div><div class="module"><a href="/lib/Gir/Gda/SqlReservedKeywordsFunc.html">SqlReservedKeywordsFunc</a></div><div class="module"><a href="/lib/Gir/Gda/SqlSelectJoinType.html">SqlSelectJoinType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatement.html">SqlStatement</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatementCompoundType.html">SqlStatementCompoundType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatementType.html">SqlStatementType</a></div><div class="module"><a href="/lib/Gir/Gda/Statement.html">Statement</a></div><div class="module"><a href="/lib/Gir/Gda/StatementError.html">StatementError</a></div><div class="module"><a href="/lib/Gir/Gda/StatementModelUsage.html">StatementModelUsage</a></div><div class="module"><a href="/lib/Gir/Gda/StatementSqlFlag.html">StatementSqlFlag</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadNotification.html">ThreadNotification</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadNotificationType.html">ThreadNotificationType</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapper.html">ThreadWrapper</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperCallback.html">ThreadWrapperCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperError.html">ThreadWrapperError</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperFunc.html">ThreadWrapperFunc</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperVoidFunc.html">ThreadWrapperVoidFunc</a></div><div class="module"><a href="/lib/Gir/Gda/Time.html">Time</a></div><div class="module"><a href="/lib/Gir/Gda/Timestamp.html">Timestamp</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionIsolation.html">TransactionIsolation</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatus.html">TransactionStatus</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusEvent.html">TransactionStatusEvent</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusEventType.html">TransactionStatusEventType</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusState.html">TransactionStatusState</a></div><div class="module"><a href="/lib/Gir/Gda/Tree.html">Tree</a></div><div class="module"><a href="/lib/Gir/Gda/TreeError.html">TreeError</a></div><div class="module"><a href="/lib/Gir/Gda/TreeManager.html">TreeManager</a></div><div class="module"><a href="/lib/Gir/Gda/TreeManagerError.html">TreeManagerError</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrColumns.html">TreeMgrColumns</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrLabel.html">TreeMgrLabel</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrLdap.html">TreeMgrLdap</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrSchemas.html">TreeMgrSchemas</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrSelect.html">TreeMgrSelect</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrTables.html">TreeMgrTables</a></div><div class="module"><a href="/lib/Gir/Gda/TreeNode.html">TreeNode</a></div><div class="module"><a href="/lib/Gir/Gda/TreeNodeError.html">TreeNodeError</a></div><div class="module"><a href="/lib/Gir/Gda/UShort.html">UShort</a></div><div class="module"><a href="/lib/Gir/Gda/ValueAttribute.html">ValueAttribute</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransaction.html">XaTransaction</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransactionError.html">XaTransactionError</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransactionId.html">XaTransactionId</a></div></section></section>
-	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Gda">Gda</a><ul><li><a href="#SubModules">SubModules</a><ul></ul></li></ul></li>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
 		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
-</div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
 	</div>
-</footer>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<section id="Gda" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Gda.html">Gda</a></li></ul></h2></nav><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/Gir/Gda/AttributesManagerFunc.html">AttributesManagerFunc</a></div><div class="module"><a href="/lib/Gir/Gda/AttributesManagerSignal.html">AttributesManagerSignal</a></div><div class="module"><a href="/lib/Gir/Gda/Batch.html">Batch</a></div><div class="module"><a href="/lib/Gir/Gda/BatchError.html">BatchError</a></div><div class="module"><a href="/lib/Gir/Gda/Binary.html">Binary</a></div><div class="module"><a href="/lib/Gir/Gda/Blob.html">Blob</a></div><div class="module"><a href="/lib/Gir/Gda/BlobOp.html">BlobOp</a></div><div class="module"><a href="/lib/Gir/Gda/Column.html">Column</a></div><div class="module"><a href="/lib/Gir/Gda/Config.html">Config</a></div><div class="module"><a href="/lib/Gir/Gda/ConfigError.html">ConfigError</a></div><div class="module"><a href="/lib/Gir/Gda/Connection.html">Connection</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionError.html">ConnectionError</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEvent.html">ConnectionEvent</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEventCode.html">ConnectionEventCode</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionEventType.html">ConnectionEventType</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionFeature.html">ConnectionFeature</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionMetaType.html">ConnectionMetaType</a></div><div class="module"><a href="/lib/Gir/Gda/ConnectionOptions.html">ConnectionOptions</a></div><div class="module"><a href="/lib/Gir/Gda/DataAccessWrapper.html">DataAccessWrapper</a></div><div class="module"><a href="/lib/Gir/Gda/DataComparator.html">DataComparator</a></div><div class="module"><a href="/lib/Gir/Gda/DataComparatorError.html">DataComparatorError</a></div><div class="module"><a href="/lib/Gir/Gda/DataHandler.html">DataHandler</a></div><div class="module"><a href="/lib/Gir/Gda/DataModel.html">DataModel</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelAccessFlags.html">DataModelAccessFlags</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelArray.html">DataModelArray</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelBdb.html">DataModelBdb</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelDir.html">DataModelDir</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelError.html">DataModelError</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelHint.html">DataModelHint</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIOFormat.html">DataModelIOFormat</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelImport.html">DataModelImport</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIter.html">DataModelIter</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelIterError.html">DataModelIterError</a></div><div class="module"><a href="/lib/Gir/Gda/DataModelLdap.html">DataModelLdap</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivot.html">DataPivot</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotAggregate.html">DataPivotAggregate</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotError.html">DataPivotError</a></div><div class="module"><a href="/lib/Gir/Gda/DataPivotFieldType.html">DataPivotFieldType</a></div><div class="module"><a href="/lib/Gir/Gda/DataProxy.html">DataProxy</a></div><div class="module"><a href="/lib/Gir/Gda/DataProxyError.html">DataProxyError</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelect.html">DataSelect</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelectConditionType.html">DataSelectConditionType</a></div><div class="module"><a href="/lib/Gir/Gda/DataSelectError.html">DataSelectError</a></div><div class="module"><a href="/lib/Gir/Gda/Diff.html">Diff</a></div><div class="module"><a href="/lib/Gir/Gda/DiffType.html">DiffType</a></div><div class="module"><a href="/lib/Gir/Gda/DsnInfo.html">DsnInfo</a></div><div class="module"><a href="/lib/Gir/Gda/GeometricPoint.html">GeometricPoint</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerBin.html">HandlerBin</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerBoolean.html">HandlerBoolean</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerNumerical.html">HandlerNumerical</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerString.html">HandlerString</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerTime.html">HandlerTime</a></div><div class="module"><a href="/lib/Gir/Gda/HandlerType.html">HandlerType</a></div><div class="module"><a href="/lib/Gir/Gda/Holder.html">Holder</a></div><div class="module"><a href="/lib/Gir/Gda/HolderError.html">HolderError</a></div><div class="module"><a href="/lib/Gir/Gda/LdapSearchScope.html">LdapSearchScope</a></div><div class="module"><a href="/lib/Gir/Gda/Lockable.html">Lockable</a></div><div class="module"><a href="/lib/Gir/Gda/Main.html">Main</a></div><div class="module"><a href="/lib/Gir/Gda/MetaContext.html">MetaContext</a></div><div class="module"><a href="/lib/Gir/Gda/MetaDbObject.html">MetaDbObject</a></div><div class="module"><a href="/lib/Gir/Gda/MetaDbObjectType.html">MetaDbObjectType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaForeignKeyPolicy.html">MetaForeignKeyPolicy</a></div><div class="module"><a href="/lib/Gir/Gda/MetaGraphInfo.html">MetaGraphInfo</a></div><div class="module"><a href="/lib/Gir/Gda/MetaSortType.html">MetaSortType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStore.html">MetaStore</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreChange.html">MetaStoreChange</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreChangeType.html">MetaStoreChangeType</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStoreError.html">MetaStoreError</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStruct.html">MetaStruct</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStructError.html">MetaStructError</a></div><div class="module"><a href="/lib/Gir/Gda/MetaStructFeature.html">MetaStructFeature</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTable.html">MetaTable</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTableColumn.html">MetaTableColumn</a></div><div class="module"><a href="/lib/Gir/Gda/MetaTableForeignKey.html">MetaTableForeignKey</a></div><div class="module"><a href="/lib/Gir/Gda/MetaView.html">MetaView</a></div><div class="module"><a href="/lib/Gir/Gda/Numeric.html">Numeric</a></div><div class="module"><a href="/lib/Gir/Gda/PStmt.html">PStmt</a></div><div class="module"><a href="/lib/Gir/Gda/ProviderInfo.html">ProviderInfo</a></div><div class="module"><a href="/lib/Gir/Gda/QuarkList.html">QuarkList</a></div><div class="module"><a href="/lib/Gir/Gda/RepetitiveStatement.html">RepetitiveStatement</a></div><div class="module"><a href="/lib/Gir/Gda/Row.html">Row</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperation.html">ServerOperation</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationCreateTableFlag.html">ServerOperationCreateTableFlag</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationError.html">ServerOperationError</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNode.html">ServerOperationNode</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNodeStatus.html">ServerOperationNodeStatus</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationNodeType.html">ServerOperationNodeType</a></div><div class="module"><a href="/lib/Gir/Gda/ServerOperationType.html">ServerOperationType</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProvider.html">ServerProvider</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderAsyncCallback.html">ServerProviderAsyncCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderError.html">ServerProviderError</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderExecCallback.html">ServerProviderExecCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderHandlerInfo.html">ServerProviderHandlerInfo</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderMeta.html">ServerProviderMeta</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderPrivate.html">ServerProviderPrivate</a></div><div class="module"><a href="/lib/Gir/Gda/ServerProviderXa.html">ServerProviderXa</a></div><div class="module"><a href="/lib/Gir/Gda/Set.html">Set</a></div><div class="module"><a href="/lib/Gir/Gda/SetError.html">SetError</a></div><div class="module"><a href="/lib/Gir/Gda/SetGroup.html">SetGroup</a></div><div class="module"><a href="/lib/Gir/Gda/SetNode.html">SetNode</a></div><div class="module"><a href="/lib/Gir/Gda/SetSource.html">SetSource</a></div><div class="module"><a href="/lib/Gir/Gda/Short.html">Short</a></div><div class="module"><a href="/lib/Gir/Gda/SqlBuilder.html">SqlBuilder</a></div><div class="module"><a href="/lib/Gir/Gda/SqlBuilderError.html">SqlBuilderError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlError.html">SqlError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlIdentifierStyle.html">SqlIdentifierStyle</a></div><div class="module"><a href="/lib/Gir/Gda/SqlOperatorType.html">SqlOperatorType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParser.html">SqlParser</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserError.html">SqlParserError</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserFlavour.html">SqlParserFlavour</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserIface.html">SqlParserIface</a></div><div class="module"><a href="/lib/Gir/Gda/SqlParserMode.html">SqlParserMode</a></div><div class="module"><a href="/lib/Gir/Gda/SqlRenderingContext.html">SqlRenderingContext</a></div><div class="module"><a href="/lib/Gir/Gda/SqlRenderingValue.html">SqlRenderingValue</a></div><div class="module"><a href="/lib/Gir/Gda/SqlReservedKeywordsFunc.html">SqlReservedKeywordsFunc</a></div><div class="module"><a href="/lib/Gir/Gda/SqlSelectJoinType.html">SqlSelectJoinType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatement.html">SqlStatement</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatementCompoundType.html">SqlStatementCompoundType</a></div><div class="module"><a href="/lib/Gir/Gda/SqlStatementType.html">SqlStatementType</a></div><div class="module"><a href="/lib/Gir/Gda/Statement.html">Statement</a></div><div class="module"><a href="/lib/Gir/Gda/StatementError.html">StatementError</a></div><div class="module"><a href="/lib/Gir/Gda/StatementModelUsage.html">StatementModelUsage</a></div><div class="module"><a href="/lib/Gir/Gda/StatementSqlFlag.html">StatementSqlFlag</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadNotification.html">ThreadNotification</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadNotificationType.html">ThreadNotificationType</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapper.html">ThreadWrapper</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperCallback.html">ThreadWrapperCallback</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperError.html">ThreadWrapperError</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperFunc.html">ThreadWrapperFunc</a></div><div class="module"><a href="/lib/Gir/Gda/ThreadWrapperVoidFunc.html">ThreadWrapperVoidFunc</a></div><div class="module"><a href="/lib/Gir/Gda/Time.html">Time</a></div><div class="module"><a href="/lib/Gir/Gda/Timestamp.html">Timestamp</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionIsolation.html">TransactionIsolation</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatus.html">TransactionStatus</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusEvent.html">TransactionStatusEvent</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusEventType.html">TransactionStatusEventType</a></div><div class="module"><a href="/lib/Gir/Gda/TransactionStatusState.html">TransactionStatusState</a></div><div class="module"><a href="/lib/Gir/Gda/Tree.html">Tree</a></div><div class="module"><a href="/lib/Gir/Gda/TreeError.html">TreeError</a></div><div class="module"><a href="/lib/Gir/Gda/TreeManager.html">TreeManager</a></div><div class="module"><a href="/lib/Gir/Gda/TreeManagerError.html">TreeManagerError</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrColumns.html">TreeMgrColumns</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrLabel.html">TreeMgrLabel</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrLdap.html">TreeMgrLdap</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrSchemas.html">TreeMgrSchemas</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrSelect.html">TreeMgrSelect</a></div><div class="module"><a href="/lib/Gir/Gda/TreeMgrTables.html">TreeMgrTables</a></div><div class="module"><a href="/lib/Gir/Gda/TreeNode.html">TreeNode</a></div><div class="module"><a href="/lib/Gir/Gda/TreeNodeError.html">TreeNodeError</a></div><div class="module"><a href="/lib/Gir/Gda/UShort.html">UShort</a></div><div class="module"><a href="/lib/Gir/Gda/ValueAttribute.html">ValueAttribute</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransaction.html">XaTransaction</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransactionError.html">XaTransactionError</a></div><div class="module"><a href="/lib/Gir/Gda/XaTransactionId.html">XaTransactionId</a></div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</div>
 </body>
 </html>

@@ -18,14 +18,19 @@
 
 
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css">
 
 	<!-- load inks css from the cdn -->
-	<link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/>
+	<!--link rel="stylesheet" type="text/css" href="/css/ink-flex.min.css"/-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 	<!-- load inks css for IE8 -->
 	<!--[if lt IE 9 ]>
-		<link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!--link rel="stylesheet" href="/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/-->
 	<![endif]-->
 
 	<!-- test browser flexbox support and load legacy grid if unsupported -->
@@ -38,271 +43,252 @@
 	</script>
 
 	<!-- load inks javascript files from the cdn -->
-	<script type="text/javascript" src="/js/holder.js"></script>
-	<script type="text/javascript" src="/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="/js/autoload.min.js"></script>
+	<!--script type="text/javascript" src="/js/holder.js"></script-->
+	<!--script type="text/javascript" src="/js/ink-all.min.js"></script-->
+	<!--script type="text/javascript" src="/js/autoload.min.js"></script-->
 
 	<title>b.Gir.Pango.Main</title>
 </head>
 <body>
 
-<div class="ink-grid">
-	<header class="vertical-space">
-		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-		<nav class="ink-navigation">
-			<ul class="menu horizontal blue">
-				<li><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="/about.html" class="toplevel"><i class="fa fa-info"></i> About</a>
-					<ul class="submenu">
-						<li><a href="/about.html#Features">Features</a></li>
-						<li><a href="/about.html#Status">Status</a></li>
-						<li><a href="/about.html#Contact">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
-					<ul class="submenu">
-						<li><a href="/ref/tutorial.html">Tutorial</a></li>
-						<li><a href="/docs.html#Reference">Reference</a>
-							<ul class="submenu flyout right">
-								<li><a href="/ref/syntax.html">Syntax</a></li>
-								<li><a href="/ref/expressions.html">Expressions</a></li>
-							</ul>
-						</li>
-						<li><a href="/samples.html">Sample</a></li>
-						<li><a href="/lib.html">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
-					<ul class="submenu">
-						<li><a href="/download.html#Source">Source</a></li>
-						<li><a href="/download.html#Binaries">Binaries</a></li>
-					</ul>
-				</li>
-				<li><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
-					<ul class="submenu">
-						<li><a href="/links.html#Programming_Languages">Other Languages</a></li>
-						<li><a href="/links.html#Development_Tools">Development Tools</a></li>
-						<li><a href="/links.html#Libraries">Libraries</a></li>
-					</ul>
-				</li>
-				<li><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
-					<ul class="submenu">
-						<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
-						<li><a href="/forum/index.php">Forum</a></li>
-					</ul>
-				</li>
-				<li id="forms" class="search small" style="float: right; margin-top: 5px;">
-					<form method="get" action="/sphider/search.php" class="ink-form">
-						<input type="hidden" name="search" value="1"/>
-						<input type="text" name="query" id="do_search">
-						<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-<div class="column-group horizontal-gutters">
-	<div class="left-column all-75 small-100 tiny-100">
-<section id="Main" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><ul class="breadcrumbs orange"><li><a href="/lib.html">Libraries</a></li><li><a class="id" href="/lib/Gir.html">Gir</a></li><li><a class="id" href="/lib/Gir/Pango.html">Pango</a></li><li><a class="id" href="/lib/Gir/Pango/Main.html">Main</a></li></ul></nav><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="__$AttrTypeGetName"><span class="code">__$AttrTypeGetName<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrType.html#T">Gir.Pango.AttrType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$AttrTypeRegister"><span class="code">__$AttrTypeRegister<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/AttrType.html#T">Gir.Pango.AttrType.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$BidiTypeForUnichar"><span class="code">__$BidiTypeForUnichar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/BidiType.html#T">Gir.Pango.BidiType.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$Break"><span class="code">__$Break<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-	</div><h4 id="__$ConfigKeyGet"><span class="code">__$ConfigKeyGet<span class="delimiter">(</span><span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$ConfigKeyGetSystem"><span class="code">__$ConfigKeyGetSystem<span class="delimiter">(</span><span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$DefaultBreak"><span class="code">__$DefaultBreak<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/LogAttr.html#T">Gir.Pango.LogAttr.T</a><span class="delimiter">,</span> <span class="var">attrs_len</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-	</div><h4 id="__$ExtentsToPixels"><span class="code">__$ExtentsToPixels<span class="delimiter">(</span><span class="var">inclusive</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Rectangle.html#T">Gir.Pango.Rectangle.T</a><span class="delimiter">,</span> <span class="var">nearest</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Rectangle.html#T">Gir.Pango.Rectangle.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$FindBaseDir"><span class="code">__$FindBaseDir<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$FindParagraphBoundary"><span class="code">__$FindParagraphBoundary<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">paragraph_delimiter_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">next_paragraph_start</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-	</div><h4 id="__$FontDescriptionFromString"><span class="code">__$FontDescriptionFromString<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/FontDescription.html#T">Gir.Pango.FontDescription.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$GetLibSubdirectory"><span class="code">__$GetLibSubdirectory<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-	</div><h4 id="__$GetLogAttrs"><span class="code">__$GetLogAttrs<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">level</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">language</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a><span class="delimiter">,</span> <span class="var">log_attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-	</div><h4 id="__$GetMirrorChar"><span class="code">__$GetMirrorChar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mirrored_ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$GetSysconfSubdirectory"><span class="code">__$GetSysconfSubdirectory<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-	</div><h4 id="__$GravityGetForMatrix"><span class="code">__$GravityGetForMatrix<span class="delimiter">(</span><span class="var">matrix</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Matrix.html#T">Gir.Pango.Matrix.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$GravityGetForScript"><span class="code">__$GravityGetForScript<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">,</span> <span class="var">base_gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">,</span> <span class="var">hint</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GravityHint.html#T">Gir.Pango.GravityHint.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$GravityGetForScriptAndWidth"><span class="code">__$GravityGetForScriptAndWidth<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">,</span> <span class="var">wide</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">base_gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">,</span> <span class="var">hint</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GravityHint.html#T">Gir.Pango.GravityHint.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-	</div><h4 id="__$GravityToRotation"><span class="code">__$GravityToRotation<span class="delimiter">(</span><span class="var">gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$IsZeroWidth"><span class="code">__$IsZeroWidth<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$Itemize"><span class="code">__$Itemize<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Context.html#T">Gir.Pango.Context.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">start_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrList.html#T">Gir.Pango.AttrList.T</a><span class="delimiter">,</span> <span class="var">cached_iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrIterator.html#T">Gir.Pango.AttrIterator.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h4 id="__$ItemizeWithBaseDir"><span class="code">__$ItemizeWithBaseDir<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Context.html#T">Gir.Pango.Context.T</a><span class="delimiter">,</span> <span class="var">base_dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">start_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrList.html#T">Gir.Pango.AttrList.T</a><span class="delimiter">,</span> <span class="var">cached_iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrIterator.html#T">Gir.Pango.AttrIterator.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-		
-		
-	</div><h4 id="__$LanguageFromString"><span class="code">__$LanguageFromString<span class="delimiter">(</span><span class="var">language</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$LanguageGetDefault"><span class="code">__$LanguageGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h4><div class="comment">
-	</div><h4 id="__$Log2visGetEmbeddingLevels"><span class="code">__$Log2visGetEmbeddingLevels<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">pbase_dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$LookupAliases"><span class="code">__$LookupAliases<span class="delimiter">(</span><span class="var">fontname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">families</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$MarkupParserFinish"><span class="code">__$MarkupParserFinish<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/MarkupParseContext.html#T">Gir.GLib.MarkupParseContext.T</a><span class="delimiter">,</span> <span class="var">attr_list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accel_char</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-	</div><h4 id="__$MarkupParserNew"><span class="code">__$MarkupParserNew<span class="delimiter">(</span><span class="var">accel_marker</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/MarkupParseContext.html#T">Gir.GLib.MarkupParseContext.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$ModuleRegister"><span class="code">__$ModuleRegister<span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/IncludedModule.html#T">Gir.Pango.IncludedModule.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$ParseEnum"><span class="code">__$ParseEnum<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">possible_values</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-	</div><h4 id="__$ParseMarkup"><span class="code">__$ParseMarkup<span class="delimiter">(</span><span class="var">markup_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accel_marker</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attr_list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accel_char</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-		
-		
-	</div><h4 id="__$ParseStretch"><span class="code">__$ParseStretch<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">stretch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$ParseStyle"><span class="code">__$ParseStyle<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$ParseVariant"><span class="code">__$ParseVariant<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variant</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$ParseWeight"><span class="code">__$ParseWeight<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">weight</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$QuantizeLineGeometry"><span class="code">__$QuantizeLineGeometry<span class="delimiter">(</span><span class="var">thickness</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">position</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$ReadLine"><span class="code">__$ReadLine<span class="delimiter">(</span><span class="var">stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$ReorderItems"><span class="code">__$ReorderItems<span class="delimiter">(</span><span class="var">logical_items</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$ScanInt"><span class="code">__$ScanInt<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$ScanString"><span class="code">__$ScanString<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$ScanWord"><span class="code">__$ScanWord<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-		
-	</div><h4 id="__$ScriptForUnichar"><span class="code">__$ScriptForUnichar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$ScriptGetSampleLanguage"><span class="code">__$ScriptGetSampleLanguage<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$Shape"><span class="code">__$Shape<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">glyphs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GlyphString.html#T">Gir.Pango.GlyphString.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-	</div><h4 id="__$ShapeFull"><span class="code">__$ShapeFull<span class="delimiter">(</span><span class="var">item_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">item_length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">paragraph_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">paragraph_length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">glyphs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GlyphString.html#T">Gir.Pango.GlyphString.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h4 id="__$SkipSpace"><span class="code">__$SkipSpace<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$SplitFileList"><span class="code">__$SplitFileList<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$TrimString"><span class="code">__$TrimString<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$UnicharDirection"><span class="code">__$UnicharDirection<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$UnitsFromDouble"><span class="code">__$UnitsFromDouble<span class="delimiter">(</span><span class="var">d</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$UnitsToDouble"><span class="code">__$UnitsToDouble<span class="delimiter">(</span><span class="var">i</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a></span></h4><div class="comment">
-		
-	</div><h4 id="__$Version"><span class="code">__$Version<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-	</div><h4 id="__$VersionCheck"><span class="code">__$VersionCheck<span class="delimiter">(</span><span class="var">required_major</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_minor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_micro</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-		
-		
-		
-	</div><h4 id="__$VersionString"><span class="code">__$VersionString<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h4><div class="comment">
-	</div></section></section>
-	</div>
-
-	<div class="right-column all-25 hide-small hide-tiny">
-		<nav class="ink-navigation ink-sticky" id="side-menu">
-			<ul class="menu vertical blue">
-<li><a href="#Main">Main</a><ul><li><a href="#Functions">Functions</a><ul></ul></li></ul></li>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.html" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.html#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.html#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.html" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.html" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.html">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.html#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.html">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.html">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.html">Sample</a></li>
+					<li class="nav-item"><a href="/lib.html">Libraries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.html" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.html#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.html#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.html" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.html#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.html#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.html#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+			<!--li class="nav-item"><a href="/discuss.html" class="toplevel"><i class="fa fa-comments"></i> Discuss</a>
+				<ul class="nav">
+					<li><a href="http://lists.sourceforge.net/lists/listinfo/wrapl-discussion">Mailing List</a></li>
+					<li><a href="/forum/index.php">Forum</a></li>
+				</ul>
+			</li-->
+			<!--li id="forms" class="search small" style="float: right; margin-top: 5px;">
+				<form method="get" action="/sphider/search.php" class="ink-form">
+					<input type="hidden" name="search" value="1"/>
+					<input type="text" name="query" id="do_search">
+					<button class="ink-button blue"><i class="fa fa-search"></i> Search</button>
+				</form>
+			</li-->
 		</ul>
-        </nav>
-    </div>
-
-	<div class="clearer"><span></span></div>
-</div>
-
-</div>
-<footer class="clearfix">
-	<div class="ink-grid">
-		<div class="bottom space">
-			<span class="left"></span>
-			<span>Copyright: &copy; 2008-2014 Raja Mukherji</span>
-			<div class="clearer"><span></span></div>
-		</div>
 	</div>
-</footer>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<section id="Main" data-spy="true" data-target="#side-menu"><nav class="ink-navigation"><h2><ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.html">Libraries</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir.html">Gir</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Pango.html">Pango</a></li><li class="breadcrumb-item"><a class="id" href="/lib/Gir/Pango/Main.html">Main</a></li></ul></h2></nav><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="__$AttrTypeGetName"><span class="code">__$AttrTypeGetName<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrType.html#T">Gir.Pango.AttrType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$AttrTypeRegister"><span class="code">__$AttrTypeRegister<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/AttrType.html#T">Gir.Pango.AttrType.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$BidiTypeForUnichar"><span class="code">__$BidiTypeForUnichar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/BidiType.html#T">Gir.Pango.BidiType.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Break"><span class="code">__$Break<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$ConfigKeyGet"><span class="code">__$ConfigKeyGet<span class="delimiter">(</span><span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ConfigKeyGetSystem"><span class="code">__$ConfigKeyGetSystem<span class="delimiter">(</span><span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$DefaultBreak"><span class="code">__$DefaultBreak<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/LogAttr.html#T">Gir.Pango.LogAttr.T</a><span class="delimiter">,</span> <span class="var">attrs_len</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$ExtentsToPixels"><span class="code">__$ExtentsToPixels<span class="delimiter">(</span><span class="var">inclusive</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Rectangle.html#T">Gir.Pango.Rectangle.T</a><span class="delimiter">,</span> <span class="var">nearest</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Rectangle.html#T">Gir.Pango.Rectangle.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$FindBaseDir"><span class="code">__$FindBaseDir<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$FindParagraphBoundary"><span class="code">__$FindParagraphBoundary<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">paragraph_delimiter_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">next_paragraph_start</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$FontDescriptionFromString"><span class="code">__$FontDescriptionFromString<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/FontDescription.html#T">Gir.Pango.FontDescription.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$GetLibSubdirectory"><span class="code">__$GetLibSubdirectory<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetLogAttrs"><span class="code">__$GetLogAttrs<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">level</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">language</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a><span class="delimiter">,</span> <span class="var">log_attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$GetMirrorChar"><span class="code">__$GetMirrorChar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mirrored_ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$GetSysconfSubdirectory"><span class="code">__$GetSysconfSubdirectory<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GravityGetForMatrix"><span class="code">__$GravityGetForMatrix<span class="delimiter">(</span><span class="var">matrix</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Matrix.html#T">Gir.Pango.Matrix.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$GravityGetForScript"><span class="code">__$GravityGetForScript<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">,</span> <span class="var">base_gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">,</span> <span class="var">hint</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GravityHint.html#T">Gir.Pango.GravityHint.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$GravityGetForScriptAndWidth"><span class="code">__$GravityGetForScriptAndWidth<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">,</span> <span class="var">wide</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">base_gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">,</span> <span class="var">hint</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GravityHint.html#T">Gir.Pango.GravityHint.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$GravityToRotation"><span class="code">__$GravityToRotation<span class="delimiter">(</span><span class="var">gravity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Gravity.html#T">Gir.Pango.Gravity.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$IsZeroWidth"><span class="code">__$IsZeroWidth<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Itemize"><span class="code">__$Itemize<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Context.html#T">Gir.Pango.Context.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">start_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrList.html#T">Gir.Pango.AttrList.T</a><span class="delimiter">,</span> <span class="var">cached_iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrIterator.html#T">Gir.Pango.AttrIterator.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$ItemizeWithBaseDir"><span class="code">__$ItemizeWithBaseDir<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Context.html#T">Gir.Pango.Context.T</a><span class="delimiter">,</span> <span class="var">base_dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">start_index</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrList.html#T">Gir.Pango.AttrList.T</a><span class="delimiter">,</span> <span class="var">cached_iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/AttrIterator.html#T">Gir.Pango.AttrIterator.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$LanguageFromString"><span class="code">__$LanguageFromString<span class="delimiter">(</span><span class="var">language</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$LanguageGetDefault"><span class="code">__$LanguageGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h5><div class="comment">
+	</div><h5 id="__$Log2visGetEmbeddingLevels"><span class="code">__$Log2visGetEmbeddingLevels<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">pbase_dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$LookupAliases"><span class="code">__$LookupAliases<span class="delimiter">(</span><span class="var">fontname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">families</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$MarkupParserFinish"><span class="code">__$MarkupParserFinish<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/MarkupParseContext.html#T">Gir.GLib.MarkupParseContext.T</a><span class="delimiter">,</span> <span class="var">attr_list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accel_char</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$MarkupParserNew"><span class="code">__$MarkupParserNew<span class="delimiter">(</span><span class="var">accel_marker</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/MarkupParseContext.html#T">Gir.GLib.MarkupParseContext.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ModuleRegister"><span class="code">__$ModuleRegister<span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/IncludedModule.html#T">Gir.Pango.IncludedModule.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ParseEnum"><span class="code">__$ParseEnum<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.html#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">possible_values</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$ParseMarkup"><span class="code">__$ParseMarkup<span class="delimiter">(</span><span class="var">markup_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">accel_marker</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">attr_list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">accel_char</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$ParseStretch"><span class="code">__$ParseStretch<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">stretch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$ParseStyle"><span class="code">__$ParseStyle<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">style</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$ParseVariant"><span class="code">__$ParseVariant<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variant</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$ParseWeight"><span class="code">__$ParseWeight<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">weight</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">warn</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$QuantizeLineGeometry"><span class="code">__$QuantizeLineGeometry<span class="delimiter">(</span><span class="var">thickness</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">position</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$ReadLine"><span class="code">__$ReadLine<span class="delimiter">(</span><span class="var">stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$ReorderItems"><span class="code">__$ReorderItems<span class="delimiter">(</span><span class="var">logical_items</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ScanInt"><span class="code">__$ScanInt<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$ScanString"><span class="code">__$ScanString<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$ScanWord"><span class="code">__$ScanWord<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">out</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$ScriptForUnichar"><span class="code">__$ScriptForUnichar<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ScriptGetSampleLanguage"><span class="code">__$ScriptGetSampleLanguage<span class="delimiter">(</span><span class="var">script</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Script.html#T">Gir.Pango.Script.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Language.html#T">Gir.Pango.Language.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Shape"><span class="code">__$Shape<span class="delimiter">(</span><span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">glyphs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GlyphString.html#T">Gir.Pango.GlyphString.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$ShapeFull"><span class="code">__$ShapeFull<span class="delimiter">(</span><span class="var">item_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">item_length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">paragraph_text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">paragraph_length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">analysis</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/Analysis.html#T">Gir.Pango.Analysis.T</a><span class="delimiter">,</span> <span class="var">glyphs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Pango/GlyphString.html#T">Gir.Pango.GlyphString.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$SkipSpace"><span class="code">__$SkipSpace<span class="delimiter">(</span><span class="var">pos</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.html#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.html#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SplitFileList"><span class="code">__$SplitFileList<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.html#T">Agg.List.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$TrimString"><span class="code">__$TrimString<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$UnicharDirection"><span class="code">__$UnicharDirection<span class="delimiter">(</span><span class="var">ch</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Direction.html#T">Gir.Pango.Direction.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$UnitsFromDouble"><span class="code">__$UnitsFromDouble<span class="delimiter">(</span><span class="var">d</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$UnitsToDouble"><span class="code">__$UnitsToDouble<span class="delimiter">(</span><span class="var">i</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.html#T">Std.Real.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Version"><span class="code">__$Version<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h5 id="__$VersionCheck"><span class="code">__$VersionCheck<span class="delimiter">(</span><span class="var">required_major</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_minor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">required_micro</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.html#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$VersionString"><span class="code">__$VersionString<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.html#T">Std.String.T</a></span></h5><div class="comment">
+	</div></section></section>
+	<div>
+		<span class="left"></span>
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</div>
 </body>
 </html>
