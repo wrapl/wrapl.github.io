@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>rlink</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+
+<section id="rlink" class="section">
+<p><span class="var">rlink</span> is the linker used to produce <a href="/impl/riva.xhtml">Riva</a> binaries. The linker accepts binary object files and libraries as well as linker <a href="#scripts">scripts</a>.</p>
+
+<section id="Command_Line_Options" data-spy="true" data-target="#side-menu"><h3>Command Line Options</h3>
+<p>The basic invocation for <span class="var">rlink</span> is <span class="code"><span class="var">rlink</span> <span class="delimiter">[</span><span class="var">options</span><span class="delimiter">]</span> <span class="var">input</span><span class="delimiter">-</span><span class="var">files</span></span>. By default, no output files are produced. The order of the input files is unimportant, all files are loaded before any linking is done.</p>
+
+<table class="table is-fullwidth">
+<tr><th>Option</th><th>Description</th></tr>
+<tr><td><span class="literal">-o filename</span></td><td>Outputs the Riva binary to <span class="var">filename</span>. If this option is omitted, no Riva binary is created.</td></tr>
+<tr><td><span class="literal">-? filename</span></td><td>Generates a listing file <span class="var">filename</span>.</td></tr>
+<tr><td><span class="literal">-l filename</span></td><td>Links in the file <span class="var">filename</span>. This option is only present for IDEs that automatically add <span class="literal">-l</span> before linked files.</td></tr>
+<tr><td><span class="literal">-L path</span></td><td>Adds <span class="var">path</span> to the linker search path. The search path is used for all linked files, not just library (<span class="literal">.a</span>/<span class="literal">.lib</span>) files.</td></tr>
+<tr><td><span class="literal">-m platform</span></td><td>Sets the platform for generated output to <span class="var">platform</span>.</td></tr>
+<tr><td><span class="literal">-v version</span></td><td>Sets the version tag in the generated Riva binary to <span class="var">version</span>.</td></tr>
+</table>
+</section>
+
+<section id="Scripts" data-spy="true" data-target="#side-menu"><h3>Scripts</h3>
+<p>The linker accepts script files, which should have the extension <span class="literal">.rlink</span>, which are essentially <a href="/links.xhtml#lua">Lua</a> programs with a number of predefined variables/functions. Any number of script files may be linked into a single module.</p>
+<table class="table is-fullwidth">
+<tr><th>Function</th><th>Description</th></tr>
+<tr><td><span class="var">export(int, ext, type)</span></td><td>Exports the symbol <span class="var">int</span> as <span class="var">ext</span>. If <span class="var">ext</span> is omitted, <span class="var">int</span> is used. <span class="var">type</span> should be one of <span class="literal">CONSTANT</span> or <span class="literal">VARIABLE</span>, if omitted, <span class="literal">CONSTANT</span> is used.</td></tr>
+<tr><td><span class="var">require(module)</span></td><td>Specifies that the <span class="var">module</span> should be loaded with the current module, even though no symbol is imported from it.</td></tr>
+<tr><td><span class="var">Platform</span></td><td>The target platform of the current module.</td></tr>
+<tr><td><span class="var">module(module)</span></td><td>Specifies the module containing the imported symbols; see <span class="var">import</span>.</td></tr>
+<tr><td><span class="var">prefix(prefix)</span></td><td>Specifies a prefix that will be added to the beginning of each imported symbol; see <span class="var">import()</span>.</td></tr>
+<tr><td><span class="var">import(int, ext, type)</span></td><td>Specifies that during linkage, the symbol <span class="var">ext</span> should be resolved to the symbol <span class="code"><span class="var">module</span><span class="delimiter">.</span><span class="var">int</span></span>. If <span class="var">ext</span> is omitted, <span class="code"><span class="var">prefix</span><span class="delimiter">+</span><span class="var">int</span></span> is used. <span class="var">type</span> should be one of <span class="literal">CONSTANT</span> or <span class="literal">VARIABLE</span>, if omitted, <span class="literal">CONSTANT</span> is used.</td></tr>
+<tr><td><span class="var">include(filename)</span></td><td>Links in the file <span class="var">filename</span>.</td></tr>
+</table>
+</section>
+
+</section>
+
+
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

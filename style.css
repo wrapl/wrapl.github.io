@@ -362,3 +362,8 @@ input.edit_button {
 	color:#BBB;
 	border:1px dotted #777;
 }
+
+.off-canvas .off-canvas-content {
+    padding: .4rem .4rem .4rem 2rem;
+	overflow: auto;
+}

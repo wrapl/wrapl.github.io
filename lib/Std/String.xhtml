@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Std.String</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/String.xhtml">String</a></li></ul><section id="String" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
+The type of all strings.<br></br>
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Empty"><span class="code">Empty</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+Empty string <span class="code"><span class="literal">""</span></span>.<br></br>
+	</div><h5 id="Lower"><span class="code">Lower</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+String consisting of lower case letters.<br></br>
+	</div><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+String corresponding to the address <span class="code">0</span>. Needed for bindings to external libraries.<br></br>
+	</div><h5 id="Upper"><span class="code">Upper</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+String consisting of upper case letters.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="Add"><span class="code">Add<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the concatenation of <span class="var">a</span> and <span class="var">b</span>.<br></br>
+	</div><h5 id="Chr"><span class="code">Chr<span class="delimiter">(</span><span class="var">byte</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Returns a string <span class="var">str</span> of length 1 with <span class="code"><span class="var">Ord</span><span class="delimiter">(</span><span class="var">str</span><span class="delimiter">)</span> <span class="delimiter">=</span> <span class="var">byte</span></span>.<br></br>
+	</div><h5 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+Returns <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Greater">Std.Object.Greater</a></span> depending on whether <span class="var">a</span> is lexically less than, equal to or greater than <span class="var">b</span>.<br></br>
+	</div><h5 id="Create"><span class="code">Create<span class="delimiter">(</span><span class="var">value<sub>1</sub>,...,value<sub>k</sub></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+returns the concatenation of <span class="var">value<sub>1</sub></span>, ... , <span class="var">value<sub>k</sub></span> after converting them (if necessary) to strings.<br></br>
+	</div><h5 id="FromAddress"><span class="code">FromAddress<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns a string consisting of the <span class="var">length</span> bytes at <span class="var">address</span>.<br></br>
+The memory at <span class="var">address</span> is not copied and should not be modified after this call.<br></br>
+	</div><h5 id="GetBlockAddress"><span class="code">GetBlockAddress<span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a></span></h5><div class="comment">
+		
+		
+Returns the address of the bytes of block<sub><span class="var">n</span></sub> of <span class="var">t</span>, where block<sub><span class="code">0</span></sub> is the first block.<br></br>
+Fails if <span class="var">n</span> is larger or equal than the number of blocks in <span class="var">t</span>.<br></br>
+	</div><h5 id="GetBlockLength"><span class="code">GetBlockLength<span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+Returns the length of the bytes of block<sub><span class="var">n</span></sub> of <span class="var">t</span>, where block<sub><span class="code">0</span></sub> is the first block.<br></br>
+Fails if <span class="var">n</span> is larger or equal than the number of blocks in <span class="var">t</span>.<br></br>
+	</div><h5 id="GetBlocks"><span class="code">GetBlocks<span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">addr</span> <span class="delimiter">@</span> ANY<span class="delimiter">,</span> <span class="var">len</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+For each block in <span class="var">t</span>, stores the address and length of the block into <span class="var">addr</span> and <span class="var">len</span> respectively and generates <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a></span>.<br></br>
+	</div><h5 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+Returns a hash code for <span class="var">t</span>.<br></br>
+	</div><h5 id="Ord"><span class="code">Ord<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+Returns the first byte of <span class="var">str</span> as an integer.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="after"><span class="code"><span class="symbol">:after</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <span class="symbol">:T</span></span></h5><div class="comment">
+		
+		
+Returns the substring of <span class="var">a</span> after the first occurance of a character in <span class="var">b</span>. Returns all of <span class="var">a</span> if no character in <span class="var">b</span> occurrs in <span class="var">a</span>.<br></br>
+	</div><h5 id="any"><span class="code"><span class="symbol">:any</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">chars</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+Generates all positions after <span class="var">m</span> in <span class="var">str</span> with a character in <span class="var">chars</span>.<br></br>
+	</div><h5 id="any"><span class="code"><span class="symbol">:any</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">chars</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+Generates all positions in <span class="var">str</span> with a character in <span class="var">chars</span>.<br></br>
+	</div><h5 id="before"><span class="code"><span class="symbol">:before</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the largest initial substring of <span class="var">a</span> that does not contain any characters in <span class="var">b</span>.<br></br>
+	</div><h5 id="begins"><span class="code"><span class="symbol">:begins</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns <span class="var">a</span> if it begins with <span class="var">b</span>, fails otherwise.<br></br>
+	</div><h5 id="centre"><span class="code"><span class="symbol">:centre</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="centre"><span class="code"><span class="symbol">:centre</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="chars"><span class="code"><span class="symbol">:chars</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Generates the characters in <span class="var">str</span> as strings of length <span class="code">1</span>.<br></br>
+	</div><h5 id="ends"><span class="code"><span class="symbol">:ends</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns <span class="var">a</span> if it ends with <span class="var">b</span>, fails otherwise.<br></br>
+	</div><h5 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">n</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+		
+Generate each position between <span class="var">m</span> and <span class="var">n</span> where <span class="var">b</span> occurs in <span class="var">a</span>.<br></br>
+	</div><h5 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+Generate each position after <span class="var">m</span> where <span class="var">b</span> occurs in <span class="var">a</span>.<br></br>
+	</div><h5 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+		
+		
+Generate each position where <span class="var">b</span> occurs in <span class="var">a</span>.<br></br>
+	</div><h5 id="gets"><span class="code"><span class="symbol">:gets</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="in"><span class="code"><span class="symbol">:in</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns <span class="var">a</span> if it is a substring of <span class="var">b</span>, fails otherwise.<br></br>
+	</div><h5 id="lower"><span class="code"><span class="symbol">:lower</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Equivalent to <span class="code"><span class="var">str</span><span class="symbol">:map</span><span class="delimiter">(</span></span><span class="code"><a class="id" href="#Upper">Upper</a></span><span class="code"><span class="delimiter">,</span> </span><span class="code"><a class="id" href="#Lower">Lower</a></span><span class="code"><span class="delimiter">)</span></span>.<br></br>
+	</div><h5 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">from</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">to</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+		
+Returns a copy of <span class="var">string</span> with each occurance of a string in <span class="var">from</span> with the corresponding string in <span class="var">to</span>.<br></br>
+The strings in <span class="var">from</span> are tried in the order they occur in <span class="var">from</span>.<br></br>
+	</div><h5 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">old</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">new</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+		
+Returns a copy of <span class="var">str</span> with each character in <span class="var">old</span> replaced with the corresponding character in <span class="var">new</span>.<br></br>
+	</div><h5 id="reverse"><span class="code"><span class="symbol">:reverse</span><span class="delimiter">(</span><span class="var">s</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+returns the a string consisting of the same bytes as <span class="var">s</span> in reverse order.<br></br>
+	</div><h5 id="skip"><span class="code"><span class="symbol">:skip</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">chars</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">m</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+Generates all positions after <span class="var">m</span> in <span class="var">str</span> with a character not in <span class="var">chars</span>.<br></br>
+	</div><h5 id="skip"><span class="code"><span class="symbol">:skip</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">chars</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+Generates all positions in <span class="var">str</span> with a character not in <span class="var">chars</span>.<br></br>
+	</div><h5 id="split"><span class="code"><span class="symbol">:split</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">sep</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Generates substrings of <span class="var">str</span> separated by characters in <span class="var">sep</span>.<br></br>
+	</div><h5 id="upper"><span class="code"><span class="symbol">:upper</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Equivalent to <span class="code"><span class="var">str</span><span class="symbol">:map</span><span class="delimiter">(</span></span><span class="code"><a class="id" href="#Lower">Lower</a></span><span class="code"><span class="delimiter">,</span> </span><span class="code"><a class="id" href="#Upper">Upper</a></span><span class="code"><span class="delimiter">)</span></span>.<br></br>
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

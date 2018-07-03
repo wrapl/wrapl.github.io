@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Using GTK+</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+<section id="Using_GTK+" class="section">
+<p>The <a class="id" href="/lib/Gtk.xhtml#*">Gtk.*</a> modules provide wrappers for most of the functions in the GTK+ api. They try to apply a Wrapl/Riva style to the functions, for example:</p>
+<ul>
+	<li>There is a one-to-one mapping of GTK+ types to Riva types and GTK+ objects to Riva objects. In general, the Riva types follow the same hierarchy as their GTK+ counterparts, and GTK+ objects of a particular type map to Riva objects of the corresponding Riva type.</li>
+	<li>Where possible, lists are used as arguments for functions expecting arrays in C.</li>
+	<li>Passing variables by reference is used where the function expects an address to write results.</li>
+	<li>Enumerations are placed in separate modules, which export each of the possible values.</li>
+</ul>
+<p>For the most part, writing GTK+ apps using Wrapl is quite similar to writing them in C.</p>
+<section id="Constructing_UI's_in_Wrapl" data-spy="true" data-target="#side-menu"><h3>Constructing UI's in Wrapl</h3>
+<div class="code"><div class="codeheader">Gtk1.wrapl</div><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Gtk1</span><span class="delimiter">;</span>
+<span class="lineno">   2</span>
+<span class="lineno">   3</span><span class="keyword">IMP</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Gtk</span><span class="delimiter">;</span>
+<span class="lineno">   4</span>
+<span class="lineno">   5</span><span class="keyword">VAR</span> <span class="var">window</span> <span class="delimiter">&lt;-</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Window</span><span class="delimiter">.</span><span class="var">New</span><span class="delimiter">(</span><span class="var">Gtk</span><span class="delimiter">.</span><span class="var">WindowType</span><span class="delimiter">.</span><span class="var">Toplevel</span><span class="delimiter">);</span>
+<span class="lineno">   6</span><span class="keyword">VAR</span> <span class="var">button</span> <span class="delimiter">&lt;-</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Button</span><span class="delimiter">.</span><span class="var">NewWithLabel</span><span class="delimiter">(</span><span class="literal">"Press Me!"</span><span class="delimiter">);</span>
+<span class="lineno">   7</span><span class="var">window</span><span class="symbol">:Add</span><span class="delimiter">(</span><span class="var">button</span><span class="delimiter">);</span>
+<span class="lineno">   8</span>
+<span class="lineno">   9</span><span class="keyword">VAR</span> <span class="var">dialog</span> <span class="delimiter">&lt;-</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Dialog</span><span class="delimiter">.</span><span class="var">New</span><span class="delimiter">();</span>
+<span class="lineno">  10</span><span class="keyword">VAR</span> <span class="var">label</span> <span class="delimiter">&lt;-</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Label</span><span class="delimiter">.</span><span class="var">New</span><span class="delimiter">(</span><span class="literal">"Sample GTK+ application"</span><span class="delimiter">);</span>
+<span class="lineno">  11</span><span class="var">dialog</span><span class="symbol">:Vbox</span><span class="symbol">:PackStartDefaults</span><span class="delimiter">(</span><span class="var">label</span><span class="delimiter">);</span>
+<span class="lineno">  12</span><span class="var">label</span><span class="symbol">:Show</span><span class="delimiter">;</span>
+<span class="lineno">  13</span><span class="var">dialog</span><span class="symbol">:AddButton</span><span class="delimiter">(</span><span class="literal">"gtk-ok"</span><span class="delimiter">,</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">ResponseType</span><span class="delimiter">.</span><span class="var">Ok</span><span class="delimiter">);</span>
+<span class="lineno">  14</span><span class="var">dialog</span><span class="symbol">:SetTransientFor</span><span class="delimiter">(</span><span class="var">window</span><span class="delimiter">);</span>
+<span class="lineno">  15</span>
+<span class="lineno">  16</span><span class="var">button</span><span class="symbol">:Connect</span><span class="delimiter">(</span><span class="literal">"clicked"</span><span class="delimiter">,</span> <span class="delimiter">&lt;</span><span class="var">button</span><span class="delimiter">,</span> <span class="var">userdata</span><span class="delimiter">&gt;</span> <span class="delimiter">(</span>
+<span class="lineno">  17</span>    <span class="var">dialog</span><span class="symbol">:Run</span><span class="delimiter">;</span>
+<span class="lineno">  18</span>    <span class="var">dialog</span><span class="symbol">:Hide</span><span class="delimiter">;</span>
+<span class="lineno">  19</span><span class="delimiter">));</span>
+<span class="lineno">  20</span>
+<span class="lineno">  21</span><span class="var">window</span><span class="symbol">:Connect</span><span class="delimiter">(</span><span class="literal">"destroy"</span><span class="delimiter">,</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Main</span><span class="delimiter">.</span><span class="var">Quit</span><span class="delimiter">);</span>
+<span class="lineno">  22</span>
+<span class="lineno">  23</span><span class="var">window</span><span class="symbol">:ShowAll</span><span class="delimiter">;</span>
+<span class="lineno">  24</span><span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Main</span><span class="delimiter">.</span><span class="var">Run</span><span class="delimiter">();</span>
+<span class="lineno">  25</span>
+<span class="lineno">  26</span><span class="keyword">END</span> <span class="var">Gtk1</span><span class="delimiter">.</span></div>
+<div class="frimage"><img src="gtk1.png"/><div class="legend">Screenshot of Gtk1.wrapl</div></div>
+</section>
+
+<section id="Using_Glade_files_in_Wrapl" data-spy="true" data-target="#side-menu"><h3>Using Glade files in Wrapl</h3>
+<p>Since there is a one-to-one mapping of GTK+ objects to Riva objects, and since the <span class="var">riva</span> module loader is extensible at runtime, the module <a class="id" href="/lib/Gtk/Glader/Loader.xhtml">Gtk.Glader.Loader</a> registers a loader for <span class="var">.glade</span> files. A <span class="var">.glade</span> loaded in this fashion behaves like a Riva module, exporting widgets as Riva objects using their names in the <span class="var">.glade</span> file. In addition, they can be set to automatically connect to Wrapl/Riva functions to handle signals. Callbacks are specified as <span class="code"><span class="var">Module</span><span class="delimiter">.</span><span class="var">Export</span></span> where <span class="var">Module</span> is the path of the module separated by <span class="code"><span class="delimiter">/</span></span>'s. To denote a module relative to the directory containing the <span class="var">.glade</span> file, <span class="var">Module</span> should start with a <span class="code"><span class="delimiter">/</span></span>.</p>
+<p>The following code combined with the proceeding <span class="var">.glade</span> file will produce the same result as the code above. There is one caveat: the module must be loaded using <span class="term">riva -PGtk/Glade/Loader -L. Gtk2</span>, in order to preload <a class="id" href="/lib/Gtk/Glade/Loader.xhtml">Gtk.Glade.Loader</a>, and so that the module <span class="var">Gtk2</span> is loaded within the module system and not as an anonymous module.</p>
+<div class="code"><div class="codeheader">Gtk2.wrapl</div><span class="lineno">   1</span><span class="keyword">MOD</span> <span class="var">Gtk2</span><span class="delimiter">;</span>
+<span class="lineno">   2</span>
+<span class="lineno">   3</span><span class="keyword">IMP</span> <span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Gtk</span><span class="delimiter">;</span>
+<span class="lineno">   4</span><span class="keyword">IMP</span> <span class="delimiter">.</span><span class="var">Gtk2UI</span><span class="delimiter">;</span>
+<span class="lineno">   5</span>
+<span class="lineno">   6</span><span class="var">Gtk2UI</span><span class="delimiter">.</span><span class="var">MainWindow</span><span class="symbol">:ShowAll</span><span class="delimiter">;</span>
+<span class="lineno">   7</span><span class="var">Gtk</span><span class="delimiter">.</span><span class="var">Main</span><span class="delimiter">.</span><span class="var">Run</span><span class="delimiter">();</span>
+<span class="lineno">   8</span>
+<span class="lineno">   9</span><span class="keyword">DEF</span> <span class="var">OnClick</span><span class="delimiter">!(</span><span class="var">button</span><span class="delimiter">,</span> <span class="var">userdata</span><span class="delimiter">)</span> <span class="delimiter">(</span>
+<span class="lineno">  10</span>    <span class="var">Gtk2UI</span><span class="delimiter">.</span><span class="var">Dialog</span><span class="symbol">:Run</span><span class="delimiter">;</span>
+<span class="lineno">  11</span>    <span class="var">Gtk2UI</span><span class="delimiter">.</span><span class="var">Dialog</span><span class="symbol">:Hide</span><span class="delimiter">;</span>
+<span class="lineno">  12</span><span class="delimiter">);</span>
+<span class="lineno">  13</span>
+<span class="lineno">  14</span><span class="keyword">END</span> <span class="var">Gtk2</span><span class="delimiter">.</span></div>
+<div class="code"><div class="codeheader">Gtk2UI.glade</div><span class="lineno">   1</span><span class="delimiter">&lt;</span>?<span class="keyword">xml</span> <span class="var">version</span><span class="delimiter">=</span><span class="literal">"1.0"</span> <span class="var">encoding</span><span class="delimiter">=</span><span class="literal">"UTF-8"</span> <span class="var">standalone</span><span class="delimiter">=</span><span class="literal">"no"</span>?<span class="delimiter">&gt;</span>
+<span class="lineno">   2</span><span class="delimiter">&lt;</span>!<span class="keyword">DOCTYPE</span> <span class="var">glade-interface</span> <span class="var">SYSTEM</span> <span class="literal">"glade-2.0.dtd"</span><span class="delimiter">&gt;</span>
+<span class="lineno">   3</span><span class="comment">&lt;!--Generated with glade3 3.4.5 on Sun Sep 14 10:55:50 2008 --&gt;</span>
+<span class="lineno">   4</span><span class="delimiter">&lt;</span><span class="keyword">glade-interface</span><span class="delimiter">&gt;</span>
+<span class="lineno">   5</span>  <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkWindow"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"MainWindow"</span><span class="delimiter">&gt;</span>
+<span class="lineno">   6</span>    <span class="delimiter">&lt;</span><span class="keyword">signal</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"destroy"</span> <span class="var">handler</span><span class="delimiter">=</span><span class="literal">"Gtk/Gtk/Main.Quit"</span><span class="delimiter">/</span><span class="delimiter">&gt;</span>
+<span class="lineno">   7</span>    <span class="delimiter">&lt;</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">   8</span>      <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkButton"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"button1"</span><span class="delimiter">&gt;</span>
+<span class="lineno">   9</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"visible"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  10</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"can_focus"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  11</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"receives_default"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  12</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"label"</span> <span class="var">translatable</span><span class="delimiter">=</span><span class="literal">"yes"</span><span class="delimiter">&gt;</span>Press Me!<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  13</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"response_id"</span><span class="delimiter">&gt;</span>0<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  14</span>        <span class="delimiter">&lt;</span><span class="keyword">signal</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"clicked"</span> <span class="var">handler</span><span class="delimiter">=</span><span class="literal">"/Gtk2.OnClick"</span><span class="delimiter">/</span><span class="delimiter">&gt;</span>
+<span class="lineno">  15</span>      <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  16</span>    <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  17</span>  <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  18</span>  <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkDialog"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"Dialog"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  19</span>    <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"border_width"</span><span class="delimiter">&gt;</span>5<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  20</span>    <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"window_position"</span><span class="delimiter">&gt;</span>GTK_WIN_POS_CENTER_ON_PARENT<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  21</span>    <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"type_hint"</span><span class="delimiter">&gt;</span>GDK_WINDOW_TYPE_HINT_DIALOG<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  22</span>    <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"transient_for"</span><span class="delimiter">&gt;</span>MainWindow<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  23</span>    <span class="delimiter">&lt;</span><span class="keyword">child</span> <span class="var">internal-child</span><span class="delimiter">=</span><span class="literal">"vbox"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  24</span>      <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkVBox"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"dialog-vbox1"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  25</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"visible"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  26</span>        <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"spacing"</span><span class="delimiter">&gt;</span>2<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  27</span>        <span class="delimiter">&lt;</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  28</span>          <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkLabel"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"label1"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  29</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"visible"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  30</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"label"</span> <span class="var">translatable</span><span class="delimiter">=</span><span class="literal">"yes"</span><span class="delimiter">&gt;</span>Sample GTK+ application<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  31</span>          <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  32</span>          <span class="delimiter">&lt;</span><span class="keyword">packing</span><span class="delimiter">&gt;</span>
+<span class="lineno">  33</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"position"</span><span class="delimiter">&gt;</span>1<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  34</span>          <span class="delimiter">&lt;/</span><span class="keyword">packing</span><span class="delimiter">&gt;</span>
+<span class="lineno">  35</span>        <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  36</span>        <span class="delimiter">&lt;</span><span class="keyword">child</span> <span class="var">internal-child</span><span class="delimiter">=</span><span class="literal">"action_area"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  37</span>          <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkHButtonBox"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"dialog-action_area1"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  38</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"visible"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  39</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"layout_style"</span><span class="delimiter">&gt;</span>GTK_BUTTONBOX_END<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  40</span>            <span class="delimiter">&lt;</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  41</span>              <span class="delimiter">&lt;</span><span class="keyword">widget</span> <span class="var">class</span><span class="delimiter">=</span><span class="literal">"GtkButton"</span> <span class="var">id</span><span class="delimiter">=</span><span class="literal">"button2"</span><span class="delimiter">&gt;</span>
+<span class="lineno">  42</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"visible"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  43</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"can_focus"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  44</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"receives_default"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  45</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"label"</span> <span class="var">translatable</span><span class="delimiter">=</span><span class="literal">"yes"</span><span class="delimiter">&gt;</span>gtk-ok<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  46</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"use_stock"</span><span class="delimiter">&gt;</span>True<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  47</span>                <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"response_id"</span><span class="delimiter">&gt;</span>0<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  48</span>              <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  49</span>            <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  50</span>            <span class="delimiter">&lt;</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  51</span>              <span class="delimiter">&lt;</span><span class="keyword">placeholder</span><span class="delimiter">/</span><span class="delimiter">&gt;</span>
+<span class="lineno">  52</span>            <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  53</span>          <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  54</span>          <span class="delimiter">&lt;</span><span class="keyword">packing</span><span class="delimiter">&gt;</span>
+<span class="lineno">  55</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"expand"</span><span class="delimiter">&gt;</span>False<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  56</span>            <span class="delimiter">&lt;</span><span class="keyword">property</span> <span class="var">name</span><span class="delimiter">=</span><span class="literal">"pack_type"</span><span class="delimiter">&gt;</span>GTK_PACK_END<span class="delimiter">&lt;/</span><span class="keyword">property</span><span class="delimiter">&gt;</span>
+<span class="lineno">  57</span>          <span class="delimiter">&lt;/</span><span class="keyword">packing</span><span class="delimiter">&gt;</span>
+<span class="lineno">  58</span>        <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  59</span>      <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  60</span>    <span class="delimiter">&lt;/</span><span class="keyword">child</span><span class="delimiter">&gt;</span>
+<span class="lineno">  61</span>  <span class="delimiter">&lt;/</span><span class="keyword">widget</span><span class="delimiter">&gt;</span>
+<span class="lineno">  62</span><span class="delimiter">&lt;/</span><span class="keyword">glade-interface</span><span class="delimiter">&gt;</span></div>
+</section>
+
+</section>
+
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

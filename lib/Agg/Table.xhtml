@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Agg.Table</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Agg.xhtml">Agg</a></li><li class="breadcrumb-item"><a href="/lib/Agg/Table.xhtml">Table</a></li></ul><section id="Table" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
+A table of Key/Value pairs<br></br>
+	</div><h5 id="NodeType"><span class="code">NodeType</span></h5><div class="comment">
+A single Key/Value pair<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="Collect"><span class="code">Collect<span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">args...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns a table consisting of the values returned by <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">args</span><span class="delimiter">)</span></span> as keys (and <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a></span> as each Value).<br></br>
+	</div><h5 id="Make"><span class="code">Make<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+Returns a new table with the arguments taken as alternating Key/Value pairs.<br></br>
+	</div><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">comp</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a> <span class="delimiter">=</span> <a class="id" href="#:"?"">:"?"</a><span class="delimiter">,</span> <span class="var">Hash</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a> <span class="delimiter">=</span> <a class="id" href="#:"#"">:"#"</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns a new table with comparison function <span class="var">comp</span> and Hash function <span class="var">Hash</span>.<br></br>
+<span class="code"><span class="var">comp</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">,</span> <span class="var">b</span><span class="delimiter">)</span></span> should return <span class="code"><span class="delimiter">-</span>1</span>, <span class="code">0</span> or <span class="code"><span class="delimiter">-</span>1</span> if <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;</span> <span class="var">b</span></span>, <span class="code"><span class="var">a</span> <span class="delimiter">=</span> <span class="var">b</span></span> or <span class="code"><span class="var">a</span> <span class="delimiter">&amp;</span><span class="var">gt</span><span class="delimiter">;</span> <span class="var">b</span></span> respectively.<br></br>
+<span class="code"><span class="var">Hash</span><span class="delimiter">(</span><span class="var">a</span><span class="delimiter">)</span></span> should return a <span class="code"><a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span>.<br></br>
+	</div><h5 id="NewIdentity"><span class="code">NewIdentity<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+Returns a new table in which two keys are the same only if they are the same object.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_*_"><span class="code"><span class="symbol">:</span><span class="literal">"*"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the intersection of <span class="var">a</span> and <span class="var">b</span>, i.e. those <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs of <span class="var">a</span> where <span class="var">Key</span> is in <span class="var">b</span>.<br></br>
+	</div><h5 id="_+_"><span class="code"><span class="symbol">:</span><span class="literal">"+"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the union of <span class="var">a</span> and <span class="var">b</span>. If a Key exists in both <span class="var">a</span> and <span class="var">b</span> then the Value is taken from <span class="var">b</span>.<br></br>
+	</div><h5 id="_-_"><span class="code"><span class="symbol">:</span><span class="literal">"-"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the difference of <span class="var">a</span> and <span class="var">b</span>, i.e. those <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs of <span class="var">a</span> where <span class="var">Key</span> is not in <span class="var">b</span>.<br></br>
+	</div><h5 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/ObjectTable.xhtml#T">Agg.ObjectTable.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="Hash"><span class="code"><span class="symbol">:Hash</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a></span></h5><div class="comment">
+		
+Returns the Hash function used in <span class="var">t</span>.<br></br>
+	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+If <span class="var">Key</span> is not present, a new pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span> is created and <span class="var">default</span> is returned.<br></br>
+	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+	</div><h5 id="check"><span class="code"><span class="symbol">:check</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+Returns the Value associated with <span class="var">Key</span> in <span class="var">t</span>.<br></br>
+If <span class="var">Key</span> is not present, a new pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span> is created and the call fails.<br></br>
+	</div><h5 id="compare"><span class="code"><span class="symbol">:compare</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a></span></h5><div class="comment">
+		
+Returns the comparison function used in <span class="var">t</span>.<br></br>
+	</div><h5 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Returns a shallow copy of <span class="var">t</span><br></br>
+	</div><h5 id="deffun"><span class="code"><span class="symbol">:deffun</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Sets the default function to create a Value when a Key is not present<br></br>
+	</div><h5 id="defval"><span class="code"><span class="symbol">:defval</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">default</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Sets the default Value to return when a Key is not present<br></br>
+	</div><h5 id="delete"><span class="code"><span class="symbol">:delete</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Removes the <span class="var">Key</span> from <span class="var">t</span>.<br></br>
+	</div><h5 id="empty"><span class="code"><span class="symbol">:empty</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+Removes all entries from <span class="var">t</span> and returns it.<br></br>
+	</div><h5 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+		
+Generates the all keys in <span class="var">table</span> which has Value <span class="var">Value</span>.<br></br>
+	</div><h5 id="in"><span class="code"><span class="symbol">:in</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Returns <span class="var">Key</span> if it is a Key in <span class="var">table</span>, fails otherwise.<br></br>
+	</div><h5 id="insert"><span class="code"><span class="symbol">:insert</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="items"><span class="code"><span class="symbol">:items</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h5><div class="comment">
+		
+Generates the <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pairs in <span class="var">t</span>.<br></br>
+	</div><h5 id="key"><span class="code"><span class="symbol">:key</span><span class="delimiter">(</span><span class="var">Node</span> <span class="delimiter">@</span> <a class="id" href="#NodeType">NodeType</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+Returns <span class="var">Key</span> from a <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair.<br></br>
+	</div><h5 id="keys"><span class="code"><span class="symbol">:keys</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+		
+value+<br></br>
+Generates the keys in <span class="var">t</span> while assigning the corresponding value to <span class="var">value</span>.<br></br>
+	</div><h5 id="keys"><span class="code"><span class="symbol">:keys</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+Generates the keys in <span class="var">t</span>.<br></br>
+	</div><h5 id="list"><span class="code"><span class="symbol">:list</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns the list <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> running over all pairs in <span class="var">t</span>.<br></br>
+	</div><h5 id="loop"><span class="code"><span class="symbol">:loop</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key<span class="delimiter">+</span></span><span class="delimiter">,</span> <span class="var">Value<span class="delimiter">+</span></span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+For each <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> in <span class="var">t</span>, generates <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a></span> after assigning <span class="var">Key</span> and <span class="var">Value</span>.<br></br>
+	</div><h5 id="map"><span class="code"><span class="symbol">:map</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Returns a copy of <span class="var">t</span> with the same keys, but with values returned by calling <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span><br></br>
+	</div><h5 id="missing"><span class="code"><span class="symbol">:missing</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+If <span class="var">Key</span> is present in <span class="var">t</span> then fail, after assigning the current Value to <span class="var">var</span> if provided.<br></br>
+Otherwise, inserts the pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="keyword">NIL</span><span class="delimiter">)</span></span> into <span class="var">t</span> and returns an assignable reference.<br></br>
+	</div><h5 id="modify"><span class="code"><span class="symbol">:modify</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">mod</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+		
+Modifies the Value associated with <span class="var">Key</span>, <span class="code"><span class="var">t</span><span class="delimiter">[</span><span class="var">Key</span><span class="delimiter">]</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;-</span> <span class="var">mod</span><span class="delimiter">($)</span></span>.<br></br>
+Uses the default Value of <span class="var">t</span> if <span class="var">Key</span> is not present and a default has been set.<br></br>
+	</div><h5 id="newv"><span class="code"><span class="symbol">:newv</span><span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Type.xhtml#T">Std.Type.T</a><span class="delimiter">,</span> <span class="var">fields</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+		
+Creates a new instance <span class="var">instance</span> of <span class="var">type</span> and for each <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair in <span class="var">fields</span>, sets <span class="code"><span class="var">Key</span><span class="delimiter">(</span><span class="var">instance</span><span class="delimiter">)</span> <span class="delimiter">&amp;</span><span class="var">lt</span><span class="delimiter">;-</span> <span class="var">Value</span></span>. Returns <span class="var">instance</span>.<br></br>
+Each <span class="var">Key</span> should be a <span class="code"><a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span>.<br></br>
+	</div><h5 id="remove"><span class="code"><span class="symbol">:remove</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Removes the first <span class="var">Key</span> found with Value <span class="var">Value</span>.<br></br>
+	</div><h5 id="remove_all"><span class="code"><span class="symbol">:remove_all</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Removes the first <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> succeeds.<br></br>
+	</div><h5 id="remove_if"><span class="code"><span class="symbol">:remove_if</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+Removes the first <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair for which <span class="code"><span class="var">func</span><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> succeeds.<br></br>
+	</div><h5 id="replace"><span class="code"><span class="symbol">:replace</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+		
+Inserts the pair <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> into <span class="var">t</span>, returning the existing value if present, or failing.<br></br>
+	</div><h5 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+Returns the number of entries in <span class="var">t</span>.<br></br>
+	</div><h5 id="value"><span class="code"><span class="symbol">:value</span><span class="delimiter">(</span><span class="var">Node</span> <span class="delimiter">@</span> <a class="id" href="#NodeType">NodeType</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+Returns <span class="var">Value</span> from a <span class="code"><span class="delimiter">(</span><span class="var">Key</span><span class="delimiter">,</span> <span class="var">Value</span><span class="delimiter">)</span></span> pair.<br></br>
+	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key<span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+		
+Generates the values in <span class="var">t</span> while assigning the corresponding key to <span class="var">key</span>.<br></br>
+	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+Generates the values in <span class="var">t</span>.<br></br>
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

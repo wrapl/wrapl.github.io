@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Gir.Gdk.Main</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gdk.xhtml">Gdk</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gdk/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="__$AddOptionEntriesLibgtkOnly"><span class="code">__$AddOptionEntriesLibgtkOnly<span class="delimiter">(</span><span class="var">group</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/OptionGroup.xhtml#T">Gir.GLib.OptionGroup.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$AtomIntern"><span class="code">__$AtomIntern<span class="delimiter">(</span><span class="var">atom_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">only_if_exists</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$AtomInternStaticString"><span class="code">__$AtomInternStaticString<span class="delimiter">(</span><span class="var">atom_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Beep"><span class="code">__$Beep<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$CairoCreate"><span class="code">__$CairoCreate<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$CairoDrawFromGl"><span class="code">__$CairoDrawFromGl<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">source_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">buffer_scale</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$CairoGetClipRectangle"><span class="code">__$CairoGetClipRectangle<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">rect</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$CairoGetDrawingContext"><span class="code">__$CairoGetDrawingContext<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/DrawingContext.xhtml#T">Gir.Gdk.DrawingContext.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$CairoRectangle"><span class="code">__$CairoRectangle<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">rectangle</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Rectangle.xhtml#T">Gir.Gdk.Rectangle.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$CairoRegion"><span class="code">__$CairoRegion<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">region</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Region.xhtml#T">Gir.Cairo.Region.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$CairoRegionCreateFromSurface"><span class="code">__$CairoRegionCreateFromSurface<span class="delimiter">(</span><span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Surface.xhtml#T">Gir.Cairo.Surface.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/Region.xhtml#T">Gir.Cairo.Region.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$CairoSetSourceColor"><span class="code">__$CairoSetSourceColor<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">color</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Color.xhtml#T">Gir.Gdk.Color.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$CairoSetSourcePixbuf"><span class="code">__$CairoSetSourcePixbuf<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">,</span> <span class="var">pixbuf_x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">pixbuf_y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$CairoSetSourceRgba"><span class="code">__$CairoSetSourceRgba<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">rgba</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/RGBA.xhtml#T">Gir.Gdk.RGBA.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$CairoSetSourceWindow"><span class="code">__$CairoSetSourceWindow<span class="delimiter">(</span><span class="var">cr</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Cairo.xhtml#T">Gir.Cairo.Cairo.T</a><span class="delimiter">,</span> <span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$CairoSurfaceCreateFromPixbuf"><span class="code">__$CairoSurfaceCreateFromPixbuf<span class="delimiter">(</span><span class="var">pixbuf</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a><span class="delimiter">,</span> <span class="var">scale</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">for_window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/Surface.xhtml#T">Gir.Cairo.Surface.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$ColorParse"><span class="code">__$ColorParse<span class="delimiter">(</span><span class="var">spec</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">color</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$DisableMultidevice"><span class="code">__$DisableMultidevice<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$DragAbort"><span class="code">__$DragAbort<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$DragBegin"><span class="code">__$DragBegin<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$DragBeginForDevice"><span class="code">__$DragBeginForDevice<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Device.xhtml#T">Gir.Gdk.Device.T</a><span class="delimiter">,</span> <span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$DragBeginFromPoint"><span class="code">__$DragBeginFromPoint<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">device</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Device.xhtml#T">Gir.Gdk.Device.T</a><span class="delimiter">,</span> <span class="var">targets</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">x_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$DragDrop"><span class="code">__$DragDrop<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$DragDropDone"><span class="code">__$DragDropDone<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">success</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$DragDropSucceeded"><span class="code">__$DragDropSucceeded<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$DragFindWindowForScreen"><span class="code">__$DragFindWindowForScreen<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">drag_window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Screen.xhtml#T">Gir.Gdk.Screen.T</a><span class="delimiter">,</span> <span class="var">x_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">dest_window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">protocol</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$DragGetSelection"><span class="code">__$DragGetSelection<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$DragMotion"><span class="code">__$DragMotion<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">dest_window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">protocol</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragProtocol.xhtml#T">Gir.Gdk.DragProtocol.T</a><span class="delimiter">,</span> <span class="var">x_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y_root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">suggested_action</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">possible_actions</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$DragStatus"><span class="code">__$DragStatus<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">action</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$DropFinish"><span class="code">__$DropFinish<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">success</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$DropReply"><span class="code">__$DropReply<span class="delimiter">(</span><span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/DragContext.xhtml#T">Gir.Gdk.DragContext.T</a><span class="delimiter">,</span> <span class="var">accepted</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$ErrorTrapPop"><span class="code">__$ErrorTrapPop<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h5 id="__$ErrorTrapPopIgnored"><span class="code">__$ErrorTrapPopIgnored<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$ErrorTrapPush"><span class="code">__$ErrorTrapPush<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$EventGet"><span class="code">__$EventGet<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a></span></h5><div class="comment">
+	</div><h5 id="__$EventHandlerSet"><span class="code">__$EventHandlerSet<span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$EventPeek"><span class="code">__$EventPeek<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a></span></h5><div class="comment">
+	</div><h5 id="__$EventRequestMotions"><span class="code">__$EventRequestMotions<span class="delimiter">(</span><span class="var">event</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/EventMotion.xhtml#T">Gir.Gdk.EventMotion.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$EventsGetAngle"><span class="code">__$EventsGetAngle<span class="delimiter">(</span><span class="var">event1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">angle</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$EventsGetCenter"><span class="code">__$EventsGetCenter<span class="delimiter">(</span><span class="var">event1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$EventsGetDistance"><span class="code">__$EventsGetDistance<span class="delimiter">(</span><span class="var">event1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">event2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Event.xhtml#T">Gir.Gdk.Event.T</a><span class="delimiter">,</span> <span class="var">distance</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$EventsPending"><span class="code">__$EventsPending<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h5 id="__$Flush"><span class="code">__$Flush<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetDefaultRootWindow"><span class="code">__$GetDefaultRootWindow<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetDisplay"><span class="code">__$GetDisplay<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetDisplayArgName"><span class="code">__$GetDisplayArgName<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetProgramClass"><span class="code">__$GetProgramClass<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GetShowEvents"><span class="code">__$GetShowEvents<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h5 id="__$GlErrorQuark"><span class="code">__$GlErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h5 id="__$Init"><span class="code">__$Init<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$InitCheck"><span class="code">__$InitCheck<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyboardGrab"><span class="code">__$KeyboardGrab<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">owner_events</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/GrabStatus.xhtml#T">Gir.Gdk.GrabStatus.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$KeyboardUngrab"><span class="code">__$KeyboardUngrab<span class="delimiter">(</span><span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalConvertCase"><span class="code">__$KeyvalConvertCase<span class="delimiter">(</span><span class="var">symbol</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">lower</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">upper</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$KeyvalFromName"><span class="code">__$KeyvalFromName<span class="delimiter">(</span><span class="var">keyval_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalIsLower"><span class="code">__$KeyvalIsLower<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalIsUpper"><span class="code">__$KeyvalIsUpper<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalName"><span class="code">__$KeyvalName<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalToLower"><span class="code">__$KeyvalToLower<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalToUnicode"><span class="code">__$KeyvalToUnicode<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$KeyvalToUpper"><span class="code">__$KeyvalToUpper<span class="delimiter">(</span><span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ListVisuals"><span class="code">__$ListVisuals<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
+	</div><h5 id="__$NotifyStartupComplete"><span class="code">__$NotifyStartupComplete<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$NotifyStartupCompleteWithId"><span class="code">__$NotifyStartupCompleteWithId<span class="delimiter">(</span><span class="var">startup_id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$OffscreenWindowGetEmbedder"><span class="code">__$OffscreenWindowGetEmbedder<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$OffscreenWindowGetSurface"><span class="code">__$OffscreenWindowGetSurface<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/Surface.xhtml#T">Gir.Cairo.Surface.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$OffscreenWindowSetEmbedder"><span class="code">__$OffscreenWindowSetEmbedder<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">embedder</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$PangoContextGet"><span class="code">__$PangoContextGet<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Context.xhtml#T">Gir.Pango.Context.T</a></span></h5><div class="comment">
+	</div><h5 id="__$PangoContextGetForDisplay"><span class="code">__$PangoContextGetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.xhtml#T">Gir.Gdk.Display.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Context.xhtml#T">Gir.Pango.Context.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$PangoContextGetForScreen"><span class="code">__$PangoContextGetForScreen<span class="delimiter">(</span><span class="var">screen</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Screen.xhtml#T">Gir.Gdk.Screen.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Pango/Context.xhtml#T">Gir.Pango.Context.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$ParseArgs"><span class="code">__$ParseArgs<span class="delimiter">(</span><span class="var">argv</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$PixbufGetFromSurface"><span class="code">__$PixbufGetFromSurface<span class="delimiter">(</span><span class="var">surface</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Cairo/Surface.xhtml#T">Gir.Cairo.Surface.T</a><span class="delimiter">,</span> <span class="var">src_x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">src_y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$PixbufGetFromWindow"><span class="code">__$PixbufGetFromWindow<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">src_x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">src_y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">width</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">height</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$PointerGrab"><span class="code">__$PointerGrab<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">owner_events</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">event_mask</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">confine_to</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">cursor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Cursor.xhtml#T">Gir.Gdk.Cursor.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/GrabStatus.xhtml#T">Gir.Gdk.GrabStatus.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$PointerIsGrabbed"><span class="code">__$PointerIsGrabbed<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h5 id="__$PointerUngrab"><span class="code">__$PointerUngrab<span class="delimiter">(</span><span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$PreParseLibgtkOnly"><span class="code">__$PreParseLibgtkOnly<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$PropertyDelete"><span class="code">__$PropertyDelete<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">property</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$PropertyGet"><span class="code">__$PropertyGet<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">property</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">offset</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">pdelete</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">actual_property_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">actual_format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$QueryDepths"><span class="code">__$QueryDepths<span class="delimiter">(</span><span class="var">depths</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$QueryVisualTypes"><span class="code">__$QueryVisualTypes<span class="delimiter">(</span><span class="var">visual_types</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SelectionConvert"><span class="code">__$SelectionConvert<span class="delimiter">(</span><span class="var">requestor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$SelectionOwnerGet"><span class="code">__$SelectionOwnerGet<span class="delimiter">(</span><span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SelectionOwnerGetForDisplay"><span class="code">__$SelectionOwnerGetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.xhtml#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$SelectionOwnerSet"><span class="code">__$SelectionOwnerSet<span class="delimiter">(</span><span class="var">owner</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">send_event</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$SelectionOwnerSetForDisplay"><span class="code">__$SelectionOwnerSetForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.xhtml#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">owner</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">send_event</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$SelectionSendNotify"><span class="code">__$SelectionSendNotify<span class="delimiter">(</span><span class="var">requestor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">property</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$SelectionSendNotifyForDisplay"><span class="code">__$SelectionSendNotifyForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.xhtml#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">requestor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">selection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">target</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">property</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">time_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$SetAllowedBackends"><span class="code">__$SetAllowedBackends<span class="delimiter">(</span><span class="var">backends</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SetDoubleClickTime"><span class="code">__$SetDoubleClickTime<span class="delimiter">(</span><span class="var">msec</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SetProgramClass"><span class="code">__$SetProgramClass<span class="delimiter">(</span><span class="var">program_class</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SetShowEvents"><span class="code">__$SetShowEvents<span class="delimiter">(</span><span class="var">show_events</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$SettingGet"><span class="code">__$SettingGet<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="__$SynthesizeWindowState"><span class="code">__$SynthesizeWindowState<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">unset_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">set_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="__$TestRenderSync"><span class="code">__$TestRenderSync<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$TestSimulateButton"><span class="code">__$TestSimulateButton<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">button</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">button_pressrelease</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/EventType.xhtml#T">Gir.Gdk.EventType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$TestSimulateKey"><span class="code">__$TestSimulateKey<span class="delimiter">(</span><span class="var">window</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Window.xhtml#T">Gir.Gdk.Window.T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">keyval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">modifiers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">key_pressrelease</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/EventType.xhtml#T">Gir.Gdk.EventType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="__$TextPropertyToUtf8ListForDisplay"><span class="code">__$TextPropertyToUtf8ListForDisplay<span class="delimiter">(</span><span class="var">display</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Display.xhtml#T">Gir.Gdk.Display.T</a><span class="delimiter">,</span> <span class="var">encoding</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gdk/Atom.xhtml#T">Gir.Gdk.Atom.T</a><span class="delimiter">,</span> <span class="var">format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">text</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$ThreadsAddIdle"><span class="code">__$ThreadsAddIdle<span class="delimiter">(</span><span class="var">priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">function</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="__$ThreadsAddTimeout"><span class="code">__$ThreadsAddTimeout<span class="delimiter">(</span><span class="var">priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">interval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">function</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$ThreadsAddTimeoutSeconds"><span class="code">__$ThreadsAddTimeoutSeconds<span class="delimiter">(</span><span class="var">priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">interval</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">function</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+	</div><h5 id="__$ThreadsEnter"><span class="code">__$ThreadsEnter<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$ThreadsInit"><span class="code">__$ThreadsInit<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$ThreadsLeave"><span class="code">__$ThreadsLeave<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h5 id="__$UnicodeToKeyval"><span class="code">__$UnicodeToKeyval<span class="delimiter">(</span><span class="var">wc</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="__$Utf8ToStringTarget"><span class="code">__$Utf8ToStringTarget<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

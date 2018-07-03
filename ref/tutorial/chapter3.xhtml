@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Chapter 3</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+<section id="Chapter_3" class="section">
+
+<section id="Success_and_Failure" data-spy="true" data-target="#side-menu"><h3>Success and Failure</h3>
+
+<p>Unlike in most other languages, (Icon being the main exception), expressions in Wrapl do not simply evaluate to a single result. Instead, they may <em>succeed</em> in producing one or more results, or <em>fail</em> to produce any result. For example, the expression <span class="code">10</span> can only produce a single value, <span class="term">10</span>, whereas the expression <span class="code">10 <span class="delimiter">|</span> 20</span> can produce the value <span class="term">10</span>, followed by the value <span class="term">20</span>. The special expression <span class="code"><span class="keyword">BACK</span></span> fails to produce any value. The expression <span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span> returns a list of all the values produced by <span class="var">expr</span>.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> 10;
+10
+<span class="prompt">--&gt;</span> 10 | 20;
+10
+<span class="prompt">--&gt;</span> BACK;
+failure
+<span class="prompt">--&gt;</span> ALL 10;
+[10]
+<span class="prompt">--&gt;</span> ALL 10 | 20;
+[10, 20]
+<span class="prompt">--&gt;</span> ALL BACK;
+[]
+</div>
+
+</section>
+
+<section id="Backtracking" data-spy="true" data-target="#side-menu"><h3>Backtracking</h3>
+
+<p>In general, an expression will only produce one value. However, if a later part in the same expression fails, then the earlier expression may be resumed and produce another value. If this happens, then evaluation continues after the resumed expression. If no earlier expression can be resumed, the entire expression fails. For example, the comparison operators in Wrapl do not return true or false, instead they succeed and return the second argument if the comparison is true, and fail if it is false.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> 10 &lt; 20;
+20
+<span class="prompt">--&gt;</span> 10 &gt; 20;
+failure
+<span class="prompt">--&gt;</span> 10 &lt; (5 | 15);
+15
+-&gt; 10 &gt; (5 | 15);
+5
+</div>
+
+</section>
+
+<section id="Flow_Control" data-spy="true" data-target="#side-menu"><h3>Flow Control</h3>
+
+<p>This success/failure of expressions can be used in conditional expressions to control program flow similar to if-statements in other languages. A conditional expression looks like <span class="code"><span class="var">cond</span> <span class="delimiter">=&gt;</span> <span class="var">expr1</span> <span class="delimiter">//</span> <span class="var">expr2</span></span>, and returns the values produced by <span class="code"><span class="var">expr1</span></span> if <span class="code"><span class="var">cond</span></span> succeeds and the values produced by <span class="code"><span class="var">expr2</span></span> if <span class="code"><span class="var">cond</span></span> fails. Either <span class="code"><span class="delimiter">=&gt;</span> <span class="var">expr1</span></span> or <span class="code"><span class="delimiter">//</span> <span class="var">expr2</span></span> may be omitted, in which case <span class="code"><span class="keyword">BACK</span></span> is used instead.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> 1 =&gt; 2 // 3;
+2
+<span class="prompt">--&gt;</span> BACK =&gt; 2 // 3;
+3
+<span class="prompt">--&gt;</span> (1 &lt; 2) =&gt; 3;
+3
+<span class="prompt">--&gt;</span> (1 &gt; 2) =&gt; 3;
+failure
+<span class="prompt">--&gt;</span> (1 &lt; 2) // 3;
+failure
+<span class="prompt">--&gt;</span> (1 &gt; 2) // 3;
+3
+</div>
+
+</section>
+
+<section id="Generators" data-spy="true" data-target="#side-menu"><h3>Generators</h3>
+
+<p>There are several expressions in Wrapl that will produce more than one value. The expression <span class="code"><span class="var">expr1</span> <span class="delimiter">|</span> <span class="var">expr2</span></span> produces all the values produced by <span class="var">expr1</span> followed by all the values produced by <span class="var">expr2</span>. The method <span class="code"><span class="symbol">:to</span><span class="delimiter">(</span><span class="var">from</span><span class="delimiter">,</span> <span class="var">limit</span><span class="delimiter">)</span></span> produces all the numbers from <span class="var">from</span> to <span class="var">limit</span> in increments of <span class="code">1</span>. The method <span class="code"><span class="symbol">:to</span><span class="delimiter">(</span><span class="var">from</span><span class="delimiter">,</span> <span class="var">limit</span><span class="delimiter">,</span> <span class="var">increment</span><span class="delimiter">)</span></span> allows the increment to be changed.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> ALL 1 | 2 | 3;
+[1, 2, 3]
+<span class="prompt">--&gt;</span> ALL 1:to(5);
+[1, 2, 3, 4, 5]
+<span class="prompt">--&gt;</span> ALL 1:to(5) | 5:to(1, -1);
+[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+</div>
+
+<p>As well as declaring and assigning values to variables, Wrapl provides a context for assigning a value to a temporary variable for the duration of a single expression. The expression <span class="code"><span class="keyword">WITH</span> <span class="var">id1</span> <span class="delimiter">&lt;-</span> <span class="var">expr1</span> <span class="keyword">DO</span> <span class="var">expr2</span></span>, assigns each value produced by <span class="var">expr1</span> to <span class="var">id1</span> and produces the values produced by <span class="var">expr2</span>. Several variables can be used in the same <span class="code"><span class="keyword">WITH</span></span> expression, in which case the expression behaves like several nested <span class="code"><span class="keyword">WITH</span></span> expression.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> ALL WITH i &lt;- 1:to(10) DO i ^ 2 + i;
+[2, 6, 12, 20, 30, 42, 56, 72, 90, 110]
+<span class="prompt">--&gt;</span> ALL WITH i &lt;- 1:to(5), j &lt;- 1:to(5) DO i * j;
+[1, 2, 3, 4, 5, 2, 4, 6, 8, 10, 3, 6, 9, 12, 15, 4, 8, 12, 16, 20, 5, 10, 15, 20, 25]
+<span class="prompt">--&gt;</span> ALL WITH i &lt;- 1:to(5) DO WITH j &lt;- 1:to(5) DO i * j;
+[1, 2, 3, 4, 5, 2, 4, 6, 8, 10, 3, 6, 9, 12, 15, 4, 8, 12, 16, 20, 5, 10, 15, 20, 25]
+</div>
+
+<p>The expression <span class="code"><span class="var">expr1</span> <span class="delimiter">#</span> <span class="var">expr2</span></span> interleaves the values produced by <span class="code"><span class="var">expr1</span></span> and <span class="code"><span class="var">expr2</span></span>, i.e. it produces the first value from <span class="var">expr1</span> followed by the first value from <span class="var">expr2</span> then the second from <span class="code"><span class="var">expr1</span></span> and so on. Any number of expressions can be interleaved. The interleave expression fails when any of its subexpressions fail.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> ALL 1:to(3) # 11:to(13) # 21:to(23);
+[1, 11, 21, 2, 12, 22, 3, 13, 23]
+<span class="prompt">--&gt;</span> ALL 1:to(10) # 11:to(14);
+[1, 11, 2, 12, 3, 13, 4, 14, 5]
+</div>
+
+<p>The expression <span class="code"><span class="var">expr1</span> <span class="delimiter">&amp;</span> <span class="var">expr2</span></span> produces the values produced by <span class="var">expr2</span> for each value produced by <span class="var">expr1</span>. In effect, <span class="code"><span class="delimiter">&amp;</span></span> is the "select right" operator. It can also function as a "logical and" operator, since it will only produce a value if both <span class="var">expr1</span> and <span class="var">expr2</span> produce a value.</p>
+<p>Similarly, the expression <span class="code"><span class="var">expr1</span> <span class="delimiter">\</span> <span class="var">expr2</span></span> produces the values produced by <span class="var">expr1</span> for each value produced by <span class="var">expr2</span>, in effect the "select left" operator. Within <span class="var">expr2</span>, the special variable <span class="code"><span class="delimiter">$</span></span> refers to the value produced by <span class="var">expr1</span> Thus it can also function as a "logical and" operator, although it is mainly used to mean "such that".</p>
+
+<div class="term"><span class="prompt">--&gt;</span> 1 &amp; 2;
+2
+<span class="prompt">--&gt;</span> 1 &amp; 2 &amp; BACK;
+failure
+<span class="prompt">--&gt;</span> 1 \ 2;
+1
+<span class="prompt">--&gt;</span> 1 &amp; 2 \ 3;
+2
+<span class="prompt">--&gt;</span> 1:to(10) \ $ &gt; 5;
+6
+<span class="prompt">--&gt;</span> ALL 1:to(3) &amp; 10:to(12);
+[10, 11, 12, 10, 11, 12, 10, 11, 12]
+<span class="prompt">--&gt;</span> ALL 1:to(3) \ 10:to(12);
+[1, 1, 1, 2, 2, 2, 3, 3, 3]
+<span class="prompt">--&gt;</span> ALL 1:to(10) \ $ &gt; 5;
+[6, 7, 8, 9, 10]
+</div>
+
+<p>The more general function call <span class="code"><span class="var">K</span><span class="delimiter">(</span><span class="var">expr1</span><span class="delimiter">,</span> <span class="delimiter">...,</span> <span class="var">exprN</span><span class="delimiter">)</span></span>, where <span class="var">K</span> is an integer, produces the value of <span class="code"><span class="var">exprK</span></span> provided all <span class="var">N</span> values succeed, and <span class="code">1 <span class="delimiter">&lt;=</span> <span class="var">K</span> <span class="delimiter">&lt;=</span> <span class="var">N</span></span>.</p>
+<div class="term"><span class="prompt">--&gt;</span> 2(1 + 2, "as" + "df", 79);
+"asdf"
+<span class="prompt">--&gt;</span> 4(1, 1, BACK, 1, 1, 1, 1);
+failure
+</div>
+
+</section>
+
+<section id="Limiting_and_Skipping" data-spy="true" data-target="#side-menu"><h3>Limiting and Skipping</h3>
+<p>The expression <span class="code"><span class="var">expr1</span> <span class="keyword">OF</span> <span class="var">expr2</span></span> allows the number of values produced by <span class="code"><span class="var">expr2</span></span> to be limited; for each value <span class="var">N</span> produced by <span class="var">expr1</span>, the first <span class="var">N</span> values produced by <span class="var">expr2</span> are returned.</p>
+<div class="term"><span class="prompt">--&gt;</span> ALL 5 OF 1:to(10);
+[1, 2, 3, 4, 5]
+<span class="prompt">--&gt;</span> ALL 1:to(4) OF 1:to(10);
+[1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
+</div>
+
+<p>On the other hand, the expression <span class="code"><span class="var">expr1</span> <span class="keyword">SKIP</span> <span class="var">expr2</span></span> allows a number of the values produces by <span class="code"><span class="var">expr2</span></span> to be discarded, before producing the rest; for each value <span class="var">N</span> produced by <span class="var">expr1</span>, the values produced by <span class="code"><span class="var">expr2</span></span> are returned after discarding the first <span class="var">N</span> values.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> ALL 5 SKIP 1:to(10);
+[6, 7, 8, 9, 10]
+<span class="prompt">--&gt;</span> ALL 6:to(9) SKIP 1:to(10);
+[7, 8, 9, 10, 8, 9, 10, 9, 10, 10]
+<span class="prompt">--&gt;</span> ALL 10 OF 3 SKIP 1:to(20);
+[4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+</div>
+
+<p>The expression <span class="code"><span class="delimiter">@</span> <span class="var">expr1</span></span> produces all the values produced by <span class="var">expr1</span> ad infinitum. By itself, this is not much use, however combined with a limit expression, it becomes very powerful.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> ALL @1; -- This won't terminate, until it runs out of memory
+^CInterrupted
+<span class="prompt">--&gt;</span> ALL 10 OF @1;
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+<span class="prompt">--&gt;</span> ALL 10 OF @(1 | 2 | 3);
+[1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+</div>
+
+</section>
+
+</section>
+
+
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

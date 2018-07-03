@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Sys.FileSys</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/FileSys.xhtml">FileSys</a></li></ul><section id="FileSys" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="MessageT"><span class="code">MessageT</span></h5><div class="comment">
+Base type for error messages sent from file system methods.<br></br>
+	</div><h5 id="DirectoryCreateMessageT"><span class="code">DirectoryCreateMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="DirectoryRemoveMessageT"><span class="code">DirectoryRemoveMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="DirectoryOpenMessageT"><span class="code">DirectoryOpenMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="FileRemoveMessageT"><span class="code">FileRemoveMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="FileRenameMessageT"><span class="code">FileRenameMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="FileLinkMessageT"><span class="code">FileLinkMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="FileSetPermissionsMessageT"><span class="code">FileSetPermissionsMessageT</span></h5>Inherits from: <a class="id" href="#MessageT">MessageT</a>
+<div class="comment">
+		
+	</div><h5 id="InfoT"><span class="code">InfoT</span></h5><div class="comment">
+Contains information about files<br></br>
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h5><div class="comment">
+<span class="code"><span class="delimiter">.</span><span class="var">Error</span></span>: Base type for error messages sent by file system methods.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">DirectoryCreateError</span></span>: An error occured while creating a directory.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">DirectoryRemoveError</span></span>: An error occured while removing a directory.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">DirectoryOpenError</span></span>: An error occured while opening a directory.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">FileRemoveError</span></span>: An error occured while removing a file.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">FileRenameError</span></span>: An error occured while renaming a file.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">FileSetPermissionsError</span></span>: An error occured while setting permissions for a file.<br></br>
+	</div><h5 id="Type"><span class="code">Type</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h5><div class="comment">
+<span class="code"><span class="delimiter">.</span><span class="var">Block</span></span>: Block device.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">Char</span></span>: Char file.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">Fifo</span></span>: Fifo file.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">Reg</span></span>: Regular file.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">Dir</span></span>: Directory.<br></br>
+<span class="code"><span class="delimiter">.</span><span class="var">Link</span></span>: Symbolic link.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="BaseName"><span class="code">BaseName<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Returns the base part of <span class="var">filename</span><br></br>
+	</div><h5 id="Copy"><span class="code">Copy<span class="delimiter">(</span><span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">dest</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Copies <span class="var">source</span> to <span class="var">dest</span>.<br></br>
+<em>Not implemented yet</em>.<br></br>
+	</div><h5 id="DirName"><span class="code">DirName<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Returns the directory part of <span class="var">filename</span><br></br>
+	</div><h5 id="Exists"><span class="code">Exists<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+Returns <span class="var">filename</span> if it denotes an existing file/directory. Fails otherwise.<br></br>
+	</div><h5 id="FileInfo"><span class="code">FileInfo<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#InfoT">InfoT</a></span></h5><div class="comment">
+		
+Returns an instance of <span class="code"><a class="id" href="#InfoT">InfoT</a></span> describing <span class="var">filename</span> if it exists. Fail otherwise.<br></br>
+	</div><h5 id="FileSize"><span class="code">FileSize<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+		
+Returns the type of <span class="var">filename</span> if it exists. Fails otherwise.<br></br>
+	</div><h5 id="FileTime"><span class="code">FileTime<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Time.xhtml#T">Sys.Time.T</a></span></h5><div class="comment">
+		
+Returns the modification time of <span class="var">filename</span> if it exists. Fails otherwise.<br></br>
+	</div><h5 id="FileType"><span class="code">FileType<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+		
+Returns the type of <span class="var">filename</span> if it exists. Fails otherwise.<br></br>
+	</div><h5 id="Link"><span class="code">Link<span class="delimiter">(</span><span class="var">old</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">new</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Links the file <span class="var">old</span> to <span class="var">new</span>.<br></br>
+	</div><h5 id="ListDir"><span class="code">ListDir<span class="delimiter">(</span><span class="var">dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+Generates the names of the files in <span class="var">dir</span>.<br></br>
+	</div><h5 id="ListDirInfo"><span class="code">ListDirInfo<span class="delimiter">(</span><span class="var">dir</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#InfoT">InfoT</a></span></h5><div class="comment">
+		
+Generates an instance of <span class="code"><a class="id" href="#InfoT">InfoT</a></span> for each file in <span class="var">dir</span>.<br></br>
+	</div><h5 id="MakeDir"><span class="code">MakeDir<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">mode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Creates a new directory at <span class="var">path</span> with permissions <span class="var">mode</span>.<br></br>
+	</div><h5 id="MakePipe"><span class="code">MakePipe<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="Path"><span class="code">Path<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="Remove"><span class="code">Remove<span class="delimiter">(</span><span class="var">file</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Removes the file <span class="var">file</span>.<br></br>
+	</div><h5 id="RemoveDir"><span class="code">RemoveDir<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Removes the directory <span class="var">path</span>. The directory should be empty.<br></br>
+	</div><h5 id="Rename"><span class="code">Rename<span class="delimiter">(</span><span class="var">old</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">new</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Renames the file <span class="var">old</span> to <span class="var">new</span>.<br></br>
+	</div><h5 id="SetPermissions"><span class="code">SetPermissions<span class="delimiter">(</span><span class="var">file</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">perm</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Sets the permissions for the file <span class="var">file</span> to <span class="var">perm</span>.<br></br>
+	</div><h5 id="SymLink"><span class="code">SymLink<span class="delimiter">(</span><span class="var">old</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">new</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+Links the file <span class="var">old</span> to <span class="var">new</span>.<br></br>
+	</div><h5 id="TempFile"><span class="code">TempFile<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+Returns the name of a temporary file.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="modified"><span class="code"><span class="symbol">:modified</span><span class="delimiter">(</span><span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+		
+Returns the modified time of the file.<br></br>
+	</div><h5 id="name"><span class="code"><span class="symbol">:name</span><span class="delimiter">(</span><span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+		
+Returns the name of the file.<br></br>
+	</div><h5 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+		
+Returns the size of the file.<br></br>
+	</div><h5 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+Returns a bitmask of the types of the file.<br></br>
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Chapter 5</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+<section id="Chapter_5" class="section">
+
+<section id="Loops" data-spy="true" data-target="#side-menu"><h3>Loops</h3>
+
+<p>There are two different forms of looping in Wrapl.</p>
+<h5 id="Regular_Loops">Regular Loops</h5>
+
+<p>The simplest way to write a loop in Wrapl is with the expression <span class="code"><span class="keyword">REP</span> <span class="var">body</span></span>, which simply keeps evaluating <span class="var">body</span>.</p>
+<div class="term"><span class="prompt">--&gt;</span> IMP IO.Terminal USE Out;
+NIL
+<span class="prompt">--&gt;</span> REP Out:write("Hello world!\n");
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!^CInterrupted
+<span class="prompt">--&gt;</span>
+</div>
+
+<p>By itself, a <span class="code"><span class="keyword">REP</span></span> expression is not much use. However, the body of a loop may be a block which may contain exit expressions <span class="code"><span class="keyword">EXIT</span> <span class="var">value</span></span> which cause the loop to terminate producing the values of <span class="code"><span class="var">value</span></span>. For example:</p>
+
+<div class="term"><span class="prompt">--&gt;</span> VAR n &lt;- 1;
+1
+<span class="prompt">--&gt;</span> REP (
+<span class="prompt">...</span>     n &gt; 1000 =&gt; EXIT n;
+<span class="prompt">...</span>     n &lt;- n + n;
+<span class="prompt">...</span> );
+1024
+<span class="prompt">--&gt;</span> 
+</div>
+
+<p>The value after <span class="code"><span class="keyword">EXIT</span></span> is optional; if no value is provided, then the loop produces <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a>. The two expressions <span class="code"><span class="keyword">WHILE</span> <span class="var">condition</span></span> and <span class="code"><span class="keyword">UNTIL</span> <span class="var">condition</span></span> are syntax sugar for <span class="code"><span class="var">condition</span> <span class="delimiter">//</span> <span class="keyword">EXIT</span> <span class="keyword">NIL</span></span> and <span class="code"><span class="var">condition</span> <span class="delimiter">=&gt;</span> <span class="keyword">EXIT</span> <span class="keyword">NIL</span></span> respectively. Thus a loop like:</p>
+
+<div class="ccode"><span class="lineno">   1</span><span class="keyword">while</span> <span class="var">condition</span> <span class="keyword">do</span> <span class="delimiter">{</span>
+<span class="lineno">   2</span>    <span class="var">body</span>
+<span class="lineno">   3</span><span class="delimiter">};</span></div>
+
+<p>in C would look like</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">REP</span> <span class="delimiter">(</span><span class="keyword">WHILE</span> <span class="var">condition</span><span class="delimiter">;</span>
+<span class="lineno">   2</span>    <span class="var">body</span>
+<span class="lineno">   3</span><span class="delimiter">);</span></div>
+
+<p>in Wrapl. A loop like:</p>
+
+<div class="ccode"><span class="lineno">   1</span><span class="keyword">do</span> <span class="delimiter">{</span>
+<span class="lineno">   2</span>    <span class="var">body</span>
+<span class="lineno">   3</span><span class="delimiter">}</span> <span class="keyword">while</span> <span class="delimiter">(</span><span class="var">condition</span><span class="delimiter">);</span></div>
+
+<p>would be equivalent to </p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">REP</span> <span class="delimiter">(</span>
+<span class="lineno">   2</span>    <span class="var">body</span>
+<span class="lineno">   3</span><span class="keyword">WHILE</span> <span class="var">condition</span><span class="delimiter">);</span></div>
+
+<p>You can have any number of <span class="code"><span class="keyword">EXIT</span></span> expressions (and hence <span class="code"><span class="keyword">WHILE</span></span> and <span class="code"><span class="keyword">UNTIL</span></span> expressions) in a loop. The step expression <span class="code"><span class="keyword">STEP</span></span> causes the loop to start the next iteration immediately.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> IMP IO.Terminal USE Out;
+NIL
+<span class="prompt">--&gt;</span> VAR i &lt;- 0;
+0
+<span class="prompt">--&gt;</span> REP (
+<span class="prompt">...</span>     i &lt;- i + 1;
+<span class="prompt">...</span>     i = 5 =&gt; STEP;
+<span class="prompt">...</span>     Out:write('i = {i}\n');
+<span class="prompt">...</span>     UNTIL i = 10;
+<span class="prompt">...</span> );
+i = 1
+i = 2
+i = 3
+i = 4
+i = 6
+i = 7
+i = 8
+i = 9
+i = 10
+NIL
+<span class="prompt">--&gt;</span>
+</div>
+
+
+
+<h5 id="Generator_Loops">Generator Loops</h5>
+
+<p>Since expressions in Wrapl can produce more than value, they can be used for looping using an <span class="code"><span class="keyword">EVERY</span></span> expression. The expression <span class="code"><span class="keyword">EVERY</span> <span class="var">condition</span> <span class="keyword">DO</span> <span class="var">body</span></span> evaluates <span class="var">body</span> once for each value produced by <span class="code"><span class="var">condition</span></span>. Since an <span class="code"><span class="keyword">EVERY</span></span> expression normally terminates when <span class="var">condition</span> fails to produce any more values, usually the entire <span class="code"><span class="keyword">EVERY</span></span> expression fails to produce any value.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> VAR i;
+NIL
+<span class="prompt">--&gt;</span> EVERY i &lt;- 1:to(5) DO Out:write('i = {i}\n');
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+failure
+</div>
+
+<p>Both <span class="code"><span class="keyword">STEP</span></span> and <span class="code"><span class="keyword">EXIT</span></span> expressions (and hence <span class="code"><span class="keyword">WHILE</span></span> and <span class="code"><span class="keyword">UNTIL</span></span> expressions) can be used within <span class="code"><span class="var">condition</span></span> and <span class="code"><span class="var">body</span></span>, allowing <span class="code"><span class="keyword">EVERY</span></span> expressions to produce values. The <span class="code"><span class="keyword">DO</span> <span class="var">body</span></span> clause can be omitted, which is equivalent to using <span class="code"><span class="keyword">DO</span> <span class="keyword">NIL</span></span>.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> EVERY Out:write('{1:to(5)} ');
+1 2 3 4 5 
+failure
+<span class="prompt">--&gt;</span>
+</div>
+
+
+
+</section>
+
+<section id="References" data-spy="true" data-target="#side-menu"><h3>References</h3>
+<p>Variables are one example of <em>references</em>, i.e. they both have a value and can be assigned a new value. Wrapl allows references to be passed to and returned from functions. Arguments which evaluate to references are passed as such to functions, however when the function is called, it normally only uses the current values of those arguments. Declaring a parameter with a proceeding <span class="code"><span class="delimiter">+</span></span> indicates that the parameter should use the reference to the argument, so that assigning a value to the parameter within the function changes the value of the argument itself.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> VAR x;
+NIL
+<span class="prompt">--&gt;</span> DEF F(x) x &lt;- 10;
+NIL
+<span class="prompt">--&gt;</span> F(x);
+10
+<span class="prompt">--&gt;</span> x;
+NIL
+<span class="prompt">--&gt;</span> DEF G(x+) x &lt;- 10;
+NIL
+<span class="prompt">--&gt;</span> G(x);
+10
+<span class="prompt">--&gt;</span> x;
+10
+<span class="prompt">--&gt;</span> VAR y &lt;- 20;
+20
+<span class="prompt">--&gt;</span> DEF Swap(a+, b+) (
+<span class="prompt">...</span>     VAR c &lt;- a;
+<span class="prompt">...</span>     a &lt;- b;
+<span class="prompt">...</span>     b &lt;- c;
+<span class="prompt">...</span>     NIL;
+<span class="prompt">...</span> );
+NIL
+<span class="prompt">--&gt;</span> Swap(x, y);
+NIL
+<span class="prompt">--&gt;</span> x;
+20
+<span class="prompt">--&gt;</span> y;
+10
+</div>
+
+<p>Similarly, references are returned from functions as such, and can be assigned to like a variable.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> VAR y;
+NIL
+<span class="prompt">--&gt;</span> DEF H() y;
+NIL
+<span class="prompt">--&gt;</span> H() &lt;- 200;
+200
+<span class="prompt">--&gt;</span> y;
+200
+</div>
+
+<p>The result of any expression can be a reference.</p>
+
+<div class="term"><span class="prompt">--&gt;</span> VAR a;
+NIL
+<span class="prompt">--&gt;</span> VAR b;
+NIL
+<span class="prompt">--&gt;</span> (1 &gt; 2 =&gt; a // b) &lt;- 40;
+40
+<span class="prompt">--&gt;</span> a;
+NIL
+<span class="prompt">--&gt;</span> b;
+40
+</div>
+
+</section>
+
+</section>
+
+
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

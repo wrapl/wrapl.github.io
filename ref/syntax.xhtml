@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Syntax</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+
+<section id="Syntax" class="section">
+
+<section id="Identifiers_and_Keywords" data-spy="true" data-target="#side-menu"><h3>Identifiers and Keywords</h3>
+
+<p>Identifiers in Wrapl begin with a letter or underscore <span class="code"><span class="var">_</span></span> followed by any number of letters, underscores and/or digits. Wrapl is case-sensitive, two identifiers differing only in case are considered as distinct identifiers. A number of identifiers are reserved as keywords, these are all written in upper case:</p>
+
+<p><span class="code"><span class="keyword">VAR</span></span>, <span class="code"><span class="keyword">DEF</span></span>, <span class="code"><span class="keyword">REP</span></span>, <span class="code"><span class="keyword">EXIT</span></span>, <span class="code"><span class="keyword">STEP</span></span>, <span class="code"><span class="keyword">YIELD</span></span>, <span class="code"><span class="keyword">WHILE</span></span>, <span class="code"><span class="keyword">UNTIL</span></span>, <span class="code"><span class="keyword">ALL</span></span>, <span class="code"><span class="keyword">EVERY</span></span>, <span class="code"><span class="keyword">DO</span></span> <span class="code"><span class="keyword">IS</span></span>, <span class="code"><span class="keyword">RET</span></span>, <span class="code"><span class="keyword">SUSP</span></span>, <span class="code"><span class="keyword">NIL</span></span>, <span class="code"><span class="keyword">BACK</span></span>, <span class="code"><span class="keyword">FAIL</span></span>, <span class="code"><span class="keyword">IMP</span></span>, <span class="code"><span class="keyword">USE</span></span>, <span class="code"><span class="keyword">AS</span></span>, <span class="code"><span class="keyword">IN</span></span>, <span class="code"><span class="keyword">OF</span></span>, <span class="code"><span class="keyword">MOD</span></span>, <span class="code"><span class="keyword">TO</span></span>, <span class="code"><span class="keyword">RECV</span></span>, <span class="code"><span class="keyword">SEND</span></span>, <span class="code"><span class="keyword">NOT</span></span>, <span class="code"><span class="keyword">WHEN</span></span>, <span class="code"><span class="keyword">END</span></span>, <span class="code"><span class="keyword">SKIP</span></span>, <span class="code"><span class="keyword">WITH</span></span>, <span class="code"><span class="keyword">UNIQ</span></span>, <span class="code"><span class="keyword">SUM</span></span>, <span class="code"><span class="keyword">PROD</span></span>, <span class="code"><span class="keyword">COUNT</span></span>.</p>
+
+</section>
+
+<section id="Numbers" data-spy="true" data-target="#side-menu"><h3>Numbers</h3>
+
+<h5 id="Integers">Integers</h5>
+<p> Integers in Wrapl can be written in decimal as a sequence of digits, or in a different base as <span class="code"><span class="var">base_digits</span></span> where <span class="code"><span class="var">base</span></span> is in decimal and <span class="code"><span class="var">digits</span></span> can contain both digits and letters (depending on <span class="code"><span class="var">base</span></span>). When <span class="code"><span class="var">base</span> <span class="delimiter">&gt;</span> 10</span>, <span class="code"><span class="var">A</span></span> and <span class="code"><span class="var">a</span></span> both represent <span class="code">10</span>, <span class="code"><span class="var">B</span></span> and <span class="code"><span class="var">b</span></span> represent <span class="code">11</span> and so on. Negative integers are preceeded by <span class="code"><span class="delimiter">-</span></span> with no space separating <span class="code"><span class="delimiter">-</span></span> and the rest of the integer. Integers in Wrapl can have arbitrary size, limited only by available memory.</p>
+
+<h5 id="Real_Numbers">Real Numbers</h5>
+<p>Real numbers in Wrapl are written in decimal using scientific notation and must contain either a decimal point <span class="code"><span class="delimiter">.</span></span> or an exponent <span class="code"><span class="var">e</span></span>/<span class="code"><span class="var">E</span></span> or both. The power can begin with a <span class="code"><span class="delimiter">-</span></span> for negative exponents. Negative mantissas begin with <span class="code"><span class="delimiter">-</span></span> with no space separating <span class="code"><span class="delimiter">-</span></span> and the rest of the number.</p>
+
+</section>
+
+<section id="Strings" data-spy="true" data-target="#side-menu"><h3>Strings</h3>
+
+<p>There are 3 methods of writing strings in Wrapl, however all strings have the same type.</p>
+<h5 id="Simple_Strings">Simple Strings</h5>
+<p>Simple strings are written in Wrapl between quotes <span class="code"><span class="literal">""</span></span> and can not span more than one line. To include carriage return character, or other control character, use escape sequences as in C, for example: <span class="code"><span class="literal">"\tTab and new line.\n"</span></span>. Arbitrary characters can be written as <span class="code"><span class="delimiter">\</span><span class="var">xHH</span></span> where <span class="code"><span class="var">HH</span></span> is a two digit hexadecimal number.</p>
+
+<h5 id="Block_Strings">Block Strings</h5>
+<p>Large blocks of text can be written in Wrapl using block strings. These start using <span class="code"><span class="delimiter">&gt;&gt;</span><span class="var">EndMarker</span></span> followed directly by a carriage return, where <span class="code"><span class="var">EndMarker</span></span> is any text. They end with a line beginning with <span class="code"><span class="var">EndMarker</span></span>. The string consists of all text between these two lines, including all whitespace such as tabs and carriage returns. Any code after <span class="code"><span class="var">EndMarker</span></span> is parsed normally. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="delimiter">&gt;&gt;EOI</span>
+<span class="lineno">   2</span><span class="literal">This is a block string</span>
+<span class="lineno">   3</span><span class="literal">    spanning more than one line</span>
+<span class="lineno">   4</span><span class="delimiter">EOI</span><span class="delimiter">);</span></div>
+
+will output:
+
+<div class="term">This is a block string
+    spanning more than one line
+</div>
+
+<h5 id="Complex_strings">Complex strings</h5>
+<p>Since Wrapl does not automatically convert values to strings, creating strings from a number of values using concatentation <span class="code"><span class="delimiter">+</span></span> is tedious. Instead, complex strings can be written between single quotes, <span class="code"><span class="literal">''</span></span>. At runtime, the text between the quotes is copied with any expressions between braces <span class="code"><span class="delimiter">{}</span></span> being replaced by its value after converting to a string. For example:</p>
+
+<div class="code"><span class="lineno">   1</span><span class="keyword">VAR</span> <span class="var">x</span> <span class="delimiter">&lt;-</span> 100<span class="delimiter">;</span>
+<span class="lineno">   2</span><span class="var">Out</span><span class="symbol">:write</span><span class="delimiter">(</span><span class="literal">'x = </span><span class="nested"><span class="delimiter">{</span><span class="var">x</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">);</span></div>
+
+<p>will output <span class="term">x = 100</span>. Complex strings can also span several lines and can contain escape sequences. They are implemented as a runtime function call to <a class="id" href="/lib/Std/String.xhtml#Create">Std.String.Create</a> and so will only produce a value if all the expressions in braces succeed.</p>
+
+</section>
+
+<section id="Lists_and_Tables" data-spy="true" data-target="#side-menu"><h3>Lists and Tables</h3>
+
+<p>Wrapl provides several high level data types, including lists and tables. Lists are written between brackets <span class="code"><span class="delimiter">[]</span></span>, for example <span class="code"><span class="delimiter">[</span>1<span class="delimiter">,</span> <span class="literal">"a"</span><span class="delimiter">,</span> <span class="keyword">NIL</span><span class="delimiter">,</span> <span class="delimiter">[</span>10<span class="delimiter">],</span> <span class="var">x</span><span class="delimiter">]</span></span> is a list containing 5 values. Lists can also be constructed using <span class="code"><span class="keyword">ALL</span></span> expressions: <span class="code"><span class="keyword">ALL</span> <span class="var">expression</span></span> will return a list consisting of the value produced by <span class="code"><span class="var">expression</span></span> in the order they were produced. If <span class="code"><span class="var">expression</span></span> fails to produce any value, the result will be an empty list <span class="code"><span class="delimiter">[]</span></span>. For example: <span class="code"><span class="keyword">ALL</span> 1<span class="symbol">:to</span><span class="delimiter">(</span>10<span class="delimiter">)</span></span> will give the list <span class="code"><span class="delimiter">[</span>1<span class="delimiter">,</span> 2<span class="delimiter">,</span> 3<span class="delimiter">,</span> 4<span class="delimiter">,</span> 5<span class="delimiter">,</span> 6<span class="delimiter">,</span> 7<span class="delimiter">,</span> 8<span class="delimiter">,</span> 9<span class="delimiter">,</span> 10<span class="delimiter">]</span></span>.</p>
+
+<p>Tables are key-value pairs written using braces <span class="code"><span class="delimiter">{}</span></span>, for example: <span class="code"><span class="delimiter">{</span>1 <span class="keyword">IS</span> <span class="literal">"one"</span><span class="delimiter">,</span> <span class="literal">"apple"</span> <span class="keyword">IS</span> <span class="delimiter">[</span>23<span class="delimiter">]}</span></span> is a table that maps <span class="code">1</span> to <span class="code"><span class="literal">"one"</span></span> and <span class="code"><span class="literal">"apple"</span></span> to the list <span class="code"><span class="delimiter">[</span>23<span class="delimiter">]</span></span>. The <span class="code"><span class="keyword">IS</span> <span class="var">value</span></span> part may be omitted, in which the value defaults to <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a> allowing tables to be used as sets, for example: <span class="code"><span class="delimiter">{</span>2<span class="delimiter">,</span> 3<span class="delimiter">,</span> 5<span class="delimiter">,</span> 7<span class="delimiter">,</span> 11<span class="delimiter">}</span></span>. Note that the keys can have any type, by default tables use <span class="code"><span class="symbol">:</span><span class="delimiter">#</span></span> to generate a hash value for each key and <span class="code"><span class="symbol">:</span><span class="delimiter">?</span></span> to compare keys, but tables with differing behaviour can be constructed using the <a class="id" href="/lib/Std/Table.xhtml">Std.Table</a> module directly.</p>
+
+</section>
+
+</section>
+
+
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>
