@@ -154,6 +154,9 @@ Returns <span class="var">a</span> if it begins with <span class="var">b</span>,
 	</div><h5 id="chars"><span class="code"><span class="symbol">:chars</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
 		
 Generates the characters in <span class="var">str</span> as strings of length <span class="code">1</span>.<br></br>
+	</div><h5 id="distance"><span class="code"><span class="symbol">:distance</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
 	</div><h5 id="ends"><span class="code"><span class="symbol">:ends</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
 		
 		
@@ -212,6 +215,10 @@ Generates substrings of <span class="var">str</span> separated by characters in 
 	</div><h5 id="upper"><span class="code"><span class="symbol">:upper</span><span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
 		
 Equivalent to <span class="code"><span class="var">str</span><span class="symbol">:map</span><span class="delimiter">(</span></span><span class="code"><a class="id" href="#Lower">Lower</a></span><span class="code"><span class="delimiter">,</span> </span><span class="code"><a class="id" href="#Upper">Upper</a></span><span class="code"><span class="delimiter">)</span></span>.<br></br>
+	</div><h5 id="_~_"><span class="code"><span class="symbol">:</span><span class="literal">"~"</span><span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.Integer.T">Std.Integer.T</a></span></h5><div class="comment">
+		
+		
+Returns the Levenshtein distance between <span class="var">a</span> and <span class="var">b</span>.<br></br>
 	</div></section></section>
 	</div>
 </div>

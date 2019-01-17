@@ -180,4 +180,39 @@ h5 {
   background-color: oldlace;
   padding: 3px; }
 
+div.folders {
+  font-family: 'Fira Code', monospace;
+  margin-bottom: 1em; }
+
+div.folders div {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 2em;
+  position: relative; }
+
+div.folders div:not(:last-child):before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  border-left: 1px solid black;
+  left: -1.5em;
+  top: 0; }
+
+div.folders div:last-child:before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  border-left: 1px solid black;
+  left: -1.5em;
+  top: 0; }
+
+div.folders div:after {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 1em;
+  border-bottom: 1px solid black;
+  left: -1.5em;
+  top: 0; }
+
 /*# sourceMappingURL=code.css.map */

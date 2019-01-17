@@ -70,391 +70,143 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio.xhtml">Gio</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="__$ActionNameIsValid"><span class="code">__$ActionNameIsValid<span class="delimiter">(</span><span class="var">action_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ActionParseDetailedName"><span class="code">__$ActionParseDetailedName<span class="delimiter">(</span><span class="var">detailed_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">action_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">target_value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$ActionPrintDetailedName"><span class="code">__$ActionPrintDetailedName<span class="delimiter">(</span><span class="var">action_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">target_value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$AppInfoCreateFromCommandline"><span class="code">__$AppInfoCreateFromCommandline<span class="delimiter">(</span><span class="var">commandline</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">application_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/AppInfo.xhtml#T">Gir.Gio.AppInfo.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$AppInfoGetAll"><span class="code">__$AppInfoGetAll<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-	</div><h5 id="__$AppInfoGetAllForType"><span class="code">__$AppInfoGetAllForType<span class="delimiter">(</span><span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$AppInfoGetDefaultForType"><span class="code">__$AppInfoGetDefaultForType<span class="delimiter">(</span><span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">must_support_uris</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/AppInfo.xhtml#T">Gir.Gio.AppInfo.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$AppInfoGetDefaultForUriScheme"><span class="code">__$AppInfoGetDefaultForUriScheme<span class="delimiter">(</span><span class="var">uri_scheme</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/AppInfo.xhtml#T">Gir.Gio.AppInfo.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$AppInfoGetFallbackForType"><span class="code">__$AppInfoGetFallbackForType<span class="delimiter">(</span><span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$AppInfoGetRecommendedForType"><span class="code">__$AppInfoGetRecommendedForType<span class="delimiter">(</span><span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$AppInfoLaunchDefaultForUri"><span class="code">__$AppInfoLaunchDefaultForUri<span class="delimiter">(</span><span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AppLaunchContext.xhtml#T">Gir.Gio.AppLaunchContext.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$AppInfoLaunchDefaultForUriAsync"><span class="code">__$AppInfoLaunchDefaultForUriAsync<span class="delimiter">(</span><span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AppLaunchContext.xhtml#T">Gir.Gio.AppLaunchContext.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$AppInfoLaunchDefaultForUriFinish"><span class="code">__$AppInfoLaunchDefaultForUriFinish<span class="delimiter">(</span><span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$AppInfoResetTypeAssociations"><span class="code">__$AppInfoResetTypeAssociations<span class="delimiter">(</span><span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$AsyncInitableNewvAsync"><span class="code">__$AsyncInitableNewvAsync<span class="delimiter">(</span><span class="var">object_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">n_parameters</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">parameters</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Parameter.xhtml#T">Gir.GObject.Parameter.T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-		
-		
-	</div><h5 id="__$BusGet"><span class="code">__$BusGet<span class="delimiter">(</span><span class="var">bus_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/BusType.xhtml#T">Gir.Gio.BusType.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$BusGetFinish"><span class="code">__$BusGetFinish<span class="delimiter">(</span><span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/DBusConnection.xhtml#T">Gir.Gio.DBusConnection.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$BusGetSync"><span class="code">__$BusGetSync<span class="delimiter">(</span><span class="var">bus_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/BusType.xhtml#T">Gir.Gio.BusType.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/DBusConnection.xhtml#T">Gir.Gio.DBusConnection.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$BusOwnName"><span class="code">__$BusOwnName<span class="delimiter">(</span><span class="var">bus_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/BusType.xhtml#T">Gir.Gio.BusType.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">bus_acquired_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">name_acquired_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">name_lost_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h5 id="__$BusOwnNameOnConnection"><span class="code">__$BusOwnNameOnConnection<span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/DBusConnection.xhtml#T">Gir.Gio.DBusConnection.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">name_acquired_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">name_lost_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$BusUnownName"><span class="code">__$BusUnownName<span class="delimiter">(</span><span class="var">owner_id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$BusUnwatchName"><span class="code">__$BusUnwatchName<span class="delimiter">(</span><span class="var">watcher_id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$BusWatchName"><span class="code">__$BusWatchName<span class="delimiter">(</span><span class="var">bus_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/BusType.xhtml#T">Gir.Gio.BusType.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">name_appeared_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">name_vanished_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$BusWatchNameOnConnection"><span class="code">__$BusWatchNameOnConnection<span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/DBusConnection.xhtml#T">Gir.Gio.DBusConnection.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">name_appeared_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">,</span> <span class="var">name_vanished_closure</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Closure.xhtml#T">Gir.GObject.Closure.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$ContentTypeCanBeExecutable"><span class="code">__$ContentTypeCanBeExecutable<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeEquals"><span class="code">__$ContentTypeEquals<span class="delimiter">(</span><span class="var">type1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">type2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$ContentTypeFromMimeType"><span class="code">__$ContentTypeFromMimeType<span class="delimiter">(</span><span class="var">mime_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGetDescription"><span class="code">__$ContentTypeGetDescription<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGetGenericIconName"><span class="code">__$ContentTypeGetGenericIconName<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGetIcon"><span class="code">__$ContentTypeGetIcon<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGetMimeType"><span class="code">__$ContentTypeGetMimeType<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGetSymbolicIcon"><span class="code">__$ContentTypeGetSymbolicIcon<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeGuess"><span class="code">__$ContentTypeGuess<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">result_uncertain</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$ContentTypeGuessForTree"><span class="code">__$ContentTypeGuessForTree<span class="delimiter">(</span><span class="var">root</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypeIsA"><span class="code">__$ContentTypeIsA<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">supertype</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$ContentTypeIsMimeType"><span class="code">__$ContentTypeIsMimeType<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">mime_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$ContentTypeIsUnknown"><span class="code">__$ContentTypeIsUnknown<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ContentTypesGetRegistered"><span class="code">__$ContentTypesGetRegistered<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-	</div><h5 id="__$DbusAddressEscapeValue"><span class="code">__$DbusAddressEscapeValue<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusAddressGetForBusSync"><span class="code">__$DbusAddressGetForBusSync<span class="delimiter">(</span><span class="var">bus_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/BusType.xhtml#T">Gir.Gio.BusType.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DbusAddressGetStream"><span class="code">__$DbusAddressGetStream<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$DbusAddressGetStreamFinish"><span class="code">__$DbusAddressGetStreamFinish<span class="delimiter">(</span><span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">out_guid</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOStream.xhtml#T">Gir.Gio.IOStream.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DbusAddressGetStreamSync"><span class="code">__$DbusAddressGetStreamSync<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">out_guid</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOStream.xhtml#T">Gir.Gio.IOStream.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$DbusAnnotationInfoLookup"><span class="code">__$DbusAnnotationInfoLookup<span class="delimiter">(</span><span class="var">annotations</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$DbusErrorEncodeGerror"><span class="code">__$DbusErrorEncodeGerror<span class="delimiter">(</span><span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusErrorGetRemoteError"><span class="code">__$DbusErrorGetRemoteError<span class="delimiter">(</span><span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusErrorIsRemoteError"><span class="code">__$DbusErrorIsRemoteError<span class="delimiter">(</span><span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusErrorNewForDbusError"><span class="code">__$DbusErrorNewForDbusError<span class="delimiter">(</span><span class="var">dbus_error_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">dbus_error_message</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$DbusErrorQuark"><span class="code">__$DbusErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$DbusErrorRegisterError"><span class="code">__$DbusErrorRegisterError<span class="delimiter">(</span><span class="var">error_domain</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">dbus_error_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DbusErrorRegisterErrorDomain"><span class="code">__$DbusErrorRegisterErrorDomain<span class="delimiter">(</span><span class="var">error_domain_quark_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">quark_volatile</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">entries</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DbusErrorStripRemoteError"><span class="code">__$DbusErrorStripRemoteError<span class="delimiter">(</span><span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusErrorUnregisterError"><span class="code">__$DbusErrorUnregisterError<span class="delimiter">(</span><span class="var">error_domain</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">dbus_error_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DbusGenerateGuid"><span class="code">__$DbusGenerateGuid<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-	</div><h5 id="__$DbusGvalueToGvariant"><span class="code">__$DbusGvalueToGvariant<span class="delimiter">(</span><span class="var">gvalue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/VariantType.xhtml#T">Gir.GLib.VariantType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$DbusGvariantToGvalue"><span class="code">__$DbusGvariantToGvalue<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">out_gvalue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$DbusIsAddress"><span class="code">__$DbusIsAddress<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusIsGuid"><span class="code">__$DbusIsGuid<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusIsInterfaceName"><span class="code">__$DbusIsInterfaceName<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusIsMemberName"><span class="code">__$DbusIsMemberName<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusIsName"><span class="code">__$DbusIsName<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DbusIsSupportedAddress"><span class="code">__$DbusIsSupportedAddress<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$DbusIsUniqueName"><span class="code">__$DbusIsUniqueName<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$DtlsClientConnectionNew"><span class="code">__$DtlsClientConnectionNew<span class="delimiter">(</span><span class="var">base_socket</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/DatagramBased.xhtml#T">Gir.Gio.DatagramBased.T</a><span class="delimiter">,</span> <span class="var">server_identity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/SocketConnectable.xhtml#T">Gir.Gio.SocketConnectable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/DtlsClientConnection.xhtml#T">Gir.Gio.DtlsClientConnection.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$DtlsServerConnectionNew"><span class="code">__$DtlsServerConnectionNew<span class="delimiter">(</span><span class="var">base_socket</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/DatagramBased.xhtml#T">Gir.Gio.DatagramBased.T</a><span class="delimiter">,</span> <span class="var">certificate</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/TlsCertificate.xhtml#T">Gir.Gio.TlsCertificate.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/DtlsServerConnection.xhtml#T">Gir.Gio.DtlsServerConnection.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$FileNewForCommandlineArg"><span class="code">__$FileNewForCommandlineArg<span class="delimiter">(</span><span class="var">arg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FileNewForCommandlineArgAndCwd"><span class="code">__$FileNewForCommandlineArgAndCwd<span class="delimiter">(</span><span class="var">arg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">cwd</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$FileNewForPath"><span class="code">__$FileNewForPath<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FileNewForUri"><span class="code">__$FileNewForUri<span class="delimiter">(</span><span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FileNewTmp"><span class="code">__$FileNewTmp<span class="delimiter">(</span><span class="var">tmpl</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">iostream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$FileParseName"><span class="code">__$FileParseName<span class="delimiter">(</span><span class="var">parse_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IconDeserialize"><span class="code">__$IconDeserialize<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IconHash"><span class="code">__$IconHash<span class="delimiter">(</span><span class="var">icon</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IconNewForString"><span class="code">__$IconNewForString<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$InitableNewv"><span class="code">__$InitableNewv<span class="delimiter">(</span><span class="var">object_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">parameters</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$IoErrorFromErrno"><span class="code">__$IoErrorFromErrno<span class="delimiter">(</span><span class="var">err_no</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOErrorEnum.xhtml#T">Gir.Gio.IOErrorEnum.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IoErrorQuark"><span class="code">__$IoErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$IoExtensionPointImplement"><span class="code">__$IoExtensionPointImplement<span class="delimiter">(</span><span class="var">extension_point_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a><span class="delimiter">,</span> <span class="var">extension_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOExtension.xhtml#T">Gir.Gio.IOExtension.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$IoExtensionPointLookup"><span class="code">__$IoExtensionPointLookup<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOExtensionPoint.xhtml#T">Gir.Gio.IOExtensionPoint.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IoExtensionPointRegister"><span class="code">__$IoExtensionPointRegister<span class="delimiter">(</span><span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/IOExtensionPoint.xhtml#T">Gir.Gio.IOExtensionPoint.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IoModulesLoadAllInDirectory"><span class="code">__$IoModulesLoadAllInDirectory<span class="delimiter">(</span><span class="var">dirname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IoModulesLoadAllInDirectoryWithScope"><span class="code">__$IoModulesLoadAllInDirectoryWithScope<span class="delimiter">(</span><span class="var">dirname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">scope</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/IOModuleScope.xhtml#T">Gir.Gio.IOModuleScope.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$IoModulesScanAllInDirectory"><span class="code">__$IoModulesScanAllInDirectory<span class="delimiter">(</span><span class="var">dirname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$IoModulesScanAllInDirectoryWithScope"><span class="code">__$IoModulesScanAllInDirectoryWithScope<span class="delimiter">(</span><span class="var">dirname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">scope</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/IOModuleScope.xhtml#T">Gir.Gio.IOModuleScope.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$IoSchedulerCancelAllJobs"><span class="code">__$IoSchedulerCancelAllJobs<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-	</div><h5 id="__$IoSchedulerPushJob"><span class="code">__$IoSchedulerPushJob<span class="delimiter">(</span><span class="var">job_func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">notify</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$KeyfileSettingsBackendNew"><span class="code">__$KeyfileSettingsBackendNew<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">root_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">root_group</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/SettingsBackend.xhtml#T">Gir.Gio.SettingsBackend.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$MemorySettingsBackendNew"><span class="code">__$MemorySettingsBackendNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/SettingsBackend.xhtml#T">Gir.Gio.SettingsBackend.T</a></span></h5><div class="comment">
-	</div><h5 id="__$NetworkMonitorGetDefault"><span class="code">__$NetworkMonitorGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/NetworkMonitor.xhtml#T">Gir.Gio.NetworkMonitor.T</a></span></h5><div class="comment">
-	</div><h5 id="__$NetworkingInit"><span class="code">__$NetworkingInit<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-	</div><h5 id="__$NullSettingsBackendNew"><span class="code">__$NullSettingsBackendNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/SettingsBackend.xhtml#T">Gir.Gio.SettingsBackend.T</a></span></h5><div class="comment">
-	</div><h5 id="__$PollableSourceNew"><span class="code">__$PollableSourceNew<span class="delimiter">(</span><span class="var">pollable_stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Source.xhtml#T">Gir.GLib.Source.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$PollableSourceNewFull"><span class="code">__$PollableSourceNewFull<span class="delimiter">(</span><span class="var">pollable_stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">child_source</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Source.xhtml#T">Gir.GLib.Source.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Source.xhtml#T">Gir.GLib.Source.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$PollableStreamRead"><span class="code">__$PollableStreamRead<span class="delimiter">(</span><span class="var">stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/InputStream.xhtml#T">Gir.Gio.InputStream.T</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">blocking</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$PollableStreamWrite"><span class="code">__$PollableStreamWrite<span class="delimiter">(</span><span class="var">stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/OutputStream.xhtml#T">Gir.Gio.OutputStream.T</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">blocking</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$PollableStreamWriteAll"><span class="code">__$PollableStreamWriteAll<span class="delimiter">(</span><span class="var">stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/OutputStream.xhtml#T">Gir.Gio.OutputStream.T</a><span class="delimiter">,</span> <span class="var">buffer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">blocking</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">bytes_written</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h5 id="__$ProxyGetDefaultForProtocol"><span class="code">__$ProxyGetDefaultForProtocol<span class="delimiter">(</span><span class="var">protocol</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Proxy.xhtml#T">Gir.Gio.Proxy.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ProxyResolverGetDefault"><span class="code">__$ProxyResolverGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/ProxyResolver.xhtml#T">Gir.Gio.ProxyResolver.T</a></span></h5><div class="comment">
-	</div><h5 id="__$ResolverErrorQuark"><span class="code">__$ResolverErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$ResourceErrorQuark"><span class="code">__$ResourceErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$ResourceLoad"><span class="code">__$ResourceLoad<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Resource.xhtml#T">Gir.Gio.Resource.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$ResourcesEnumerateChildren"><span class="code">__$ResourcesEnumerateChildren<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">lookup_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$ResourcesGetInfo"><span class="code">__$ResourcesGetInfo<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">lookup_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$ResourcesLookupData"><span class="code">__$ResourcesLookupData<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">lookup_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Bytes.xhtml#T">Gir.GLib.Bytes.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$ResourcesOpenStream"><span class="code">__$ResourcesOpenStream<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">lookup_flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/InputStream.xhtml#T">Gir.Gio.InputStream.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$ResourcesRegister"><span class="code">__$ResourcesRegister<span class="delimiter">(</span><span class="var">resource</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Resource.xhtml#T">Gir.Gio.Resource.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$ResourcesUnregister"><span class="code">__$ResourcesUnregister<span class="delimiter">(</span><span class="var">resource</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Resource.xhtml#T">Gir.Gio.Resource.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$SettingsSchemaSourceGetDefault"><span class="code">__$SettingsSchemaSourceGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/SettingsSchemaSource.xhtml#T">Gir.Gio.SettingsSchemaSource.T</a></span></h5><div class="comment">
-	</div><h5 id="__$SimpleAsyncReportGerrorInIdle"><span class="code">__$SimpleAsyncReportGerrorInIdle<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Error.xhtml#T">Gir.GLib.Error.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$TlsBackendGetDefault"><span class="code">__$TlsBackendGetDefault<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/TlsBackend.xhtml#T">Gir.Gio.TlsBackend.T</a></span></h5><div class="comment">
-	</div><h5 id="__$TlsClientConnectionNew"><span class="code">__$TlsClientConnectionNew<span class="delimiter">(</span><span class="var">base_io_stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/IOStream.xhtml#T">Gir.Gio.IOStream.T</a><span class="delimiter">,</span> <span class="var">server_identity</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/SocketConnectable.xhtml#T">Gir.Gio.SocketConnectable.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/TlsClientConnection.xhtml#T">Gir.Gio.TlsClientConnection.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$TlsErrorQuark"><span class="code">__$TlsErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$TlsFileDatabaseNew"><span class="code">__$TlsFileDatabaseNew<span class="delimiter">(</span><span class="var">anchors</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/TlsFileDatabase.xhtml#T">Gir.Gio.TlsFileDatabase.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$TlsServerConnectionNew"><span class="code">__$TlsServerConnectionNew<span class="delimiter">(</span><span class="var">base_io_stream</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/IOStream.xhtml#T">Gir.Gio.IOStream.T</a><span class="delimiter">,</span> <span class="var">certificate</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/TlsCertificate.xhtml#T">Gir.Gio.TlsCertificate.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/TlsServerConnection.xhtml#T">Gir.Gio.TlsServerConnection.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$UnixIsMountPathSystemInternal"><span class="code">__$UnixIsMountPathSystemInternal<span class="delimiter">(</span><span class="var">mount_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixIsSystemDevicePath"><span class="code">__$UnixIsSystemDevicePath<span class="delimiter">(</span><span class="var">device_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixIsSystemFsType"><span class="code">__$UnixIsSystemFsType<span class="delimiter">(</span><span class="var">fs_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountAt"><span class="code">__$UnixMountAt<span class="delimiter">(</span><span class="var">mount_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">time_read</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$UnixMountCompare"><span class="code">__$UnixMountCompare<span class="delimiter">(</span><span class="var">mount1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">mount2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$UnixMountCopy"><span class="code">__$UnixMountCopy<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountFor"><span class="code">__$UnixMountFor<span class="delimiter">(</span><span class="var">file_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">time_read</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$UnixMountFree"><span class="code">__$UnixMountFree<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGetDevicePath"><span class="code">__$UnixMountGetDevicePath<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGetFsType"><span class="code">__$UnixMountGetFsType<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGetMountPath"><span class="code">__$UnixMountGetMountPath<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGuessCanEject"><span class="code">__$UnixMountGuessCanEject<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGuessIcon"><span class="code">__$UnixMountGuessIcon<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGuessName"><span class="code">__$UnixMountGuessName<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGuessShouldDisplay"><span class="code">__$UnixMountGuessShouldDisplay<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountGuessSymbolicIcon"><span class="code">__$UnixMountGuessSymbolicIcon<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountIsReadonly"><span class="code">__$UnixMountIsReadonly<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountIsSystemInternal"><span class="code">__$UnixMountIsSystemInternal<span class="delimiter">(</span><span class="var">mount_entry</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountPointsChangedSince"><span class="code">__$UnixMountPointsChangedSince<span class="delimiter">(</span><span class="var">time</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountPointsGet"><span class="code">__$UnixMountPointsGet<span class="delimiter">(</span><span class="var">time_read</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountsChangedSince"><span class="code">__$UnixMountsChangedSince<span class="delimiter">(</span><span class="var">time</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UnixMountsGet"><span class="code">__$UnixMountsGet<span class="delimiter">(</span><span class="var">time_read</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio.xhtml">Gio</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="ActionNameIsValid"><span class="code">ActionNameIsValid<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ActionParseDetailedName"><span class="code">ActionParseDetailedName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ActionPrintDetailedName"><span class="code">ActionPrintDetailedName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoCreateFromCommandline"><span class="code">AppInfoCreateFromCommandline<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetAll"><span class="code">AppInfoGetAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetAllForType"><span class="code">AppInfoGetAllForType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetDefaultForType"><span class="code">AppInfoGetDefaultForType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetDefaultForUriScheme"><span class="code">AppInfoGetDefaultForUriScheme<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetFallbackForType"><span class="code">AppInfoGetFallbackForType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoGetRecommendedForType"><span class="code">AppInfoGetRecommendedForType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoLaunchDefaultForUri"><span class="code">AppInfoLaunchDefaultForUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoLaunchDefaultForUriAsync"><span class="code">AppInfoLaunchDefaultForUriAsync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoLaunchDefaultForUriFinish"><span class="code">AppInfoLaunchDefaultForUriFinish<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AppInfoResetTypeAssociations"><span class="code">AppInfoResetTypeAssociations<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AsyncInitableNewvAsync"><span class="code">AsyncInitableNewvAsync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusGet"><span class="code">BusGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusGetFinish"><span class="code">BusGetFinish<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusGetSync"><span class="code">BusGetSync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusOwnName"><span class="code">BusOwnName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusOwnNameOnConnection"><span class="code">BusOwnNameOnConnection<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusUnownName"><span class="code">BusUnownName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusUnwatchName"><span class="code">BusUnwatchName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusWatchName"><span class="code">BusWatchName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="BusWatchNameOnConnection"><span class="code">BusWatchNameOnConnection<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeCanBeExecutable"><span class="code">ContentTypeCanBeExecutable<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeEquals"><span class="code">ContentTypeEquals<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeFromMimeType"><span class="code">ContentTypeFromMimeType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGetDescription"><span class="code">ContentTypeGetDescription<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGetGenericIconName"><span class="code">ContentTypeGetGenericIconName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGetIcon"><span class="code">ContentTypeGetIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGetMimeType"><span class="code">ContentTypeGetMimeType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGetSymbolicIcon"><span class="code">ContentTypeGetSymbolicIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGuess"><span class="code">ContentTypeGuess<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeGuessForTree"><span class="code">ContentTypeGuessForTree<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeIsA"><span class="code">ContentTypeIsA<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeIsMimeType"><span class="code">ContentTypeIsMimeType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypeIsUnknown"><span class="code">ContentTypeIsUnknown<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ContentTypesGetRegistered"><span class="code">ContentTypesGetRegistered<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAddressEscapeValue"><span class="code">DbusAddressEscapeValue<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAddressGetForBusSync"><span class="code">DbusAddressGetForBusSync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAddressGetStream"><span class="code">DbusAddressGetStream<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAddressGetStreamFinish"><span class="code">DbusAddressGetStreamFinish<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAddressGetStreamSync"><span class="code">DbusAddressGetStreamSync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusAnnotationInfoLookup"><span class="code">DbusAnnotationInfoLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorEncodeGerror"><span class="code">DbusErrorEncodeGerror<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorGetRemoteError"><span class="code">DbusErrorGetRemoteError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorIsRemoteError"><span class="code">DbusErrorIsRemoteError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorNewForDbusError"><span class="code">DbusErrorNewForDbusError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorQuark"><span class="code">DbusErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorRegisterError"><span class="code">DbusErrorRegisterError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorRegisterErrorDomain"><span class="code">DbusErrorRegisterErrorDomain<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorStripRemoteError"><span class="code">DbusErrorStripRemoteError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusErrorUnregisterError"><span class="code">DbusErrorUnregisterError<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusGenerateGuid"><span class="code">DbusGenerateGuid<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusGvalueToGvariant"><span class="code">DbusGvalueToGvariant<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusGvariantToGvalue"><span class="code">DbusGvariantToGvalue<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsAddress"><span class="code">DbusIsAddress<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsGuid"><span class="code">DbusIsGuid<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsInterfaceName"><span class="code">DbusIsInterfaceName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsMemberName"><span class="code">DbusIsMemberName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsName"><span class="code">DbusIsName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsSupportedAddress"><span class="code">DbusIsSupportedAddress<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DbusIsUniqueName"><span class="code">DbusIsUniqueName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DtlsClientConnectionNew"><span class="code">DtlsClientConnectionNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="DtlsServerConnectionNew"><span class="code">DtlsServerConnectionNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileNewForCommandlineArg"><span class="code">FileNewForCommandlineArg<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileNewForCommandlineArgAndCwd"><span class="code">FileNewForCommandlineArgAndCwd<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileNewForPath"><span class="code">FileNewForPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileNewForUri"><span class="code">FileNewForUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileNewTmp"><span class="code">FileNewTmp<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FileParseName"><span class="code">FileParseName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IconDeserialize"><span class="code">IconDeserialize<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IconHash"><span class="code">IconHash<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IconNewForString"><span class="code">IconNewForString<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="InitableNewv"><span class="code">InitableNewv<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoErrorFromErrno"><span class="code">IoErrorFromErrno<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoErrorQuark"><span class="code">IoErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoExtensionPointImplement"><span class="code">IoExtensionPointImplement<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoExtensionPointLookup"><span class="code">IoExtensionPointLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoExtensionPointRegister"><span class="code">IoExtensionPointRegister<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoModulesLoadAllInDirectory"><span class="code">IoModulesLoadAllInDirectory<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoModulesLoadAllInDirectoryWithScope"><span class="code">IoModulesLoadAllInDirectoryWithScope<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoModulesScanAllInDirectory"><span class="code">IoModulesScanAllInDirectory<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoModulesScanAllInDirectoryWithScope"><span class="code">IoModulesScanAllInDirectoryWithScope<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoSchedulerCancelAllJobs"><span class="code">IoSchedulerCancelAllJobs<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="IoSchedulerPushJob"><span class="code">IoSchedulerPushJob<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="KeyfileSettingsBackendNew"><span class="code">KeyfileSettingsBackendNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="MemorySettingsBackendNew"><span class="code">MemorySettingsBackendNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="NetworkMonitorGetDefault"><span class="code">NetworkMonitorGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="NetworkingInit"><span class="code">NetworkingInit<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="NullSettingsBackendNew"><span class="code">NullSettingsBackendNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="PollableSourceNew"><span class="code">PollableSourceNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="PollableSourceNewFull"><span class="code">PollableSourceNewFull<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="PollableStreamRead"><span class="code">PollableStreamRead<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="PollableStreamWrite"><span class="code">PollableStreamWrite<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="PollableStreamWriteAll"><span class="code">PollableStreamWriteAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ProxyGetDefaultForProtocol"><span class="code">ProxyGetDefaultForProtocol<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ProxyResolverGetDefault"><span class="code">ProxyResolverGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResolverErrorQuark"><span class="code">ResolverErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourceErrorQuark"><span class="code">ResourceErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourceLoad"><span class="code">ResourceLoad<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesEnumerateChildren"><span class="code">ResourcesEnumerateChildren<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesGetInfo"><span class="code">ResourcesGetInfo<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesLookupData"><span class="code">ResourcesLookupData<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesOpenStream"><span class="code">ResourcesOpenStream<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesRegister"><span class="code">ResourcesRegister<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ResourcesUnregister"><span class="code">ResourcesUnregister<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="SettingsSchemaSourceGetDefault"><span class="code">SettingsSchemaSourceGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="SimpleAsyncReportGerrorInIdle"><span class="code">SimpleAsyncReportGerrorInIdle<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TlsBackendGetDefault"><span class="code">TlsBackendGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TlsClientConnectionNew"><span class="code">TlsClientConnectionNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TlsErrorQuark"><span class="code">TlsErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TlsFileDatabaseNew"><span class="code">TlsFileDatabaseNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TlsServerConnectionNew"><span class="code">TlsServerConnectionNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixIsMountPathSystemInternal"><span class="code">UnixIsMountPathSystemInternal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixIsSystemDevicePath"><span class="code">UnixIsSystemDevicePath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixIsSystemFsType"><span class="code">UnixIsSystemFsType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountAt"><span class="code">UnixMountAt<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountCompare"><span class="code">UnixMountCompare<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountCopy"><span class="code">UnixMountCopy<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountFor"><span class="code">UnixMountFor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountFree"><span class="code">UnixMountFree<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGetDevicePath"><span class="code">UnixMountGetDevicePath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGetFsType"><span class="code">UnixMountGetFsType<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGetMountPath"><span class="code">UnixMountGetMountPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGetOptions"><span class="code">UnixMountGetOptions<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGuessCanEject"><span class="code">UnixMountGuessCanEject<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGuessIcon"><span class="code">UnixMountGuessIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGuessName"><span class="code">UnixMountGuessName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGuessShouldDisplay"><span class="code">UnixMountGuessShouldDisplay<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountGuessSymbolicIcon"><span class="code">UnixMountGuessSymbolicIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountIsReadonly"><span class="code">UnixMountIsReadonly<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountIsSystemInternal"><span class="code">UnixMountIsSystemInternal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountPointsChangedSince"><span class="code">UnixMountPointsChangedSince<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountPointsGet"><span class="code">UnixMountPointsGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountsChangedSince"><span class="code">UnixMountsChangedSince<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UnixMountsGet"><span class="code">UnixMountsGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div></section></section>
 	</div>
 </div>

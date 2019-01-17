@@ -70,196 +70,71 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="__$CheckVersion"><span class="code">__$CheckVersion<span class="delimiter">(</span><span class="var">major</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">minor</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">micro</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$CookieParse"><span class="code">__$CookieParse<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">origin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/URI.xhtml#T">Gir.Soup.URI.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Cookie.xhtml#T">Gir.Soup.Cookie.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$CookiesFromRequest"><span class="code">__$CookiesFromRequest<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$CookiesFromResponse"><span class="code">__$CookiesFromResponse<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$CookiesToCookieHeader"><span class="code">__$CookiesToCookieHeader<span class="delimiter">(</span><span class="var">cookies</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$CookiesToRequest"><span class="code">__$CookiesToRequest<span class="delimiter">(</span><span class="var">cookies</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$CookiesToResponse"><span class="code">__$CookiesToResponse<span class="delimiter">(</span><span class="var">cookies</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$FormDecode"><span class="code">__$FormDecode<span class="delimiter">(</span><span class="var">encoded_form</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FormDecodeMultipart"><span class="code">__$FormDecodeMultipart<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">file_control_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">file</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="__$FormEncodeDatalist"><span class="code">__$FormEncodeDatalist<span class="delimiter">(</span><span class="var">form_data_set</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FormEncodeHash"><span class="code">__$FormEncodeHash<span class="delimiter">(</span><span class="var">form_data_set</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$FormRequestNewFromDatalist"><span class="code">__$FormRequestNewFromDatalist<span class="delimiter">(</span><span class="var">method</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">form_data_set</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$FormRequestNewFromHash"><span class="code">__$FormRequestNewFromHash<span class="delimiter">(</span><span class="var">method</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">form_data_set</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$FormRequestNewFromMultipart"><span class="code">__$FormRequestNewFromMultipart<span class="delimiter">(</span><span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">multipart</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Multipart.xhtml#T">Gir.Soup.Multipart.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$GetMajorVersion"><span class="code">__$GetMajorVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$GetMicroVersion"><span class="code">__$GetMicroVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$GetMinorVersion"><span class="code">__$GetMinorVersion<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$HeaderContains"><span class="code">__$HeaderContains<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">token</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$HeaderFreeParamList"><span class="code">__$HeaderFreeParamList<span class="delimiter">(</span><span class="var">param_list</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$HeaderGStringAppendParam"><span class="code">__$HeaderGStringAppendParam<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/String.xhtml#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$HeaderGStringAppendParamQuoted"><span class="code">__$HeaderGStringAppendParamQuoted<span class="delimiter">(</span><span class="var">string</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/String.xhtml#T">Gir.GLib.String.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$HeaderParseList"><span class="code">__$HeaderParseList<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$HeaderParseParamList"><span class="code">__$HeaderParseParamList<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$HeaderParseQualityList"><span class="code">__$HeaderParseQualityList<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">unacceptable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$HeaderParseSemiParamList"><span class="code">__$HeaderParseSemiParamList<span class="delimiter">(</span><span class="var">header</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$HeadersParse"><span class="code">__$HeadersParse<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">len</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">dest</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$HeadersParseRequest"><span class="code">__$HeadersParseRequest<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">len</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">req_headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">req_method</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">req_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">ver</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h5 id="__$HeadersParseResponse"><span class="code">__$HeadersParseResponse<span class="delimiter">(</span><span class="var">str</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">len</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">ver</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">status_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">reason_phrase</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-		
-	</div><h5 id="__$HeadersParseStatusLine"><span class="code">__$HeadersParseStatusLine<span class="delimiter">(</span><span class="var">status_line</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">ver</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">status_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">reason_phrase</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$HttpErrorQuark"><span class="code">__$HttpErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$MessageHeadersIterInit"><span class="code">__$MessageHeadersIterInit<span class="delimiter">(</span><span class="var">iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">hdrs</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$RequestErrorQuark"><span class="code">__$RequestErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$RequesterErrorQuark"><span class="code">__$RequesterErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$StatusGetPhrase"><span class="code">__$StatusGetPhrase<span class="delimiter">(</span><span class="var">status_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$StatusProxify"><span class="code">__$StatusProxify<span class="delimiter">(</span><span class="var">status_code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$StrCaseEqual"><span class="code">__$StrCaseEqual<span class="delimiter">(</span><span class="var">v1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">v2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$StrCaseHash"><span class="code">__$StrCaseHash<span class="delimiter">(</span><span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$TldDomainIsPublicSuffix"><span class="code">__$TldDomainIsPublicSuffix<span class="delimiter">(</span><span class="var">domain</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$TldErrorQuark"><span class="code">__$TldErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$TldGetBaseDomain"><span class="code">__$TldGetBaseDomain<span class="delimiter">(</span><span class="var">hostname</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$UriDecode"><span class="code">__$UriDecode<span class="delimiter">(</span><span class="var">part</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$UriEncode"><span class="code">__$UriEncode<span class="delimiter">(</span><span class="var">part</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">escape_extra</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$UriNormalize"><span class="code">__$UriNormalize<span class="delimiter">(</span><span class="var">part</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">unescape_extra</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$ValueArrayNew"><span class="code">__$ValueArrayNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/ValueArray.xhtml#T">Gir.GObject.ValueArray.T</a></span></h5><div class="comment">
-	</div><h5 id="__$ValueHashInsertValue"><span class="code">__$ValueHashInsertValue<span class="delimiter">(</span><span class="var">hash</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a><span class="delimiter">,</span> <span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$ValueHashNew"><span class="code">__$ValueHashNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/HashTable.xhtml#T">Gir.GLib.HashTable.T</a></span></h5><div class="comment">
-	</div><h5 id="__$WebsocketClientPrepareHandshake"><span class="code">__$WebsocketClientPrepareHandshake<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">origin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">protocols</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$WebsocketClientVerifyHandshake"><span class="code">__$WebsocketClientVerifyHandshake<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$WebsocketErrorGetQuark"><span class="code">__$WebsocketErrorGetQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$WebsocketServerCheckHandshake"><span class="code">__$WebsocketServerCheckHandshake<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">origin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">protocols</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$WebsocketServerProcessHandshake"><span class="code">__$WebsocketServerProcessHandshake<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">expected_origin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">protocols</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$XmlrpcBuildMethodCall"><span class="code">__$XmlrpcBuildMethodCall<span class="delimiter">(</span><span class="var">method_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">params</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$XmlrpcBuildMethodResponse"><span class="code">__$XmlrpcBuildMethodResponse<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="__$XmlrpcBuildRequest"><span class="code">__$XmlrpcBuildRequest<span class="delimiter">(</span><span class="var">method_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">params</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$XmlrpcBuildResponse"><span class="code">__$XmlrpcBuildResponse<span class="delimiter">(</span><span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$XmlrpcErrorQuark"><span class="code">__$XmlrpcErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$XmlrpcFaultQuark"><span class="code">__$XmlrpcFaultQuark<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-	</div><h5 id="__$XmlrpcMessageNew"><span class="code">__$XmlrpcMessageNew<span class="delimiter">(</span><span class="var">uri</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">method_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">params</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$XmlrpcMessageSetResponse"><span class="code">__$XmlrpcMessageSetResponse<span class="delimiter">(</span><span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="__$XmlrpcParseMethodCall"><span class="code">__$XmlrpcParseMethodCall<span class="delimiter">(</span><span class="var">method_call</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">method_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">params</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$XmlrpcParseMethodResponse"><span class="code">__$XmlrpcParseMethodResponse<span class="delimiter">(</span><span class="var">method_response</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$XmlrpcParseRequest"><span class="code">__$XmlrpcParseRequest<span class="delimiter">(</span><span class="var">method_call</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">params</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$XmlrpcParseResponse"><span class="code">__$XmlrpcParseResponse<span class="delimiter">(</span><span class="var">method_response</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">signature</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="__$XmlrpcVariantGetDatetime"><span class="code">__$XmlrpcVariantGetDatetime<span class="delimiter">(</span><span class="var">variant</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a><span class="delimiter">,</span> <span class="var">error</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Soup/Date.xhtml#T">Gir.Soup.Date.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="__$XmlrpcVariantNewDatetime"><span class="code">__$XmlrpcVariantNewDatetime<span class="delimiter">(</span><span class="var">date</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Date.xhtml#T">Gir.Soup.Date.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Variant.xhtml#T">Gir.GLib.Variant.T</a></span></h5><div class="comment">
-		
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="CheckVersion"><span class="code">CheckVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookieParse"><span class="code">CookieParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookiesFromRequest"><span class="code">CookiesFromRequest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookiesFromResponse"><span class="code">CookiesFromResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookiesToCookieHeader"><span class="code">CookiesToCookieHeader<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookiesToRequest"><span class="code">CookiesToRequest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CookiesToResponse"><span class="code">CookiesToResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormDecode"><span class="code">FormDecode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormDecodeMultipart"><span class="code">FormDecodeMultipart<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormEncodeDatalist"><span class="code">FormEncodeDatalist<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormEncodeHash"><span class="code">FormEncodeHash<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormRequestNewFromDatalist"><span class="code">FormRequestNewFromDatalist<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormRequestNewFromHash"><span class="code">FormRequestNewFromHash<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="FormRequestNewFromMultipart"><span class="code">FormRequestNewFromMultipart<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="GetMajorVersion"><span class="code">GetMajorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="GetMicroVersion"><span class="code">GetMicroVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="GetMinorVersion"><span class="code">GetMinorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderContains"><span class="code">HeaderContains<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderFreeParamList"><span class="code">HeaderFreeParamList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderGStringAppendParam"><span class="code">HeaderGStringAppendParam<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderGStringAppendParamQuoted"><span class="code">HeaderGStringAppendParamQuoted<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderParseList"><span class="code">HeaderParseList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderParseParamList"><span class="code">HeaderParseParamList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderParseQualityList"><span class="code">HeaderParseQualityList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeaderParseSemiParamList"><span class="code">HeaderParseSemiParamList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeadersParse"><span class="code">HeadersParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeadersParseRequest"><span class="code">HeadersParseRequest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeadersParseResponse"><span class="code">HeadersParseResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HeadersParseStatusLine"><span class="code">HeadersParseStatusLine<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HttpErrorQuark"><span class="code">HttpErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="MessageHeadersIterInit"><span class="code">MessageHeadersIterInit<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RequestErrorQuark"><span class="code">RequestErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RequesterErrorQuark"><span class="code">RequesterErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="StatusGetPhrase"><span class="code">StatusGetPhrase<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="StatusProxify"><span class="code">StatusProxify<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="StrCaseEqual"><span class="code">StrCaseEqual<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="StrCaseHash"><span class="code">StrCaseHash<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TldDomainIsPublicSuffix"><span class="code">TldDomainIsPublicSuffix<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TldErrorQuark"><span class="code">TldErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="TldGetBaseDomain"><span class="code">TldGetBaseDomain<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UriDecode"><span class="code">UriDecode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UriEncode"><span class="code">UriEncode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="UriNormalize"><span class="code">UriNormalize<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ValueArrayNew"><span class="code">ValueArrayNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ValueHashInsertValue"><span class="code">ValueHashInsertValue<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="ValueHashNew"><span class="code">ValueHashNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="WebsocketClientPrepareHandshake"><span class="code">WebsocketClientPrepareHandshake<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="WebsocketClientVerifyHandshake"><span class="code">WebsocketClientVerifyHandshake<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="WebsocketErrorGetQuark"><span class="code">WebsocketErrorGetQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="WebsocketServerCheckHandshake"><span class="code">WebsocketServerCheckHandshake<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="WebsocketServerProcessHandshake"><span class="code">WebsocketServerProcessHandshake<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcBuildMethodCall"><span class="code">XmlrpcBuildMethodCall<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcBuildMethodResponse"><span class="code">XmlrpcBuildMethodResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcBuildRequest"><span class="code">XmlrpcBuildRequest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcBuildResponse"><span class="code">XmlrpcBuildResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcErrorQuark"><span class="code">XmlrpcErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcFaultQuark"><span class="code">XmlrpcFaultQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcMessageNew"><span class="code">XmlrpcMessageNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcMessageSetResponse"><span class="code">XmlrpcMessageSetResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcParseMethodCall"><span class="code">XmlrpcParseMethodCall<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcParseMethodResponse"><span class="code">XmlrpcParseMethodResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcParseRequest"><span class="code">XmlrpcParseRequest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcParseResponse"><span class="code">XmlrpcParseResponse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcVariantGetDatetime"><span class="code">XmlrpcVariantGetDatetime<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="XmlrpcVariantNewDatetime"><span class="code">XmlrpcVariantNewDatetime<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div></section></section>
 	</div>
 </div>

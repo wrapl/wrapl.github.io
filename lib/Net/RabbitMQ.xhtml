@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Net.RabbitMQ</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Net.xhtml">Net</a></li><li class="breadcrumb-item"><a href="/lib/Net/RabbitMQ.xhtml">RabbitMQ</a></li></ul><section id="RabbitMQ" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
+A RabbitMQ connection.<br></br>
+	</div><h5 id="ChannelT"><span class="code">ChannelT</span></h5><div class="comment">
+A single channel in a RabbitMQ connection. Contains a reference to the connection.<br></br>
+	</div><h5 id="EnvelopeT"><span class="code">EnvelopeT</span></h5><div class="comment">
+A RabbitMQ envelope.<br></br>
+	</div><h5 id="MessageT"><span class="code">MessageT</span></h5><div class="comment">
+A RabbitMQ message.<br></br>
+	</div><h5 id="BasicPropertiesT"><span class="code">BasicPropertiesT</span></h5><div class="comment">
+Set of properties for basic RabbitMQ methods.<br></br>
+	</div><h5 id="DeliveryModeT"><span class="code">DeliveryModeT</span></h5>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
+<div class="comment">
+		
+		
+		
+	</div><h5 id="SocketT"><span class="code">SocketT</span></h5><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="BasicPropertiesNew"><span class="code">BasicPropertiesNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a></span></h5><div class="comment">
+	</div><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+Return a new RabbitMQ connection.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_bytes"><span class="code"><span class="symbol">:_bytes</span><span class="delimiter">(</span><span class="var">message</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.Address.T">Std.Address.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="_length"><span class="code"><span class="symbol">:_length</span><span class="delimiter">(</span><span class="var">message</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.Integer.SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+		
+	</div><h5 id="app_id"><span class="code"><span class="symbol">:app_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="basic_ack"><span class="code"><span class="symbol">:basic_ack</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="basic_cancel"><span class="code"><span class="symbol">:basic_cancel</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="basic_consume"><span class="code"><span class="symbol">:basic_consume</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">queue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">consumer_tag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+Also accepts <span class="code"><span class="symbol">:no_local</span></span>, <span class="code"><span class="symbol">:no_ack</span></span>, <span class="code"><span class="symbol">:exclusive</span></span> and <span class="code"><a class="id" href="#Agg.Table.T">Agg.Table.T</a></span> for additional arguments.<br></br>
+	</div><h5 id="basic_publish"><span class="code"><span class="symbol">:basic_publish</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">exchange</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">routing_key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">message</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/Buffer.xhtml#T">Agg.Buffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ChannelT">ChannelT</a></span></h5><div class="comment">
+		
+		
+		
+		
+Also accepts <span class="code"><span class="symbol">:mandatory</span></span>, <span class="code"><span class="symbol">:immediate</span></span> and <span class="code"><a class="id" href="#BasicPropertiesT">BasicPropertiesT</a></span>.<br></br>
+	</div><h5 id="basic_publish"><span class="code"><span class="symbol">:basic_publish</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">exchange</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">routing_key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">message</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ChannelT">ChannelT</a></span></h5><div class="comment">
+		
+		
+		
+		
+Also accepts <span class="code"><span class="symbol">:mandatory</span></span>, <span class="code"><span class="symbol">:immediate</span></span> and <span class="code"><a class="id" href="#BasicPropertiesT">BasicPropertiesT</a></span>.<br></br>
+	</div><h5 id="basic_qos"><span class="code"><span class="symbol">:basic_qos</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">prefetch_count</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ChannelT">ChannelT</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="basic_recover"><span class="code"><span class="symbol">:basic_recover</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="basic_reject"><span class="code"><span class="symbol">:basic_reject</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="body"><span class="code"><span class="symbol">:body</span><span class="delimiter">(</span><span class="var">message</span> <span class="delimiter">@</span> <a class="id" href="#MessageT">MessageT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.String.T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="channel_open"><span class="code"><span class="symbol">:channel_open</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ChannelT">ChannelT</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Close <span class="var">connection</span>.<br></br>
+	</div><h5 id="cluster_id"><span class="code"><span class="symbol">:cluster_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="consume_message"><span class="code"><span class="symbol">:consume_message</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timeout</span> <span class="delimiter">@</span> <a class="id" href="/lib/Sys/Time.xhtml#PreciseT">Sys.Time.PreciseT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#EnvelopeT">EnvelopeT</a></span></h5><div class="comment">
+		
+		
+	</div><h5 id="consume_message"><span class="code"><span class="symbol">:consume_message</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#EnvelopeT">EnvelopeT</a></span></h5><div class="comment">
+		
+	</div><h5 id="consumer_tag"><span class="code"><span class="symbol">:consumer_tag</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.String.T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="content_encoding"><span class="code"><span class="symbol">:content_encoding</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="content_type"><span class="code"><span class="symbol">:content_type</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="correlation_id"><span class="code"><span class="symbol">:correlation_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="delivery_mode"><span class="code"><span class="symbol">:delivery_mode</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="delivery_tag"><span class="code"><span class="symbol">:delivery_tag</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.Integer.T">Std.Integer.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="destroy"><span class="code"><span class="symbol">:destroy</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+Destroy <span class="var">connection</span>.<br></br>
+	</div><h5 id="exchange"><span class="code"><span class="symbol">:exchange</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.String.T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="exchange_bind"><span class="code"><span class="symbol">:exchange_bind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="exchange_declare"><span class="code"><span class="symbol">:exchange_declare</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="exchange_delete"><span class="code"><span class="symbol">:exchange_delete</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="exchange_unbind"><span class="code"><span class="symbol">:exchange_unbind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="expiration"><span class="code"><span class="symbol">:expiration</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="get_rpc_reply"><span class="code"><span class="symbol">:get_rpc_reply</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="get_rpc_reply"><span class="code"><span class="symbol">:get_rpc_reply</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="headers"><span class="code"><span class="symbol">:headers</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="login"><span class="code"><span class="symbol">:login</span><span class="delimiter">(</span><span class="var">connection</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">host</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">channel_max</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">frame_max</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">heartbeat</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">username</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">password</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="maybe_release_buffers"><span class="code"><span class="symbol">:maybe_release_buffers</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="message"><span class="code"><span class="symbol">:message</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#MessageT">MessageT</a></span></h5><div class="comment">
+		
+	</div><h5 id="message_id"><span class="code"><span class="symbol">:message_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="open"><span class="code"><span class="symbol">:open</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SocketT">SocketT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="priority"><span class="code"><span class="symbol">:priority</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="queue_bind"><span class="code"><span class="symbol">:queue_bind</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">queue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">exchange</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">routing_key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="queue_declare"><span class="code"><span class="symbol">:queue_declare</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="queue_delete"><span class="code"><span class="symbol">:queue_delete</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="queue_purge"><span class="code"><span class="symbol">:queue_purge</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="queue_unbind"><span class="code"><span class="symbol">:queue_unbind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="read_message"><span class="code"><span class="symbol">:read_message</span><span class="delimiter">(</span><span class="var">channel</span> <span class="delimiter">@</span> <a class="id" href="#ChannelT">ChannelT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#MessageT">MessageT</a></span></h5><div class="comment">
+		
+	</div><h5 id="redelivered"><span class="code"><span class="symbol">:redelivered</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.Symbol.T">Std.Symbol.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="reply_to"><span class="code"><span class="symbol">:reply_to</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="routing_key"><span class="code"><span class="symbol">:routing_key</span><span class="delimiter">(</span><span class="var">envelope</span> <span class="delimiter">@</span> <a class="id" href="#EnvelopeT">EnvelopeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#Std.String.T">Std.String.T</a></span></h5><div class="comment">
+		
+	</div><h5 id="set_app_id"><span class="code"><span class="symbol">:set_app_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_cluster_id"><span class="code"><span class="symbol">:set_cluster_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_content_encoding"><span class="code"><span class="symbol">:set_content_encoding</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_content_type"><span class="code"><span class="symbol">:set_content_type</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_correlation_id"><span class="code"><span class="symbol">:set_correlation_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_delivery_mode"><span class="code"><span class="symbol">:set_delivery_mode</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#DeliveryModeT">DeliveryModeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_expiration"><span class="code"><span class="symbol">:set_expiration</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_headers"><span class="code"><span class="symbol">:set_headers</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/Table.xhtml#T">Agg.Table.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_message_id"><span class="code"><span class="symbol">:set_message_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_reply_to"><span class="code"><span class="symbol">:set_reply_to</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_timestamp"><span class="code"><span class="symbol">:set_timestamp</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Sys/Time.xhtml#T">Sys.Time.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_timestamp"><span class="code"><span class="symbol">:set_timestamp</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_type"><span class="code"><span class="symbol">:set_type</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="set_user_id"><span class="code"><span class="symbol">:set_user_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="tcp_socket"><span class="code"><span class="symbol">:tcp_socket</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="timestamp"><span class="code"><span class="symbol">:timestamp</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="user_id"><span class="code"><span class="symbol">:user_id</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#BasicPropertiesT">BasicPropertiesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>

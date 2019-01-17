@@ -78,10 +78,134 @@
 	<li class="breadcrumb-item">Chapter 1</li>
 </ul>
 
-<section id="Chapter_1" class="section">
+<section id="Chapter_1:_A_Simple_Example" class="section">
 
-<section id="Introduction" data-spy="true" data-target="#side-menu"><h3>Introduction</h3>
+<section id="The_Project" data-spy="true" data-target="#side-menu"><h3>The Project</h3>
+<p>Given the following directory structure (before building):</p>
+<div class="folders">
+	Project Directory
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
 
+<p>We would like to compile and link <span class="literal">src/test.c</span> into an executable <span class="literal">bin/test</span>. In addition, we would like to keep the <span class="literal">src</span> directory clean of intermediate build files.</p>
+<p>Hence, we want the final build to look like this:</p>
+<div class="folders">
+	Project Directory
+	<div>bin
+		<div>test</div>
+	</div>
+	<div>obj
+		<div>test.o</div>
+	</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+</section>
+
+<section id="Simple_Build_Scripts" data-spy="true" data-target="#side-menu"><h3>Simple Build Scripts</h3>
+<p>We can accomplish using by adding a <span class="literal">_minibuild_</span> file in the root directory:</p>
+<div class="folders">
+	Project Directory
+	<div>_minibuild_</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+
+<div class="code"><div class="codeheader">_minibuild_</div><span class="lineno">   1</span><span class="comment">-- ROOT --</span>
+<span class="lineno">   2</span>
+<span class="lineno">   3</span><span class="keyword">var</span> <span class="var">SRC</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"src"</span><span class="delimiter">)</span>
+<span class="lineno">   4</span><span class="keyword">var</span> <span class="var">BIN</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"bin"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   5</span><span class="keyword">var</span> <span class="var">OBJ</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   6</span>
+<span class="lineno">   7</span><span class="keyword">var</span> <span class="var">TEST_C</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.c"</span>
+<span class="lineno">   8</span><span class="keyword">var</span> <span class="var">TEST_H</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.h"</span>
+<span class="lineno">   9</span><span class="keyword">var</span> <span class="var">TEST_O</span> <span class="delimiter">:=</span> <span class="var">OBJ</span> <span class="delimiter">/</span> <span class="literal">"test.o"</span>
+<span class="lineno">  10</span>
+<span class="lineno">  11</span><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  12</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  13</span><span class="keyword">end</span>
+<span class="lineno">  14</span>
+<span class="lineno">  15</span><span class="keyword">var</span> <span class="var">TEST</span> <span class="delimiter">:=</span> <span class="var">BIN</span> <span class="delimiter">/</span> <span class="literal">"test"</span>
+<span class="lineno">  16</span>
+<span class="lineno">  17</span><span class="var">TEST</span><span class="delimiter">[</span><span class="var">TEST_O</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  18</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  19</span><span class="keyword">end</span>
+<span class="lineno">  20</span>
+<span class="lineno">  21</span><span class="var">DEFAULT</span><span class="delimiter">[</span><span class="var">TEST</span><span class="delimiter">]</span></div>
+
+<p>Building this project results in the following output:</p>
+
+<div class="term"><span class="prompt">$</span> rabs -c -s
+RootPath = /test, Path = /test
+CurrentVersion = 1
+Starting build thread #0
+1 / 6 #0 Built file:src/test.h at version 1
+2 / 6 #0 Built file:src/test.c at version 1
+/test: gcc -c -o/test/obj/test.o -I/test/src /test/src/test.c 
+    0.000185 seconds.
+3 / 6 #0 Built file:obj/test.o at version 1
+/test: gcc -o/test/bin/test /test/obj/test.o 
+    0.000130 seconds.
+4 / 6 #0 Built file:bin/test at version 1
+5 / 6 #0 Built meta:::DEFAULT at version 1
+6 / 6 #0 Built symb:/DEFAULT at version 1
+</div>
+
+<p>The final file layout looks like this:</p>
+<div class="folders">
+	Project Directory
+	<div>bin
+		<div>test</div>
+	</div>
+	<div>_minibuild_</div>
+	<div>_minibuild_.db</div>
+	<div>obj
+		<div>test.o</div>
+	</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+</section>
+
+<section id="Explanation" data-spy="true" data-target="#side-menu"><h3>Explanation</h3>
+<p></p>
+<div class="code"><span class="lineno">   1</span><span class="comment">-- ROOT --</span></div>
+<p>This line specifies that this directory is the root directory for the project. The <span class="literal">_minibuild_</span> file in the root project directory must start with this line so that <span class="literal">rabs</span> can find the project root.</p>
+<div class="code"><span class="lineno">   3</span><span class="keyword">var</span> <span class="var">SRC</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"src"</span><span class="delimiter">)</span></div>
+<p>This line declares a new variable called <span class="var">SRC</span> and assigns it a new file target referring to the directory called <span class="literal">src</span>. <span class="var">rabs</span> does not distinguish between files and directory, hence the call to <span class="code"><span class="var">file</span><span class="delimiter">()</span></span>.</p>
+<div class="code"><span class="lineno">   4</span><span class="keyword">var</span> <span class="var">BIN</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"bin"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   5</span><span class="keyword">var</span> <span class="var">OBJ</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span></div>
+<p>Similar to the previous line, these lines also declare variables <span class="var">BIN</span> and <span class="var">OBJ</span>, assigning file targets referring to <span class="literal">bin</span> and <span class="literal">obj</span> respectively. The additional <span class="code"><span class="symbol">:mkdir</span></span> code creates the directories if they do not exist.</p>
+<div class="code"><span class="lineno">   7</span><span class="keyword">var</span> <span class="var">TEST_C</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.c"</span>
+<span class="lineno">   8</span><span class="keyword">var</span> <span class="var">TEST_H</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.h"</span>
+<span class="lineno">   9</span><span class="keyword">var</span> <span class="var">TEST_O</span> <span class="delimiter">:=</span> <span class="var">OBJ</span> <span class="delimiter">/</span> <span class="literal">"test.o"</span></div>
+<p>These lines declare 3 more variables, referring to 3 different files. The files are referenced relative to the previously declared <span class="var">SRC</span> and <span class="var">OBJ</span> variables. The end result is that <span class="var">TEST_C</span>, <span class="var">TEST_H</span> and <span class="var">TEST_O</span> refer to <span class="literal">src/test.c</span>, <span class="literal">src/test.h</span> and <span class="literal">obj/test.o</span> respectively.</p>
+<div class="code"><span class="lineno">  10</span><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  11</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  12</span><span class="keyword">end</span></div>
+<p>These lines contain the first build rule in this script. The first part, <span class="code"><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span></span> declares that <span class="var">TEST_O</span> depends on <span class="var">TEST_C</span> and <span class="var">TEST_H</span>. The next part, <span class="code"><span class="delimiter">=&gt;</span> <span class="var">fun</span><span class="delimiter">()</span> <span class="var">do</span> <span class="delimiter">...</span> <span class="var">end</span></span>, specifies the code to run in order to build <span class="var">TEST_O</span> both initially and whenever any of its dependencies change.</p>
+<p>The next line, <span class="code"><span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span><span class="literal"> -I</span><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span><span class="literal"> </span><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span><span class="literal">'</span><span class="delimiter">)</span></span>, executes <span class="var">gcc</span> with the shell to compile the file <span class="literal">src/test.c</span> and produce <span class="literal">obj/test.o</span>. The pieces of code embedded in the string between braces <span class="code"><span class="delimiter">{</span></span> and <span class="code"><span class="delimiter">}</span></span> are expanded at runtime into the full paths of the respective files.</p>
+<div class="code"><span class="lineno">  15</span><span class="keyword">var</span> <span class="var">TEST</span> <span class="delimiter">:=</span> <span class="var">BIN</span> <span class="delimiter">/</span> <span class="literal">"test"</span>
+<span class="lineno">  16</span>
+<span class="lineno">  17</span><span class="var">TEST</span><span class="delimiter">[</span><span class="var">TEST_O</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  18</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  19</span><span class="keyword">end</span></div>
+<p>Similar to the previous lines, these lines declare another variable to reference the target executable <span class="literal">bin/test</span> and define its dependencies and build function.</p>
+<div class="code"><span class="lineno">  21</span><span class="var">DEFAULT</span><span class="delimiter">[</span><span class="var">TEST</span><span class="delimiter">]</span></div>
+<p>The final line defines one more dependency, namely that the <span class="var">DEFAULT</span> target for this project depends on <span class="literal">bin/test</span> being built. No build function is specified so the only effect of the rule is that <span class="literal">bin/test</span> will be built and kept up to date whenever <span class="literal">rabs</span> is run.</p>
+</section>
+
+<section id="Rabs_Database" data-spy="true" data-target="#side-menu"><h3>Rabs Database</h3>
+<p>As you might have noticed, after running <span class="literal">rabs</span>, an additional file <span class="literal">_minibuild_.db</span> was created in the root directory.</p>
 </section>
 
 </section>

@@ -148,12 +148,15 @@ Defines the constant <span class="var">name</span> with value <span class="var">
 	</div><h5 id="SessionEval"><span class="code">SessionEval<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
 		
 Parses and evaluates the next value from <span class="var">session</span>.<br></br>
+	</div><h5 id="SessionGet"><span class="code">SessionGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SessionLine"><span class="code">SessionLine<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/ Std/String.xhtml#T"> Std.String.T</a></span></h5><div class="comment">
 		
 Returns the rest of the current line stored by the scanner in <span class="var">session</span>.<br></br>
 	</div><h5 id="SessionNew"><span class="code">SessionNew<span class="delimiter">(</span><span class="var">src</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# SessionT"> SessionT</a></span></h5><div class="comment">
 		
 Returns a new <span class="code"><a class="id" href="#SessionT">SessionT</a></span> which reads source from <span class="var">src</span>.<br></br>
+	</div><h5 id="SessionPeek"><span class="code">SessionPeek<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="SessionSuggest"><span class="code">SessionSuggest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SessionVar"><span class="code">SessionVar<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variable</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h5><div class="comment">
 		
 		
@@ -178,7 +181,10 @@ Defines <span class="var">variable</span> as a variable called <span class="var"
 	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
 		
 		
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ErrorMessageT">ErrorMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+		
+		
+	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ErrorMessageT">ErrorMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
 		
 		
 	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#IncorrectAssignMessageT">IncorrectAssignMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
@@ -240,13 +246,21 @@ Returns the number of arguments in <span class="var">args</span>.<br></br>
 	</div><h5 id="line"><span class="code"><span class="symbol">:line</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
 		
 The same as <span class="code"><span class="var">SessionLine</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
+	</div><h5 id="lineno"><span class="code"><span class="symbol">:lineno</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
 	</div><h5 id="mark"><span class="code"><span class="symbol">:mark</span><span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">)</span></span></h5><div class="comment">
 		
 Stores the current execution state into <span class="var">exec</span>.<br></br>
+	</div><h5 id="peek"><span class="code"><span class="symbol">:peek</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
 	</div><h5 id="prepend"><span class="code"><span class="symbol">:prepend</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span><span class="delimiter">)</span></span></h5><div class="comment">
 		
 		
 Creates a copy of <span class="var">args</span> with the extra arguments <span class="var">more...</span> at the beginning<br></br>
+	</div><h5 id="suggest"><span class="code"><span class="symbol">:suggest</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
 	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
 		
 		

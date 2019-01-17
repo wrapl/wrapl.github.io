@@ -108,6 +108,13 @@
 	</div><h5 id="AtomicPointerOr"><span class="code">AtomicPointerOr<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="AtomicPointerSet"><span class="code">AtomicPointerSet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="AtomicPointerXor"><span class="code">AtomicPointerXor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxAcquire"><span class="code">AtomicRcBoxAcquire<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxAlloc"><span class="code">AtomicRcBoxAlloc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxAlloc0"><span class="code">AtomicRcBoxAlloc0<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxDup"><span class="code">AtomicRcBoxDup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxGetSize"><span class="code">AtomicRcBoxGetSize<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxRelease"><span class="code">AtomicRcBoxRelease<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="AtomicRcBoxReleaseFull"><span class="code">AtomicRcBoxReleaseFull<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="Base64Decode"><span class="code">Base64Decode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="Base64DecodeInplace"><span class="code">Base64DecodeInplace<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="Base64Encode"><span class="code">Base64Encode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
@@ -128,6 +135,7 @@
 	</div><h5 id="ByteArrayNew"><span class="code">ByteArrayNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="ByteArrayNewTake"><span class="code">ByteArrayNewTake<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="ByteArrayUnref"><span class="code">ByteArrayUnref<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="CanonicalizeFilename"><span class="code">CanonicalizeFilename<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="Chdir"><span class="code">Chdir<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="CheckVersion"><span class="code">CheckVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="ChecksumTypeGetLength"><span class="code">ChecksumTypeGetLength<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
@@ -208,6 +216,7 @@
 	</div><h5 id="GetHomeDir"><span class="code">GetHomeDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="GetHostName"><span class="code">GetHostName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="GetLanguageNames"><span class="code">GetLanguageNames<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="GetLanguageNamesWithCategory"><span class="code">GetLanguageNamesWithCategory<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="GetLocaleVariants"><span class="code">GetLocaleVariants<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="GetMonotonicTime"><span class="code">GetMonotonicTime<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="GetNumProcessors"><span class="code">GetNumProcessors<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
@@ -236,6 +245,7 @@
 	</div><h5 id="HashTableSize"><span class="code">HashTableSize<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="HashTableSteal"><span class="code">HashTableSteal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="HashTableStealAll"><span class="code">HashTableStealAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="HashTableStealExtended"><span class="code">HashTableStealExtended<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="HashTableUnref"><span class="code">HashTableUnref<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="HookDestroy"><span class="code">HookDestroy<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="HookDestroyLink"><span class="code">HookDestroyLink<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
@@ -324,8 +334,21 @@
 	</div><h5 id="RandomInt"><span class="code">RandomInt<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="RandomIntRange"><span class="code">RandomIntRange<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="RandomSetSeed"><span class="code">RandomSetSeed<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxAcquire"><span class="code">RcBoxAcquire<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxAlloc"><span class="code">RcBoxAlloc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxAlloc0"><span class="code">RcBoxAlloc0<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxDup"><span class="code">RcBoxDup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxGetSize"><span class="code">RcBoxGetSize<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxRelease"><span class="code">RcBoxRelease<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RcBoxReleaseFull"><span class="code">RcBoxReleaseFull<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="Realloc"><span class="code">Realloc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="ReallocN"><span class="code">ReallocN<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringAcquire"><span class="code">RefStringAcquire<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringLength"><span class="code">RefStringLength<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringNew"><span class="code">RefStringNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringNewIntern"><span class="code">RefStringNewIntern<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringNewLen"><span class="code">RefStringNewLen<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="RefStringRelease"><span class="code">RefStringRelease<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="RegexCheckReplacement"><span class="code">RegexCheckReplacement<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="RegexErrorQuark"><span class="code">RegexErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="RegexEscapeNul"><span class="code">RegexEscapeNul<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
@@ -365,6 +388,7 @@
 	</div><h5 id="SourceSetNameById"><span class="code">SourceSetNameById<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SpacedPrimesClosest"><span class="code">SpacedPrimesClosest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SpawnAsync"><span class="code">SpawnAsync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h5 id="SpawnAsyncWithFds"><span class="code">SpawnAsyncWithFds<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SpawnAsyncWithPipes"><span class="code">SpawnAsyncWithPipes<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SpawnCheckExitStatus"><span class="code">SpawnCheckExitStatus<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
 	</div><h5 id="SpawnClosePid"><span class="code">SpawnClosePid<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">

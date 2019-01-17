@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>b.Net.SSH</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Net.xhtml">Net</a></li><li class="breadcrumb-item"><a href="/lib/Net/SSH.xhtml">SSH</a></li></ul><section id="SSH" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="SSHSessionT"><span class="code">SSHSessionT</span></h5><div class="comment">
+	</div><h5 id="SSHOptionT"><span class="code">SSHOptionT</span></h5><div class="comment">
+	</div><h5 id="SSHStringOptionT"><span class="code">SSHStringOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHIntOptionT"><span class="code">SSHIntOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHBoolOptionT"><span class="code">SSHBoolOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHSocketOptionT"><span class="code">SSHSocketOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHDataOptionT"><span class="code">SSHDataOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHCallbackOptionT"><span class="code">SSHCallbackOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHLogVerbosityOptionT"><span class="code">SSHLogVerbosityOptionT</span></h5>Inherits from: <a class="id" href="#SSHOptionT">SSHOptionT</a>
+<div class="comment">
+		
+	</div><h5 id="SSHLogVerbosityT"><span class="code">SSHLogVerbosityT</span></h5><div class="comment">
+	</div><h5 id="SSHKeyT"><span class="code">SSHKeyT</span></h5><div class="comment">
+	</div><h5 id="SSHKnownHostT"><span class="code">SSHKnownHostT</span></h5><div class="comment">
+	</div><h5 id="SSHAuthT"><span class="code">SSHAuthT</span></h5><div class="comment">
+	</div><h5 id="SSHChannelT"><span class="code">SSHChannelT</span></h5><div class="comment">
+	</div><h5 id="SFTPSessionT"><span class="code">SFTPSessionT</span></h5><div class="comment">
+	</div><h5 id="SFTPFileT"><span class="code">SFTPFileT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+	</div><h5 id="SFTPFileReaderT"><span class="code">SFTPFileReaderT</span></h5>Inherits from: <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+	</div><h5 id="SFTPFileWriterT"><span class="code">SFTPFileWriterT</span></h5>Inherits from: <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+	</div><h5 id="SFTPFileReaderWriterT"><span class="code">SFTPFileReaderWriterT</span></h5>Inherits from: <a class="id" href="#SFTPFileReaderT">SFTPFileReaderT</a>, <a class="id" href="#SFTPFileWriterT">SFTPFileWriterT</a>, <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="SFTPFileTextReaderT"><span class="code">SFTPFileTextReaderT</span></h5>Inherits from: <a class="id" href="#SFTPFileReaderT">SFTPFileReaderT</a>, <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="SFTPFileTextWriterT"><span class="code">SFTPFileTextWriterT</span></h5>Inherits from: <a class="id" href="#SFTPFileWriterT">SFTPFileWriterT</a>, <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h5 id="SFTPFileTextReaderWriterT"><span class="code">SFTPFileTextReaderWriterT</span></h5>Inherits from: <a class="id" href="#SFTPFileReaderT">SFTPFileReaderT</a>, <a class="id" href="#SFTPFileWriterT">SFTPFileWriterT</a>, <a class="id" href="#SFTPFileT">SFTPFileT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h5 id="SFTPAttributesT"><span class="code">SFTPAttributesT</span></h5><div class="comment">
+	</div><h5 id="SFTPFileTypeT"><span class="code">SFTPFileTypeT</span></h5><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileTypeT">SFTPFileTypeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHAuthT">SSHAuthT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHKnownHostT">SSHKnownHostT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="channel_new"><span class="code"><span class="symbol">:channel_new</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileT">SFTPFileT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="connect"><span class="code"><span class="symbol">:connect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="disconnect"><span class="code"><span class="symbol">:disconnect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="flags"><span class="code"><span class="symbol">:flags</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPSessionT">SFTPSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="get_server_publickey"><span class="code"><span class="symbol">:get_server_publickey</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="gid"><span class="code"><span class="symbol">:gid</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="group"><span class="code"><span class="symbol">:group</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="has_known_hosts_entry"><span class="code"><span class="symbol">:has_known_hosts_entry</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="init"><span class="code"><span class="symbol">:init</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPSessionT">SFTPSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="is_known_server"><span class="code"><span class="symbol">:is_known_server</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="lsdir"><span class="code"><span class="symbol">:lsdir</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPSessionT">SFTPSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="lsdirinfo"><span class="code"><span class="symbol">:lsdirinfo</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPSessionT">SFTPSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="name"><span class="code"><span class="symbol">:name</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="open"><span class="code"><span class="symbol">:open</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPSessionT">SFTPSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="open_session"><span class="code"><span class="symbol">:open_session</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="owner"><span class="code"><span class="symbol">:owner</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="parse_config"><span class="code"><span class="symbol">:parse_config</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="poll"><span class="code"><span class="symbol">:poll</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="poll_timeout"><span class="code"><span class="symbol">:poll_timeout</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileReaderT">SFTPFileReaderT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <span class="symbol">:block</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileReaderT">SFTPFileReaderT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="read_nonblocking"><span class="code"><span class="symbol">:read_nonblocking</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="set"><span class="code"><span class="symbol">:set</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHLogVerbosityOptionT">SSHLogVerbosityOptionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHLogVerbosityT">SSHLogVerbosityT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="set"><span class="code"><span class="symbol">:set</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHBoolOptionT">SSHBoolOptionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="set"><span class="code"><span class="symbol">:set</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHIntOptionT">SSHIntOptionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="set"><span class="code"><span class="symbol">:set</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHStringOptionT">SSHStringOptionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="sftp_new"><span class="code"><span class="symbol">:sftp_new</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="sftp_new_channel"><span class="code"><span class="symbol">:sftp_new_channel</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="uid"><span class="code"><span class="symbol">:uid</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPAttributesT">SFTPAttributesT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_agent"><span class="code"><span class="symbol">:userauth_agent</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_gssapi"><span class="code"><span class="symbol">:userauth_gssapi</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_kbdint"><span class="code"><span class="symbol">:userauth_kbdint</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_kbdint_getinstruction"><span class="code"><span class="symbol">:userauth_kbdint_getinstruction</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_kbdint_getname"><span class="code"><span class="symbol">:userauth_kbdint_getname</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_kbdint_getnprompts"><span class="code"><span class="symbol">:userauth_kbdint_getnprompts</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h5 id="userauth_kbdint_getprompt"><span class="code"><span class="symbol">:userauth_kbdint_getprompt</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="userauth_kbdint_setanswer"><span class="code"><span class="symbol">:userauth_kbdint_setanswer</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="userauth_password"><span class="code"><span class="symbol">:userauth_password</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="userauth_publickey"><span class="code"><span class="symbol">:userauth_publickey</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHSessionT">SSHSessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h5 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileWriterT">SFTPFileWriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <span class="symbol">:block</span><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+		
+	</div><h5 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SFTPFileWriterT">SFTPFileWriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div><h5 id="write_stderr"><span class="code"><span class="symbol">:write_stderr</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SSHChannelT">SSHChannelT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+		
+	</div></section></section>
+	</div>
+</div>
+<footer>
+	<div class="text-center">
+		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+	</div>
+</footer>
+</body>
+</html>
