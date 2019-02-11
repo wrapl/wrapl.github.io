@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,225 +71,225 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Wrapl.xhtml">Wrapl</a></li><li class="breadcrumb-item"><a href="/lib/Wrapl/Loader.xhtml">Loader</a></li></ul><section id="Loader" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="ScopeT"><span class="code">ScopeT</span></h5><div class="comment">
-	</div><h5 id="ExternErrorMessageT"><span class="code">ExternErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Wrapl.xhtml">Wrapl</a></li><li class="breadcrumb-item"><a href="/lib/Wrapl/Loader.xhtml">Loader</a></li></ul><section id="Loader" class="section"><h2>Loader</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="ScopeT"><span class="code">ScopeT</span></h4><div class="comment">
+	</div><h4 id="ExternErrorMessageT"><span class="code">ExternErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="ScopeErrorMessageT"><span class="code">ScopeErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+	</div><h4 id="ScopeErrorMessageT"><span class="code">ScopeErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="SemanticErrorMessageT"><span class="code">SemanticErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+	</div><h4 id="SemanticErrorMessageT"><span class="code">SemanticErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="TypeErrorMessageT"><span class="code">TypeErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+	</div><h4 id="TypeErrorMessageT"><span class="code">TypeErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="InitErrorMessageT"><span class="code">InitErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+	</div><h4 id="InitErrorMessageT"><span class="code">InitErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>
+	</div><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>
 <div class="comment">
 		
-	</div><h5 id="SourceErrorMessageT"><span class="code">SourceErrorMessageT</span></h5>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
+	</div><h4 id="SourceErrorMessageT"><span class="code">SourceErrorMessageT</span></h4>Inherits from: <a class="id" href="#ErrorMessageT">ErrorMessageT</a>
 <div class="comment">
 		
-	</div><h5 id="VariadicT"><span class="code">VariadicT</span></h5><div class="comment">
+	</div><h4 id="VariadicT"><span class="code">VariadicT</span></h4><div class="comment">
 Used to collect extra arguments to a variadic function.<br></br>
-	</div><h5 id="WraplPreT"><span class="code">WraplPreT</span></h5>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
+	</div><h4 id="WraplPreT"><span class="code">WraplPreT</span></h4>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
 <div class="comment">
 		
-	</div><h5 id="WraplT"><span class="code">WraplT</span></h5>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
+	</div><h4 id="WraplT"><span class="code">WraplT</span></h4>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
 <div class="comment">
 		
-	</div><h5 id="ExecT"><span class="code">ExecT</span></h5><div class="comment">
+	</div><h4 id="ExecT"><span class="code">ExecT</span></h4><div class="comment">
 Marks a state in the execution of a Wrapl function that can be restarted.<br></br>
 Calling an instance of <span class="code"><a class="id" href="#ExecT">ExecT</a></span> will restart execution at the state stored in it.<br></br>
-	</div><h5 id="IncorrectTypeMessageT"><span class="code">IncorrectTypeMessageT</span></h5><div class="comment">
-	</div><h5 id="IncorrectAssignMessageT"><span class="code">IncorrectAssignMessageT</span></h5><div class="comment">
-	</div><h5 id="CodeT"><span class="code">CodeT</span></h5>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
+	</div><h4 id="IncorrectTypeMessageT"><span class="code">IncorrectTypeMessageT</span></h4><div class="comment">
+	</div><h4 id="IncorrectAssignMessageT"><span class="code">IncorrectAssignMessageT</span></h4><div class="comment">
+	</div><h4 id="CodeT"><span class="code">CodeT</span></h4>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
 <div class="comment">
 		
-	</div><h5 id="ErrorMessageT"><span class="code">ErrorMessageT</span></h5><div class="comment">
+	</div><h4 id="ErrorMessageT"><span class="code">ErrorMessageT</span></h4><div class="comment">
 The type of error messages sent by the compiler.<br></br>
-	</div><h5 id="SessionT"><span class="code">SessionT</span></h5><div class="comment">
+	</div><h4 id="SessionT"><span class="code">SessionT</span></h4><div class="comment">
  An incremental Wrapl compiler/interpreter<br></br>
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h4><div class="comment">
 Possible error messages sent by the compiler.<br></br>
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></h4><div class="comment">
 Writes the representation for a value to a stream.<br></br>
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="ExecJump"><span class="code">ExecJump<span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">,</span> <span class="var">arg</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="ExecJump"><span class="code">ExecJump<span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">,</span> <span class="var">arg</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Restarts current execution from the state in <span class="var">exec</span>.<br></br>
-	</div><h5 id="ExecMark"><span class="code">ExecMark<span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="ExecMark"><span class="code">ExecMark<span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 Stores the current execution state into <span class="var">exec</span>.<br></br>
 Fails when called initially, succeeds if restarted by <span class="code"><a class="id" href="#ExecJump">ExecJump</a></span>.<br></br>
-	</div><h5 id="ExecNew"><span class="code">ExecNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ExecT">ExecT</a></span></h5><div class="comment">
+	</div><h4 id="ExecNew"><span class="code">ExecNew<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#ExecT">ExecT</a></span></h4><div class="comment">
 Returns a new empty <span class="code"><a class="id" href="#ExecT">ExecT</a></span>.<br></br>
-	</div><h5 id="LoadExpr"><span class="code">LoadExpr<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="LoadExpr"><span class="code">LoadExpr<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 Evaluates the expression contained in the file <span class="var">filename</span> and returns the result.<br></br>
-	</div><h5 id="LoadModule"><span class="code">LoadModule<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></span></h5><div class="comment">
+	</div><h4 id="LoadModule"><span class="code">LoadModule<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></span></h4><div class="comment">
 		
 Loads and compiles the module contained in the file <span class="var">filename</span> and returns the module handle.<br></br>
-	</div><h5 id="ReadExpr"><span class="code">ReadExpr<span class="delimiter">(</span><span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="ReadExpr"><span class="code">ReadExpr<span class="delimiter">(</span><span class="var">source</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 Evaluates the expression read from <span class="var">source</span> and returns the result.<br></br>
-	</div><h5 id="SaveExpr"><span class="code">SaveExpr<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="SaveExpr"><span class="code">SaveExpr<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 expr:ANY<br></br>
 Evaluates the expression contained in the file <span class="var">filename</span> and returns the result.<br></br>
-	</div><h5 id="ScopeNew"><span class="code">ScopeNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SessionDef"><span class="code">SessionDef<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="ScopeNew"><span class="code">ScopeNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SessionDef"><span class="code">SessionDef<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 Defines the constant <span class="var">name</span> with value <span class="var">value</span> in the global scope of <span class="var">session</span>.<br></br>
-	</div><h5 id="SessionEval"><span class="code">SessionEval<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="SessionEval"><span class="code">SessionEval<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 Parses and evaluates the next value from <span class="var">session</span>.<br></br>
-	</div><h5 id="SessionGet"><span class="code">SessionGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SessionLine"><span class="code">SessionLine<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/ Std/String.xhtml#T"> Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="SessionGet"><span class="code">SessionGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SessionLine"><span class="code">SessionLine<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/ Std/String.xhtml#T"> Std.String.T</a></span></h4><div class="comment">
 		
 Returns the rest of the current line stored by the scanner in <span class="var">session</span>.<br></br>
-	</div><h5 id="SessionNew"><span class="code">SessionNew<span class="delimiter">(</span><span class="var">src</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# SessionT"> SessionT</a></span></h5><div class="comment">
+	</div><h4 id="SessionNew"><span class="code">SessionNew<span class="delimiter">(</span><span class="var">src</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# SessionT"> SessionT</a></span></h4><div class="comment">
 		
 Returns a new <span class="code"><a class="id" href="#SessionT">SessionT</a></span> which reads source from <span class="var">src</span>.<br></br>
-	</div><h5 id="SessionPeek"><span class="code">SessionPeek<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SessionSuggest"><span class="code">SessionSuggest<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SessionVar"><span class="code">SessionVar<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variable</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="SessionPeek"><span class="code">SessionPeek<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SessionSuggest"><span class="code">SessionSuggest<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SessionVar"><span class="code">SessionVar<span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variable</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 Defines <span class="var">variable</span> as a variable called <span class="var">name</span> in the global scope of <span class="var">session</span>.<br></br>
-	</div><h5 id="VariadicNew"><span class="code">VariadicNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="VariadicNew"><span class="code">VariadicNew<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/Table.xhtml#T">Agg.Table.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/Table.xhtml#T">Agg.Table.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h5><div class="comment">
+	</div><h4 id="WriteExpr"><span class="code">WriteExpr<span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a></span></h4><div class="comment">
 		
 		
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 		
-	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ErrorMessageT">ErrorMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ErrorMessageT">ErrorMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#IncorrectAssignMessageT">IncorrectAssignMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#IncorrectAssignMessageT">IncorrectAssignMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#IncorrectTypeMessageT">IncorrectTypeMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#IncorrectTypeMessageT">IncorrectTypeMessageT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="add"><span class="code"><span class="symbol">:add</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">scope</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="add"><span class="code"><span class="symbol">:add</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">scope</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Adds an existing scope to the global scopes of <span class="var">session</span>.<br></br>
 This code needs to be fixed, since scopes are stored in a linked list, and adding more than one scope to multiple sessions will not work correctly.<br></br>
-	</div><h5 id="append"><span class="code"><span class="symbol">:append</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="append"><span class="code"><span class="symbol">:append</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Creates a copy of <span class="var">args</span> with the extra arguments <span class="var">more...</span> at the end<br></br>
-	</div><h5 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">more...</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">more...</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span></span></h5><div class="comment">
-		
-		
-Calls <span class="var">func</span> with <span class="var">args</span>.<br></br>
-	</div><h5 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Calls <span class="var">func</span> with <span class="var">args</span>.<br></br>
-	</div><h5 id="def"><span class="code"><span class="symbol">:def</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="apply"><span class="code"><span class="symbol">:apply</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+Calls <span class="var">func</span> with <span class="var">args</span>.<br></br>
+	</div><h4 id="def"><span class="code"><span class="symbol">:def</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 The same as <span class="code"><span class="var">SessionDef</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">,</span> <span class="var">name</span><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="def"><span class="code"><span class="symbol">:def</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="def"><span class="code"><span class="symbol">:def</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="eval"><span class="code"><span class="symbol">:eval</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
-		
-The same as <span class="code"><span class="var">SessionEval</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="eval_line"><span class="code"><span class="symbol">:eval_line</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
-		
+	</div><h4 id="eval"><span class="code"><span class="symbol">:eval</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 The same as <span class="code"><span class="var">SessionEval</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="expr"><span class="code"><span class="symbol">:expr</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="eval_line"><span class="code"><span class="symbol">:eval_line</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+The same as <span class="code"><span class="var">SessionEval</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
+	</div><h4 id="expr"><span class="code"><span class="symbol">:expr</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 The same as <span class="code"><span class="var">SessionExpr</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="get"><span class="code"><span class="symbol">:get</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="get"><span class="code"><span class="symbol">:get</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 		
-	</div><h5 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h4 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 Returns the number of arguments in <span class="var">args</span>.<br></br>
-	</div><h5 id="line"><span class="code"><span class="symbol">:line</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="line"><span class="code"><span class="symbol">:line</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
 		
 The same as <span class="code"><span class="var">SessionLine</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="lineno"><span class="code"><span class="symbol">:lineno</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="lineno"><span class="code"><span class="symbol">:lineno</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="mark"><span class="code"><span class="symbol">:mark</span><span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="mark"><span class="code"><span class="symbol">:mark</span><span class="delimiter">(</span><span class="var">exec</span> <span class="delimiter">@</span> <a class="id" href="#ExecT">ExecT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 Stores the current execution state into <span class="var">exec</span>.<br></br>
-	</div><h5 id="peek"><span class="code"><span class="symbol">:peek</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="peek"><span class="code"><span class="symbol">:peek</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="prepend"><span class="code"><span class="symbol">:prepend</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="prepend"><span class="code"><span class="symbol">:prepend</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">more...</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Creates a copy of <span class="var">args</span> with the extra arguments <span class="var">more...</span> at the beginning<br></br>
-	</div><h5 id="suggest"><span class="code"><span class="symbol">:suggest</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="suggest"><span class="code"><span class="symbol">:suggest</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">values</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#ArrayT">Std.Symbol.ArrayT</a><span class="delimiter">,</span> <span class="var">key<span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">values</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">,</span> <span class="var">keys</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#ArrayT">Std.Symbol.ArrayT</a><span class="delimiter">,</span> <span class="var">key<span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 		
 		
 Generates the arguments in <span class="var">args</span>, while filling <span class="var">key</span> from <span class="var">keys</span> in parallel.<br></br>
-	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">args</span> <span class="delimiter">@</span> <a class="id" href="#VariadicT">VariadicT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
 Generates the arguments in <span class="var">args</span>.<br></br>
-	</div><h5 id="var"><span class="code"><span class="symbol">:var</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variable</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="var"><span class="code"><span class="symbol">:var</span><span class="delimiter">(</span><span class="var">session</span> <span class="delimiter">@</span> <a class="id" href="#SessionT">SessionT</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">variable</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 The same as <span class="code"><span class="var">SessionVar</span><span class="delimiter">(</span><span class="var">session</span><span class="delimiter">,</span> <span class="var">name</span><span class="delimiter">,</span> <span class="var">variable</span><span class="delimiter">)</span></span>.<br></br>
-	</div><h5 id="var"><span class="code"><span class="symbol">:var</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="var"><span class="code"><span class="symbol">:var</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ScopeT">ScopeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

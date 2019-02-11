@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,53 +71,53 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GtkSource.xhtml">GtkSource</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GtkSource/CompletionProvider.xhtml">CompletionProvider</a></li></ul><section id="CompletionProvider" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GtkSource.xhtml">GtkSource</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GtkSource/CompletionProvider.xhtml">CompletionProvider</a></li></ul><section id="CompletionProvider" class="section"><h2>CompletionProvider</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a>
 <div class="comment">
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="activate_proposal"><span class="code"><span class="symbol">:activate_proposal</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gtk/TextIter.xhtml#T">Gir.Gtk.TextIter.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="activate_proposal"><span class="code"><span class="symbol">:activate_proposal</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">iter</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gtk/TextIter.xhtml#T">Gir.Gtk.TextIter.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="get_activation"><span class="code"><span class="symbol">:get_activation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h4 id="get_activation"><span class="code"><span class="symbol">:get_activation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
-	</div><h5 id="get_gicon"><span class="code"><span class="symbol">:get_gicon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h5><div class="comment">
+	</div><h4 id="get_gicon"><span class="code"><span class="symbol">:get_gicon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Icon.xhtml#T">Gir.Gio.Icon.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="get_icon"><span class="code"><span class="symbol">:get_icon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h5><div class="comment">
+	</div><h4 id="get_icon"><span class="code"><span class="symbol">:get_icon</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GdkPixbuf/Pixbuf.xhtml#T">Gir.GdkPixbuf.Pixbuf.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="get_icon_name"><span class="code"><span class="symbol">:get_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="get_icon_name"><span class="code"><span class="symbol">:get_icon_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="get_info_widget"><span class="code"><span class="symbol">:get_info_widget</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gtk/Widget.xhtml#T">Gir.Gtk.Widget.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="get_interactive_delay"><span class="code"><span class="symbol">:get_interactive_delay</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_name"><span class="code"><span class="symbol">:get_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_priority"><span class="code"><span class="symbol">:get_priority</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_start_iter"><span class="code"><span class="symbol">:get_start_iter</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">iter</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h4 id="get_info_widget"><span class="code"><span class="symbol">:get_info_widget</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gtk/Widget.xhtml#T">Gir.Gtk.Widget.T</a></span></h4><div class="comment">
 		
 		
+	</div><h4 id="get_interactive_delay"><span class="code"><span class="symbol">:get_interactive_delay</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_name"><span class="code"><span class="symbol">:get_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_priority"><span class="code"><span class="symbol">:get_priority</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_start_iter"><span class="code"><span class="symbol">:get_start_iter</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">iter</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="match"><span class="code"><span class="symbol">:match</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
 		
 		
-	</div><h5 id="populate"><span class="code"><span class="symbol">:populate</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="match"><span class="code"><span class="symbol">:match</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="update_info"><span class="code"><span class="symbol">:update_info</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionInfo.xhtml#T">Gir.GtkSource.CompletionInfo.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="populate"><span class="code"><span class="symbol">:populate</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionContext.xhtml#T">Gir.GtkSource.CompletionContext.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="update_info"><span class="code"><span class="symbol">:update_info</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">proposal</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionProposal.xhtml#T">Gir.GtkSource.CompletionProposal.T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GtkSource/CompletionInfo.xhtml#T">Gir.GtkSource.CompletionInfo.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

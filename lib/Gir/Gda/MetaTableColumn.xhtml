@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,84 +71,84 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/MetaTableColumn.xhtml">MetaTableColumn</a></li></ul><section id="MetaTableColumn" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/MetaTableColumn.xhtml#T">Gir.Gda.MetaTableColumn.T</a></span></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/MetaTableColumn.xhtml">MetaTableColumn</a></li></ul><section id="MetaTableColumn" class="section"><h2>MetaTableColumn</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/MetaTableColumn.xhtml#T">Gir.Gda.MetaTableColumn.T</a></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_gda_reserved1"><span class="code"><span class="symbol">:_gda_reserved1</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="_gda_reserved1"><span class="code"><span class="symbol">:_gda_reserved1</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="_gda_reserved2"><span class="code"><span class="symbol">:_gda_reserved2</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="_gda_reserved2"><span class="code"><span class="symbol">:_gda_reserved2</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="_gda_reserved3"><span class="code"><span class="symbol">:_gda_reserved3</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="_gda_reserved3"><span class="code"><span class="symbol">:_gda_reserved3</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="_gda_reserved4"><span class="code"><span class="symbol">:_gda_reserved4</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="_gda_reserved4"><span class="code"><span class="symbol">:_gda_reserved4</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="column_name"><span class="code"><span class="symbol">:column_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="column_name"><span class="code"><span class="symbol">:column_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="column_type"><span class="code"><span class="symbol">:column_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="column_type"><span class="code"><span class="symbol">:column_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="default_value"><span class="code"><span class="symbol">:default_value</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="default_value"><span class="code"><span class="symbol">:default_value</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="foreach_attribute"><span class="code"><span class="symbol">:foreach_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="get_attribute"><span class="code"><span class="symbol">:get_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="gtype"><span class="code"><span class="symbol">:gtype</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="nullok"><span class="code"><span class="symbol">:nullok</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="pkey"><span class="code"><span class="symbol">:pkey</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="set__gda_reserved1"><span class="code"><span class="symbol">:set__gda_reserved1</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set__gda_reserved2"><span class="code"><span class="symbol">:set__gda_reserved2</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set__gda_reserved3"><span class="code"><span class="symbol">:set__gda_reserved3</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set__gda_reserved4"><span class="code"><span class="symbol">:set__gda_reserved4</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set_attribute"><span class="code"><span class="symbol">:set_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">,</span> <span class="var">destroy</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="foreach_attribute"><span class="code"><span class="symbol">:foreach_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">func</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
-		
-	</div><h5 id="set_column_name"><span class="code"><span class="symbol">:set_column_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set_column_type"><span class="code"><span class="symbol">:set_column_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="get_attribute"><span class="code"><span class="symbol">:get_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_default_value"><span class="code"><span class="symbol">:set_default_value</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
+	</div><h4 id="gtype"><span class="code"><span class="symbol">:gtype</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="nullok"><span class="code"><span class="symbol">:nullok</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="pkey"><span class="code"><span class="symbol">:pkey</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="set__gda_reserved1"><span class="code"><span class="symbol">:set__gda_reserved1</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_gtype"><span class="code"><span class="symbol">:set_gtype</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a></span></h5><div class="comment">
+	</div><h4 id="set__gda_reserved2"><span class="code"><span class="symbol">:set__gda_reserved2</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_nullok"><span class="code"><span class="symbol">:set_nullok</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h4 id="set__gda_reserved3"><span class="code"><span class="symbol">:set__gda_reserved3</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_pkey"><span class="code"><span class="symbol">:set_pkey</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h4 id="set__gda_reserved4"><span class="code"><span class="symbol">:set__gda_reserved4</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="set_attribute"><span class="code"><span class="symbol">:set_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">,</span> <span class="var">destroy</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="set_column_name"><span class="code"><span class="symbol">:set_column_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_column_type"><span class="code"><span class="symbol">:set_column_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_default_value"><span class="code"><span class="symbol">:set_default_value</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_gtype"><span class="code"><span class="symbol">:set_gtype</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GObject/Type.xhtml#T">Gir.GObject.Type.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_nullok"><span class="code"><span class="symbol">:set_nullok</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_pkey"><span class="code"><span class="symbol">:set_pkey</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

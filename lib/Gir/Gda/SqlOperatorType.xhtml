@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,51 +71,51 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/SqlOperatorType.xhtml">SqlOperatorType</a></li></ul><section id="SqlOperatorType" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/SqlOperatorType.xhtml">SqlOperatorType</a></li></ul><section id="SqlOperatorType" class="section"><h2>SqlOperatorType</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
 <div class="comment">
 		
 		
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="And"><span class="code">And</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Between"><span class="code">Between</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Bitand"><span class="code">Bitand</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Bitnot"><span class="code">Bitnot</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Bitor"><span class="code">Bitor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Concat"><span class="code">Concat</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Diff"><span class="code">Diff</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Div"><span class="code">Div</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Eq"><span class="code">Eq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Geq"><span class="code">Geq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Gt"><span class="code">Gt</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Ilike"><span class="code">Ilike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="In"><span class="code">In</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Is"><span class="code">Is</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Isnotnull"><span class="code">Isnotnull</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Isnull"><span class="code">Isnull</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Leq"><span class="code">Leq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Like"><span class="code">Like</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Lt"><span class="code">Lt</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Minus"><span class="code">Minus</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Not"><span class="code">Not</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="NotRegexp"><span class="code">NotRegexp</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="NotRegexpCi"><span class="code">NotRegexpCi</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Notilike"><span class="code">Notilike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Notin"><span class="code">Notin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Notlike"><span class="code">Notlike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Or"><span class="code">Or</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Plus"><span class="code">Plus</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Regexp"><span class="code">Regexp</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="RegexpCi"><span class="code">RegexpCi</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Rem"><span class="code">Rem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Similar"><span class="code">Similar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Star"><span class="code">Star</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="And"><span class="code">And</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Between"><span class="code">Between</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Bitand"><span class="code">Bitand</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Bitnot"><span class="code">Bitnot</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Bitor"><span class="code">Bitor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Concat"><span class="code">Concat</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Diff"><span class="code">Diff</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Div"><span class="code">Div</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Eq"><span class="code">Eq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Geq"><span class="code">Geq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Gt"><span class="code">Gt</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Ilike"><span class="code">Ilike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="In"><span class="code">In</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Is"><span class="code">Is</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Isnotnull"><span class="code">Isnotnull</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Isnull"><span class="code">Isnull</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Leq"><span class="code">Leq</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Like"><span class="code">Like</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Lt"><span class="code">Lt</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Minus"><span class="code">Minus</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Not"><span class="code">Not</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="NotRegexp"><span class="code">NotRegexp</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="NotRegexpCi"><span class="code">NotRegexpCi</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Notilike"><span class="code">Notilike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Notin"><span class="code">Notin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Notlike"><span class="code">Notlike</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Or"><span class="code">Or</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Plus"><span class="code">Plus</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Regexp"><span class="code">Regexp</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="RegexpCi"><span class="code">RegexpCi</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Rem"><span class="code">Rem</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Similar"><span class="code">Similar</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Star"><span class="code">Star</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

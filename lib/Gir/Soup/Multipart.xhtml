@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,50 +71,50 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/Multipart.xhtml">Multipart</a></li></ul><section id="Multipart" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromMessage"><span class="code">NewFromMessage<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/Multipart.xhtml">Multipart</a></li></ul><section id="Multipart" class="section"><h2>Multipart</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromMessage"><span class="code">NewFromMessage<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="append_form_file"><span class="code"><span class="symbol">:append_form_file</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">control_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Buffer.xhtml#T">Gir.Soup.Buffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="append_form_string"><span class="code"><span class="symbol">:append_form_string</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">control_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="append_part"><span class="code"><span class="symbol">:append_part</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Buffer.xhtml#T">Gir.Soup.Buffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_length"><span class="code"><span class="symbol">:get_length</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_part"><span class="code"><span class="symbol">:get_part</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">part</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">headers</span><span class="delimiter">,</span> <span class="var">body</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h4 id="append_form_file"><span class="code"><span class="symbol">:append_form_file</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">control_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">content_type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Buffer.xhtml#T">Gir.Soup.Buffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 		
-	</div><h5 id="to_message"><span class="code"><span class="symbol">:to_message</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">dest_headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">dest_body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageBody.xhtml#T">Gir.Soup.MessageBody.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+		
+	</div><h4 id="append_form_string"><span class="code"><span class="symbol">:append_form_string</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">control_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="append_part"><span class="code"><span class="symbol">:append_part</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Buffer.xhtml#T">Gir.Soup.Buffer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="free"><span class="code"><span class="symbol">:free</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_length"><span class="code"><span class="symbol">:get_length</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_part"><span class="code"><span class="symbol">:get_part</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">part</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">headers</span><span class="delimiter">,</span> <span class="var">body</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="to_message"><span class="code"><span class="symbol">:to_message</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">dest_headers</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageHeaders.xhtml#T">Gir.Soup.MessageHeaders.T</a><span class="delimiter">,</span> <span class="var">dest_body</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/MessageBody.xhtml#T">Gir.Soup.MessageBody.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

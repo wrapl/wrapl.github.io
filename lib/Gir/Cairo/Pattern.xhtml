@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,80 +71,80 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Cairo.xhtml">Cairo</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Cairo/Pattern.xhtml">Pattern</a></li></ul><section id="Pattern" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="CreateForSurface"><span class="code">CreateForSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CreateLinear"><span class="code">CreateLinear<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CreateMesh"><span class="code">CreateMesh<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CreateRadial"><span class="code">CreateRadial<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CreateRgb"><span class="code">CreateRgb<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CreateRgba"><span class="code">CreateRgba<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Cairo.xhtml">Cairo</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Cairo/Pattern.xhtml">Pattern</a></li></ul><section id="Pattern" class="section"><h2>Pattern</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="CreateForSurface"><span class="code">CreateForSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CreateLinear"><span class="code">CreateLinear<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CreateMesh"><span class="code">CreateMesh<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CreateRadial"><span class="code">CreateRadial<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CreateRgb"><span class="code">CreateRgb<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CreateRgba"><span class="code">CreateRgba<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="add_color_stop_rgb"><span class="code"><span class="symbol">:add_color_stop_rgb</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">offset</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">g</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="add_color_stop_rgba"><span class="code"><span class="symbol">:add_color_stop_rgba</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">offset</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">g</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="add_color_stop_rgb"><span class="code"><span class="symbol">:add_color_stop_rgb</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">offset</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">g</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 		
 		
-		
-	</div><h5 id="get_type"><span class="code"><span class="symbol">:get_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/PatternType.xhtml#T">Gir.Cairo.PatternType.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="mesh_begin_patch"><span class="code"><span class="symbol">:mesh_begin_patch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="mesh_curve_to"><span class="code"><span class="symbol">:mesh_curve_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x3</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y3</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="add_color_stop_rgba"><span class="code"><span class="symbol">:add_color_stop_rgba</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">offset</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">r</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">g</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 		
 		
 		
+	</div><h4 id="get_type"><span class="code"><span class="symbol">:get_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Cairo/PatternType.xhtml#T">Gir.Cairo.PatternType.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="mesh_end_patch"><span class="code"><span class="symbol">:mesh_end_patch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="mesh_begin_patch"><span class="code"><span class="symbol">:mesh_begin_patch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="mesh_line_to"><span class="code"><span class="symbol">:mesh_line_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="mesh_move_to"><span class="code"><span class="symbol">:mesh_move_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-	</div><h5 id="mesh_set_control_point"><span class="code"><span class="symbol">:mesh_set_control_point</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-	</div><h5 id="mesh_set_corner_color_rgb"><span class="code"><span class="symbol">:mesh_set_corner_color_rgb</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">red</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">green</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">blue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
-		
-		
-		
-		
-		
-	</div><h5 id="mesh_set_corner_color_rgba"><span class="code"><span class="symbol">:mesh_set_corner_color_rgba</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">red</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">green</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">blue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">alpha</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="mesh_curve_to"><span class="code"><span class="symbol">:mesh_curve_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y1</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">x3</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y3</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 		
 		
 		
-	</div><h5 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h4 id="mesh_end_patch"><span class="code"><span class="symbol">:mesh_end_patch</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="mesh_line_to"><span class="code"><span class="symbol">:mesh_line_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="mesh_move_to"><span class="code"><span class="symbol">:mesh_move_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="mesh_set_control_point"><span class="code"><span class="symbol">:mesh_set_control_point</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">y</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="mesh_set_corner_color_rgb"><span class="code"><span class="symbol">:mesh_set_corner_color_rgb</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">red</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">green</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">blue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="mesh_set_corner_color_rgba"><span class="code"><span class="symbol">:mesh_set_corner_color_rgba</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">point_num</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">red</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">green</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">blue</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">alpha</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -72,7 +73,7 @@
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
 
 
-<section id="Expressions" class="section">
+<section id="Expressions" class="section"><h2>Expressions</h2>
 
 
 
@@ -85,39 +86,39 @@
 <p>The table below summarizes the different expression forms in Wrapl. The following notation is used in the table; <span class="var">id<sub>i</sub></span> denotes an idenitifer, <span class="var">expr<sub>i</sub></span> denotes an expression and <span class="var">decl<sub>i</sub></span> denotes a declaration.</p>
 
 <section id="Basic_Expressions" data-spy="true" data-target="#side-menu"><h3>Basic Expressions</h3>
-<h5 id="nil"><span class="keyword">NIL</span></h5>
+<h4 id="nil"><span class="keyword">NIL</span></h4>
 <p>Evaluates to the constant <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a>, used to denote the absence of any other value.</p>
 
-<h5 id="back"><span class="keyword">BACK</span></h5>
+<h4 id="back"><span class="keyword">BACK</span></h4>
 <p>Fails to produce any value, causing the current expression to backtrack.</p>
 
-<h5 id="valueof"><span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span></h5>
+<h4 id="valueof"><span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span></h4>
 <p>Returns the value of <span class="code"><span class="var">expr</span></span>. If <span class="code"><span class="var">expr</span></span> is a reference, then <span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span> returns the current value of <span class="code"><span class="var">expr</span></span> without any reference.</p>
 
-<h5 id="typeof"><span class="code"><span class="delimiter">?</span> <span class="var">expr</span></span></h5>
+<h4 id="typeof"><span class="code"><span class="delimiter">?</span> <span class="var">expr</span></span></h4>
 <p>Returns the type of <span class="code"><span class="var">expr</span></span>.</p>
 
-<h5 id="equal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">==</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="equal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">==</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Returns <span class="var">expr<sub>2</sub></span> if <span class="var">expr<sub>1</sub></span> and <span class="var">expr<sub>2</sub></span> are the same object, fails otherwise.</p>
 
-<h5 id="notequal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">~==</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="notequal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">~==</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Returns <span class="var">expr<sub>2</sub></span> if <span class="var">expr<sub>1</sub></span> and <span class="var">expr<sub>2</sub></span> are not the same object, fails otherwise.</p>
 
 </section>
 
 <section id="Structure_Expressions" data-spy="true" data-target="#side-menu"><h3>Structure Expressions</h3>
-<h5 id="lists"><span class="code"><span class="delimiter">[</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">]</span></span></h5>
+<h4 id="lists"><span class="code"><span class="delimiter">[</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">]</span></span></h4>
 <p>Returns a list (instance of <a class="id" href="/lib/Std/List.xhtml#T">Std.List.T</a>) with elements <span class="var">expr<sub>1</sub></span>, <span class="var">expr<sub>2</sub></span>, ..., <span class="var">expr<sub>k</sub></span></p>
 
-<h5 id="tables"><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>k<sub>1</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>1</sub></sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k<sub>k</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>k</sub></sub></span><span class="code"><span class="delimiter">}</span></span></h5>
+<h4 id="tables"><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>k<sub>1</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>1</sub></sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k<sub>k</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>k</sub></sub></span><span class="code"><span class="delimiter">}</span></span></h4>
 <p>Returns a table (instance of <a class="id" href="/lib/Std/Table.xhtml#T">Std.Table.T</a>) with pairs <span class="code"><span class="delimiter">(</span></span><span class="var">expr<sub>k<sub>i</sub></sub></span><span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>v<sub>i</sub></sub></span><span class="code"><span class="delimiter">)</span></span>. Any value <span class="var">expr<sub>v<sub>j</sub></sub></span> is omitted, the value <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a> is used.</p>
 
-<h5 id="all"><span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span></h5>
+<h4 id="all"><span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span></h4>
 <p>Returns a list of all the values produced by <span class="code"><span class="var">expr</span></span>.</p>
-<h5 id="uniq"><span class="code"><span class="keyword">UNIQ</span> <span class="var">expr</span></span></h5>
+<h4 id="uniq"><span class="code"><span class="keyword">UNIQ</span> <span class="var">expr</span></span></h4>
 <p>Returns a table with the (unique) values produced by <span class="code"><span class="var">expr</span></span> as keys.</p>
 
-<h5 id="ismethod"><span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">expr</span></span></h5>
+<h4 id="ismethod"><span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">expr</span></span></h4>
 <p>where <span class="var">signature</span> is of the form [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>1</sub></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span>[<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>k</sub></span>].</p>
 <p>Adds <span class="var">expr</span> (which should be an invokable object) to <span class="code"><span class="symbol">:method</span></span> corresponding to <span class="var">signature</span>, where <span class="code"><span class="delimiter">@</span> <span class="var">type</span></span> denotes a type match and <span class="code"><span class="delimiter">=</span> <span class="var">value</span></span> denotes a value match, using <a class="id" href="/lib/Std/Symbol.xhtml#Set">Std.Symbol.Set</a>. Returns <span class="code"><span class="var">expr</span></span>.</p>
 <p>The old keyword <span class="code"><span class="keyword">TO</span></span> can still be used instead of <span class="code"><span class="keyword">METH</span></span>.</p>
@@ -126,25 +127,25 @@
 </section>
 
 <section id="Assignment_Expressions" data-spy="true" data-target="#side-menu"><h3>Assignment Expressions</h3>
-<h5 id="assign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="assign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Assigns the value of <span class="var">expr<sub>2</sub></span> to the reference produced by <span class="var">expr<sub>1</sub></span>. If <span class="var">expr<sub>1</sub></span> does not evalute to a reference then <a class="id" href="/lib/Wrapl/Loader.xhtml#IncorrectAssignMessageT">Wrapl.Loader.IncorrectAssignMessageT</a> message is sent. Within the evaluation of <span class="var">expr<sub>2</sub></span> the special variable <span class="code"><span class="delimiter">$</span></span> can be used to refer to the current value of <span class="var">expr<sub>1</sub></span>.</p>
 
-<h5 id="rassign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">-&gt;</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="rassign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">-&gt;</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Assigns the value of <span class="var">expr<sub>1</sub></span> to the reference produced by <span class="var">expr<sub>2</sub></span>. If <span class="var">expr<sub>1</sub></span> does not evalute to a reference then <a class="id" href="/lib/Wrapl/Loader.xhtml#IncorrectAssignMessageT">Wrapl.Loader.IncorrectAssignMessageT</a> message is sent.</p>
 
 </section>
 
 <section id="Function_Expressions" data-spy="true" data-target="#side-menu"><h3>Function Expressions</h3>
-<h5 id="function"><span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>][<span class="code"><span class="delimiter">|</span> <span class="var">expr</span></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]<span class="code"><span class="delimiter">&gt;</span> <span class="var">expr</span></span></h5>
+<h4 id="function"><span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>][<span class="code"><span class="delimiter">|</span> <span class="var">expr</span></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]<span class="code"><span class="delimiter">&gt;</span> <span class="var">expr</span></span></h4>
 <p>Creates a new function object with parameters <span class="var">id<sub>1</sub></span>, ..., <span class="var">id<sub>k</sub></span> and body <span class="code"><span class="var">expr</span></span>. If a parameter is followed by <span class="code"><span class="delimiter">+</span></span> it is passed by reference, other it is passed by value. A <span class="code"><span class="delimiter">*</span></span> after the final parameter indicates that it is a variadic parameter, any extra arguments are collected into a <a class="id" href="/lib/Wrapl/Loader.xhtml#VariadicT">Wrapl.Loader.VariadicT</a> and passed in this parameter.</p>
 
-<h5 id="varfunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">VAR</span> <span class="var">expr</span></span></h5>
+<h4 id="varfunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">VAR</span> <span class="var">expr</span></span></h4>
 <p>Creates a new <a class="id" href="/lib/Std/Function.xhtml#VariableT">Std.Function.VariableT</a> object that returns the variable produced by <span class="code"><span class="var">expr</span></span>. This is equivalent to a call to <a class="id" href="/lib/Std/Function.xhtml#VariableNew">Std.Function.VariableNew</a> with <span class="code"><span class="var">expr</span></span>.</p>
 
-<h5 id="deffunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">DEF</span> <span class="var">expr</span></span></h5>
+<h4 id="deffunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">DEF</span> <span class="var">expr</span></span></h4>
 <p>Creates a new <a class="id" href="/lib/Std/Function.xhtml#ConstantT">Std.Function.ConstantT</a> function object that returns the value produced by <span class="code"><span class="var">expr</span></span>. This is equivalent to a call to <a class="id" href="/lib/Std/Function.xhtml#ConstantNew">Std.Function.ConstantNew</a> with <span class="code"><span class="var">expr</span></span>.</p>
 
-<h5 id="method"><span class="code"><span class="keyword">TO</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> </span>[&nbsp;<span class="code"><span class="keyword">VAR</span></span>&nbsp;|&nbsp;<span class="code"><span class="keyword">DEF</span></span>&nbsp;]<span class="code"> <span class="var">expr</span></span></h5>
+<h4 id="method"><span class="code"><span class="keyword">TO</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> </span>[&nbsp;<span class="code"><span class="keyword">VAR</span></span>&nbsp;|&nbsp;<span class="code"><span class="keyword">DEF</span></span>&nbsp;]<span class="code"> <span class="var">expr</span></span></h4>
 <p>where <span class="var">signature</span> is of the form [<span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>]] [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>1</sub></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span>[<span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]] [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>k</sub></span>].</p>
 <p>Equivalent to <span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span></span>'<span class="code"><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">func</span></span> (see <a href="#ismethod">here</a>) where <span class="var">signature</span>' is the type/value information in <span class="var">signature</span> (i.e. ignoring any identifiers and pass-by-reference markers) and <span class="code"><span class="var">func</span></span> is the function: <span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>], ..., <span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>]<span class="code"><span class="delimiter">&gt;</span> </span>[ <span class="code"><span class="keyword">VAR</span></span> | <span class="code"><span class="keyword">DEF</span></span> ]<span class="code"> <span class="var">expr</span></span> (creating unique <span class="var">id</span>'s for those omitted). Returns <span class="code"><span class="var">func</span></span>.</p>
 <p>The old keyword <span class="code"><span class="keyword">TO</span></span> can still be used instead of <span class="code"><span class="keyword">METH</span></span>.</p>
@@ -152,28 +153,28 @@
 </section>
 
 <section id="Function_Invocation_Expressions" data-spy="true" data-target="#side-menu"><h3>Function Invocation Expressions</h3>
-<h5 id="invoke"><span class="var">expr<sub>0</sub></span><span class="code"><span class="delimiter">(</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">)</span></span></h5>
+<h4 id="invoke"><span class="var">expr<sub>0</sub></span><span class="code"><span class="delimiter">(</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">)</span></span></h4>
 <p>Calls the function <span class="var">expr<sub>0</sub></span> with arguments <span class="var">expr<sub>1</sub></span>, ..., <span class="var">expr<sub>k</sub></span>. If the function fails, <span class="var">expr<sub>k</sub></span> is resumed and the function is called again. If <span class="var">expr<sub>k</sub></span> fails, <span class="var">expr<sub>k-1</sub></span> is resumed, and so on.</p>
 
-<h5 id="pinvoke"><span class="var">expr<sub>0</sub></span><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">}</span></span></h5>
+<h4 id="pinvoke"><span class="var">expr<sub>0</sub></span><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">}</span></span></h4>
 <p>Calls the function <span class="var">expr<sub>0</sub></span> with arguments <span class="var">expr<sub>1</sub></span>, ..., <span class="var">expr<sub>k</sub></span>. If the function fails, each <span class="var">expr<sub>1</sub></span>, <span class="var">expr<sub>2</sub></span>, ..., <span class="var">expr<sub>k</sub></span> is resumed and the function is called again.</p>
 
 </section>
 
 <section id="Function_Control_Expressions" data-spy="true" data-target="#side-menu"><h3>Function Control Expressions</h3>
-<h5 id="return"><span class="code"><span class="keyword">RET</span> <span class="var">expr</span></span></h5>
+<h4 id="return"><span class="code"><span class="keyword">RET</span> <span class="var">expr</span></span></h4>
 <p>Returns <span class="code"><span class="var">expr</span></span> from the current function.</p>
 
-<h5 id="fail"><span class="code"><span class="keyword">FAIL</span></span></h5>
+<h4 id="fail"><span class="code"><span class="keyword">FAIL</span></span></h4>
 <p>Exits the current function without producing any value (failing).</p>
 
-<h5 id="suspend"><span class="code"><span class="keyword">SUSP</span> <span class="var">expr</span></span></h5>
+<h4 id="suspend"><span class="code"><span class="keyword">SUSP</span> <span class="var">expr</span></span></h4>
 <p>Suspends the current function producing the value <span class="code"><span class="var">expr</span></span>. If the function in resumed, evaluation continues with <span class="code"><span class="keyword">SUSP</span> <span class="var">expr</span></span> producing the value of <span class="code"><span class="var">expr</span></span>.</p>
 
 </section>
 
 <section id="Conditional_Expressions" data-spy="true" data-target="#side-menu"><h3>Conditional Expressions</h3>
-<h5 id="conditional"><span class="var">expr<sub>0</sub></span>&nbsp;[<span class="code"><span class="delimiter">=&gt;</span> </span><span class="var">expr<sub>1</sub></span>]&nbsp;[<span class="code"><span class="delimiter">//</span> </span><span class="var">expr<sub>2</sub></span>]</h5>
+<h4 id="conditional"><span class="var">expr<sub>0</sub></span>&nbsp;[<span class="code"><span class="delimiter">=&gt;</span> </span><span class="var">expr<sub>1</sub></span>]&nbsp;[<span class="code"><span class="delimiter">//</span> </span><span class="var">expr<sub>2</sub></span>]</h4>
 <p>If <span class="var">expr<sub>0</sub></span> succeeds, returns the values produced by <span class="var">expr<sub>1</sub></span> otherwise returns the values produced by <span class="var">expr<sub>2</sub></span>.
 If the failure clause (<span class="code"><span class="delimiter">//</span> </span><span class="var">expr<sub>2</sub></span>) is omitted and <span class="var">expr<sub>0</sub></span> fails, the entire expression fails.
 If the success clause (<span class="code"><span class="delimiter">=&gt;</span> </span><span class="var">expr<sub>1</sub></span>) is omitted and <span class="var">expr<sub>0</sub></span> succeeds, the entire expression fails.</p>
@@ -181,92 +182,92 @@ If the success clause (<span class="code"><span class="delimiter">=&gt;</span> <
 </section>
 
 <section id="Scope_Expressions" data-spy="true" data-target="#side-menu"><h3>Scope Expressions</h3>
-<h5 id="block"><span class="code"><span class="delimiter">(</span></span>{<span class="code"><span class="var">decl</span><span class="delimiter">;</span></span>|<span class="code"><span class="var">expr</span><span class="delimiter">;</span></span>}<span class="code"><span class="delimiter">)</span></span></h5>
+<h4 id="block"><span class="code"><span class="delimiter">(</span></span>{<span class="code"><span class="var">decl</span><span class="delimiter">;</span></span>|<span class="code"><span class="var">expr</span><span class="delimiter">;</span></span>}<span class="code"><span class="delimiter">)</span></span></h4>
 <p>Creates a new scope for the evaluation of each declaration <span class="code"><span class="var">decl</span></span> and each expression <span class="code"><span class="var">expr</span></span>. The block expression produces the value(s) of the last expression in the block. A block expression can contain a <span class="code"><span class="keyword">RECV</span></span> expression for handling message.</p>
 
-<h5 id="with"><span class="code"><span class="keyword">WITH</span> </span><span class="var">id<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>k</sub></span><span class="code"> <span class="keyword">DO</span> <span class="var">expr</span></span></h5>
+<h4 id="with"><span class="code"><span class="keyword">WITH</span> </span><span class="var">id<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>k</sub></span><span class="code"> <span class="keyword">DO</span> <span class="var">expr</span></span></h4>
 <p>For each <span class="code"><span class="var">i</span> <span class="delimiter">=</span> 1<span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> <span class="var">k</span></span>: binds <span class="var">id<sub>i</sub></span> to the value of <span class="var">expr<sub>i</sub></span> and produces the values produced by <span class="code"><span class="var">expr</span></span>. If <span class="var">expr<sub>i</sub></span> produces an assignable reference, then <span class="var">id<sub>i</sub></span> will be assignable.</p>
 
-<h5 id="dot"><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">.</span></span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="dot"><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">.</span></span><span class="var">expr<sub>2</sub></span></h4>
 <p>Normally, an expression of the form <span class="var">id<sub>1</sub></span><span class="code"><span class="delimiter">.</span></span><span class="var">id<sub>2</sub></span> denotes the variable/constant <span class="var">id<sub>2</sub></span> imported from the module <span class="var">id<sub>1</sub></span>. However, if <span class="var">id<sub>1</sub></span> is not a constant then a runtime call to <span class="code"><span class="symbol">:</span><span class="literal">"."</span></span> is made. Thus <span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">.</span></span><span class="var">expr<sub>2</sub></span> is equivalent to <span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>2</sub></span><span class="code"><span class="delimiter">)</span></span> except when <span class="var">expr<sub>2</sub></span> is an identifier, in which case <span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">.</span></span><span class="var">id<sub>2</sub></span> is equivalent to <span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> <span class="literal">"</span></span><span class="var">id<sub>2</sub></span><span class="code"><span class="literal">"</span></span><span class="code"><span class="delimiter">)</span></span>.</p>
 
 </section>
 
 <section id="Loop_Expressions" data-spy="true" data-target="#side-menu"><h3>Loop Expressions</h3>
-<h5 id="repeat"><span class="code"><span class="keyword">REP</span> <span class="var">expr</span></span></h5>
+<h4 id="repeat"><span class="code"><span class="keyword">REP</span> <span class="var">expr</span></span></h4>
 <p>Repeatedly evaluates <span class="code"><span class="var">expr</span></span>.</p>
 
-<h5 id="every"><span class="code"><span class="keyword">EVERY</span> </span><span class="var">expr<sub>0</sub></span><span class="code"> <span class="keyword">DO</span> </span><span class="var">expr<sub>1</sub></span></h5>
+<h4 id="every"><span class="code"><span class="keyword">EVERY</span> </span><span class="var">expr<sub>0</sub></span><span class="code"> <span class="keyword">DO</span> </span><span class="var">expr<sub>1</sub></span></h4>
 <p>For each value produced by <span class="var">expr<sub>0</sub></span> evaluates <span class="var">expr<sub>1</sub></span>.</p>
 
-<h5 id="step"><span class="code"><span class="keyword">STEP</span></span></h5>
+<h4 id="step"><span class="code"><span class="keyword">STEP</span></span></h4>
 <p>Causes the current loop to start its next iteration.</p>
 
-<h5 id="exit"><span class="code"><span class="keyword">EXIT</span> <span class="var">expr</span></span></h5>
+<h4 id="exit"><span class="code"><span class="keyword">EXIT</span> <span class="var">expr</span></span></h4>
 <p>Exits the current loop with the value(s) of <span class="code"><span class="var">expr</span></span>. Note that <span class="code"><span class="var">expr</span></span> is evaluated in the context directly outside the loop, in particular this affects <span class="code"><span class="keyword">STEP</span></span>, <span class="code"><span class="keyword">EXIT</span></span> and <span class="code"><span class="keyword">SEND</span></span> expressions.</p>
 
-<h5 id="while-until"><span class="code"><span class="keyword">WHILE</span> <span class="var">expr</span></span>&nbsp;and&nbsp;<span class="code"><span class="keyword">UNTIL</span> <span class="var">expr</span></span></h5>
+<h4 id="while-until"><span class="code"><span class="keyword">WHILE</span> <span class="var">expr</span></span>&nbsp;and&nbsp;<span class="code"><span class="keyword">UNTIL</span> <span class="var">expr</span></span></h4>
 <p><span class="code"><span class="keyword">WHILE</span> <span class="var">expr</span></span> is equivalent to <span class="code"><span class="var">expr</span> <span class="delimiter">//</span> <span class="keyword">EXIT</span> <span class="keyword">NIL</span></span>.</p>
 <p><span class="code"><span class="keyword">UNTIL</span> <span class="var">expr</span></span> is equivalent to <span class="code"><span class="var">expr</span> <span class="delimiter">=&gt;</span> <span class="keyword">EXIT</span> <span class="keyword">NIL</span></span>.</p>
 
 </section>
 
 <section id="Generator_Control_Expressions" data-spy="true" data-target="#side-menu"><h3>Generator Control Expressions</h3>
-<h5 id="right"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&amp;</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="right"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&amp;</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>For each value produced by <span class="var">expr<sub>1</sub></span>, produces all the values of <span class="var">expr<sub>2</sub></span>. If <span class="var">expr<sub>1</sub></span> fails then the entire expression fails, thus <span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&amp;</span> </span><span class="var">expr<sub>2</sub></span> behaves like a shortcut <em>logical and</em> expression which returns it's second operand if it succeeds.</p>
 
-<h5 id="left"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">\</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="left"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">\</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>For each value <span class="var">V</span> produced by <span class="var">expr<sub>1</sub></span>, produces <span class="var">V</span> for each value produced by <span class="var">expr<sub>2</sub></span>. Within the evaluation of <span class="var">expr<sub>2</sub></span> the special variable <span class="code"><span class="delimiter">$</span></span> can be used to refer to the value produced by <span class="var">expr<sub>1</sub></span>, thus <span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">\</span> </span><span class="var">expr<sub>2</sub></span> can be used to mean "such that".</p>
 
-<h5 id="sequence"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">|</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="sequence"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">|</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Produces all the values produced by <span class="var">expr<sub>1</sub></span> followed by the values produced by <span class="var">expr<sub>2</sub></span>. Since <span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">|</span> </span><span class="var">expr<sub>2</sub></span> will produce a value if either <span class="var">expr<sub>1</sub></span> or <span class="var">expr<sub>2</sub></span> succeeds, it behaves like a shortcut <em>logical or</em> expression.</p>
 
-<h5 id="parallel"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">!</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="parallel"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">!</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Causes <span class="var">expr<sub>1</sub></span> and <span class="var">expr<sub>2</sub></span> to produce values in parallel: for each value produced by <span class="var">expr<sub>1</sub></span> the next value produced by <span class="var">expr<sub>2</sub></span> is returned. The expression fails when either <span class="var">expr<sub>1</sub></span> or <span class="var">expr<sub>2</sub></span> fails.</p>
 
-<h5 id="interleave"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">#</span> </span><span class="var">expr<sub>2</sub></span><span class="code"> <span class="delimiter">#</span> </span>...<span class="code"> <span class="delimiter">#</span> </span><span class="var">expr<sub>k</sub></span></h5>
+<h4 id="interleave"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">#</span> </span><span class="var">expr<sub>2</sub></span><span class="code"> <span class="delimiter">#</span> </span>...<span class="code"> <span class="delimiter">#</span> </span><span class="var">expr<sub>k</sub></span></h4>
 <p>Generates the values produced by <span class="var">expr<sub>1</sub></span>, <span class="var">expr<sub>2</sub></span>, ..., <span class="var">expr<sub>k</sub></span> in an interleaved fashion; i.e. the first value produced by <span class="var">expr<sub>1</sub></span> is produced, followed the first from <span class="var">expr<sub>2</sub></span> and so on until the first value from <span class="var">expr<sub>k</sub></span> is produced. Then the second value from <span class="var">expr<sub>1</sub></span> is produced, then the second from <span class="var">expr<sub>2</sub></span> and so on. The expression fails when any of <span class="var">expr<sub>1</sub></span>, <span class="var">expr<sub>2</sub></span>, ..., <span class="var">expr<sub>k</sub></span> fail.</p>
 
-<h5 id="limit"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="keyword">OF</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="limit"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="keyword">OF</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Produces the first <span class="var">expr<sub>1</sub></span> values produced by <span class="var">expr<sub>2</sub></span>.</p>
 
-<h5 id="skip"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="keyword">SKIP</span> </span><span class="var">expr<sub>2</sub></span></h5>
+<h4 id="skip"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="keyword">SKIP</span> </span><span class="var">expr<sub>2</sub></span></h4>
 <p>Produces all but the first <span class="var">expr<sub>1</sub></span> values produced by <span class="var">expr<sub>2</sub></span>.</p>
 
-<h5 id="infinite"><span class="code"><span class="delimiter">@</span> <span class="var">expr</span></span></h5>
+<h4 id="infinite"><span class="code"><span class="delimiter">@</span> <span class="var">expr</span></span></h4>
 <p>Generate all the values of <span class="code"><span class="var">expr</span></span> repeatedly. If <span class="code"><span class="var">expr</span></span> fails to produce any values, then the entire expression fails.</p>
 
-<h5 id="sum"><span class="code"><span class="keyword">SUM</span> <span class="var">expr</span></span></h5>
+<h4 id="sum"><span class="code"><span class="keyword">SUM</span> <span class="var">expr</span></span></h4>
 <p>Returns the sum of the values produced by <span class="code"><span class="var">expr</span></span>. Fails if <span class="code"><span class="var">expr</span></span> fails to produce any values.</p>
 
-<h5 id="prod"><span class="code"><span class="keyword">PROD</span> <span class="var">expr</span></span></h5>
+<h4 id="prod"><span class="code"><span class="keyword">PROD</span> <span class="var">expr</span></span></h4>
 <p>Returns the product of the values produced by <span class="code"><span class="var">expr</span></span>. Fails if <span class="code"><span class="var">expr</span></span> fails to produce any values.</p>
 
-<h5 id="count"><span class="code"><span class="keyword">COUNT</span> <span class="var">expr</span></span></h5>
+<h4 id="count"><span class="code"><span class="keyword">COUNT</span> <span class="var">expr</span></span></h4>
 <p>Returns the number of values produced by <span class="code"><span class="var">expr</span></span>. Returns <span class="code">0</span> if <span class="code"><span class="var">expr</span></span> fails to produce any values.</p>
 
 </section>
 
 <section id="Iterator_Expressions" data-spy="true" data-target="#side-menu"><h3>Iterator Expressions</h3>
-<h5 id="interator"><span class="code"><span class="keyword">DO</span> <span class="var">expr</span></span></h5>
+<h4 id="interator"><span class="code"><span class="keyword">DO</span> <span class="var">expr</span></span></h4>
 <p>Returns an instance of <a class="id" href="/lib/Std/Function.xhtml#IteratorT">Std.Function.IteratorT</a> which produces the values produced by <span class="code"><span class="var">expr</span></span>.</p>
 
-<h5 id="next"><span class="code"><span class="keyword">USE</span> <span class="var">expr</span></span></h5>
+<h4 id="next"><span class="code"><span class="keyword">USE</span> <span class="var">expr</span></span></h4>
 <p>Returns the next value produced by <span class="code"><span class="var">expr</span></span> which should be an instance of <a class="id" href="/lib/Std/Function.xhtml#IteratorT">Std.Function.IteratorT</a>.</p>
 
 </section>
 
 <section id="Message_Handling_Expressions" data-spy="true" data-target="#side-menu"><h3>Message Handling Expressions</h3>
-<h5 id="receive"><span class="code"><span class="keyword">RECV</span> <span class="var">id</span> <span class="keyword">DO</span> <span class="var">expr</span></span></h5>
+<h4 id="receive"><span class="code"><span class="keyword">RECV</span> <span class="var">id</span> <span class="keyword">DO</span> <span class="var">expr</span></span></h4>
 <p>Catches messages sent in the current block. The message sent is assigned to <span class="code"><span class="var">id</span></span> and value(s) produced by <span class="code"><span class="var">expr</span></span> is returned as the value of the block. Note that <span class="code"><span class="keyword">RECV</span></span> expressions receive all messages, it is therefore necessary to resend unhandled messages using <span class="code"><span class="keyword">SEND</span></span>.</p>
 
-<h5 id="send"><span class="code"><span class="keyword">SEND</span> <span class="var">expr</span></span></h5>
+<h4 id="send"><span class="code"><span class="keyword">SEND</span> <span class="var">expr</span></span></h4>
 <p>Sends <span class="code"><span class="var">expr</span></span> as a message. The first enclosing (at runtime) <span class="code"><span class="keyword">RECV</span></span> expr will receive the message.</p>
 
 </section>
 
 <section id="Precompiled_Expressions" data-spy="true" data-target="#side-menu"><h3>Precompiled Expressions</h3>
-<h5 id="backquote"><span class="code"><span class="delimiter">`</span><span class="var">expr</span><span class="delimiter">`</span></span></h5>
+<h4 id="backquote"><span class="code"><span class="delimiter">`</span><span class="var">expr</span><span class="delimiter">`</span></span></h4>
 <p>Produces the value of <span class="code"><span class="var">expr</span></span> as evaluated at compile time. If <span class="code"><span class="var">expr</span></span> fails or sends <span class="code"><span class="var">msg</span></span> at compile time, then <span class="code"><span class="delimiter">`</span><span class="var">expr</span><span class="delimiter">`</span></span> is equivalent to <span class="code"><span class="keyword">BACK</span></span> or <span class="code"><span class="keyword">SEND</span> <span class="var">msg</span></span> respectively. Since <span class="code"><span class="var">expr</span></span> is evaluted at compile time, it may only use constants and global variables.</p>
 
 </section>
@@ -274,12 +275,12 @@ If the success clause (<span class="code"><span class="delimiter">=&gt;</span> <
 </section>
 
 
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

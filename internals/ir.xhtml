@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Intermediate Representation</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+
+<section id="Intermediate_Representation" class="section"><h2>Intermediate Representation</h2>
+
+<section id="Frame_Layout" data-spy="true" data-target="#side-menu"><h3>Frame Layout</h3>
+</section>
+
+<section id="Operands" data-spy="true" data-target="#side-menu"><h3>Operands</h3>
+<table>
+	<tr><td>Constant</td><td><span class="var">Value</span></td><td>A constant value.</td></tr>
+	<tr><td>Global Variable</td><td><span class="var">Address</span></td><td>A global variable, assignable.</td></tr>
+	<tr><td>Local Value</td><td><span class="var">Index</span></td><td>A local value, not assignable.</td></tr>
+	<tr><td>Local Reference</td><td><span class="var">Index</span></td><td>A local variable, assignable.</td></tr>
+	<tr><td>Temporary Value</td><td><span class="var">Index</span></td><td>A temporary value, not assignable.</td></tr>
+	<tr><td>Temporary Reference</td><td><span class="var">Index</span></td><td>A temporary reference, assignable.</td></tr>
+	<tr><td>Temporary Result</td><td><span class="var">Index</span></td><td>A temporary result, usually to store <span class="var">Register</span>, which is checked at runtime for assignability.</td></tr>
+	<tr><td>Closure</td><td><span class="var">Entry</span>, <span class="var">UpValues</span>, <span class="var">UpTemps</span></td><td>A function closure, with code at <span class="var">Entry</span> and which has access to <span class="var">UpValues</span> and <span class="var">UpTemps</span> from the the current frame.</td></tr>
+	<tr><td>Future</td><td><span class="var">Future</span></td><td>Used for delayed resolution at compile time. These do not occur at assembly time.</td></tr>
+	<tr><td>Register</td><td><span class="literal">None</span></td><td>The current computation result. Can be stored in a <span class="var">Temporary Result</span> if required.</td></tr>
+</table>
+</section>
+
+<section id="Instruction_Set" data-spy="true" data-target="#side-menu"><h3>Instruction Set</h3>
+<div class="ccode"><span class="lineno">   1</span>    <span class="keyword">void</span> <span class="var">test_param</span><span class="delimiter">(</span><span class="var">bool</span> <span class="var">Reference</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Continue</span><span class="delimiter">);</span>
+<span class="lineno">   2</span>    <span class="keyword">void</span> <span class="var">default_param</span><span class="delimiter">(</span><span class="var">bool</span> <span class="var">Reference</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">   3</span>    <span class="keyword">void</span> <span class="var">local</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">   4</span>    <span class="keyword">void</span> <span class="var">store_local</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">   5</span>    <span class="keyword">void</span> <span class="var">init_trap</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Failure</span><span class="delimiter">);</span>
+<span class="lineno">   6</span>    <span class="keyword">void</span> <span class="var">push_trap</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Failure</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">);</span>
+<span class="lineno">   7</span>    <span class="keyword">void</span> <span class="var">store_trap</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Failure</span><span class="delimiter">);</span>
+<span class="lineno">   8</span>    <span class="keyword">void</span> <span class="var">store_link</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Target</span><span class="delimiter">);</span>
+<span class="lineno">   9</span>    <span class="keyword">void</span> <span class="var">jump_link</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">);</span>
+<span class="lineno">  10</span>    <span class="keyword">void</span> <span class="var">resume</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  11</span>    <span class="keyword">void</span> <span class="var">load</span><span class="delimiter">(</span><span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  12</span>    <span class="keyword">void</span> <span class="var">store_reg</span><span class="delimiter">(</span><span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  13</span>    <span class="keyword">void</span> <span class="var">store_val</span><span class="delimiter">(</span><span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  14</span>    <span class="keyword">void</span> <span class="var">store_ref</span><span class="delimiter">(</span><span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  15</span>    <span class="keyword">void</span> <span class="var">store_con</span><span class="delimiter">(</span><span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">,</span> <span class="var">Std$Object_t</span> <span class="delimiter">*</span><span class="var">Value</span><span class="delimiter">);</span>
+<span class="lineno">  16</span>    <span class="keyword">void</span> <span class="var">flush</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  17</span>    <span class="keyword">void</span> <span class="var">store_arg</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">,</span> <span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  18</span>    <span class="keyword">void</span> <span class="var">fixup_arg</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">,</span> <span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">);</span>
+<span class="lineno">  19</span>    <span class="keyword">void</span> <span class="var">invoke</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Args</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Count</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Fixup</span><span class="delimiter">);</span>
+<span class="lineno">  20</span>    <span class="keyword">void</span> <span class="var">back</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">);</span>
+<span class="lineno">  21</span>    <span class="keyword">void</span> <span class="var">fail</span><span class="delimiter">(</span><span class="var">bool</span> <span class="var">CodeBlock</span> <span class="delimiter">=</span> <span class="var">false</span><span class="delimiter">);</span>
+<span class="lineno">  22</span>    <span class="keyword">void</span> <span class="var">ret</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  23</span>    <span class="keyword">void</span> <span class="var">susp</span><span class="delimiter">(</span><span class="var">bool</span> <span class="var">CodeBlock</span><span class="delimiter">);</span>
+<span class="lineno">  24</span>    <span class="keyword">void</span> <span class="var">recv</span><span class="delimiter">(</span><span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Handler</span><span class="delimiter">);</span>
+<span class="lineno">  25</span>    <span class="keyword">void</span> <span class="var">send</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  26</span>    <span class="keyword">void</span> <span class="var">resend</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  27</span>    <span class="keyword">void</span> <span class="var">comp</span><span class="delimiter">(</span><span class="var">bool</span> <span class="var">Equal</span><span class="delimiter">,</span> <span class="var">operand_t</span> <span class="delimiter">*</span><span class="var">Operand</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Failure</span><span class="delimiter">);</span>
+<span class="lineno">  28</span>    <span class="keyword">void</span> <span class="var">limit</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">);</span>
+<span class="lineno">  29</span>    <span class="keyword">void</span> <span class="var">test_limit</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Failure</span><span class="delimiter">);</span>
+<span class="lineno">  30</span>    <span class="keyword">void</span> <span class="var">skip</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">);</span>
+<span class="lineno">  31</span>    <span class="keyword">void</span> <span class="var">test_skip</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Trap</span><span class="delimiter">,</span> <span class="var">uint32_t</span> <span class="var">Temp</span><span class="delimiter">);</span>
+<span class="lineno">  32</span>    <span class="keyword">void</span> <span class="var">select_integer</span><span class="delimiter">(</span><span class="var">select_integer_case_t</span> <span class="delimiter">*</span><span class="var">Cases</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Default</span><span class="delimiter">);</span>
+<span class="lineno">  33</span>    <span class="keyword">void</span> <span class="var">select_string</span><span class="delimiter">(</span><span class="var">select_string_case_t</span> <span class="delimiter">*</span><span class="var">Cases</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Default</span><span class="delimiter">);</span>
+<span class="lineno">  34</span>    <span class="keyword">void</span> <span class="var">select_real</span><span class="delimiter">(</span><span class="var">select_real_case_t</span> <span class="delimiter">*</span><span class="var">Cases</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Default</span><span class="delimiter">);</span>
+<span class="lineno">  35</span>    <span class="keyword">void</span> <span class="var">select_object</span><span class="delimiter">(</span><span class="var">select_object_case_t</span> <span class="delimiter">*</span><span class="var">Cases</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Default</span><span class="delimiter">);</span>
+<span class="lineno">  36</span>    <span class="keyword">void</span> <span class="var">select_type</span><span class="delimiter">(</span><span class="var">select_type_case_t</span> <span class="delimiter">*</span><span class="var">Cases</span><span class="delimiter">,</span> <span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Default</span><span class="delimiter">);</span>
+<span class="lineno">  37</span>    <span class="keyword">void</span> <span class="var">type_of</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  38</span>    <span class="keyword">void</span> <span class="var">value_of</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">LineNo</span><span class="delimiter">);</span>
+<span class="lineno">  39</span>    <span class="keyword">void</span> <span class="var">new_list</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  40</span>    <span class="keyword">void</span> <span class="var">store_list</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  41</span>    <span class="keyword">void</span> <span class="var">new_table</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  42</span>    <span class="keyword">void</span> <span class="var">store_table</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  43</span>    <span class="keyword">void</span> <span class="var">new_count</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  44</span>    <span class="keyword">void</span> <span class="var">inc_count</span><span class="delimiter">(</span><span class="var">uint32_t</span> <span class="var">Index</span><span class="delimiter">);</span>
+<span class="lineno">  45</span>    <span class="keyword">void</span> <span class="var">load_code</span><span class="delimiter">(</span><span class="var">label_t</span> <span class="delimiter">*</span><span class="var">Code</span><span class="delimiter">);</span></div>
+</section>
+
+</section>
+
+
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

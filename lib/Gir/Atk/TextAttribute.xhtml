@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,47 +71,47 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Atk.xhtml">Atk</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Atk/TextAttribute.xhtml">TextAttribute</a></li></ul><section id="TextAttribute" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Atk.xhtml">Atk</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Atk/TextAttribute.xhtml">TextAttribute</a></li></ul><section id="TextAttribute" class="section"><h2>TextAttribute</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
 <div class="comment">
 		
 		
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="BgColor"><span class="code">BgColor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="BgFullHeight"><span class="code">BgFullHeight</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="BgStipple"><span class="code">BgStipple</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Direction"><span class="code">Direction</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Editable"><span class="code">Editable</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="FamilyName"><span class="code">FamilyName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="FgColor"><span class="code">FgColor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="FgStipple"><span class="code">FgStipple</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Indent"><span class="code">Indent</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Invalid"><span class="code">Invalid</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Invisible"><span class="code">Invisible</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Justification"><span class="code">Justification</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Language"><span class="code">Language</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="LastDefined"><span class="code">LastDefined</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="LeftMargin"><span class="code">LeftMargin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="PixelsAboveLines"><span class="code">PixelsAboveLines</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="PixelsBelowLines"><span class="code">PixelsBelowLines</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="PixelsInsideWrap"><span class="code">PixelsInsideWrap</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="RightMargin"><span class="code">RightMargin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Rise"><span class="code">Rise</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Scale"><span class="code">Scale</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Size"><span class="code">Size</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Stretch"><span class="code">Stretch</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Strikethrough"><span class="code">Strikethrough</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Style"><span class="code">Style</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Underline"><span class="code">Underline</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Variant"><span class="code">Variant</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="Weight"><span class="code">Weight</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div><h5 id="WrapMode"><span class="code">WrapMode</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="BgColor"><span class="code">BgColor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="BgFullHeight"><span class="code">BgFullHeight</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="BgStipple"><span class="code">BgStipple</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Direction"><span class="code">Direction</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Editable"><span class="code">Editable</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="FamilyName"><span class="code">FamilyName</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="FgColor"><span class="code">FgColor</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="FgStipple"><span class="code">FgStipple</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Indent"><span class="code">Indent</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Invalid"><span class="code">Invalid</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Invisible"><span class="code">Invisible</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Justification"><span class="code">Justification</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Language"><span class="code">Language</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="LastDefined"><span class="code">LastDefined</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="LeftMargin"><span class="code">LeftMargin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="PixelsAboveLines"><span class="code">PixelsAboveLines</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="PixelsBelowLines"><span class="code">PixelsBelowLines</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="PixelsInsideWrap"><span class="code">PixelsInsideWrap</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="RightMargin"><span class="code">RightMargin</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Rise"><span class="code">Rise</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Scale"><span class="code">Scale</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Size"><span class="code">Size</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Stretch"><span class="code">Stretch</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Strikethrough"><span class="code">Strikethrough</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Style"><span class="code">Style</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Underline"><span class="code">Underline</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Variant"><span class="code">Variant</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Weight"><span class="code">Weight</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="WrapMode"><span class="code">WrapMode</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,29 +71,29 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/ProxyResolver.xhtml">ProxyResolver</a></li></ul><section id="ProxyResolver" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup.xhtml">Soup</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Soup/ProxyResolver.xhtml">ProxyResolver</a></li></ul><section id="ProxyResolver" class="section"><h2>ProxyResolver</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a>
 <div class="comment">
 		
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="get_proxy_async"><span class="code"><span class="symbol">:get_proxy_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">async_context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/MainContext.xhtml#T">Gir.GLib.MainContext.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="get_proxy_async"><span class="code"><span class="symbol">:get_proxy_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">async_context</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/MainContext.xhtml#T">Gir.GLib.MainContext.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
 		
 		
 		
 		
-	</div><h5 id="get_proxy_sync"><span class="code"><span class="symbol">:get_proxy_sync</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">addr</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
+	</div><h4 id="get_proxy_sync"><span class="code"><span class="symbol">:get_proxy_sync</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">msg</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Soup/Message.xhtml#T">Gir.Soup.Message.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">addr</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
 		
 		
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

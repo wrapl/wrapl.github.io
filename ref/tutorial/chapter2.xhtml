@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -72,7 +73,7 @@
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
 
 
-<section id="Chapter_2" class="section">
+<section id="Chapter_2" class="section"><h2>Chapter 2</h2>
 
 <section id="Converting_Types" data-spy="true" data-target="#side-menu"><h3>Converting Types</h3>
 <p>The basic types in Wrapl are provided by the modules in <a class="id" href="/lib/Std.xhtml">Std.*</a>. To convert from one type to another, one uses the conversion operator <span class="code"><span class="delimiter">@</span></span>.</p>
@@ -123,7 +124,7 @@ NIL
 </section>
 
 <section id="Numbers" data-spy="true" data-target="#side-menu"><h3>Numbers</h3>
-<h5 id="Integers">Integers</h5>
+<h4 id="Integers">Integers</h4>
 <p>Wrapl provides support for integers of arbitrary precision (limited only by available memory).</p>
 <div class="term"><span class="prompt">--&gt;</span> 2 + 2;
 4
@@ -146,7 +147,7 @@ NIL
 </div>
 
 
-<h5 id="Rational_Numbers">Rational Numbers</h5>
+<h4 id="Rational_Numbers">Rational Numbers</h4>
 <p>Wrapl provides rational numbers of arbitrary precision. Rationals can be written as <span class="code"><span class="var">numerator</span><span class="delimiter">/</span><span class="var">denominator</span></span>, with no space around the <span class="code"><span class="delimiter">/</span></span>. Rationals are returned by any division involving integers where there is a remainder. To get the integer part of a division involving integers, use <span class="code"><span class="symbol">:div</span></span> or <span class="code"><span class="symbol">:floor</span></span>.</p>
 <div class="term"><span class="prompt">--&gt;</span> 1/2;
 1/2
@@ -165,7 +166,7 @@ NIL
 </div>
 
 
-<h5 id="Real_Numbers">Real Numbers</h5>
+<h4 id="Real_Numbers">Real Numbers</h4>
 <p>Real numbers are stored in Wrapl using the standard (IEEE 754, double precision) floating point representation. It is possible to convert between real numbers and rationals. Converting a rational to a real will usually result in a loss of precision.</p>
 <div class="term"><span class="prompt">--&gt;</span> 3.4 * 7.6;
 25.84
@@ -229,12 +230,12 @@ NIL
 </section>
 
 
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

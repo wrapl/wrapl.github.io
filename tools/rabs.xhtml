@@ -14,15 +14,15 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
-	<title>rabs</title>
+	<title>Rabs</title>
 </head>
 <body>
 <div class="off-canvas off-canvas-sidebar-show">
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -72,45 +73,9 @@
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
 
 
-<section id="rabs" class="section">
+<section id="Rabs" class="section"><h2>Rabs</h2>
 
-<p><span class="var">rabs</span> is the build tool used to build all the entire Wrapl system. Although originally created to build Wrapl, <span class="var">rabs</span> was designed to be a completely general purpose build tool.</p>
-
-<section id="Features" data-spy="true" data-target="#side-menu"><h3>Features</h3>
-
-<ul>
-	<li><b>Language Agnostic:</b> <span class="var">rabs</span> was designed from the ground up to be completely agnostic to any programming language or use case. There are no built-in functions specific to any language.</li>
-	<li><b>Supports Large Projects:</b> each directory in a project can have its own build script, with settings inherited from parent directories.</li>
-	<li><b>Fully Scriptable:</b> <span class="var">rabs</span> provides a complete imperative language called <a href="rabs/ref/minilang.xhtml"><span class="var">Minilang</span></a>, which is be used to configure the building of the project as well as for the build functions themselves.</li>
-	<li><b>Minimal Rebuilds:</b> <span class="var">rabs</span> uses both md5 checksums as well as file modification times to compute which precisely which targets have to be rebuilt at each run.</li>
-</ul>
-
-</section>
-
-<section id="Guide" data-spy="true" data-target="#side-menu"><h3>Guide</h3>
-<p>Since <span class="var">rabs</span> is used outside of Wrapl, it has its own guide here.</p>
-
-<ul>
-	<li><a href="rabs/guide/chapter1.xhtml">Chapter 1</a></li>
-	<li><a href="rabs/guide/chapter2.xhtml">Chapter 2</a></li>
-	<li><a href="rabs/guide/chapter3.xhtml">Chapter 3</a></li>
-	<li><a href="rabs/guide/chapter4.xhtml">Chapter 4</a></li>
-	<li><a href="rabs/guide/chapter5.xhtml">Chapter 5</a></li>
-	<li><a href="rabs/guide/chapter6.xhtml">Chapter 6</a></li>
-	<li><a href="rabs/guide/chapter7.xhtml">Chapter 7</a></li>
-	<li><a href="rabs/guide/chapter8.xhtml">Chapter 8</a></li>
-
-</ul>
-</section>
-
-<section id="Reference" data-spy="true" data-target="#side-menu"><h3>Reference</h3>
-<ul>
-	<li><a href="rabs/ref/structure.xhtml">Directory Structure</a></li>
-	<li><a href="rabs/ref/minilang.xhtml">Script Language</a></li>
-	<li><a href="rabs/ref/operation.xhtml">Operation</a></li>
-	<li><a href="rabs/ref/file_targets.xhtml">File Targets</a></li>
-</ul>
-</section>
+<p><span class="literal">Rabs</span> is the build tool used to build all the entire Wrapl system. Although originally created to build Wrapl, <span class="literal">Rabs</span> was designed to be a completely general purpose build tool.</p><section class="level-3"><h3>Features</h3><ul><li><span class="var">Language Agnostic</span>: <span class="literal">Rabs</span> was designed from the ground up to be completely agnostic to any programming language or use case. There are no built-in functions specific to any language.</li><li><span class="var">Supports Large Projects</span>: each directory in a project can have its own build script, with settings inherited from parent directories.</li><li><span class="var">Fully scriptable</span>: <span class="literal">Rabs</span> provides a complete imperative language called <a href="rabs/ref/minilang.xhtml"><span class="literal">Minilang</span></a>, which is be used to configure the building of the project as well as for the build functions themselves.</li></ul></section><section class="level-3"><h3>Guide</h3><p>Since <span class="literal">Rabs</span> is used outside of <span class="literal">Wrapl</span>, it has its own guide here:</p><ul><li><a href="rabs/guide/building.xhtml">Building and Installation</a></li><li><a href="rabs/guide/example.xhtml">Basic Example</a></li><li><a href="rabs/guide/chapter3.xhtml"/></li><li><a href="rabs/guide/chapter4.xhtml"/></li><li><a href="rabs/guide/chapter5.xhtml"/></li></ul></section><section class="level-3"><h3>Reference</h3><ul><li><a href="rabs/ref/structure.xhtml">Directory Structure</a></li><li><a href="rabs/ref/minilang.xhtml">Scripting Language</a></li><li><a href="rabs/ref/operation.xhtml">Operation</a></li><li><a href="rabs/ref/targets.xhtml">Targets</a></li></ul></section>
 
 <section id="Command_Line_Options" data-spy="true" data-target="#side-menu"><h3>Command Line Options</h3>
 <p>Within a folder containing a <span class="var">_minibuild_</span> file (see the <a href="#guide">guide</a> for more details), running <span class="code"><span class="var">rabs</span></span> will load <span class="var">_minibuild_</span> in that folder and build the <span class="code"><span class="var">DEFAULT</span></span> target. <span class="var">rabs</span> accepts a number of command line options for controlling the build.</p>
@@ -126,16 +91,15 @@
 </table>
 </section>
 
-
 </section>
 
 
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

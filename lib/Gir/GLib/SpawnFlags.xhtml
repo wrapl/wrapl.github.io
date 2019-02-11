@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,23 +71,23 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib.xhtml">GLib</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib/SpawnFlags.xhtml">SpawnFlags</a></li></ul><section id="SpawnFlags" class="section"><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="ChildInheritsStdin"><span class="code">ChildInheritsStdin</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="CloexecPipes"><span class="code">CloexecPipes</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="Default"><span class="code">Default</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="DoNotReapChild"><span class="code">DoNotReapChild</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="FileAndArgvZero"><span class="code">FileAndArgvZero</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="LeaveDescriptorsOpen"><span class="code">LeaveDescriptorsOpen</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="SearchPath"><span class="code">SearchPath</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="SearchPathFromEnvp"><span class="code">SearchPathFromEnvp</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="StderrToDevNull"><span class="code">StderrToDevNull</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
-	</div><h5 id="StdoutToDevNull"><span class="code">StdoutToDevNull</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib.xhtml">GLib</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib/SpawnFlags.xhtml">SpawnFlags</a></li></ul><section id="SpawnFlags" class="section"><h2>SpawnFlags</h2><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="ChildInheritsStdin"><span class="code">ChildInheritsStdin</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="CloexecPipes"><span class="code">CloexecPipes</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="Default"><span class="code">Default</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="DoNotReapChild"><span class="code">DoNotReapChild</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="FileAndArgvZero"><span class="code">FileAndArgvZero</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="LeaveDescriptorsOpen"><span class="code">LeaveDescriptorsOpen</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="SearchPath"><span class="code">SearchPath</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="SearchPathFromEnvp"><span class="code">SearchPathFromEnvp</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="StderrToDevNull"><span class="code">StderrToDevNull</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
+	</div><h4 id="StdoutToDevNull"><span class="code">StdoutToDevNull</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></h4><div class="comment">
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,7 +71,7 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Socket.xhtml">Socket</a></li></ul><section id="Socket" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Socket.xhtml">Socket</a></li></ul><section id="Socket" class="section"><h2>Socket</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -85,7 +86,7 @@
 		
 		
 A handle to one end of a connection<br></br>
-	</div><h5 id="LocalT"><span class="code">LocalT</span></h5>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+	</div><h4 id="LocalT"><span class="code">LocalT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -101,7 +102,7 @@ A handle to one end of a connection<br></br>
 		
 		
 Sockets for connections between processes on the same machine<br></br>
-	</div><h5 id="InetT"><span class="code">InetT</span></h5>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+	</div><h4 id="InetT"><span class="code">InetT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -117,83 +118,83 @@ Sockets for connections between processes on the same machine<br></br>
 		
 		
 Sockets for internet connections<br></br>
-	</div><h5 id="CreateMessageT"><span class="code">CreateMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="CreateMessageT"><span class="code">CreateMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="BindMessageT"><span class="code">BindMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="BindMessageT"><span class="code">BindMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="ListenMessageT"><span class="code">ListenMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="ListenMessageT"><span class="code">ListenMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="AcceptMessageT"><span class="code">AcceptMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="AcceptMessageT"><span class="code">AcceptMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="ConnectMessageT"><span class="code">ConnectMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="ConnectMessageT"><span class="code">ConnectMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="HostNotFoundMessageT"><span class="code">HostNotFoundMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="HostNotFoundMessageT"><span class="code">HostNotFoundMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="ShutdownMessageT"><span class="code">ShutdownMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="ShutdownMessageT"><span class="code">ShutdownMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="OptionMessageT"><span class="code">OptionMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="OptionMessageT"><span class="code">OptionMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="PeerNameMessageT"><span class="code">PeerNameMessageT</span></h5>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+	</div><h4 id="PeerNameMessageT"><span class="code">PeerNameMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
 <div class="comment">
 		
-	</div><h5 id="OptionT"><span class="code">OptionT</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">type</span><span class="delimiter">,</span> <span class="var">stream</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+	</div><h4 id="OptionT"><span class="code">OptionT</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">type</span><span class="delimiter">,</span> <span class="var">stream</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
 		
 		
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="accept"><span class="code"><span class="symbol">:accept</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="accept"><span class="code"><span class="symbol">:accept</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="bind"><span class="code"><span class="symbol">:bind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
-		
-		
-	</div><h5 id="bind"><span class="code"><span class="symbol">:bind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="bind"><span class="code"><span class="symbol">:bind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#CloseModeT">IO.Stream.CloseModeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="bind"><span class="code"><span class="symbol">:bind</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="connect"><span class="code"><span class="symbol">:connect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#CloseModeT">IO.Stream.CloseModeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-		
-	</div><h5 id="connect"><span class="code"><span class="symbol">:connect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
-		
-		
-	</div><h5 id="listen"><span class="code"><span class="symbol">:listen</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
-		
-		
-	</div><h5 id="peername"><span class="code"><span class="symbol">:peername</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="connect"><span class="code"><span class="symbol">:connect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 		
-	</div><h5 id="recvfd"><span class="code"><span class="symbol">:recvfd</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">)</span></span></h5><div class="comment">
-		
-	</div><h5 id="sendfd"><span class="code"><span class="symbol">:sendfd</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="connect"><span class="code"><span class="symbol">:connect</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="setopt"><span class="code"><span class="symbol">:setopt</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#OptionT">OptionT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="listen"><span class="code"><span class="symbol">:listen</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="setown"><span class="code"><span class="symbol">:setown</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="peername"><span class="code"><span class="symbol">:peername</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InetT">InetT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="urge"><span class="code"><span class="symbol">:urge</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+		
+	</div><h4 id="recvfd"><span class="code"><span class="symbol">:recvfd</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="sendfd"><span class="code"><span class="symbol">:sendfd</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#LocalT">LocalT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="setopt"><span class="code"><span class="symbol">:setopt</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#OptionT">OptionT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="setown"><span class="code"><span class="symbol">:setown</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="urge"><span class="code"><span class="symbol">:urge</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

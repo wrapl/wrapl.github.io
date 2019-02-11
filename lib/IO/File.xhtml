@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,22 +71,13 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/File.xhtml">File</a></li></ul><section id="File" class="section"><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/IO/File/Flag.xhtml">Flag</a></div></section><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5>Inherits from: <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/File.xhtml">File</a></li></ul><section id="File" class="section"><h2>File</h2><section id="SubModules" data-spy="true" data-target="#side-menu"><h3>SubModules</h3><div class="module"><a href="/lib/IO/File/Flag.xhtml">Flag</a></div></section><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
 		
 		
-	</div><h5 id="ReaderT"><span class="code">ReaderT</span></h5>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
-<div class="comment">
-		
-		
-		
-		
-		
-		
-		
-	</div><h5 id="WriterT"><span class="code">WriterT</span></h5>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+	</div><h4 id="ReaderT"><span class="code">ReaderT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -94,7 +86,7 @@
 		
 		
 		
-	</div><h5 id="ReaderWriterT"><span class="code">ReaderWriterT</span></h5>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+	</div><h4 id="WriterT"><span class="code">WriterT</span></h4>Inherits from: <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -103,35 +95,7 @@
 		
 		
 		
-		
-		
-		
-		
-	</div><h5 id="TextReaderT"><span class="code">TextReaderT</span></h5>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
-<div class="comment">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div><h5 id="TextWriterT"><span class="code">TextWriterT</span></h5>Inherits from: <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
-<div class="comment">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div><h5 id="TextReaderWriterT"><span class="code">TextReaderWriterT</span></h5>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+	</div><h4 id="ReaderWriterT"><span class="code">ReaderWriterT</span></h4>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
 <div class="comment">
 		
 		
@@ -144,27 +108,64 @@
 		
 		
 		
+	</div><h4 id="TextReaderT"><span class="code">TextReaderT</span></h4>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
 		
 		
 		
 		
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="Open"><span class="code">Open<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">mode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="TextWriterT"><span class="code">TextWriterT</span></h4>Inherits from: <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="TextReaderWriterT"><span class="code">TextReaderWriterT</span></h4>Inherits from: <a class="id" href="#ReaderT">ReaderT</a>, <a class="id" href="#WriterT">WriterT</a>, <a class="id" href="#T">T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Open"><span class="code">Open<span class="delimiter">(</span><span class="var">filename</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">mode</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
 		
 		
 Opens filename with the correct mode and returns a file object<br></br>
-	</div><h5 id="Pipe"><span class="code">Pipe<span class="delimiter">(</span><span class="var">rd<span class="delimiter">+</span></span><span class="delimiter">,</span> <span class="var">wr<span class="delimiter">+</span></span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="Pipe"><span class="code">Pipe<span class="delimiter">(</span><span class="var">rd<span class="delimiter">+</span></span><span class="delimiter">,</span> <span class="var">wr<span class="delimiter">+</span></span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 Creates a pipe and storing the reader / writer streams in <span class="var">rd</span> / <span class="var">wr</span> respectively.<br></br>
-	</div><h5 id="Temp"><span class="code">Temp<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+	</div><h4 id="Temp"><span class="code">Temp<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
 Creates and opens a temporary file. The file is automatically deleted when closed.<br></br>
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,97 +71,97 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Html.xhtml">Html</a></li><li class="breadcrumb-item"><a href="/lib/Html/Gumbo.xhtml">Gumbo</a></li></ul><section id="Gumbo" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div><h5 id="NodeT"><span class="code">NodeT</span></h5><div class="comment">
-	</div><h5 id="DocumentNodeT"><span class="code">DocumentNodeT</span></h5>Inherits from: <a class="id" href="#NodeT">NodeT</a>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Html.xhtml">Html</a></li><li class="breadcrumb-item"><a href="/lib/Html/Gumbo.xhtml">Gumbo</a></li></ul><section id="Gumbo" class="section"><h2>Gumbo</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div><h4 id="NodeT"><span class="code">NodeT</span></h4><div class="comment">
+	</div><h4 id="DocumentNodeT"><span class="code">DocumentNodeT</span></h4>Inherits from: <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
-	</div><h5 id="ElementNodeT"><span class="code">ElementNodeT</span></h5>Inherits from: <a class="id" href="#NodeT">NodeT</a>
+	</div><h4 id="ElementNodeT"><span class="code">ElementNodeT</span></h4>Inherits from: <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
-	</div><h5 id="TextNodeT"><span class="code">TextNodeT</span></h5>Inherits from: <a class="id" href="#NodeT">NodeT</a>
+	</div><h4 id="TextNodeT"><span class="code">TextNodeT</span></h4>Inherits from: <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
-	</div><h5 id="CDataNodeT"><span class="code">CDataNodeT</span></h5>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
-<div class="comment">
-		
-		
-	</div><h5 id="CommentNodeT"><span class="code">CommentNodeT</span></h5>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
+	</div><h4 id="CDataNodeT"><span class="code">CDataNodeT</span></h4>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
 		
-	</div><h5 id="WhitespaceNodeT"><span class="code">WhitespaceNodeT</span></h5>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
+	</div><h4 id="CommentNodeT"><span class="code">CommentNodeT</span></h4>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
 		
-	</div><h5 id="TemplateNodeT"><span class="code">TemplateNodeT</span></h5>Inherits from: <a class="id" href="#ElementNodeT">ElementNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
+	</div><h4 id="WhitespaceNodeT"><span class="code">WhitespaceNodeT</span></h4>Inherits from: <a class="id" href="#TextNodeT">TextNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
 <div class="comment">
 		
 		
-	</div><h5 id="VectorT"><span class="code">VectorT</span></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="Parse"><span class="code">Parse<span class="delimiter">(</span><span class="var">html</span> <span class="delimiter">@</span> <a class="id" href="#Std.String.T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h5><div class="comment">
+	</div><h4 id="TemplateNodeT"><span class="code">TemplateNodeT</span></h4>Inherits from: <a class="id" href="#ElementNodeT">ElementNodeT</a>, <a class="id" href="#NodeT">NodeT</a>
+<div class="comment">
+		
+		
+	</div><h4 id="VectorT"><span class="code">VectorT</span></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Parse"><span class="code">Parse<span class="delimiter">(</span><span class="var">html</span> <span class="delimiter">@</span> <a class="id" href="#Std.String.T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
 		
 Parses <span class="var">html</span> and returns a new html tree.<br></br>
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#TextNodeT">TextNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_@_"><span class="code"><span class="symbol">:</span><span class="literal">"@"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#TextNodeT">TextNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">=</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#DocumentNodeT">DocumentNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#DocumentNodeT">DocumentNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="children"><span class="code"><span class="symbol">:children</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#DocumentNodeT">DocumentNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="children"><span class="code"><span class="symbol">:children</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#DocumentNodeT">DocumentNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="children"><span class="code"><span class="symbol">:children</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="children"><span class="code"><span class="symbol">:children</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="document"><span class="code"><span class="symbol">:document</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h5><div class="comment">
+	</div><h4 id="document"><span class="code"><span class="symbol">:document</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h4><div class="comment">
 		
-	</div><h5 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="find"><span class="code"><span class="symbol">:find</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="index"><span class="code"><span class="symbol">:index</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="index"><span class="code"><span class="symbol">:index</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="length"><span class="code"><span class="symbol">:length</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="parent"><span class="code"><span class="symbol">:parent</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="parent"><span class="code"><span class="symbol">:parent</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="root"><span class="code"><span class="symbol">:root</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h5><div class="comment">
+	</div><h4 id="root"><span class="code"><span class="symbol">:root</span><span class="delimiter">(</span><span class="var">t</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#NodeT">NodeT</a></span></h4><div class="comment">
 		
-	</div><h5 id="tag"><span class="code"><span class="symbol">:tag</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="tag"><span class="code"><span class="symbol">:tag</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="text"><span class="code"><span class="symbol">:text</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="text"><span class="code"><span class="symbol">:text</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="text"><span class="code"><span class="symbol">:text</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#TextNodeT">TextNodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="text"><span class="code"><span class="symbol">:text</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#TextNodeT">TextNodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
-	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">vector</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">vector</span> <span class="delimiter">@</span> <a class="id" href="#ElementNodeT">ElementNodeT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
-	</div><h5 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">vector</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h5><div class="comment">
+	</div><h4 id="values"><span class="code"><span class="symbol">:values</span><span class="delimiter">(</span><span class="var">vector</span> <span class="delimiter">@</span> <a class="id" href="#VectorT">VectorT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
 		
-	</div><h5 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#NodeT">NodeT</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,57 +71,57 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/ServerOperationNode.xhtml">ServerOperationNode</a></li></ul><section id="ServerOperationNode" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNode.xhtml#T">Gir.Gda.ServerOperationNode.T</a></span></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda.xhtml">Gda</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gda/ServerOperationNode.xhtml">ServerOperationNode</a></li></ul><section id="ServerOperationNode" class="section"><h2>ServerOperationNode</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="_Alloc"><span class="code">_Alloc<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNode.xhtml#T">Gir.Gda.ServerOperationNode.T</a></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="column"><span class="code"><span class="symbol">:column</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a></span></h5><div class="comment">
+	</div><h4 id="column"><span class="code"><span class="symbol">:column</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="model"><span class="code"><span class="symbol">:model</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a></span></h5><div class="comment">
+	</div><h4 id="model"><span class="code"><span class="symbol">:model</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="param"><span class="code"><span class="symbol">:param</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a></span></h5><div class="comment">
+	</div><h4 id="param"><span class="code"><span class="symbol">:param</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="plist"><span class="code"><span class="symbol">:plist</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a></span></h5><div class="comment">
+	</div><h4 id="plist"><span class="code"><span class="symbol">:plist</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="priv"><span class="code"><span class="symbol">:priv</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="priv"><span class="code"><span class="symbol">:priv</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="set_column"><span class="code"><span class="symbol">:set_column</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="set_model"><span class="code"><span class="symbol">:set_model</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a></span></h5><div class="comment">
+	</div><h4 id="set_column"><span class="code"><span class="symbol">:set_column</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Column.xhtml#T">Gir.Gda.Column.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_param"><span class="code"><span class="symbol">:set_param</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a></span></h5><div class="comment">
+	</div><h4 id="set_model"><span class="code"><span class="symbol">:set_model</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/DataModel.xhtml#T">Gir.Gda.DataModel.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_plist"><span class="code"><span class="symbol">:set_plist</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a></span></h5><div class="comment">
+	</div><h4 id="set_param"><span class="code"><span class="symbol">:set_param</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Holder.xhtml#T">Gir.Gda.Holder.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_priv"><span class="code"><span class="symbol">:set_priv</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="set_plist"><span class="code"><span class="symbol">:set_plist</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/Set.xhtml#T">Gir.Gda.Set.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_status"><span class="code"><span class="symbol">:set_status</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a></span></h5><div class="comment">
+	</div><h4 id="set_priv"><span class="code"><span class="symbol">:set_priv</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="set_type"><span class="code"><span class="symbol">:set_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a></span></h5><div class="comment">
+	</div><h4 id="set_status"><span class="code"><span class="symbol">:set_status</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="status"><span class="code"><span class="symbol">:status</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a></span></h5><div class="comment">
+	</div><h4 id="set_type"><span class="code"><span class="symbol">:set_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a></span></h5><div class="comment">
 		
-	</div><h5 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+	</div><h4 id="status"><span class="code"><span class="symbol">:status</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeStatus.xhtml#T">Gir.Gda.ServerOperationNodeStatus.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="type"><span class="code"><span class="symbol">:type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gda/ServerOperationNodeType.xhtml#T">Gir.Gda.ServerOperationNodeType.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

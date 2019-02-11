@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,126 +71,126 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib.xhtml">GLib</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib/DateTime.xhtml">DateTime</a></li></ul><section id="DateTime" class="section"><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h5 id="T"><span class="code">T</span></h5><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h5 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h5><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="Equal"><span class="code">Equal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromIso8601"><span class="code">NewFromIso8601<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromTimevalLocal"><span class="code">NewFromTimevalLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromTimevalUtc"><span class="code">NewFromTimevalUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromUnixLocal"><span class="code">NewFromUnixLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewFromUnixUtc"><span class="code">NewFromUnixUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewLocal"><span class="code">NewLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewNow"><span class="code">NewNow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewNowLocal"><span class="code">NewNowLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewNowUtc"><span class="code">NewNowUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="NewUtc"><span class="code">NewUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h5 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib.xhtml">GLib</a></li><li class="breadcrumb-item"><a href="/lib/Gir/GLib/DateTime.xhtml">DateTime</a></li></ul><section id="DateTime" class="section"><h2>DateTime</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Equal"><span class="code">Equal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromIso8601"><span class="code">NewFromIso8601<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromTimevalLocal"><span class="code">NewFromTimevalLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromTimevalUtc"><span class="code">NewFromTimevalUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromUnixLocal"><span class="code">NewFromUnixLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewFromUnixUtc"><span class="code">NewFromUnixUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewLocal"><span class="code">NewLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewNow"><span class="code">NewNow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewNowLocal"><span class="code">NewNowLocal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewNowUtc"><span class="code">NewNowUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewUtc"><span class="code">NewUtc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_=_"><span class="code"><span class="symbol">:</span><span class="literal">"="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
-	</div><h5 id="add"><span class="code"><span class="symbol">:add</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timespan</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
+	</div><h4 id="add"><span class="code"><span class="symbol">:add</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">timespan</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="add_days"><span class="code"><span class="symbol">:add_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
+	</div><h4 id="add_days"><span class="code"><span class="symbol">:add_days</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="add_full"><span class="code"><span class="symbol">:add_full</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hours</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">minutes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">seconds</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-		
+	</div><h4 id="add_full"><span class="code"><span class="symbol">:add_full</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">days</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">hours</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">minutes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">seconds</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
 		
 		
 		
-	</div><h5 id="add_hours"><span class="code"><span class="symbol">:add_hours</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hours</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="add_minutes"><span class="code"><span class="symbol">:add_minutes</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">minutes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="add_months"><span class="code"><span class="symbol">:add_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="add_seconds"><span class="code"><span class="symbol">:add_seconds</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">seconds</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="add_weeks"><span class="code"><span class="symbol">:add_weeks</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">weeks</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="add_years"><span class="code"><span class="symbol">:add_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="difference"><span class="code"><span class="symbol">:difference</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">begin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="format"><span class="code"><span class="symbol">:format</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-		
-	</div><h5 id="get_day_of_month"><span class="code"><span class="symbol">:get_day_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_day_of_week"><span class="code"><span class="symbol">:get_day_of_week</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_day_of_year"><span class="code"><span class="symbol">:get_day_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_hour"><span class="code"><span class="symbol">:get_hour</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_microsecond"><span class="code"><span class="symbol">:get_microsecond</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_minute"><span class="code"><span class="symbol">:get_minute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_month"><span class="code"><span class="symbol">:get_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_second"><span class="code"><span class="symbol">:get_second</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_seconds"><span class="code"><span class="symbol">:get_seconds</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_timezone"><span class="code"><span class="symbol">:get_timezone</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/TimeZone.xhtml#T">Gir.GLib.TimeZone.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_timezone_abbreviation"><span class="code"><span class="symbol">:get_timezone_abbreviation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_utc_offset"><span class="code"><span class="symbol">:get_utc_offset</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_week_numbering_year"><span class="code"><span class="symbol">:get_week_numbering_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_week_of_year"><span class="code"><span class="symbol">:get_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_year"><span class="code"><span class="symbol">:get_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h5><div class="comment">
-		
-	</div><h5 id="get_ymd"><span class="code"><span class="symbol">:get_ymd</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">year</span><span class="delimiter">,</span> <span class="var">month</span><span class="delimiter">,</span> <span class="var">day</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
 		
 		
 		
-		
-	</div><h5 id="is_daylight_savings"><span class="code"><span class="symbol">:is_daylight_savings</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="ref"><span class="code"><span class="symbol">:ref</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="to_local"><span class="code"><span class="symbol">:to_local</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
-		
-	</div><h5 id="to_timeval"><span class="code"><span class="symbol">:to_timeval</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tv</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeVal.xhtml#T">Gir.GLib.TimeVal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h5><div class="comment">
+	</div><h4 id="add_hours"><span class="code"><span class="symbol">:add_hours</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">hours</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="to_timezone"><span class="code"><span class="symbol">:to_timezone</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tz</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeZone.xhtml#T">Gir.GLib.TimeZone.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
+	</div><h4 id="add_minutes"><span class="code"><span class="symbol">:add_minutes</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">minutes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
 		
-	</div><h5 id="to_unix"><span class="code"><span class="symbol">:to_unix</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h5><div class="comment">
+	</div><h4 id="add_months"><span class="code"><span class="symbol">:add_months</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">months</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="to_utc"><span class="code"><span class="symbol">:to_utc</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h5><div class="comment">
 		
-	</div><h5 id="unref"><span class="code"><span class="symbol">:unref</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h5><div class="comment">
+	</div><h4 id="add_seconds"><span class="code"><span class="symbol">:add_seconds</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">seconds</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
 		
-	</div><h5 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h5><div class="comment">
+		
+	</div><h4 id="add_weeks"><span class="code"><span class="symbol">:add_weeks</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">weeks</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="add_years"><span class="code"><span class="symbol">:add_years</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">years</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="difference"><span class="code"><span class="symbol">:difference</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">begin</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="format"><span class="code"><span class="symbol">:format</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">format</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_day_of_month"><span class="code"><span class="symbol">:get_day_of_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_day_of_week"><span class="code"><span class="symbol">:get_day_of_week</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_day_of_year"><span class="code"><span class="symbol">:get_day_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_hour"><span class="code"><span class="symbol">:get_hour</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_microsecond"><span class="code"><span class="symbol">:get_microsecond</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_minute"><span class="code"><span class="symbol">:get_minute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_month"><span class="code"><span class="symbol">:get_month</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_second"><span class="code"><span class="symbol">:get_second</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_seconds"><span class="code"><span class="symbol">:get_seconds</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_timezone"><span class="code"><span class="symbol">:get_timezone</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/TimeZone.xhtml#T">Gir.GLib.TimeZone.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_timezone_abbreviation"><span class="code"><span class="symbol">:get_timezone_abbreviation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_utc_offset"><span class="code"><span class="symbol">:get_utc_offset</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_week_numbering_year"><span class="code"><span class="symbol">:get_week_numbering_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_week_of_year"><span class="code"><span class="symbol">:get_week_of_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_year"><span class="code"><span class="symbol">:get_year</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_ymd"><span class="code"><span class="symbol">:get_ymd</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">year</span><span class="delimiter">,</span> <span class="var">month</span><span class="delimiter">,</span> <span class="var">day</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="is_daylight_savings"><span class="code"><span class="symbol">:is_daylight_savings</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="ref"><span class="code"><span class="symbol">:ref</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="to_local"><span class="code"><span class="symbol">:to_local</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="to_timeval"><span class="code"><span class="symbol">:to_timeval</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tv</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeVal.xhtml#T">Gir.GLib.TimeVal.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="to_timezone"><span class="code"><span class="symbol">:to_timezone</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">tz</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/TimeZone.xhtml#T">Gir.GLib.TimeZone.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="to_unix"><span class="code"><span class="symbol">:to_unix</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="to_utc"><span class="code"><span class="symbol">:to_utc</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/DateTime.xhtml#T">Gir.GLib.DateTime.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="unref"><span class="code"><span class="symbol">:unref</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="_~=_"><span class="code"><span class="symbol">:</span><span class="literal">"~="</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
 		
 		
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>

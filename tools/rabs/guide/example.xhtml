@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Basic Example</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/docs.xhtml#tools">Tools</a></li>
+	<li class="breadcrumb-item"><a href="/tools/rabs.xhtml#guide">Rabs Guide</a></li>
+	<li class="breadcrumb-item">Basic Example</li>
+</ul>
+
+<section id="Basic_Example" class="section"><h2>Basic Example</h2>
+
+<section id="Project_Layout" data-spy="true" data-target="#side-menu"><h3>Project Layout</h3>
+<p>Given the following directory structure (before building):</p>
+<div class="folders">
+	Project Directory
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+
+<p>We would like to compile and link <span class="literal">src/test.c</span> into an executable <span class="literal">bin/test</span>. In addition, we would like to keep the <span class="literal">src</span> directory clean of intermediate build files.</p>
+<p>Hence, we want the final build to look like this:</p>
+<div class="folders">
+	Project Directory
+	<div>bin
+		<div>test</div>
+	</div>
+	<div>obj
+		<div>test.o</div>
+	</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+</section>
+
+<section id="Simple_Build_Script" data-spy="true" data-target="#side-menu"><h3>Simple Build Script</h3>
+<p>We can accomplish using by adding a <span class="literal">_minibuild_</span> file in the root directory:</p>
+<div class="folders">
+	Project Directory
+	<div>_minibuild_</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+
+<div class="code"><div class="codeheader">_minibuild_</div><span class="lineno">   1</span><span class="comment">-- ROOT --</span>
+<span class="lineno">   2</span>
+<span class="lineno">   3</span><span class="keyword">var</span> <span class="var">SRC</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"src"</span><span class="delimiter">)</span>
+<span class="lineno">   4</span><span class="keyword">var</span> <span class="var">BIN</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"bin"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   5</span><span class="keyword">var</span> <span class="var">OBJ</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   6</span>
+<span class="lineno">   7</span><span class="keyword">var</span> <span class="var">TEST_C</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.c"</span>
+<span class="lineno">   8</span><span class="keyword">var</span> <span class="var">TEST_H</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.h"</span>
+<span class="lineno">   9</span><span class="keyword">var</span> <span class="var">TEST_O</span> <span class="delimiter">:=</span> <span class="var">OBJ</span> <span class="delimiter">/</span> <span class="literal">"test.o"</span>
+<span class="lineno">  10</span>
+<span class="lineno">  11</span><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  12</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  13</span><span class="keyword">end</span>
+<span class="lineno">  14</span>
+<span class="lineno">  15</span><span class="keyword">var</span> <span class="var">TEST</span> <span class="delimiter">:=</span> <span class="var">BIN</span> <span class="delimiter">/</span> <span class="literal">"test"</span>
+<span class="lineno">  16</span>
+<span class="lineno">  17</span><span class="var">TEST</span><span class="delimiter">[</span><span class="var">TEST_O</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  18</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  19</span><span class="keyword">end</span>
+<span class="lineno">  20</span>
+<span class="lineno">  21</span><span class="var">DEFAULT</span><span class="delimiter">[</span><span class="var">TEST</span><span class="delimiter">]</span></div>
+
+<p>Building this project results in the following output:</p>
+
+<div class="term"><span class="prompt">$</span> rabs -c -s
+RootPath = /test, Path = /test
+CurrentVersion = 1
+Starting build thread #0
+1 / 6 #0 Built file:src/test.h at version 1
+2 / 6 #0 Built file:src/test.c at version 1
+/test: gcc -c -o/test/obj/test.o -I/test/src /test/src/test.c 
+    0.000185 seconds.
+3 / 6 #0 Built file:obj/test.o at version 1
+/test: gcc -o/test/bin/test /test/obj/test.o 
+    0.000130 seconds.
+4 / 6 #0 Built file:bin/test at version 1
+5 / 6 #0 Built meta:::DEFAULT at version 1
+6 / 6 #0 Built symb:/DEFAULT at version 1
+</div>
+
+<p>The final file layout looks like this:</p>
+<div class="folders">
+	Project Directory
+	<div>bin
+		<div>test</div>
+	</div>
+	<div>_minibuild_</div>
+	<div>_minibuild_.db</div>
+	<div>obj
+		<div>test.o</div>
+	</div>
+	<div>src
+		<div>test.c</div>
+		<div>test.h</div>
+	</div>
+</div>
+</section>
+
+<section id="Simple_Build_Script_Explained" data-spy="true" data-target="#side-menu"><h3>Simple Build Script Explained</h3>
+<p></p>
+<div class="code"><span class="lineno">   1</span><span class="comment">-- ROOT --</span></div>
+<p>This line specifies that this directory is the root directory for the project. The <span class="literal">_minibuild_</span> file in the root project directory must start with this line so that <span class="literal">rabs</span> can find the project root.</p>
+<div class="code"><span class="lineno">   3</span><span class="keyword">var</span> <span class="var">SRC</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"src"</span><span class="delimiter">)</span></div>
+<p>This line declares a new variable called <span class="var">SRC</span> and assigns it a new file target referring to the directory called <span class="literal">src</span>. <span class="var">rabs</span> does not distinguish between files and directory, hence the call to <span class="code"><span class="var">file</span><span class="delimiter">()</span></span>.</p>
+<div class="code"><span class="lineno">   4</span><span class="keyword">var</span> <span class="var">BIN</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"bin"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">   5</span><span class="keyword">var</span> <span class="var">OBJ</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span></div>
+<p>Similar to the previous line, these lines also declare variables <span class="var">BIN</span> and <span class="var">OBJ</span>, assigning file targets referring to <span class="literal">bin</span> and <span class="literal">obj</span> respectively. The additional <span class="code"><span class="symbol">:mkdir</span></span> code creates the directories if they do not exist.</p>
+<div class="code"><span class="lineno">   7</span><span class="keyword">var</span> <span class="var">TEST_C</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.c"</span>
+<span class="lineno">   8</span><span class="keyword">var</span> <span class="var">TEST_H</span> <span class="delimiter">:=</span> <span class="var">SRC</span> <span class="delimiter">/</span> <span class="literal">"test.h"</span>
+<span class="lineno">   9</span><span class="keyword">var</span> <span class="var">TEST_O</span> <span class="delimiter">:=</span> <span class="var">OBJ</span> <span class="delimiter">/</span> <span class="literal">"test.o"</span></div>
+<p>These lines declare 3 more variables, referring to 3 different files. The files are referenced relative to the previously declared <span class="var">SRC</span> and <span class="var">OBJ</span> variables. The end result is that <span class="var">TEST_C</span>, <span class="var">TEST_H</span> and <span class="var">TEST_O</span> refer to <span class="literal">src/test.c</span>, <span class="literal">src/test.h</span> and <span class="literal">obj/test.o</span> respectively.</p>
+<div class="code"><span class="lineno">  10</span><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  11</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  12</span><span class="keyword">end</span></div>
+<p>These lines contain the first build rule in this script. The first part, <span class="code"><span class="var">TEST_O</span><span class="delimiter">[</span><span class="var">TEST_C</span><span class="delimiter">,</span> <span class="var">TEST_H</span><span class="delimiter">]</span></span> declares that <span class="var">TEST_O</span> depends on <span class="var">TEST_C</span> and <span class="var">TEST_H</span>. The next part, <span class="code"><span class="delimiter">=&gt;</span> <span class="var">fun</span><span class="delimiter">()</span> <span class="var">do</span> <span class="delimiter">...</span> <span class="var">end</span></span>, specifies the code to run in order to build <span class="var">TEST_O</span> both initially and whenever any of its dependencies change.</p>
+<p>The next line, <span class="code"><span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c -o</span><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span><span class="literal"> -I</span><span class="delimiter">{</span><span class="var">SRC</span><span class="delimiter">}</span><span class="literal"> </span><span class="delimiter">{</span><span class="var">TEST_C</span><span class="delimiter">}</span><span class="literal">'</span><span class="delimiter">)</span></span>, executes <span class="var">gcc</span> with the shell to compile the file <span class="literal">src/test.c</span> and produce <span class="literal">obj/test.o</span>. The pieces of code embedded in the string between braces <span class="code"><span class="delimiter">{</span></span> and <span class="code"><span class="delimiter">}</span></span> are expanded at runtime into the full paths of the respective files.</p>
+<div class="code"><span class="lineno">  15</span><span class="keyword">var</span> <span class="var">TEST</span> <span class="delimiter">:=</span> <span class="var">BIN</span> <span class="delimiter">/</span> <span class="literal">"test"</span>
+<span class="lineno">  16</span>
+<span class="lineno">  17</span><span class="var">TEST</span><span class="delimiter">[</span><span class="var">TEST_O</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">  18</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -o</span><span class="nested"><span class="delimiter">{</span><span class="var">TEST</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">TEST_O</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  19</span><span class="keyword">end</span></div>
+<p>Similar to the previous lines, these lines declare another variable to reference the target executable <span class="literal">bin/test</span> and define its dependencies and build function.</p>
+<div class="code"><span class="lineno">  21</span><span class="var">DEFAULT</span><span class="delimiter">[</span><span class="var">TEST</span><span class="delimiter">]</span></div>
+<p>The final line defines one more dependency, namely that the <span class="var">DEFAULT</span> target for this project depends on <span class="literal">bin/test</span> being built. No build function is specified so the only effect of the rule is that <span class="literal">bin/test</span> will be built and kept up to date whenever <span class="literal">rabs</span> is run.</p>
+</section>
+
+
+<section id="Build_Database" data-spy="true" data-target="#side-menu"><h3>Build Database</h3>
+<p>As you might have noticed, after running <span class="literal">rabs</span>, an additional file <span class="literal">_minibuild_.db</span> was created in the root directory. This file is a <span class="var">Sqlite3</span> database that stores necessary information after each run of <span class="literal">rabs</span>. This information includes the md5 checksums of files and build functions as well as detected build dependencies.</p>
+</section>
+
+<p><a href="chapter2.xhtml">Next</a></p>
+
+</section>
+
+
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

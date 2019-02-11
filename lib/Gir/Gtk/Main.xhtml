@@ -14,9 +14,9 @@
 	<meta property="og:description" content="Wrapl, The Programming Language"/>
 	<meta property="og:url" content="http://wrapl.sf.net"/>
 	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
 	<link rel="stylesheet" type="text/css" href="/code.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
@@ -50,6 +50,7 @@
 					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
 					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
 					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
@@ -70,201 +71,201 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gtk.xhtml">Gtk</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gtk/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h5 id="AccelGroupsActivate"><span class="code">AccelGroupsActivate<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AccelGroupsFromObject"><span class="code">AccelGroupsFromObject<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorGetDefaultModMask"><span class="code">AcceleratorGetDefaultModMask<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorGetLabel"><span class="code">AcceleratorGetLabel<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorGetLabelWithKeycode"><span class="code">AcceleratorGetLabelWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorName"><span class="code">AcceleratorName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorNameWithKeycode"><span class="code">AcceleratorNameWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorParse"><span class="code">AcceleratorParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorParseWithKeycode"><span class="code">AcceleratorParseWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorSetDefaultModMask"><span class="code">AcceleratorSetDefaultModMask<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AcceleratorValid"><span class="code">AcceleratorValid<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="AlternativeDialogButtonOrder"><span class="code">AlternativeDialogButtonOrder<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingEntryAddSignalFromString"><span class="code">BindingEntryAddSignalFromString<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingEntryAddSignall"><span class="code">BindingEntryAddSignall<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingEntryRemove"><span class="code">BindingEntryRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingEntrySkip"><span class="code">BindingEntrySkip<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingSetFind"><span class="code">BindingSetFind<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingsActivate"><span class="code">BindingsActivate<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BindingsActivateEvent"><span class="code">BindingsActivateEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="BuilderErrorQuark"><span class="code">BuilderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CairoShouldDrawWindow"><span class="code">CairoShouldDrawWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CairoTransformToWindow"><span class="code">CairoTransformToWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CheckVersion"><span class="code">CheckVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="CssProviderErrorQuark"><span class="code">CssProviderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DeviceGrabAdd"><span class="code">DeviceGrabAdd<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DeviceGrabRemove"><span class="code">DeviceGrabRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DisableSetlocale"><span class="code">DisableSetlocale<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DistributeNaturalAllocation"><span class="code">DistributeNaturalAllocation<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragCancel"><span class="code">DragCancel<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragFinish"><span class="code">DragFinish<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragGetSourceWidget"><span class="code">DragGetSourceWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconDefault"><span class="code">DragSetIconDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconGicon"><span class="code">DragSetIconGicon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconName"><span class="code">DragSetIconName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconPixbuf"><span class="code">DragSetIconPixbuf<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconStock"><span class="code">DragSetIconStock<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconSurface"><span class="code">DragSetIconSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DragSetIconWidget"><span class="code">DragSetIconWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="DrawInsertionCursor"><span class="code">DrawInsertionCursor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="EventsPending"><span class="code">EventsPending<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="False"><span class="code">False<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="FileChooserErrorQuark"><span class="code">FileChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetBinaryAge"><span class="code">GetBinaryAge<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetCurrentEvent"><span class="code">GetCurrentEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetCurrentEventDevice"><span class="code">GetCurrentEventDevice<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetCurrentEventState"><span class="code">GetCurrentEventState<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetCurrentEventTime"><span class="code">GetCurrentEventTime<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetDebugFlags"><span class="code">GetDebugFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetDefaultLanguage"><span class="code">GetDefaultLanguage<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetEventWidget"><span class="code">GetEventWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetInterfaceAge"><span class="code">GetInterfaceAge<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetLocaleDirection"><span class="code">GetLocaleDirection<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetMajorVersion"><span class="code">GetMajorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetMicroVersion"><span class="code">GetMicroVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetMinorVersion"><span class="code">GetMinorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GetOptionGroup"><span class="code">GetOptionGroup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="GrabGetCurrent"><span class="code">GrabGetCurrent<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeFromName"><span class="code">IconSizeFromName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeGetName"><span class="code">IconSizeGetName<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeLookup"><span class="code">IconSizeLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeLookupForSettings"><span class="code">IconSizeLookupForSettings<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeRegister"><span class="code">IconSizeRegister<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconSizeRegisterAlias"><span class="code">IconSizeRegisterAlias<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="IconThemeErrorQuark"><span class="code">IconThemeErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="Init"><span class="code">Init<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="InitCheck"><span class="code">InitCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="InitWithArgs"><span class="code">InitWithArgs<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="KeySnooperRemove"><span class="code">KeySnooperRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="Main"><span class="code">Main<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="MainDoEvent"><span class="code">MainDoEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="MainIteration"><span class="code">MainIteration<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="MainIterationDo"><span class="code">MainIterationDo<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="MainLevel"><span class="code">MainLevel<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="MainQuit"><span class="code">MainQuit<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintArrow"><span class="code">PaintArrow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintBox"><span class="code">PaintBox<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintBoxGap"><span class="code">PaintBoxGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintCheck"><span class="code">PaintCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintDiamond"><span class="code">PaintDiamond<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintExpander"><span class="code">PaintExpander<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintExtension"><span class="code">PaintExtension<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintFlatBox"><span class="code">PaintFlatBox<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintFocus"><span class="code">PaintFocus<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintHandle"><span class="code">PaintHandle<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintHline"><span class="code">PaintHline<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintLayout"><span class="code">PaintLayout<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintOption"><span class="code">PaintOption<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintResizeGrip"><span class="code">PaintResizeGrip<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintShadow"><span class="code">PaintShadow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintShadowGap"><span class="code">PaintShadowGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintSlider"><span class="code">PaintSlider<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintSpinner"><span class="code">PaintSpinner<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintTab"><span class="code">PaintTab<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaintVline"><span class="code">PaintVline<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaperSizeGetDefault"><span class="code">PaperSizeGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PaperSizeGetPaperSizes"><span class="code">PaperSizeGetPaperSizes<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="ParseArgs"><span class="code">ParseArgs<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PrintErrorQuark"><span class="code">PrintErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PrintRunPageSetupDialog"><span class="code">PrintRunPageSetupDialog<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PrintRunPageSetupDialogAsync"><span class="code">PrintRunPageSetupDialogAsync<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="PropagateEvent"><span class="code">PropagateEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcAddDefaultFile"><span class="code">RcAddDefaultFile<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcFindModuleInPath"><span class="code">RcFindModuleInPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcFindPixmapInPath"><span class="code">RcFindPixmapInPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetDefaultFiles"><span class="code">RcGetDefaultFiles<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetImModuleFile"><span class="code">RcGetImModuleFile<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetImModulePath"><span class="code">RcGetImModulePath<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetModuleDir"><span class="code">RcGetModuleDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetStyle"><span class="code">RcGetStyle<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetStyleByPaths"><span class="code">RcGetStyleByPaths<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcGetThemeDir"><span class="code">RcGetThemeDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParse"><span class="code">RcParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParseColor"><span class="code">RcParseColor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParseColorFull"><span class="code">RcParseColorFull<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParsePriority"><span class="code">RcParsePriority<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParseState"><span class="code">RcParseState<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcParseString"><span class="code">RcParseString<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcPropertyParseBorder"><span class="code">RcPropertyParseBorder<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcPropertyParseColor"><span class="code">RcPropertyParseColor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcPropertyParseEnum"><span class="code">RcPropertyParseEnum<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcPropertyParseFlags"><span class="code">RcPropertyParseFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcPropertyParseRequisition"><span class="code">RcPropertyParseRequisition<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcReparseAll"><span class="code">RcReparseAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcReparseAllForSettings"><span class="code">RcReparseAllForSettings<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcResetStyles"><span class="code">RcResetStyles<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RcSetDefaultFiles"><span class="code">RcSetDefaultFiles<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RecentChooserErrorQuark"><span class="code">RecentChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RecentManagerErrorQuark"><span class="code">RecentManagerErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderActivity"><span class="code">RenderActivity<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderArrow"><span class="code">RenderArrow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderBackground"><span class="code">RenderBackground<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderBackgroundGetClip"><span class="code">RenderBackgroundGetClip<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderCheck"><span class="code">RenderCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderExpander"><span class="code">RenderExpander<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderExtension"><span class="code">RenderExtension<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderFocus"><span class="code">RenderFocus<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderFrame"><span class="code">RenderFrame<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderFrameGap"><span class="code">RenderFrameGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderHandle"><span class="code">RenderHandle<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderIcon"><span class="code">RenderIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderIconPixbuf"><span class="code">RenderIconPixbuf<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderIconSurface"><span class="code">RenderIconSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderInsertionCursor"><span class="code">RenderInsertionCursor<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderLayout"><span class="code">RenderLayout<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderLine"><span class="code">RenderLine<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderOption"><span class="code">RenderOption<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RenderSlider"><span class="code">RenderSlider<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="RgbToHsv"><span class="code">RgbToHsv<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionAddTarget"><span class="code">SelectionAddTarget<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionAddTargets"><span class="code">SelectionAddTargets<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionClearTargets"><span class="code">SelectionClearTargets<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionConvert"><span class="code">SelectionConvert<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionOwnerSet"><span class="code">SelectionOwnerSet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionOwnerSetForDisplay"><span class="code">SelectionOwnerSetForDisplay<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SelectionRemoveAll"><span class="code">SelectionRemoveAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="SetDebugFlags"><span class="code">SetDebugFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="ShowUri"><span class="code">ShowUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="ShowUriOnWindow"><span class="code">ShowUriOnWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="StockAdd"><span class="code">StockAdd<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="StockAddStatic"><span class="code">StockAddStatic<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="StockListIds"><span class="code">StockListIds<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="StockLookup"><span class="code">StockLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="StockSetTranslateFunc"><span class="code">StockSetTranslateFunc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetTableFree"><span class="code">TargetTableFree<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetTableNewFromList"><span class="code">TargetTableNewFromList<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetsIncludeImage"><span class="code">TargetsIncludeImage<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetsIncludeRichText"><span class="code">TargetsIncludeRichText<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetsIncludeText"><span class="code">TargetsIncludeText<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TargetsIncludeUri"><span class="code">TargetsIncludeUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestCreateSimpleWindow"><span class="code">TestCreateSimpleWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestFindLabel"><span class="code">TestFindLabel<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestFindSibling"><span class="code">TestFindSibling<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestFindWidget"><span class="code">TestFindWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestListAllTypes"><span class="code">TestListAllTypes<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestRegisterAllTypes"><span class="code">TestRegisterAllTypes<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestSliderGetValue"><span class="code">TestSliderGetValue<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestSliderSetPerc"><span class="code">TestSliderSetPerc<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestSpinButtonClick"><span class="code">TestSpinButtonClick<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestTextGet"><span class="code">TestTextGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestTextSet"><span class="code">TestTextSet<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestWidgetClick"><span class="code">TestWidgetClick<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestWidgetSendKey"><span class="code">TestWidgetSendKey<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TestWidgetWaitForDraw"><span class="code">TestWidgetWaitForDraw<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TreeGetRowDragData"><span class="code">TreeGetRowDragData<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TreeRowReferenceDeleted"><span class="code">TreeRowReferenceDeleted<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TreeRowReferenceInserted"><span class="code">TreeRowReferenceInserted<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="TreeSetRowDragData"><span class="code">TreeSetRowDragData<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
-	</div><h5 id="True"><span class="code">True<span class="delimiter">(</span><span class="delimiter">)</span></span></h5><div class="comment">
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gtk.xhtml">Gtk</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gtk/Main.xhtml">Main</a></li></ul><section id="Main" class="section"><h2>Main</h2><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="AccelGroupsActivate"><span class="code">AccelGroupsActivate<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AccelGroupsFromObject"><span class="code">AccelGroupsFromObject<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorGetDefaultModMask"><span class="code">AcceleratorGetDefaultModMask<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorGetLabel"><span class="code">AcceleratorGetLabel<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorGetLabelWithKeycode"><span class="code">AcceleratorGetLabelWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorName"><span class="code">AcceleratorName<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorNameWithKeycode"><span class="code">AcceleratorNameWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorParse"><span class="code">AcceleratorParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorParseWithKeycode"><span class="code">AcceleratorParseWithKeycode<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorSetDefaultModMask"><span class="code">AcceleratorSetDefaultModMask<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AcceleratorValid"><span class="code">AcceleratorValid<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="AlternativeDialogButtonOrder"><span class="code">AlternativeDialogButtonOrder<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingEntryAddSignalFromString"><span class="code">BindingEntryAddSignalFromString<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingEntryAddSignall"><span class="code">BindingEntryAddSignall<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingEntryRemove"><span class="code">BindingEntryRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingEntrySkip"><span class="code">BindingEntrySkip<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingSetFind"><span class="code">BindingSetFind<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingsActivate"><span class="code">BindingsActivate<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BindingsActivateEvent"><span class="code">BindingsActivateEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="BuilderErrorQuark"><span class="code">BuilderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CairoShouldDrawWindow"><span class="code">CairoShouldDrawWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CairoTransformToWindow"><span class="code">CairoTransformToWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CheckVersion"><span class="code">CheckVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CssProviderErrorQuark"><span class="code">CssProviderErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DeviceGrabAdd"><span class="code">DeviceGrabAdd<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DeviceGrabRemove"><span class="code">DeviceGrabRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DisableSetlocale"><span class="code">DisableSetlocale<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DistributeNaturalAllocation"><span class="code">DistributeNaturalAllocation<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragCancel"><span class="code">DragCancel<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragFinish"><span class="code">DragFinish<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragGetSourceWidget"><span class="code">DragGetSourceWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconDefault"><span class="code">DragSetIconDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconGicon"><span class="code">DragSetIconGicon<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconName"><span class="code">DragSetIconName<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconPixbuf"><span class="code">DragSetIconPixbuf<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconStock"><span class="code">DragSetIconStock<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconSurface"><span class="code">DragSetIconSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DragSetIconWidget"><span class="code">DragSetIconWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="DrawInsertionCursor"><span class="code">DrawInsertionCursor<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="EventsPending"><span class="code">EventsPending<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="False"><span class="code">False<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="FileChooserErrorQuark"><span class="code">FileChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetBinaryAge"><span class="code">GetBinaryAge<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetCurrentEvent"><span class="code">GetCurrentEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetCurrentEventDevice"><span class="code">GetCurrentEventDevice<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetCurrentEventState"><span class="code">GetCurrentEventState<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetCurrentEventTime"><span class="code">GetCurrentEventTime<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetDebugFlags"><span class="code">GetDebugFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetDefaultLanguage"><span class="code">GetDefaultLanguage<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetEventWidget"><span class="code">GetEventWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetInterfaceAge"><span class="code">GetInterfaceAge<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetLocaleDirection"><span class="code">GetLocaleDirection<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetMajorVersion"><span class="code">GetMajorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetMicroVersion"><span class="code">GetMicroVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetMinorVersion"><span class="code">GetMinorVersion<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GetOptionGroup"><span class="code">GetOptionGroup<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="GrabGetCurrent"><span class="code">GrabGetCurrent<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeFromName"><span class="code">IconSizeFromName<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeGetName"><span class="code">IconSizeGetName<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeLookup"><span class="code">IconSizeLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeLookupForSettings"><span class="code">IconSizeLookupForSettings<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeRegister"><span class="code">IconSizeRegister<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconSizeRegisterAlias"><span class="code">IconSizeRegisterAlias<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IconThemeErrorQuark"><span class="code">IconThemeErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Init"><span class="code">Init<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="InitCheck"><span class="code">InitCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="InitWithArgs"><span class="code">InitWithArgs<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="KeySnooperRemove"><span class="code">KeySnooperRemove<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Main"><span class="code">Main<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="MainDoEvent"><span class="code">MainDoEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="MainIteration"><span class="code">MainIteration<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="MainIterationDo"><span class="code">MainIterationDo<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="MainLevel"><span class="code">MainLevel<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="MainQuit"><span class="code">MainQuit<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintArrow"><span class="code">PaintArrow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintBox"><span class="code">PaintBox<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintBoxGap"><span class="code">PaintBoxGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintCheck"><span class="code">PaintCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintDiamond"><span class="code">PaintDiamond<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintExpander"><span class="code">PaintExpander<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintExtension"><span class="code">PaintExtension<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintFlatBox"><span class="code">PaintFlatBox<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintFocus"><span class="code">PaintFocus<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintHandle"><span class="code">PaintHandle<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintHline"><span class="code">PaintHline<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintLayout"><span class="code">PaintLayout<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintOption"><span class="code">PaintOption<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintResizeGrip"><span class="code">PaintResizeGrip<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintShadow"><span class="code">PaintShadow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintShadowGap"><span class="code">PaintShadowGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintSlider"><span class="code">PaintSlider<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintSpinner"><span class="code">PaintSpinner<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintTab"><span class="code">PaintTab<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaintVline"><span class="code">PaintVline<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaperSizeGetDefault"><span class="code">PaperSizeGetDefault<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PaperSizeGetPaperSizes"><span class="code">PaperSizeGetPaperSizes<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="ParseArgs"><span class="code">ParseArgs<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PrintErrorQuark"><span class="code">PrintErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PrintRunPageSetupDialog"><span class="code">PrintRunPageSetupDialog<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PrintRunPageSetupDialogAsync"><span class="code">PrintRunPageSetupDialogAsync<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="PropagateEvent"><span class="code">PropagateEvent<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcAddDefaultFile"><span class="code">RcAddDefaultFile<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcFindModuleInPath"><span class="code">RcFindModuleInPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcFindPixmapInPath"><span class="code">RcFindPixmapInPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetDefaultFiles"><span class="code">RcGetDefaultFiles<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetImModuleFile"><span class="code">RcGetImModuleFile<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetImModulePath"><span class="code">RcGetImModulePath<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetModuleDir"><span class="code">RcGetModuleDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetStyle"><span class="code">RcGetStyle<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetStyleByPaths"><span class="code">RcGetStyleByPaths<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcGetThemeDir"><span class="code">RcGetThemeDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParse"><span class="code">RcParse<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParseColor"><span class="code">RcParseColor<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParseColorFull"><span class="code">RcParseColorFull<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParsePriority"><span class="code">RcParsePriority<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParseState"><span class="code">RcParseState<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcParseString"><span class="code">RcParseString<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcPropertyParseBorder"><span class="code">RcPropertyParseBorder<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcPropertyParseColor"><span class="code">RcPropertyParseColor<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcPropertyParseEnum"><span class="code">RcPropertyParseEnum<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcPropertyParseFlags"><span class="code">RcPropertyParseFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcPropertyParseRequisition"><span class="code">RcPropertyParseRequisition<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcReparseAll"><span class="code">RcReparseAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcReparseAllForSettings"><span class="code">RcReparseAllForSettings<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcResetStyles"><span class="code">RcResetStyles<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RcSetDefaultFiles"><span class="code">RcSetDefaultFiles<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RecentChooserErrorQuark"><span class="code">RecentChooserErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RecentManagerErrorQuark"><span class="code">RecentManagerErrorQuark<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderActivity"><span class="code">RenderActivity<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderArrow"><span class="code">RenderArrow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderBackground"><span class="code">RenderBackground<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderBackgroundGetClip"><span class="code">RenderBackgroundGetClip<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderCheck"><span class="code">RenderCheck<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderExpander"><span class="code">RenderExpander<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderExtension"><span class="code">RenderExtension<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderFocus"><span class="code">RenderFocus<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderFrame"><span class="code">RenderFrame<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderFrameGap"><span class="code">RenderFrameGap<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderHandle"><span class="code">RenderHandle<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderIcon"><span class="code">RenderIcon<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderIconPixbuf"><span class="code">RenderIconPixbuf<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderIconSurface"><span class="code">RenderIconSurface<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderInsertionCursor"><span class="code">RenderInsertionCursor<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderLayout"><span class="code">RenderLayout<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderLine"><span class="code">RenderLine<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderOption"><span class="code">RenderOption<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RenderSlider"><span class="code">RenderSlider<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="RgbToHsv"><span class="code">RgbToHsv<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionAddTarget"><span class="code">SelectionAddTarget<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionAddTargets"><span class="code">SelectionAddTargets<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionClearTargets"><span class="code">SelectionClearTargets<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionConvert"><span class="code">SelectionConvert<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionOwnerSet"><span class="code">SelectionOwnerSet<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionOwnerSetForDisplay"><span class="code">SelectionOwnerSetForDisplay<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SelectionRemoveAll"><span class="code">SelectionRemoveAll<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="SetDebugFlags"><span class="code">SetDebugFlags<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="ShowUri"><span class="code">ShowUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="ShowUriOnWindow"><span class="code">ShowUriOnWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="StockAdd"><span class="code">StockAdd<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="StockAddStatic"><span class="code">StockAddStatic<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="StockListIds"><span class="code">StockListIds<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="StockLookup"><span class="code">StockLookup<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="StockSetTranslateFunc"><span class="code">StockSetTranslateFunc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetTableFree"><span class="code">TargetTableFree<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetTableNewFromList"><span class="code">TargetTableNewFromList<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetsIncludeImage"><span class="code">TargetsIncludeImage<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetsIncludeRichText"><span class="code">TargetsIncludeRichText<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetsIncludeText"><span class="code">TargetsIncludeText<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TargetsIncludeUri"><span class="code">TargetsIncludeUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestCreateSimpleWindow"><span class="code">TestCreateSimpleWindow<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestFindLabel"><span class="code">TestFindLabel<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestFindSibling"><span class="code">TestFindSibling<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestFindWidget"><span class="code">TestFindWidget<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestListAllTypes"><span class="code">TestListAllTypes<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestRegisterAllTypes"><span class="code">TestRegisterAllTypes<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestSliderGetValue"><span class="code">TestSliderGetValue<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestSliderSetPerc"><span class="code">TestSliderSetPerc<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestSpinButtonClick"><span class="code">TestSpinButtonClick<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestTextGet"><span class="code">TestTextGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestTextSet"><span class="code">TestTextSet<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestWidgetClick"><span class="code">TestWidgetClick<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestWidgetSendKey"><span class="code">TestWidgetSendKey<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TestWidgetWaitForDraw"><span class="code">TestWidgetWaitForDraw<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TreeGetRowDragData"><span class="code">TreeGetRowDragData<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TreeRowReferenceDeleted"><span class="code">TreeRowReferenceDeleted<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TreeRowReferenceInserted"><span class="code">TreeRowReferenceInserted<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="TreeSetRowDragData"><span class="code">TreeSetRowDragData<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="True"><span class="code">True<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
 	</div></section></section>
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
 	</div>
 </div>
-<footer>
-	<div class="text-center">
-		<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
-	</div>
-</footer>
 </body>
 </html>
