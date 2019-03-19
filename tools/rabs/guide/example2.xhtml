@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content=""/>
+	<meta name="author" content="ink, cookbook, recipes"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Wrapl, The Programming Language"/>
+	<meta property="og:description" content="Wrapl, The Programming Language"/>
+	<meta property="og:url" content="http://wrapl.sf.net"/>
+	<meta property="og:image" content="http://wrapl.sf.net/sample.png"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-exp.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/spectre-icons.css"/>
+	<link rel="stylesheet" type="text/css" href="/code.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css"/>
+	<title>Advanced Example</title>
+</head>
+<body>
+<div class="off-canvas off-canvas-sidebar-show">
+	<a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+		<i class="icon icon-menu"></i>
+	</a>
+	<div id="sidebar-id" class="off-canvas-sidebar">
+		<ul class="nav">
+			<li class="nav-item"><a href="/index.xhtml" class="toplevel"><i class="fa fa-home"></i> Home</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/index.xhtml#Features">Features</a></li>
+					<li class="nav-item"><a href="/index.xhtml#Contact">Contact</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/news.xhtml" class="toplevel"><i class="fa fa-clock"></i> News</a></li>
+			<li class="nav-item"><a href="/docs.xhtml" class="toplevel"><i class="fa fa-book"></i> Documentation</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/ref/tutorial.xhtml">Tutorial</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#Reference">Reference</a>
+						<ul class="nav flyout right">
+							<li class="nav-item"><a href="/ref/syntax.xhtml">Syntax</a></li>
+							<li class="nav-item"><a href="/ref/expressions.xhtml">Expressions</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/samples.xhtml">Sample</a></li>
+					<li class="nav-item"><a href="/lib.xhtml">Libraries</a></li>
+					<li class="nav-item"><a href="/docs.xhtml#tools">Tools</a></li>
+					<li class="nav-item"><a href="/internals.xhtml">Internals</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/download.xhtml" class="toplevel"><i class="fa fa-download"></i> Download</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/download.xhtml#Source">Source</a></li>
+					<li class="nav-item"><a href="/download.xhtml#Binaries">Binaries</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="/links.xhtml" class="toplevel"><i class="fa fa-globe"></i> Links</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="/links.xhtml#Programming_Languages">Other Languages</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Development_Tools">Development Tools</a></li>
+					<li class="nav-item"><a href="/links.xhtml#Libraries">Libraries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<a class="off-canvas-overlay" href="#close"></a>
+	<div class="off-canvas-content">
+		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
+
+
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/docs.xhtml#tools">Tools</a></li>
+	<li class="breadcrumb-item"><a href="/tools/rabs.xhtml#guide">Rabs Guide</a></li>
+	<li class="breadcrumb-item">Advanced Example</li>
+</ul>
+
+<section id="Advanced_Example" class="section"><h2>Advanced Example</h2>
+
+<section id="Improved_Build_Script" data-spy="true" data-target="#side-menu"><h3>Improved Build Script</h3>
+<p>Although the simple build script described previously is adequate for the sample project, it can be improved in some aspects:</p>
+<ul>
+	<li>The program only uses 1 source file for now. Each additional source file requires another rule for the corresponding object file, and another change to the rule for building the final executable.</li>
+	<li>The command line options for <span class="literal">gcc</span> are specified inline, which makes them cumbersome to change and also means that they cannot be adjusted when calling <span class="literal">rabs</span>.</li>
+	<li>The indirect dependance of <span class="literal">src/test.o</span> on <span class="literal">src/test.h</span> caused by a <span class="code"><span class="delimiter">#</span><span class="var">include</span> <span class="literal">"test.h"</span></span> in <span class="literal">src/test.c</span> is explicitly coded. This means that if new <span class="code"><span class="delimiter">#</span><span class="var">include</span></span>s are added to <span class="literal">src/test.c</span>, they will also have to be added to the <span class="literal">_minibuild_</span> script.</li>
+</ul>
+</section>
+
+<section id="Intermediate_Build_Script" data-spy="true" data-target="#side-menu"><h3>Intermediate Build Script</h3>
+<p>The following build script contains these improvements.</p>
+<div class="code"><div class="codeheader">_minibuild_</div><span class="lineno">   1</span><span class="comment">-- ROOT --</span>
+<span class="lineno">   2</span>
+<span class="lineno">   3</span><span class="var">CFLAGS</span> <span class="delimiter">:=</span> <span class="delimiter">[]</span>
+<span class="lineno">   4</span><span class="var">LDFLAGS</span> <span class="delimiter">:=</span> <span class="delimiter">[]</span>
+<span class="lineno">   5</span>
+<span class="lineno">   6</span><span class="var">c_compile</span> <span class="delimiter">:=</span> <span class="keyword">fun</span><span class="delimiter">(</span><span class="var">Object</span><span class="delimiter">)</span> <span class="keyword">do</span>
+<span class="lineno">   7</span>    <span class="keyword">var</span> <span class="var">Source</span> <span class="delimiter">:=</span> <span class="var">Object</span> <span class="delimiter">%</span> <span class="literal">"c"</span>
+<span class="lineno">   8</span>    <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc -c </span><span class="nested"><span class="delimiter">{</span><span class="var">CFLAGS</span><span class="delimiter">}</span></span><span class="literal"> -o</span><span class="nested"><span class="delimiter">{</span><span class="var">Object</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">Source</span><span class="symbol">:dir</span><span class="delimiter">}</span></span><span class="literal"> </span><span class="nested"><span class="delimiter">{</span><span class="var">Source</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">   9</span><span class="keyword">end</span>
+<span class="lineno">  10</span>
+<span class="lineno">  11</span><span class="var">c_includes</span> <span class="delimiter">:=</span> <span class="keyword">fun</span><span class="delimiter">(</span><span class="var">Source</span><span class="delimiter">)</span> <span class="keyword">do</span>
+<span class="lineno">  12</span>    <span class="keyword">var</span> <span class="var">Files</span> <span class="delimiter">:=</span> <span class="delimiter">[]</span>
+<span class="lineno">  13</span>    <span class="keyword">var</span> <span class="var">Lines</span> <span class="delimiter">:=</span> <span class="var">shell</span><span class="delimiter">(</span><span class="literal">'gcc -c </span><span class="nested"><span class="delimiter">{</span><span class="var">CFLAGS</span><span class="delimiter">}</span></span><span class="literal"> -I</span><span class="nested"><span class="delimiter">{</span><span class="var">Source</span><span class="symbol">:dirname</span><span class="delimiter">}</span></span><span class="literal"> -M -MG </span><span class="nested"><span class="delimiter">{</span><span class="var">Source</span><span class="delimiter">}</span></span><span class="literal">'</span><span class="delimiter">)</span>
+<span class="lineno">  14</span>    <span class="keyword">var</span> <span class="var">Files</span> <span class="delimiter">:=</span> <span class="var">Lines</span><span class="symbol">:trim</span><span class="symbol">:replace</span><span class="delimiter">(</span><span class="var">r</span><span class="literal">"\\\n "</span><span class="delimiter">,</span> <span class="literal">""</span><span class="delimiter">)</span> <span class="delimiter">/</span> <span class="var">r</span><span class="literal">"[^\\]( )"</span>
+<span class="lineno">  15</span>    <span class="keyword">for</span> <span class="var">File</span> <span class="keyword">in</span> <span class="var">Files</span> <span class="keyword">do</span>
+<span class="lineno">  16</span>        <span class="var">File</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="var">File</span><span class="symbol">:replace</span><span class="delimiter">(</span><span class="var">r</span><span class="literal">"\\ "</span><span class="delimiter">,</span> <span class="literal">" "</span><span class="delimiter">))</span>
+<span class="lineno">  17</span>    <span class="keyword">end</span>
+<span class="lineno">  18</span>    <span class="keyword">return</span> <span class="var">Files</span>
+<span class="lineno">  19</span><span class="keyword">end</span>
+<span class="lineno">  20</span>
+<span class="lineno">  21</span><span class="keyword">var</span> <span class="var">SourceTypes</span> <span class="delimiter">:=</span> <span class="delimiter">{</span>
+<span class="lineno">  22</span>    <span class="literal">"c"</span> <span class="keyword">is</span> <span class="delimiter">[</span><span class="var">c_includes</span><span class="delimiter">,</span> <span class="var">c_compile</span><span class="delimiter">]</span>
+<span class="lineno">  23</span><span class="delimiter">}</span>
+<span class="lineno">  24</span>
+<span class="lineno">  25</span><span class="var">c_program</span> <span class="delimiter">:=</span> <span class="keyword">fun</span><span class="delimiter">(</span><span class="var">Executable</span><span class="delimiter">,</span> <span class="var">Objects</span><span class="delimiter">,</span> <span class="var">Libraries</span><span class="delimiter">)</span> <span class="keyword">do</span>
+<span class="lineno">  26</span>    <span class="var">Objects</span> <span class="delimiter">:=</span> <span class="var">Objects</span> <span class="keyword">or</span> <span class="delimiter">[]</span>
+<span class="lineno">  27</span>    <span class="var">Libraries</span> <span class="delimiter">:=</span> <span class="var">Libraries</span> <span class="keyword">or</span> <span class="delimiter">[]</span>
+<span class="lineno">  28</span>    <span class="keyword">var</span> <span class="var">Sources</span> <span class="delimiter">:=</span> <span class="delimiter">[]</span>
+<span class="lineno">  29</span>    <span class="keyword">for</span> <span class="var">Object</span> <span class="keyword">in</span> <span class="var">Objects</span> <span class="keyword">do</span>
+<span class="lineno">  30</span>        <span class="keyword">for</span> <span class="var">Extension</span><span class="delimiter">,</span> <span class="var">Functions</span> <span class="keyword">in</span> <span class="var">SourceTypes</span> <span class="keyword">do</span>
+<span class="lineno">  31</span>            <span class="keyword">var</span> <span class="var">Source</span> <span class="delimiter">:=</span> <span class="var">Object</span> <span class="delimiter">%</span> <span class="var">Extension</span>
+<span class="lineno">  32</span>            <span class="keyword">if</span> <span class="var">Source</span><span class="symbol">:exists</span> <span class="keyword">then</span>
+<span class="lineno">  33</span>                <span class="var">Sources</span><span class="symbol">:put</span><span class="delimiter">(</span><span class="var">Source</span><span class="delimiter">)</span>
+<span class="lineno">  34</span>                <span class="keyword">var</span> <span class="var">Scan</span> <span class="delimiter">:=</span> <span class="var">Source</span><span class="symbol">:scan</span><span class="delimiter">(</span><span class="literal">"INCLUDES"</span><span class="delimiter">,</span> <span class="symbol">:true</span><span class="delimiter">)</span> <span class="delimiter">=&gt;</span> <span class="var">Functions</span><span class="delimiter">[</span>1<span class="delimiter">]</span>
+<span class="lineno">  35</span>                <span class="var">Object</span><span class="delimiter">[</span><span class="var">Source</span><span class="delimiter">,</span> <span class="var">Scan</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="var">Functions</span><span class="delimiter">[</span>2<span class="delimiter">]</span>
+<span class="lineno">  36</span>                <span class="keyword">exit</span>
+<span class="lineno">  37</span>            <span class="keyword">end</span>
+<span class="lineno">  38</span>        <span class="keyword">end</span>
+<span class="lineno">  39</span>    <span class="keyword">end</span>
+<span class="lineno">  40</span>    <span class="var">Executable</span><span class="delimiter">[</span><span class="var">Objects</span><span class="delimiter">,</span> <span class="var">Libraries</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">(</span><span class="var">Executable</span><span class="delimiter">)</span> <span class="keyword">do</span>
+<span class="lineno">  41</span>        <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'gcc'</span><span class="delimiter">,</span> <span class="literal">'-o'</span><span class="delimiter">,</span> <span class="var">Executable</span><span class="delimiter">,</span> <span class="var">Objects</span><span class="delimiter">,</span> <span class="var">Libraries</span><span class="delimiter">,</span> <span class="var">LDFLAGS</span><span class="delimiter">)</span>
+<span class="lineno">  42</span>        <span class="var">DEBUG</span> <span class="keyword">or</span> <span class="var">execute</span><span class="delimiter">(</span><span class="literal">'strip'</span><span class="delimiter">,</span> <span class="var">Executable</span><span class="delimiter">)</span>
+<span class="lineno">  43</span>    <span class="keyword">end</span>
+<span class="lineno">  44</span>    <span class="var">DEFAULT</span><span class="delimiter">[</span><span class="var">Executable</span><span class="delimiter">]</span>
+<span class="lineno">  45</span><span class="keyword">end</span>
+<span class="lineno">  46</span>
+<span class="lineno">  47</span><span class="var">vmount</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">,</span> <span class="literal">"src"</span><span class="delimiter">)</span>
+<span class="lineno">  48</span>
+<span class="lineno">  49</span><span class="var">BIN_DIR</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"bin"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">  50</span><span class="var">OBJ_DIR</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"obj"</span><span class="delimiter">)</span><span class="symbol">:mkdir</span>
+<span class="lineno">  51</span>
+<span class="lineno">  52</span><span class="var">c_program</span><span class="delimiter">(</span><span class="var">BIN_DIR</span> <span class="delimiter">/</span> <span class="literal">"test"</span><span class="delimiter">,</span> <span class="delimiter">[</span><span class="var">OBJ_DIR</span> <span class="delimiter">/</span><span class="literal">"test.o"</span><span class="delimiter">])</span></div>
+
+</section>
+
+<section id="Intermediate_Build_Script_Explained" data-spy="true" data-target="#side-menu"><h3>Intermediate Build Script Explained</h3>
+
+</section>
+
+</section>
+
+
+		<footer>
+			<div class="text-center">
+				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
+			</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>
