@@ -86,66 +86,68 @@
 <p>The table below summarizes the different expression forms in Wrapl. The following notation is used in the table; <span class="var">id<sub>i</sub></span> denotes an idenitifer, <span class="var">expr<sub>i</sub></span> denotes an expression and <span class="var">decl<sub>i</sub></span> denotes a declaration.</p>
 
 <section id="Basic_Expressions" data-spy="true" data-target="#side-menu"><h3>Basic Expressions</h3>
-<h4 id="nil"><span class="keyword">NIL</span></h4>
+<h5><span class="code"><span class="keyword">NIL</span></span></h5>
 <p>Evaluates to the constant <a class="id" href="/lib/Std/Object.xhtml#Nil">Std.Object.Nil</a>, used to denote the absence of any other value.</p>
 
-<h4 id="back"><span class="keyword">BACK</span></h4>
+<h5><span class="code"><span class="keyword">BACK</span></span></h5>
 <p>Fails to produce any value, causing the current expression to backtrack.</p>
 
-<h4 id="valueof"><span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span></h5>
 <p>Returns the value of <span class="code"><span class="var">expr</span></span>. If <span class="code"><span class="var">expr</span></span> is a reference, then <span class="code"><span class="delimiter">.</span> <span class="var">expr</span></span> returns the current value of <span class="code"><span class="var">expr</span></span> without any reference.</p>
 
-<h4 id="typeof"><span class="code"><span class="delimiter">?</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="delimiter">?</span> <span class="var">expr</span></span></h5>
 <p>Returns the type of <span class="code"><span class="var">expr</span></span>.</p>
 
-<h4 id="equal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">==</span> </span><span class="var">expr<sub>2</sub></span></h4>
+<h5><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">==</span> </span><span class="var">expr<sub>2</sub></span></h5>
 <p>Returns <span class="var">expr<sub>2</sub></span> if <span class="var">expr<sub>1</sub></span> and <span class="var">expr<sub>2</sub></span> are the same object, fails otherwise.</p>
 
-<h4 id="notequal"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">~==</span> </span><span class="var">expr<sub>2</sub></span></h4>
+<h5><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">~==</span> </span><span class="var">expr<sub>2</sub></span></h5>
 <p>Returns <span class="var">expr<sub>2</sub></span> if <span class="var">expr<sub>1</sub></span> and <span class="var">expr<sub>2</sub></span> are not the same object, fails otherwise.</p>
 
 </section>
 
 <section id="Structure_Expressions" data-spy="true" data-target="#side-menu"><h3>Structure Expressions</h3>
-<h4 id="lists"><span class="code"><span class="delimiter">[</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">]</span></span></h4>
+
+<h5><span class="code"><span class="delimiter">[</span></span><span class="var">expr<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>&hellip;<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k</sub></span><span class="code"><span class="delimiter">]</span></span></h5>
 <p>Returns a list (instance of <a class="id" href="/lib/Std/List.xhtml#T">Std.List.T</a>) with elements <span class="var">expr<sub>1</sub></span>, <span class="var">expr<sub>2</sub></span>, ..., <span class="var">expr<sub>k</sub></span></p>
 
-<h4 id="tables"><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>k<sub>1</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>1</sub></sub></span><span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k<sub>k</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>k</sub></sub></span><span class="code"><span class="delimiter">}</span></span></h4>
+<h5><span class="code"><span class="delimiter">{</span></span><span class="var">expr<sub>k<sub>1</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>1</sub></sub></span><span class="code"><span class="delimiter">,</span> </span>&hellip;<span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>k<sub>k</sub></sub></span><span class="code"> <span class="keyword">IS</span> </span><span class="var">expr<sub>v<sub>k</sub></sub></span><span class="code"><span class="delimiter">}</span></span></h5>
 <p>Returns a table (instance of <a class="id" href="/lib/Std/Table.xhtml#T">Std.Table.T</a>) with pairs <span class="code"><span class="delimiter">(</span></span><span class="var">expr<sub>k<sub>i</sub></sub></span><span class="code"><span class="delimiter">,</span> </span><span class="var">expr<sub>v<sub>i</sub></sub></span><span class="code"><span class="delimiter">)</span></span>. Any value <span class="var">expr<sub>v<sub>j</sub></sub></span> is omitted, the value <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a> is used.</p>
 
-<h4 id="all"><span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="keyword">ALL</span> <span class="var">expr</span></span></h5>
 <p>Returns a list of all the values produced by <span class="code"><span class="var">expr</span></span>.</p>
-<h4 id="uniq"><span class="code"><span class="keyword">UNIQ</span> <span class="var">expr</span></span></h4>
+
+<h5><span class="code"><span class="keyword">UNIQ</span> <span class="var">expr</span></span></h5>
 <p>Returns a table with the (unique) values produced by <span class="code"><span class="var">expr</span></span> as keys.</p>
 
-<h4 id="ismethod"><span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">expr</span></span></h5>
 <p>where <span class="var">signature</span> is of the form [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>1</sub></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span>[<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>k</sub></span>].</p>
 <p>Adds <span class="var">expr</span> (which should be an invokable object) to <span class="code"><span class="symbol">:method</span></span> corresponding to <span class="var">signature</span>, where <span class="code"><span class="delimiter">@</span> <span class="var">type</span></span> denotes a type match and <span class="code"><span class="delimiter">=</span> <span class="var">value</span></span> denotes a value match, using <a class="id" href="/lib/Std/Symbol.xhtml#Set">Std.Symbol.Set</a>. Returns <span class="code"><span class="var">expr</span></span>.</p>
 <p>The old keyword <span class="code"><span class="keyword">TO</span></span> can still be used instead of <span class="code"><span class="keyword">METH</span></span>.</p>
 
-
 </section>
 
 <section id="Assignment_Expressions" data-spy="true" data-target="#side-menu"><h3>Assignment Expressions</h3>
-<h4 id="assign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>2</sub></span></h4>
+<h5><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">&lt;-</span> </span><span class="var">expr<sub>2</sub></span></h5>
 <p>Assigns the value of <span class="var">expr<sub>2</sub></span> to the reference produced by <span class="var">expr<sub>1</sub></span>. If <span class="var">expr<sub>1</sub></span> does not evalute to a reference then <a class="id" href="/lib/Wrapl/Loader.xhtml#IncorrectAssignMessageT">Wrapl.Loader.IncorrectAssignMessageT</a> message is sent. Within the evaluation of <span class="var">expr<sub>2</sub></span> the special variable <span class="code"><span class="delimiter">$</span></span> can be used to refer to the current value of <span class="var">expr<sub>1</sub></span>.</p>
 
-<h4 id="rassign"><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">-&gt;</span> </span><span class="var">expr<sub>2</sub></span></h4>
+<h5><span class="var">expr<sub>1</sub></span><span class="code"> <span class="delimiter">-&gt;</span> </span><span class="var">expr<sub>2</sub></span></h5>
 <p>Assigns the value of <span class="var">expr<sub>1</sub></span> to the reference produced by <span class="var">expr<sub>2</sub></span>. If <span class="var">expr<sub>1</sub></span> does not evalute to a reference then <a class="id" href="/lib/Wrapl/Loader.xhtml#IncorrectAssignMessageT">Wrapl.Loader.IncorrectAssignMessageT</a> message is sent.</p>
 
 </section>
 
 <section id="Function_Expressions" data-spy="true" data-target="#side-menu"><h3>Function Expressions</h3>
-<h4 id="function"><span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>][<span class="code"><span class="delimiter">|</span> <span class="var">expr</span></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]<span class="code"><span class="delimiter">&gt;</span> <span class="var">expr</span></span></h4>
+
+<h5><span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>][<span class="code"><span class="delimiter">|</span> </span><span class="var">expr<sub>1</sub></span>]<span class="code"><span class="delimiter">,</span> </span>&hellip;<span class="code"><span class="delimiter">,</span> </span><span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]<span class="code"><span class="delimiter">&gt;</span> <span class="var">expr</span></span></h5>
 <p>Creates a new function object with parameters <span class="var">id<sub>1</sub></span>, ..., <span class="var">id<sub>k</sub></span> and body <span class="code"><span class="var">expr</span></span>. If a parameter is followed by <span class="code"><span class="delimiter">+</span></span> it is passed by reference, other it is passed by value. A <span class="code"><span class="delimiter">*</span></span> after the final parameter indicates that it is a variadic parameter, any extra arguments are collected into a <a class="id" href="/lib/Wrapl/Loader.xhtml#VariadicT">Wrapl.Loader.VariadicT</a> and passed in this parameter.</p>
 
-<h4 id="varfunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">VAR</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">VAR</span> <span class="var">expr</span></span></h5>
 <p>Creates a new <a class="id" href="/lib/Std/Function.xhtml#VariableT">Std.Function.VariableT</a> object that returns the variable produced by <span class="code"><span class="var">expr</span></span>. This is equivalent to a call to <a class="id" href="/lib/Std/Function.xhtml#VariableNew">Std.Function.VariableNew</a> with <span class="code"><span class="var">expr</span></span>.</p>
 
-<h4 id="deffunction"><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">DEF</span> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="delimiter">&lt;&gt;</span> <span class="keyword">DEF</span> <span class="var">expr</span></span></h5>
 <p>Creates a new <a class="id" href="/lib/Std/Function.xhtml#ConstantT">Std.Function.ConstantT</a> function object that returns the value produced by <span class="code"><span class="var">expr</span></span>. This is equivalent to a call to <a class="id" href="/lib/Std/Function.xhtml#ConstantNew">Std.Function.ConstantNew</a> with <span class="code"><span class="var">expr</span></span>.</p>
 
-<h4 id="method"><span class="code"><span class="keyword">TO</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> </span>[&nbsp;<span class="code"><span class="keyword">VAR</span></span>&nbsp;|&nbsp;<span class="code"><span class="keyword">DEF</span></span>&nbsp;]<span class="code"> <span class="var">expr</span></span></h4>
+<h5><span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span><span class="delimiter">)</span> </span>[<span class="code"><span class="keyword">VAR</span></span>|<span class="code"><span class="keyword">DEF</span></span>]<span class="code"> <span class="var">expr</span></span></h5>
 <p>where <span class="var">signature</span> is of the form [<span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>]] [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>1</sub></span>]<span class="code"><span class="delimiter">,</span> </span>...<span class="code"><span class="delimiter">,</span> </span>[<span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>|<span class="code"><span class="delimiter">*</span></span>]] [<span class="code"><span class="delimiter">@</span></span>|<span class="code"><span class="delimiter">=</span></span> <span class="var">expr<sub>k</sub></span>].</p>
 <p>Equivalent to <span class="code"><span class="keyword">METH</span> <span class="symbol">:method</span><span class="delimiter">(</span><span class="var">signature</span></span>'<span class="code"><span class="delimiter">)</span> <span class="keyword">IS</span> <span class="var">func</span></span> (see <a href="#ismethod">here</a>) where <span class="var">signature</span>' is the type/value information in <span class="var">signature</span> (i.e. ignoring any identifiers and pass-by-reference markers) and <span class="code"><span class="var">func</span></span> is the function: <span class="code"><span class="delimiter">&lt;</span></span><span class="var">id<sub>1</sub></span>[<span class="code"><span class="delimiter">+</span></span>], ..., <span class="var">id<sub>k</sub></span>[<span class="code"><span class="delimiter">+</span></span>]<span class="code"><span class="delimiter">&gt;</span> </span>[ <span class="code"><span class="keyword">VAR</span></span> | <span class="code"><span class="keyword">DEF</span></span> ]<span class="code"> <span class="var">expr</span></span> (creating unique <span class="var">id</span>'s for those omitted). Returns <span class="code"><span class="var">func</span></span>.</p>
 <p>The old keyword <span class="code"><span class="keyword">TO</span></span> can still be used instead of <span class="code"><span class="keyword">METH</span></span>.</p>

@@ -84,8 +84,8 @@
 		<li>If the target has a <span class="literal">build function</span> then invoke it to (re)build the target if any of the following are true:
 			<ul>
 				<li>any dependency has <span class="literal">changed</span>,</li>
-				<li>the <span class="literal">build function</span> for this target has changed,</li>
-				<li>this target has never been built (or deleted in the case of file targets).</li>
+				<li>the <span class="literal">build function</span> for the target has changed,</li>
+				<li>the target has never been built (or deleted in the case of file targets).</li>
 			</ul>
 		</li>
 		<li>Whether or not the target was (re)built above, test if the target has acutally <span class="literal">changed</span> by comparing its current checksum to its previous checksum. Freshly built targets (with no previous checksum) are always considered <span class="literal">changed</span>.</li>
@@ -93,18 +93,19 @@
 	</ol>
 </p>
 
-<section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3>
-<h4 id="depends">
-<span class="code"><span class="var">Target</span><span class="delimiter">[</span></span><span class="var">Dependency<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>&hellip;<span class="code"><span class="delimiter">,</span> </span><span class="var">Dependency<sub>n</sub></span><span class="code"><span class="delimiter">]</span></span>
-</h4>
+<h4 id="Methods">Methods</h4>
+<h5><span class="code"><span class="var">Target</span><span class="delimiter">[</span></span><span class="var">V<sub>1</sub></span><span class="code"><span class="delimiter">,</span> </span>&hellip;<span class="code"><span class="delimiter">,</span> </span><span class="var">V<sub>n</sub></span><span class="code"><span class="delimiter">]</span></span></h5>
+<p>Adds explicit dependencies to the target <span class="var">Target</span>. Each value <span class="var">V<sub>i></sub></span> can be either:</p>
+<ol>
+	<li>a target,</li>
+	<li>a string, denoting a <span class="literal">symbol</span> target,</li>
+	<li>a list, where each element in turn is a target, string or another list</li>
+</ol>
+
+<h5><span class="code"><span class="var">Target</span> <span class="delimiter">=&gt;</span> <span class="var">BuildFunction</span></span></h5>
+<p>Sets the build function for <span class="var">Target</span>, which will be called to build the target if it has not been built already (or was deleted from the disk), and when any of its dependencies have changed.</p>
 
 
-<h4 id="build">
-<span class="code"><span class="var">Target</span> <span class="delimiter">=&gt;</span> <span class="var">BuildFunction</span></span>
-</h4>
-
-
-</section>
 </section>
 
 <section id="File_Targets" data-spy="true" data-target="#side-menu"><h3>File Targets</h3>
@@ -115,9 +116,10 @@
 <p>When using a <span class="literal">file</span> target in an <a href="functions.xhtml#external_commands">external command</a> or in a <a href="minilang.xhtml#string_interpolation">string interpolation</a>, relative file paths are resolved within the build's <a href="functions.xhtml#virtual_file_system">virtual file system</a>. The absolute resolved path is then used.</p>
 
 <p>Since <span class="literal">file</span> targets correspond to files or directories within the file system, their checksum is calculated as the sha256 hash of a file's contents or a directory's modification time. The contents of a directory are not considered here, since doing so can lead to incorrect rebuilding.</p>
+
 </section>
 
-<section id="Symbols" data-spy="true" data-target="#side-menu"><h3>Symbols</h3>
+<section id="Symbol_Targets" data-spy="true" data-target="#side-menu"><h3>Symbol Targets</h3>
 <p>These correspond to build variables and are usually, but not limited to, strings. They can be considered global variables in the sense that they are passed from one <a href="contexts.xhtml">context</a> to any sub-contexts it contains. However, they may be overridden in sub-contexts, and more importantly, are resolved when a build function is executed, not when it is declared. They also act as targets is that changing the value of a symbol will trigger a rebuild of any target whose build function uses that symbol.</p>
 
 <p>A <span class="literal">symbol</span> target is created by assigning to an undeclared variable, e.g. <span class="code"><span class="var">CFLAGS</span> <span class="delimiter">:=</span> <span class="literal">"-g"</span></span>. Putting a <span class="code"><span class="keyword">var</span></span> before the assignment will create a local variable within the script, and not a <span class="literal">symbol</span>. Reassigning to a symbol in a sub-context will override the value of the symbol within that sub-context and its own sub-contexts. Within this overriding assignment, the previous value of the symbol may be accessed using <span class="code"><span class="keyword">old</span></span>, for example <span class="code"><span class="var">CFLAGS</span> <span class="delimiter">:=</span> <span class="keyword">old</span> <span class="delimiter">+</span> <span class="literal">"-O2"</span></span>.</p>
@@ -127,10 +129,19 @@
 <p>In some rare occasions, it might be necessary to explicitly denote a dependency on a symbol. This can be achieved by using a string containing the symbol name in the dependency list.</p>
 </section>
 
-<section id="Meta_Targets" data-spy="true" data-target="#side-menu"><h3>Meta Targets</h3>
+<section id="Expression_Targets" data-spy="true" data-target="#side-menu"><h3>Expression Targets</h3>
+<p>These are similar to <span class="literal">symbol</span> targets in that they correspond to a value rather than a file. However unlike <span class="literal">symbol</span> targets, <span class="literal">expression</span> targets use a build function to calculate their values instead of simple assignment. Having a build function allows <span class="literal">expression</span> targets to have their own dependencies, which will be built before evaluating the target's build function. In rebuilds, if any of the dependencies change, then the build function will be called again.</p>
+
+<p>Example:
+<div class="code"><span class="lineno">   1</span><span class="keyword">var</span> <span class="var">Library</span> <span class="delimiter">:=</span> <span class="var">file</span><span class="delimiter">(</span><span class="literal">"libX.a"</span><span class="delimiter">)</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="keyword">do</span>
+<span class="lineno">   2</span>    <span class="comment">-- Build libX.a and pkg-config files</span>
+<span class="lineno">   3</span><span class="keyword">end</span>
+<span class="lineno">   4</span>
+<span class="lineno">   5</span><span class="keyword">var</span> <span class="var">LibraryCFlags</span> <span class="delimiter">:=</span> <span class="var">expr</span><span class="delimiter">(</span><span class="literal">"LibraryCFlags"</span><span class="delimiter">)[</span><span class="var">Library</span><span class="delimiter">]</span> <span class="delimiter">=&gt;</span> <span class="keyword">fun</span><span class="delimiter">()</span> <span class="var">shell</span><span class="delimiter">(</span><span class="literal">"pkg-config --cflags library"</span><span class="delimiter">)</span></div>
+</p>
 </section>
 
-<section id="Expression_Targets" data-spy="true" data-target="#side-menu"><h3>Expression Targets</h3>
+<section id="Meta_Targets" data-spy="true" data-target="#side-menu"><h3>Meta Targets</h3>
 </section>
 
 <section id="Scanning_Targets" data-spy="true" data-target="#side-menu"><h3>Scanning Targets</h3>

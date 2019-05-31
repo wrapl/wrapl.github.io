@@ -71,69 +71,7 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Module.xhtml">Module</a></li></ul><section id="Module" class="section"><h2>Module</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
- A handle to a loaded module.<br></br>
-	</div><h4 id="InfoT"><span class="code">InfoT</span></h4><div class="comment">
-Information about an exported/imported symbol.<br></br>
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="AddDirectory"><span class="code">AddDirectory<span class="delimiter">(</span><span class="var">directory</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-Adds <span class="var">directory</span> to the module search path.<br></br>
-	</div><h4 id="FromRef"><span class="code">FromRef<span class="delimiter">(</span><span class="var">ref</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h4><div class="comment">
-		
-Returns the a name for <span class="var">ref</span> as a list <span class="code"><span class="delimiter">[</span><span class="var">module</span><span class="delimiter">,</span> <span class="var">import</span><span class="delimiter">]</span></span> if is a reference imported from a loaded module. Fails otherwise.<br></br>
-	</div><h4 id="FromVal"><span class="code">FromVal<span class="delimiter">(</span><span class="var">val</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></span></h4><div class="comment">
-		
-Returns the a name for <span class="var">val</span> as a list <span class="code"><span class="delimiter">[</span><span class="var">module</span><span class="delimiter">,</span> <span class="var">import</span><span class="delimiter">]</span></span> if is a value imported from a loaded module. Fails otherwise.<br></br>
-	</div><h4 id="GetInfo"><span class="code">GetInfo<span class="delimiter">(</span><span class="var">value</span><span class="delimiter">)</span></span></h4><div class="comment">
-		
-Returns information about an exported value/reference.<br></br>
-	</div><h4 id="Load"><span class="code">Load<span class="delimiter">(</span><span class="var">path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
-		
-		
- Loads and returns a handle to the module <span class="var">name</span> from <span class="var">path</span>.<br></br>
- <span class="var">path</span> can be <span class="code"><span class="keyword">NIL</span></span> to load <span class="var">name</span> relative to the current directory.<br></br>
-	</div><h4 id="LoadFile"><span class="code">LoadFile<span class="delimiter">(</span><span class="var">file</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
-		
- Loads and returns a handle to the module located in <span class="var">file</span>.<br></br>
- The loaded module is not cached by the module system.<br></br>
-	</div><h4 id="LoadSymbol"><span class="code">LoadSymbol<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
-	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
- Creates an returns an anonymous module.<br></br>
-	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_._"><span class="code"><span class="symbol">:</span><span class="literal">"."</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
- Returns the imported value <span class="code"><span class="var">module</span><span class="delimiter">.</span><span class="var">id</span></span>.<br></br>
-	</div><h4 id="export"><span class="code"><span class="symbol">:export</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span></span></h4><div class="comment">
-		
-		
-		
-Adds the export <span class="var">value</span> to <span class="var">module</span> with the name <span class="var">id</span>.<br></br>
-	</div><h4 id="import"><span class="code"><span class="symbol">:import</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">id</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
-		
-		
- Returns the imported value <span class="code"><span class="var">module</span><span class="delimiter">.</span><span class="var">id</span></span>.<br></br>
-	</div><h4 id="import"><span class="code"><span class="symbol">:import</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-	</div><h4 id="module"><span class="code"><span class="symbol">:module</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#InfoT">InfoT</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-	</div><h4 id="name"><span class="code"><span class="symbol">:name</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
-		
-Returns the name of <span class="var">module</span>.<br></br>
-	</div><h4 id="path"><span class="code"><span class="symbol">:path</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
-		
-Returns the path of <span class="var">module</span>.<br></br>
-	</div><h4 id="refresh"><span class="code"><span class="symbol">:refresh</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-	</div><h4 id="set_import_func"><span class="code"><span class="symbol">:set_import_func</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-		
-	</div><h4 id="suggest"><span class="code"><span class="symbol">:suggest</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-		
-	</div><h4 id="version"><span class="code"><span class="symbol">:version</span><span class="delimiter">(</span><span class="var">module</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-		
-Returns the version of <span class="var">module</span>.<br></br>
-	</div></section></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Module.xhtml">Module</a></li></ul><section id="Module" class="section"><h2>Module</h2></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

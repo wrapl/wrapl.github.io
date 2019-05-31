@@ -71,45 +71,7 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Object.xhtml">Object</a></li></ul><section id="Object" class="section"><h2>Object</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
-the base type of all types<br></br>
-	</div><h4 id="NonCallableMessageT"><span class="code">NonCallableMessageT</span></h4><div class="comment">
-	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Equal"><span class="code">Equal</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-Result of comparison.<br></br>
-	</div><h4 id="Greater"><span class="code">Greater</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-Result of comparison.<br></br>
-	</div><h4 id="Less"><span class="code">Less</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-Result of comparison.<br></br>
-	</div><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
-	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Compare"><span class="code">Compare<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
-		
-		
-Compares <span class="var">a</span> and <span class="var">b</span> and return either <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Less">Std.Object.Less</a></span>, <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Equal">Std.Object.Equal</a></span> or <span class="code"><a class="id" href="/lib/Std/Object.xhtml#Greater">Std.Object.Greater</a></span>.<br></br>
-	</div><h4 id="Create"><span class="code">Create<span class="delimiter">(</span><span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Type.xhtml#T">Std.Type.T</a><span class="delimiter">,</span> <span class="var">values...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# T"> T</a></span></h4><div class="comment">
-		
-		
-Creates a new object of type <span class="var">type</span>. If present, fields are initialized from <span class="var">values</span>.<br></br>
-	</div><h4 id="Field"><span class="code">Field<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
-	</div><h4 id="Hash"><span class="code">Hash<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
-		
-Returns a hash for <span class="var">a</span>.<br></br>
-	</div><h4 id="IsEqual"><span class="code">IsEqual<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
-		
-		
-Returns <span class="var">b</span> if <span class="code"><span class="var">a</span> <span class="delimiter">==</span> <span class="var">b</span></span><br></br>
-	</div><h4 id="IsNotEq"><span class="code">IsNotEq<span class="delimiter">(</span><span class="var">a</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">b</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
-		
-		
-Returns <span class="var">b</span> if <span class="code"><span class="var">a</span> <span class="delimiter">~==</span> <span class="var">b</span></span><br></br>
-	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="# T"> T</a></span></h4><div class="comment">
-		
-creates a new object of the same type as <span class="var">object</span><br></br>
-	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
-		
-		
-		
-Attaches a finalizer to <span class="var">object</span>. I.e. <span class="code"><span class="var">finalizer</span><span class="delimiter">(</span><span class="var">object</span><span class="delimiter">,</span> <span class="var">data</span><span class="delimiter">)</span></span> should be called at some stage after <span class="var">object</span> becomes unreachable.<br></br>
-	</div></section></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Object.xhtml">Object</a></li></ul><section id="Object" class="section"><h2>Object</h2></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
