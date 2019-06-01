@@ -71,7 +71,46 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Buffered.xhtml">Buffered</a></li></ul><section id="Buffered" class="section"><h2>Buffered</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Buffered.xhtml">Buffered</a></li></ul><section id="Buffered" class="section"><h2>Buffered</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+A buffered stream. Uses buffers to read/write to an underlying.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">base</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+Creates and returns a new buffered stream with <span class="var">base</span> as the underlying stream.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#CloseModeT">IO.Stream.CloseModeT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="close"><span class="code"><span class="symbol">:close</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="flush"><span class="code"><span class="symbol">:flush</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="readi"><span class="code"><span class="symbol">:readi</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="readx"><span class="code"><span class="symbol">:readx</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#ReaderT">ReaderT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="seek"><span class="code"><span class="symbol">:seek</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#SeekerT">SeekerT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/IO/Stream.xhtml#SeekModeT">IO.Stream.SeekModeT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="tell"><span class="code"><span class="symbol">:tell</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="write"><span class="code"><span class="symbol">:write</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#WriterT">WriterT</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

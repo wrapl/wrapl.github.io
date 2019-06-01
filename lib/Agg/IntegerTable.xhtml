@@ -71,7 +71,26 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Agg.xhtml">Agg</a></li><li class="breadcrumb-item"><a href="/lib/Agg/IntegerTable.xhtml">IntegerTable</a></li></ul><section id="IntegerTable" class="section"><h2>IntegerTable</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Agg.xhtml">Agg</a></li><li class="breadcrumb-item"><a href="/lib/Agg/IntegerTable.xhtml">IntegerTable</a></li></ul><section id="IntegerTable" class="section"><h2>IntegerTable</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4><div class="comment">
+A table using <span class="code"><a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span> as keys. Note that instances of <span class="code"><a class="id" href="#T">T</a></span> do not support deletion of entries.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="_[]_"><span class="code"><span class="symbol">:</span><span class="literal">"[]"</span><span class="delimiter">(</span><span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+		
+Returns value if <span class="code"><span class="delimiter">(</span><span class="var">key</span><span class="delimiter">,</span> <span class="var">Std</span><span class="delimiter">$</span><span class="var">Object_t</span><span class="delimiter">)</span></span> is an entry in <span class="var">table</span>, fails otherwise.<br></br>
+	</div><h4 id="insert"><span class="code"><span class="symbol">:insert</span><span class="delimiter">(</span><span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">key</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">value</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+		
+Inserts a new entry <span class="code"><span class="delimiter">(</span><span class="var">key</span><span class="delimiter">,</span> <span class="var">Std</span><span class="delimiter">$</span><span class="var">Object_t</span><span class="delimiter">)</span></span> into <span class="var">table</span>. Returns <span class="var">table</span>.<br></br>
+	</div><h4 id="missing"><span class="code"><span class="symbol">:missing</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">_</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="size"><span class="code"><span class="symbol">:size</span><span class="delimiter">(</span><span class="var">table</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+Returns the number of entries in <span class="var">table</span><br></br>
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

@@ -71,7 +71,38 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Memory.xhtml">Memory</a></li></ul><section id="Memory" class="section"><h2>Memory</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Memory.xhtml">Memory</a></li></ul><section id="Memory" class="section"><h2>Memory</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="WeakRefT"><span class="code">WeakRefT</span></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Alloc"><span class="code">Alloc<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a></span></h4><div class="comment">
+		
+Allocates and returns the address of <span class="var">size</span> bytes of memory in the heap.<br></br>
+	</div><h4 id="AllocAtomic"><span class="code">AllocAtomic<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a></span></h4><div class="comment">
+		
+Allocates and returns the address of <span class="var">size</span> bytes of pointer free memory in the heap.<br></br>
+	</div><h4 id="AllocUncollectable"><span class="code">AllocUncollectable<span class="delimiter">(</span><span class="var">size</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a></span></h4><div class="comment">
+		
+Allocates and returns the address of <span class="var">size</span> bytes of uncollectable memory in the heap.<br></br>
+	</div><h4 id="Collect"><span class="code">Collect<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+Causes a garbage collection cycle.<br></br>
+	</div><h4 id="GCEnabled"><span class="code">GCEnabled<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IsVisible"><span class="code">IsVisible<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="RegisterFinalizer"><span class="code">RegisterFinalizer<span class="delimiter">(</span><span class="var">address</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Address.xhtml#T">Std.Address.T</a><span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+Attaches a finalizer to <span class="var">address</span>. I.e. <span class="code"><span class="var">finalizer</span><span class="delimiter">(</span><span class="var">address</span><span class="delimiter">,</span> <span class="var">data</span><span class="delimiter">)</span></span> should be called at some stage after <span class="var">address</span> becomes unreachable.<br></br>
+	</div><h4 id="RegisterObjectFinalizer"><span class="code">RegisterObjectFinalizer<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> ANY<span class="delimiter">,</span> <span class="var">finalizer</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">data</span> <span class="delimiter">@</span> ANY <span class="delimiter">=</span> <a class="id" href="/lib/Std/Object.xhtml#Nil">NIL</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+		
+Attaches a finalizer to <span class="var">object</span>. I.e. <span class="code"><span class="var">finalizer</span><span class="delimiter">(</span><span class="var">object</span><span class="delimiter">)</span></span> should be called at some stage after <span class="var">object</span> becomes unreachable.<br></br>
+	</div><h4 id="WeakRefGet"><span class="code">WeakRefGet<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="WeakRefNew"><span class="code">WeakRefNew<span class="delimiter">(</span><span class="var">object</span> <span class="delimiter">@</span> ANY<span class="delimiter">)</span></span></h4><div class="comment">
+		
+Returns a weak reference to <span class="var">object</span>.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="get"><span class="code"><span class="symbol">:get</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#WeakRefT">WeakRefT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

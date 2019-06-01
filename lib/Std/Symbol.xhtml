@@ -71,7 +71,29 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Symbol.xhtml">Symbol</a></li></ul><section id="Symbol" class="section"><h2>Symbol</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Symbol.xhtml">Symbol</a></li></ul><section id="Symbol" class="section"><h2>Symbol</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a>
+<div class="comment">
+		
+The type of all symbols (a.k.a. multimethods).<br></br>
+	</div><h4 id="ArrayT"><span class="code">ArrayT</span></h4><div class="comment">
+	</div><h4 id="NoMethodMessageT"><span class="code">NoMethodMessageT</span></h4><div class="comment">
+An instance of this type is sent when no signature is found to match a method call.<br></br>
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Default"><span class="code">Default</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+<span class="code"><a class="id" href="#Default">Default</a></span> is called whenever a symbol call fails to match any signature. I.e. if <span class="code"><span class="var">symbol</span></span> has no signature matching <span class="code"><span class="var">args</span><span class="delimiter">...</span></span>, then the call <span class="code"><span class="var">symbol</span><span class="delimiter">(</span><span class="var">args</span><span class="delimiter">...)</span></span> is then treated as <span class="code"><span class="var">Default</span><span class="delimiter">(</span><span class="var">symbol</span><span class="delimiter">,</span> <span class="var">args</span><span class="delimiter">...)</span></span>. Since <span class="code"><a class="id" href="#Default">Default</a></span> is an instance of <span class="code"><a class="id" href="#T">T</a></span>, this allows for a certain degree of meta-programming.<br></br>
+If <span class="code"><a class="id" href="#Default">Default</a></span> itself fails to match a signature, then it sends an instance <span class="code"><a class="id" href="#NoMethodMessageT">NoMethodMessageT</a></span>.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Get"><span class="code">Get<span class="delimiter">(</span><span class="var">symbol</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">signature...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a></span></h4><div class="comment">
+		
+		
+Returns the entry in <span class="var">symbol</span> which matches <span class="var">signature</span> to <span class="var">function</span> or fails if no matching entry is found.<br></br>
+	</div><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+Returns a new unnamed symbol<br></br>
+	</div><h4 id="Set"><span class="code">Set<span class="delimiter">(</span><span class="var">symbol</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">function</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">signature...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a></span></h4><div class="comment">
+		
+		
+		
+Adds a new entry to <span class="var">symbol</span> which matches <span class="var">signature</span> to <span class="var">function</span>.<br></br>
+Returns <span class="var">function</span>.<br></br>
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

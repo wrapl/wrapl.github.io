@@ -71,7 +71,634 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio.xhtml">Gio</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio/File.xhtml">File</a></li></ul><section id="File" class="section"><h2>File</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Gir.xhtml">Gir</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio.xhtml">Gio</a></li><li class="breadcrumb-item"><a href="/lib/Gir/Gio/File.xhtml">File</a></li></ul><section id="File" class="section"><h2>File</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Gir/GObject/Object.xhtml#T">Gir.GObject.Object.T</a>
+<div class="comment">
+		
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="NewForCommandlineArg"><span class="code">NewForCommandlineArg<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewForCommandlineArgAndCwd"><span class="code">NewForCommandlineArgAndCwd<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewForPath"><span class="code">NewForPath<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewForUri"><span class="code">NewForUri<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="NewTmp"><span class="code">NewTmp<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="ParseName"><span class="code">ParseName<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="append_to"><span class="code"><span class="symbol">:append_to</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="append_to_async"><span class="code"><span class="symbol">:append_to_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="append_to_finish"><span class="code"><span class="symbol">:append_to_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="copy"><span class="code"><span class="symbol">:copy</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">destination</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">progress_callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">progress_callback_data</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="copy_async"><span class="code"><span class="symbol">:copy_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">destination</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">progress_callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">progress_callback_data</span><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="copy_attributes"><span class="code"><span class="symbol">:copy_attributes</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">destination</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="copy_finish"><span class="code"><span class="symbol">:copy_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="create"><span class="code"><span class="symbol">:create</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="create_async"><span class="code"><span class="symbol">:create_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="create_finish"><span class="code"><span class="symbol">:create_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="create_readwrite"><span class="code"><span class="symbol">:create_readwrite</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="create_readwrite_async"><span class="code"><span class="symbol">:create_readwrite_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="create_readwrite_finish"><span class="code"><span class="symbol">:create_readwrite_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="delete"><span class="code"><span class="symbol">:delete</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="delete_async"><span class="code"><span class="symbol">:delete_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="delete_finish"><span class="code"><span class="symbol">:delete_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="dup"><span class="code"><span class="symbol">:dup</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="eject_mountable"><span class="code"><span class="symbol">:eject_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="eject_mountable_finish"><span class="code"><span class="symbol">:eject_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="eject_mountable_with_operation"><span class="code"><span class="symbol">:eject_mountable_with_operation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mount_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="eject_mountable_with_operation_finish"><span class="code"><span class="symbol">:eject_mountable_with_operation_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="enumerate_children"><span class="code"><span class="symbol">:enumerate_children</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileEnumerator.xhtml#T">Gir.Gio.FileEnumerator.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="enumerate_children_async"><span class="code"><span class="symbol">:enumerate_children_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="enumerate_children_finish"><span class="code"><span class="symbol">:enumerate_children_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileEnumerator.xhtml#T">Gir.Gio.FileEnumerator.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="equal"><span class="code"><span class="symbol">:equal</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">file2</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="find_enclosing_mount"><span class="code"><span class="symbol">:find_enclosing_mount</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Mount.xhtml#T">Gir.Gio.Mount.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="find_enclosing_mount_async"><span class="code"><span class="symbol">:find_enclosing_mount_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="find_enclosing_mount_finish"><span class="code"><span class="symbol">:find_enclosing_mount_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/Mount.xhtml#T">Gir.Gio.Mount.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_basename"><span class="code"><span class="symbol">:get_basename</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_child"><span class="code"><span class="symbol">:get_child</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_child_for_display_name"><span class="code"><span class="symbol">:get_child_for_display_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">display_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="get_parent"><span class="code"><span class="symbol">:get_parent</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_parse_name"><span class="code"><span class="symbol">:get_parse_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_path"><span class="code"><span class="symbol">:get_path</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_relative_path"><span class="code"><span class="symbol">:get_relative_path</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">descendant</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="get_uri"><span class="code"><span class="symbol">:get_uri</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="get_uri_scheme"><span class="code"><span class="symbol">:get_uri_scheme</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="has_parent"><span class="code"><span class="symbol">:has_parent</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">parent</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="has_prefix"><span class="code"><span class="symbol">:has_prefix</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">prefix</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="has_uri_scheme"><span class="code"><span class="symbol">:has_uri_scheme</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">uri_scheme</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="hash"><span class="code"><span class="symbol">:hash</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a></span></h4><div class="comment">
+		
+	</div><h4 id="is_native"><span class="code"><span class="symbol">:is_native</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="load_bytes"><span class="code"><span class="symbol">:load_bytes</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">etag_out</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Bytes.xhtml#T">Gir.GLib.Bytes.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="load_bytes_async"><span class="code"><span class="symbol">:load_bytes_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="load_bytes_finish"><span class="code"><span class="symbol">:load_bytes_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">etag_out</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/GLib/Bytes.xhtml#T">Gir.GLib.Bytes.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="load_contents"><span class="code"><span class="symbol">:load_contents</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">length</span><span class="delimiter">,</span> <span class="var">etag_out</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="load_contents_async"><span class="code"><span class="symbol">:load_contents_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="load_contents_finish"><span class="code"><span class="symbol">:load_contents_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">length</span><span class="delimiter">,</span> <span class="var">etag_out</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="load_partial_contents_finish"><span class="code"><span class="symbol">:load_partial_contents_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">length</span><span class="delimiter">,</span> <span class="var">etag_out</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="make_directory"><span class="code"><span class="symbol">:make_directory</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="make_directory_async"><span class="code"><span class="symbol">:make_directory_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="make_directory_finish"><span class="code"><span class="symbol">:make_directory_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="make_directory_with_parents"><span class="code"><span class="symbol">:make_directory_with_parents</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="make_symbolic_link"><span class="code"><span class="symbol">:make_symbolic_link</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">symlink_value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="measure_disk_usage_finish"><span class="code"><span class="symbol">:measure_disk_usage_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">disk_usage</span><span class="delimiter">,</span> <span class="var">num_dirs</span><span class="delimiter">,</span> <span class="var">num_files</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="monitor"><span class="code"><span class="symbol">:monitor</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileMonitor.xhtml#T">Gir.Gio.FileMonitor.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="monitor_directory"><span class="code"><span class="symbol">:monitor_directory</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileMonitor.xhtml#T">Gir.Gio.FileMonitor.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="monitor_file"><span class="code"><span class="symbol">:monitor_file</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileMonitor.xhtml#T">Gir.Gio.FileMonitor.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="mount_enclosing_volume"><span class="code"><span class="symbol">:mount_enclosing_volume</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mount_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="mount_enclosing_volume_finish"><span class="code"><span class="symbol">:mount_enclosing_volume_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="mount_mountable"><span class="code"><span class="symbol">:mount_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mount_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="mount_mountable_finish"><span class="code"><span class="symbol">:mount_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="move"><span class="code"><span class="symbol">:move</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">destination</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">progress_callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">progress_callback_data</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="open_readwrite"><span class="code"><span class="symbol">:open_readwrite</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="open_readwrite_async"><span class="code"><span class="symbol">:open_readwrite_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="open_readwrite_finish"><span class="code"><span class="symbol">:open_readwrite_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="peek_path"><span class="code"><span class="symbol">:peek_path</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="poll_mountable"><span class="code"><span class="symbol">:poll_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="poll_mountable_finish"><span class="code"><span class="symbol">:poll_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_default_handler"><span class="code"><span class="symbol">:query_default_handler</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/AppInfo.xhtml#T">Gir.Gio.AppInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_default_handler_async"><span class="code"><span class="symbol">:query_default_handler_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="query_default_handler_finish"><span class="code"><span class="symbol">:query_default_handler_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/AppInfo.xhtml#T">Gir.Gio.AppInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_exists"><span class="code"><span class="symbol">:query_exists</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="query_file_type"><span class="code"><span class="symbol">:query_file_type</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileType.xhtml#T">Gir.Gio.FileType.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_filesystem_info"><span class="code"><span class="symbol">:query_filesystem_info</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="query_filesystem_info_async"><span class="code"><span class="symbol">:query_filesystem_info_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="query_filesystem_info_finish"><span class="code"><span class="symbol">:query_filesystem_info_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_info"><span class="code"><span class="symbol">:query_info</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="query_info_async"><span class="code"><span class="symbol">:query_info_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attributes</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="query_info_finish"><span class="code"><span class="symbol">:query_info_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_settable_attributes"><span class="code"><span class="symbol">:query_settable_attributes</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileAttributeInfoList.xhtml#T">Gir.Gio.FileAttributeInfoList.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="query_writable_namespaces"><span class="code"><span class="symbol">:query_writable_namespaces</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileAttributeInfoList.xhtml#T">Gir.Gio.FileAttributeInfoList.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="read"><span class="code"><span class="symbol">:read</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInputStream.xhtml#T">Gir.Gio.FileInputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="read_async"><span class="code"><span class="symbol">:read_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="read_finish"><span class="code"><span class="symbol">:read_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileInputStream.xhtml#T">Gir.Gio.FileInputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="replace"><span class="code"><span class="symbol">:replace</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_async"><span class="code"><span class="symbol">:replace_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_contents"><span class="code"><span class="symbol">:replace_contents</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span><span class="delimiter">,</span> <span class="var">new_etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">cancellable</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_contents_async"><span class="code"><span class="symbol">:replace_contents_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a><span class="delimiter">,</span> <span class="var">length</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">callback</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_contents_bytes_async"><span class="code"><span class="symbol">:replace_contents_bytes_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">contents</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/GLib/Bytes.xhtml#T">Gir.GLib.Bytes.T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_contents_finish"><span class="code"><span class="symbol">:replace_contents_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">new_etag</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="replace_finish"><span class="code"><span class="symbol">:replace_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileOutputStream.xhtml#T">Gir.Gio.FileOutputStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="replace_readwrite"><span class="code"><span class="symbol">:replace_readwrite</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_readwrite_async"><span class="code"><span class="symbol">:replace_readwrite_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">etag</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">make_backup</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="replace_readwrite_finish"><span class="code"><span class="symbol">:replace_readwrite_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/FileIOStream.xhtml#T">Gir.Gio.FileIOStream.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="resolve_relative_path"><span class="code"><span class="symbol">:resolve_relative_path</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">relative_path</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="set_attribute"><span class="code"><span class="symbol">:set_attribute</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">type</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/FileAttributeType.xhtml#T">Gir.Gio.FileAttributeType.T</a><span class="delimiter">,</span> <span class="var">value_p</span><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_byte_string"><span class="code"><span class="symbol">:set_attribute_byte_string</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_int32"><span class="code"><span class="symbol">:set_attribute_int32</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_int64"><span class="code"><span class="symbol">:set_attribute_int64</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_string"><span class="code"><span class="symbol">:set_attribute_string</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_uint32"><span class="code"><span class="symbol">:set_attribute_uint32</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attribute_uint64"><span class="code"><span class="symbol">:set_attribute_uint64</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">attribute</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">value</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attributes_async"><span class="code"><span class="symbol">:set_attributes_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_attributes_finish"><span class="code"><span class="symbol">:set_attributes_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">info</span><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="set_attributes_from_info"><span class="code"><span class="symbol">:set_attributes_from_info</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">info</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/FileInfo.xhtml#T">Gir.Gio.FileInfo.T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="set_display_name"><span class="code"><span class="symbol">:set_display_name</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">display_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+	</div><h4 id="set_display_name_async"><span class="code"><span class="symbol">:set_display_name_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">display_name</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="set_display_name_finish"><span class="code"><span class="symbol">:set_display_name_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">res</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Gir/Gio/File.xhtml#T">Gir.Gio.File.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="start_mountable"><span class="code"><span class="symbol">:start_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">start_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="start_mountable_finish"><span class="code"><span class="symbol">:start_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="stop_mountable"><span class="code"><span class="symbol">:stop_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mount_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="stop_mountable_finish"><span class="code"><span class="symbol">:stop_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="supports_thread_contexts"><span class="code"><span class="symbol">:supports_thread_contexts</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="trash"><span class="code"><span class="symbol">:trash</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="trash_async"><span class="code"><span class="symbol">:trash_async</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">io_priority</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="trash_finish"><span class="code"><span class="symbol">:trash_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="unmount_mountable"><span class="code"><span class="symbol">:unmount_mountable</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+	</div><h4 id="unmount_mountable_finish"><span class="code"><span class="symbol">:unmount_mountable_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div><h4 id="unmount_mountable_with_operation"><span class="code"><span class="symbol">:unmount_mountable_with_operation</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">flags</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">,</span> <span class="var">mount_operation</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/MountOperation.xhtml#T">Gir.Gio.MountOperation.T</a><span class="delimiter">,</span> <span class="var">cancellable</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/Cancellable.xhtml#T">Gir.Gio.Cancellable.T</a><span class="delimiter">,</span> <span class="var">callback</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">,</span> <span class="var">user_data</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Object.xhtml#T">Std.Object.T</a></span></h4><div class="comment">
+		
+		
+		
+		
+		
+		
+	</div><h4 id="unmount_mountable_with_operation_finish"><span class="code"><span class="symbol">:unmount_mountable_with_operation_finish</span><span class="delimiter">(</span><span class="var">self</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">result</span> <span class="delimiter">@</span> <a class="id" href="/lib/Gir/Gio/AsyncResult.xhtml#T">Gir.Gio.AsyncResult.T</a><span class="delimiter">,</span> <span class="var">error</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Symbol.xhtml#T">Std.Symbol.T</a></span></h4><div class="comment">
+		
+		
+		
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

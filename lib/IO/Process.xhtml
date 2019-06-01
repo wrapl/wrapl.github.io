@@ -71,7 +71,53 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Process.xhtml">Process</a></li></ul><section id="Process" class="section"><h2>Process</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/IO.xhtml">IO</a></li><li class="breadcrumb-item"><a href="/lib/IO/Process.xhtml">Process</a></li></ul><section id="Process" class="section"><h2>Process</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/IO/Socket.xhtml#T">IO.Socket.T</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextReaderT">IO.Posix.TextReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#TextWriterT">IO.Posix.TextWriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#ReaderT">IO.Posix.ReaderT</a>, <a class="id" href="/lib/IO/Posix.xhtml#WriterT">IO.Posix.WriterT</a>, <a class="id" href="/lib/IO/Posix.xhtml#SeekerT">IO.Posix.SeekerT</a>, <a class="id" href="/lib/IO/Posix.xhtml#T">IO.Posix.T</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextReaderT">IO.Stream.TextReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#TextWriterT">IO.Stream.TextWriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#ReaderT">IO.Stream.ReaderT</a>, <a class="id" href="/lib/IO/Stream.xhtml#WriterT">IO.Stream.WriterT</a>, <a class="id" href="/lib/IO/Stream.xhtml#SeekerT">IO.Stream.SeekerT</a>, <a class="id" href="/lib/IO/Stream.xhtml#T">IO.Stream.T</a>
+<div class="comment">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><h4 id="PipeMessageT"><span class="code">PipeMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+<div class="comment">
+		
+	</div><h4 id="ForkMessageT"><span class="code">ForkMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+<div class="comment">
+		
+	</div><h4 id="WaitMessageT"><span class="code">WaitMessageT</span></h4>Inherits from: <a class="id" href="/lib/IO/Stream.xhtml#MessageT">IO.Stream.MessageT</a>
+<div class="comment">
+		
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="/lib/Sys/Module.xhtml#T">Sys.Module.T</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Open"><span class="code">Open<span class="delimiter">(</span><span class="var">prog</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/String.xhtml#T">Std.String.T</a><span class="delimiter">,</span> <span class="var">args...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+Spawns a new process <span class="code"><span class="var">prog</span> <span class="var">args</span></span> and returns a handle to it. <span class="var">args</span> should either be<br></br>
+a) a list or arguments (including the name of exectuable as the first argument)<br></br>
+b) any number of strings arguments (in which case the name of the executable is taken from <span class="var">prog</span><br></br>
+The returned handle is a <span class="code"><a class="id" href="/lib/IO/Socket.xhtml#T">IO.Socket.T</a></span>, connecting to the input and output of the spawned process.<br></br>
+	</div><h4 id="Result"><span class="code">Result<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+Returns the exit status of the process referred to by <span class="var">proc</span> if it has finished executing. Fails otherwise.<br></br>
+	</div><h4 id="Signal"><span class="code">Signal<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Wait"><span class="code">Wait<span class="delimiter">(</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+Returns the exit status of the process referred to by <span class="var">proc</span>, waiting if necessary for the process to finish. executing. Fails otherwise.<br></br>
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="result"><span class="code"><span class="symbol">:result</span><span class="delimiter">(</span><span class="var">proc</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+		
+Returns the exit status of the process referred to by <span class="var">proc</span> if it has finished executing. Fails otherwise.<br></br>
+	</div><h4 id="signal"><span class="code"><span class="symbol">:signal</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+	</div><h4 id="wait"><span class="code"><span class="symbol">:wait</span><span class="delimiter">(</span><span class="var">proc</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a></span></h4><div class="comment">
+		
+Returns the exit status of the process referred to by <span class="var">proc</span>, waiting if necessary for the process to finish. executing. Fails otherwise.<br></br>
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

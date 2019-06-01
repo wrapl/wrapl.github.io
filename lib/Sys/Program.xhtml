@@ -71,7 +71,25 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Program.xhtml">Program</a></li></ul><section id="Program" class="section"><h2>Program</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Sys.xhtml">Sys</a></li><li class="breadcrumb-item"><a href="/lib/Sys/Program.xhtml">Program</a></li></ul><section id="Program" class="section"><h2>Program</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="ErrorT"><span class="code">ErrorT</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Args"><span class="code">Args</span> <span class="delimiter">:</span> <a class="id" href="/lib/Agg/List.xhtml#T">Agg.List.T</a></h4><div class="comment">
+The command line arguments.<br></br>
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="Break"><span class="code">Break<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="CurrentDir"><span class="code">CurrentDir<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Exit"><span class="code">Exit<span class="delimiter">(</span><span class="var">code</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a> <span class="delimiter">=</span> <a class="id" href="#0">0</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+Terminates the program with exit code <span class="var">code</span>.<br></br>
+	</div><h4 id="OnInt"><span class="code">OnInt<span class="delimiter">(</span><span class="var">handler</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+Installs <span class="var">handler</span> to handler Ctrl-C presses at the terminal<br></br>
+This function is kinda hacky, try not to use it :)<br></br>
+	</div><h4 id="OnUrg"><span class="code">OnUrg<span class="delimiter">(</span><span class="var">handler</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Function.xhtml#T">Std.Function.T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+Installs <span class="var">handler</span> to handler OOB data<br></br>
+This function is kinda hacky, try not to use it :)<br></br>
+	</div><h4 id="Restart"><span class="code">Restart<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Sleep"><span class="code">Sleep<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

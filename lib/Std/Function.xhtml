@@ -71,7 +71,79 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Function.xhtml">Function</a></li></ul><section id="Function" class="section"><h2>Function</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Std.xhtml">Std</a></li><li class="breadcrumb-item"><a href="/lib/Std/Function.xhtml">Function</a></li></ul><section id="Function" class="section"><h2>Function</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="FewArgsMessageT"><span class="code">FewArgsMessageT</span></h4><div class="comment">
+Message sent when a function is called with too few arguments<br></br>
+	</div><h4 id="ArgTypeMessageT"><span class="code">ArgTypeMessageT</span></h4><div class="comment">
+Message sent when a function is called with incorrect argument types<br></br>
+	</div><h4 id="T"><span class="code">T</span></h4><div class="comment">
+Base type of all functions<br></br>
+	</div><h4 id="StatusT"><span class="code">StatusT</span></h4>Inherits from: <a class="id" href="/lib/Std/Integer.xhtml#SmallT">Std.Integer.SmallT</a>, <a class="id" href="/lib/Std/Integer.xhtml#T">Std.Integer.T</a>, <a class="id" href="/lib/Std/Number.xhtml#T">Std.Number.T</a>
+<div class="comment">
+		
+		
+		
+	</div><h4 id="AsmT"><span class="code">AsmT</span></h4>Inherits from: <a class="id" href="#T">T</a>
+<div class="comment">
+		
+Type of functions written in assembly.<br></br>
+	</div><h4 id="CheckedAsmT"><span class="code">CheckedAsmT</span></h4>Inherits from: <a class="id" href="#AsmT">AsmT</a>, <a class="id" href="#T">T</a>
+<div class="comment">
+		
+		
+Type of functions written in assembly with a checked minimum number of arguments<br></br>
+	</div><h4 id="CT"><span class="code">CT</span></h4>Inherits from: <a class="id" href="#T">T</a>
+<div class="comment">
+		
+Type of functions written in C.<br></br>
+	</div><h4 id="CheckedCT"><span class="code">CheckedCT</span></h4>Inherits from: <a class="id" href="#CT">CT</a>, <a class="id" href="#T">T</a>
+<div class="comment">
+		
+		
+Type of functions written in C with checked minimum number of arguments.<br></br>
+	</div><h4 id="ConstantT"><span class="code">ConstantT</span></h4>Inherits from: <a class="id" href="#T">T</a>
+<div class="comment">
+		
+	</div><h4 id="MessageT"><span class="code">MessageT</span></h4>Inherits from: <a class="id" href="#T">T</a>
+<div class="comment">
+		
+	</div><h4 id="VariableT"><span class="code">VariableT</span></h4>Inherits from: <a class="id" href="#T">T</a>
+<div class="comment">
+		
+	</div><h4 id="IteratorT"><span class="code">IteratorT</span></h4><div class="comment">
+	</div></section><section id="Constants" data-spy="true" data-target="#side-menu"><h3>Constants</h3><h4 id="Failure"><span class="code">Failure</span> <span class="delimiter">:</span> <a class="id" href="#StatusT">StatusT</a></h4><div class="comment">
+	</div><h4 id="Message"><span class="code">Message</span> <span class="delimiter">:</span> <a class="id" href="#StatusT">StatusT</a></h4><div class="comment">
+	</div><h4 id="Nil"><span class="code">Nil</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></h4><div class="comment">
+	</div><h4 id="Success"><span class="code">Success</span> <span class="delimiter">:</span> <a class="id" href="#StatusT">StatusT</a></h4><div class="comment">
+	</div><h4 id="Suspend"><span class="code">Suspend</span> <span class="delimiter">:</span> <a class="id" href="#StatusT">StatusT</a></h4><div class="comment">
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="ConstantNew"><span class="code">ConstantNew<span class="delimiter">(</span><span class="var">x</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+returns a function which always returns the value <span class="var">x</span>.<br></br>
+	</div><h4 id="Cycle"><span class="code">Cycle<span class="delimiter">(</span><span class="var">v<sub>1</sub>, ..., v<sub>k</sub></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+Generates <span class="var">v<sub>1</sub></span>, ..., <span class="var">v<sub>k</sub></span>, ..., <span class="var">v<sub>1</sub></span>, ...<br></br>
+	</div><h4 id="Fail"><span class="code">Fail<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="Fold"><span class="code">Fold<span class="delimiter">(</span><span class="var">func1</span><span class="delimiter">,</span> <span class="var">func2</span><span class="delimiter">)</span></span></h4><div class="comment">
+		
+		
+returns the repeated application of <span class="var">func1</span> to the values produced by <span class="var">func2</span><br></br>
+	</div><h4 id="Generate"><span class="code">Generate<span class="delimiter">(</span><span class="var">v<sub>1</sub>, ..., v<sub>k</sub></span><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+Generates <span class="var">v<sub>1</sub></span>, ..., <span class="var">v<sub>k</sub></span><br></br>
+	</div><h4 id="Identity"><span class="code">Identity<span class="delimiter">(</span><span class="delimiter">)</span></span></h4><div class="comment">
+	</div><h4 id="IteratorNew"><span class="code">IteratorNew<span class="delimiter">(</span><span class="var">fun</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">args...</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#IteratorT">IteratorT</a></span></h4><div class="comment">
+		
+		
+Creates an <span class="code"><a class="id" href="#IteratorT">IteratorT</a></span> which encapsulates the function call <span class="code"><span class="var">fun</span><span class="delimiter">(</span><span class="var">args</span><span class="delimiter">)</span></span>.<br></br>
+	</div><h4 id="IteratorNext"><span class="code">IteratorNext<span class="delimiter">(</span><span class="var">iter</span> <span class="delimiter">@</span> <a class="id" href="#IteratorT">IteratorT</a><span class="delimiter">)</span> <span class="delimiter">:</span> ANY</span></h4><div class="comment">
+		
+returns the next value produced by the function call encapsulated in <span class="var">iter</span>.<br></br>
+	</div><h4 id="MessageNew"><span class="code">MessageNew<span class="delimiter">(</span><span class="var">x</span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+returns a function which always sends the message <span class="var">x</span>.<br></br>
+	</div><h4 id="VariableNew"><span class="code">VariableNew<span class="delimiter">(</span><span class="var">v<span class="delimiter">+</span></span><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+returns a function which always returns the variable <span class="var">v</span>.<br></br>
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>

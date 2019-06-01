@@ -71,7 +71,39 @@
 	<a class="off-canvas-overlay" href="#close"></a>
 	<div class="off-canvas-content">
 		<h1 id="title"><img src="/logo.png" alt="W"/> Wrapl, The Programming Language</h1>
-<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Stat.xhtml">Stat</a></li><li class="breadcrumb-item"><a href="/lib/Stat/Dist.xhtml">Dist</a></li><li class="breadcrumb-item"><a href="/lib/Stat/Dist/Binomial.xhtml">Binomial</a></li></ul><section id="Binomial" class="section"><h2>Binomial</h2></section>
+<ul class="breadcrumb"><li class="breadcrumb-item"><a href="/lib.xhtml">Libraries</a></li><li class="breadcrumb-item"><a href="/lib/Stat.xhtml">Stat</a></li><li class="breadcrumb-item"><a href="/lib/Stat/Dist.xhtml">Dist</a></li><li class="breadcrumb-item"><a href="/lib/Stat/Dist/Binomial.xhtml">Binomial</a></li></ul><section id="Binomial" class="section"><h2>Binomial</h2><section id="Types" data-spy="true" data-target="#side-menu"><h3>Types</h3><h4 id="T"><span class="code">T</span></h4>Inherits from: <a class="id" href="/lib/Stat/Dist.xhtml#T">Stat.Dist.T</a>
+<div class="comment">
+		
+	</div></section><section id="Functions" data-spy="true" data-target="#side-menu"><h3>Functions</h3><h4 id="New"><span class="code">New<span class="delimiter">(</span><span class="var">trials</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">,</span> <span class="var">probability</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std.xhtml#Real@T">Std.Real@T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="#T">T</a></span></h4><div class="comment">
+		
+		
+	</div></section><section id="Methods" data-spy="true" data-target="#side-menu"><h3>Methods</h3><h4 id="cdf"><span class="code"><span class="symbol">:cdf</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="generate"><span class="code"><span class="symbol">:generate</span><span class="delimiter">(</span><span class="var">generator</span> <span class="delimiter">@</span> <a class="id" href="/lib/Math/Random.xhtml#T">Math.Random.T</a><span class="delimiter">,</span> <span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="kurtosis"><span class="code"><span class="symbol">:kurtosis</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="mean"><span class="code"><span class="symbol">:mean</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="pdf"><span class="code"><span class="symbol">:pdf</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">x</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="probability"><span class="code"><span class="symbol">:probability</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="quantile"><span class="code"><span class="symbol">:quantile</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">,</span> <span class="var">prob</span> <span class="delimiter">@</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+		
+	</div><h4 id="skewness"><span class="code"><span class="symbol">:skewness</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="stddev"><span class="code"><span class="symbol">:stddev</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div><h4 id="trials"><span class="code"><span class="symbol">:trials</span><span class="delimiter">(</span><span class="var">_</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span></span></h4><div class="comment">
+		
+	</div><h4 id="variance"><span class="code"><span class="symbol">:variance</span><span class="delimiter">(</span><span class="var">dist</span> <span class="delimiter">@</span> <a class="id" href="#T">T</a><span class="delimiter">)</span> <span class="delimiter">:</span> <a class="id" href="/lib/Std/Real.xhtml#T">Std.Real.T</a></span></h4><div class="comment">
+		
+	</div></section></section>
 		<footer>
 			<div class="text-center">
 				<span>Copyright: &copy; 2008-2018 Raja Mukherji</span>
